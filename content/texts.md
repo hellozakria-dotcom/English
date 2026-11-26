@@ -248,3 +248,141 @@ The strong version, which holds that language determines the categories availabl
 The weaker claim, namely that linguistic habits influence attention, memory and categorisation at the margins, is a different matter. Experimental work on colour perception, for instance, has shown that speakers of languages which have separate words for two shades of blue discriminate between those shades slightly faster than speakers of languages which do not. Similarly, communities whose languages describe spatial relations in absolute terms ("to the north of") rather than relative ones ("to the left of") appear to remember the arrangement of objects differently. Such effects are measurable and can be repeated; they are also, crucially, small, and frequently diminish when speakers are distracted from verbalising the task.
 
 What emerges, then, is a picture of language not as a prison but as something closer to a set of well-worn paths: routes that thought travels easily and habitually, without being confined to them. This more temperate formulation lacks the rhetorical appeal of its predecessor, yet it has the considerable advantage of being consistent with the evidence.
+
+=== hw1 | headway | C1 | Unit 1 · What really makes us human?
+Q: Which ability does the writer think is most unusual in humans? || Imagining and planning for situations that have not happened yet.
+Q: Why does the writer mention crows and chimpanzees? || To show that tool use and problem-solving are not unique to humans.
+---
+For centuries, people have tried to identify a single feature that separates humans from every other species. Tool use was once a popular answer, until researchers watched crows bend wire into hooks and chimpanzees use sticks to fish for insects. Language seemed a safer choice, yet many animals communicate in surprisingly complex ways.
+
+Perhaps the most convincing candidate is our ability to imagine. We can picture events that have never happened, plan for a future we cannot see and feel nervous about a job interview that is still a week away. We also tell stories about ourselves, and these stories change as we move through life: the toddler having a tantrum becomes the teenager who is sure that nobody understands them, then the adult who settles down, gets promoted and eventually looks back with a mixture of pride and regret.
+
+Another distinctive trait is how much we care about what others think. We blush, we apologise and we feel embarrassed on behalf of strangers. None of these characteristics makes us better than other animals, but together they explain why human life is so full of plans, worries and second thoughts.
+
+=== hw2 | headway | C1 | Unit 2 · A man of few words
+Q: Why did the writer stop using long words? || Because readers found them tiring and the message got lost.
+Q: What does "to eat your words" mean in the last paragraph? || To admit that something you said was wrong.
+---
+When I started writing for a living, I thought impressive vocabulary was the key to good writing. I would never say "use" if I could say "utilise", and I filled every paragraph with adverbs: extremely, incredibly, absolutely. My editor, a man of few words, read my first article, crossed out half of it and wrote one comment in the margin: "Shorter."
+
+I was annoyed at first. I went over the piece again and again, convinced that he had misunderstood it. But slowly I realised he was right. Readers do not want to fight their way through a sentence; they want to understand it quickly. Long words often hide a lack of clear thinking, and too many adverbs make every statement sound equally dramatic, which means none of them is.
+
+These days I jot down my ideas in plain language first and only look for a better word when the plain one is genuinely not good enough. I still love language, but I love it most when it is precise. And yes, I had to eat my words: the editor and I are now good friends, and he still cuts my articles in half.
+
+=== hw3 | headway | C1 | Unit 3 · Enough is enough?
+Q: What happened to the town's population between 2010 and 2020? || It rose sharply, by about 40 per cent.
+Q: What is the main argument of the people who want to limit growth? || That roads, schools and water supplies cannot keep up.
+---
+Ten years ago, Westford was a quiet market town of 20,000 people. Then a new railway line opened, cutting the journey to the capital to forty minutes, and the town began to change. By 2020 the population had risen sharply, by around 40 per cent, and house prices had more than doubled.
+
+Not everyone is happy about it. Local residents complain that roads are permanently congested, that schools are full and that the town's water supply is struggling to keep up. A campaign group is now calling on the council to stop approving new housing developments until the infrastructure has caught up. "Growth is not automatically a good thing," says one of its organisers. "At some point you have to ask whether more is actually better."
+
+Supporters of growth disagree. They point out that the new residents have brought money into the town, that unemployment has fallen steadily and that several shops which were about to close are now doing well. Slowing things down, they argue, would simply push prices up even further and keep young local people out of the market.
+
+The council is expected to make a decision next month, and whichever way it goes, someone is going to be disappointed.
+
+=== hw4 | headway | C1 | Unit 4 · Can we trust our memory?
+Q: What did the experiment show about the word used in the question? || When the word "smashed" was used, people remembered higher speeds and even broken glass that wasn't there.
+Q: What does the writer recommend police do? || Record a witness's first account as early as possible and avoid leading questions.
+---
+Most of us assume that memory works like a video camera, recording events so that we can play them back later. In reality, it is much less reliable. Every time we remember something, we rebuild it, and small details can change without our noticing.
+
+In a famous series of experiments, people watched a film of a car accident and were then asked how fast the cars were going when they "hit" each other. Others were asked how fast the cars were going when they "smashed" into each other. The second group estimated higher speeds, and a week later some of them even remembered seeing broken glass that had never been in the film.
+
+This has serious consequences for the courts. A witness may be completely sincere and still be wrong. They might have seen the face of a stranger in a newspaper, or they may have been influenced by the way a police officer asked a question. That doesn't mean witnesses must be lying; it means their memories can't be treated as proof.
+
+For this reason, experts recommend that police record a witness's first account as early as possible and avoid questions that suggest an answer. It might seem a small change, but it could prevent innocent people from going to prison.
+
+=== hw5 | headway | C1 | Unit 5 · Culture shock in both directions
+Q: What surprised the visitors most about British cities? || How little people spoke to strangers, even when they were sitting close together.
+Q: What does the writer say about stereotypes? || They contain a small amount of truth but hide how different individuals are.
+---
+When we talk about culture shock, we usually think of people from rich countries travelling somewhere unfamiliar. But the experience works in both directions. A group of village elders who visited Britain for the first time were asked what had surprised them most. It wasn't the traffic or the tall buildings. It was how little people spoke to each other.
+
+"On the train, everyone sat close together, but no one said a word," one of them explained. "At home, if you sit next to someone, you ask about their family." They were also puzzled by the number of old people living alone, and by the idea that you might have to make an appointment to visit a friend.
+
+Of course, the British visitors who later stayed in their village had their own surprises. They found it hard to get used to having no privacy, and they were not sure how to respond when strangers asked how much they earned.
+
+Stereotypes about nationalities usually contain a small amount of truth, but they hide how different individuals are. The British are said to be reserved, yet anyone who has been to a football match knows that isn't always the case. Getting to know people one by one is the only real cure for culture shock.
+
+=== hw6 | headway | C1 | Unit 6 · Good things that came from bad times
+Q: Name two inventions or changes that the text links to the First World War. || Wristwatches, blood banks, plastic surgery, women entering new jobs (any two).
+Q: Does the writer think war is worth these benefits? || No: the writer says these benefits came at a terrible price.
+---
+It is difficult to think of anything positive coming out of the First World War, a conflict in which millions of people lost their lives. Yet historians point out that several features of modern life can be traced back to those years.
+
+Wristwatches, for example, became popular because soldiers needed to check the time without taking a watch out of their pocket. Doctors developed new ways of storing blood, which led to the first blood banks, and surgeons who treated terrible facial injuries laid the foundations of modern plastic surgery. At home, women took over jobs that had always been done by men, and in many countries this helped to strengthen the case for giving women the vote.
+
+What is important to remember, however, is that none of these changes needed a war to happen. Never should we pretend that progress justifies the suffering that produced it. It was the price that was paid, not the benefits, that the survivors remembered for the rest of their lives.
+
+Studying this period does teach us something, though: people are remarkably inventive under pressure, and even in the worst circumstances they do find ways to help one another.
+
+=== hw7 | headway | C1 | Unit 7 · Seven small habits of happier people
+Q: Why does the writer say "if I were you" advice often fails? || Because people give advice for their own lives, not yours.
+Q: Which habit involves other people? || Doing small kind things for others / staying in touch with friends.
+---
+Happiness research has become a big industry, and a lot of it is common sense dressed up in scientific language. Still, some findings are worth repeating, because most of us don't act on them.
+
+First, people who spend money on experiences tend to feel better than those who spend it on things. A concert stays with you; a new phone becomes normal within a week. Second, small acts of kindness make the giver happier as well as the receiver. Third, staying in touch with friends matters more than almost anything else. If you had asked me ten years ago, I would have said that success at work was the key. If I had listened to the research, I would be less stressed now.
+
+Fourth, sleep and exercise are not optional extras. Fifth, comparing yourself with others on social media rarely ends well. Sixth, writing down a few things you are grateful for each evening seems to work for many people. And finally, be careful with advice. When someone says, "I wouldn't do that if I were you," remember that they are imagining their own life, not yours. As if anyone could tell you exactly how to be happy!
+
+=== hw8 | headway | C1 | Unit 8 · Who stays at home?
+Q: What change does the text describe? || More fathers are staying at home to look after children while their partners are the main earners.
+Q: What problem do stay-at-home fathers mention? || Feeling isolated, for example at baby groups mostly attended by mothers.
+---
+In many countries, the number of fathers who stay at home to look after their children has grown steadily over the past twenty years. In most of these families, the mother, whose salary is often higher, has become the main breadwinner, while the father takes responsibility for the domestic side of life.
+
+Fathers who have made this choice describe it as rewarding but sometimes lonely. One man, who gave up a job in sales to care for his twin daughters, said that the hardest part was not the cooking or the cleaning. "It was walking into a baby group full of mothers and feeling that everyone was looking at me," he explained. "They were just being friendly, but I felt like an outsider."
+
+Attitudes are changing, however. Employers are offering longer paternity leave, and children who grow up seeing both parents doing housework are less likely to see it as women's work. Some experts warn that the change is slower than headlines suggest: in most homes, women still do the majority of unpaid work, including the invisible task of organising everything.
+
+Just how equal things will become remains to be seen, but the idea that caring is a job only for women is clearly losing ground.
+
+=== hw9 | headway | C1 | Unit 9 · Why music moves us
+Q: According to the text, why do songs bring back memories so strongly? || Music is linked to emotion, and emotional moments are remembered more strongly.
+Q: What does "mind you" introduce in the last paragraph? || A point that limits or contrasts with what was said before.
+---
+Quite honestly, it is hard to explain why a few notes can make us cry. Music has no obvious practical use: you can't eat it, and it won't keep you warm. Yet every human culture we know of has created it, which suggests that it plays an important role in our lives.
+
+One explanation is that music is closely linked to emotion. Hearing a favourite song releases chemicals in the brain associated with pleasure, the same ones involved in eating good food. Because emotional moments are remembered more strongly than ordinary ones, songs we heard at important times in our lives can bring back memories with surprising force. Unfortunately, this works both ways: a song from a painful period can be almost impossible to listen to.
+
+Music also brings people together. Singing in a choir or dancing at a wedding creates a feeling of belonging that is difficult to achieve in other ways. After all, it is hard to stay angry with someone you have just sung with.
+
+Mind you, not everyone responds to music in the same way. A small number of people feel nothing at all when they hear it, which reminds us that even the most universal experiences are not quite universal.
+
+=== hw10 | headway | C1 | Unit 10 · The power of believing
+Q: What is a placebo? || A treatment with no active ingredient, such as a sugar pill.
+Q: What surprising result does the text mention about telling patients? || Placebos seemed to work even when patients were told they were taking a placebo.
+---
+A placebo is a treatment with no active ingredient, such as a sugar pill or a salt-water injection. It is said to be one of the most powerful tools in medicine, and it appears to work for a surprising range of conditions, especially pain, nausea and anxiety.
+
+In drug trials, patients are usually divided into two groups: one receives the real medicine and the other a placebo. A new drug is only considered effective if it performs better than the placebo, and this is often harder than it sounds. In some studies, around a third of the placebo group were reported to feel significantly better.
+
+Even more surprisingly, placebos seem to work in some cases when patients are told exactly what they are taking. Researchers believe that the ritual of treatment itself, seeing a doctor, being listened to and taking something regularly, may trigger the body's own pain-relieving chemicals.
+
+This does not mean that the effect is "all in the mind", or that serious illnesses can be cured by positive thinking. It is thought to have clear limits. What it does suggest is that the relationship between mind and body is far closer than we tend to assume.
+
+=== hw11 | headway | C1 | Unit 11 · Too clever for its own good
+Q: What does the writer mean by "feature creep"? || Adding more and more functions to a product until it becomes hard to use.
+Q: What prediction does the writer make? || That simple, reliable products will become a selling point again.
+---
+My new washing machine has twenty-four programmes, a touch screen and an app that will tell me on my phone when the washing has finished. I use exactly two of the programmes. The rest are, I suspect, there because the manufacturer needed something to put in the advertisement.
+
+This is what designers call feature creep: a product gets more and more functions until it becomes harder to use than the simple version it replaced. Many household appliances now come with instructions longer than a short novel, and when something goes wrong, it is often the electronics rather than the motor that fails.
+
+Manufacturers argue that consumers want choice and that connected devices will save energy, since a machine that knows the price of electricity can run when it is cheapest. That may be true. But I can't help thinking that by the time I have learnt how to use all these features, the machine will have been replaced by a newer model.
+
+My prediction is that within ten years, simplicity will be a selling point again. A fridge that just keeps food cold and lasts twenty years might turn out to be the most advanced product of all.
+
+=== hw12 | headway | C1 | Unit 12 · The day everything changed
+Q: Why did the writer start running? || A doctor warned her about her health after a check-up.
+Q: What happened during the marathon? || She collapsed with heatstroke a few kilometres from the finish and was taken to hospital.
+---
+I had never run further than the bus stop when my doctor told me, after a routine check-up, that I needed to change my lifestyle. I was forty, overweight and stressed, and I decided, rather dramatically, that I would run a marathon within a year.
+
+The training went surprisingly well. I followed a plan, increased the distance gradually and, furthermore, started to enjoy it. Meanwhile, I lost weight and slept better than I had for years. By race day I felt ready.
+
+It was, however, one of the hottest days of the year. I ignored the advice to slow down, and a few kilometres from the finish I collapsed. I woke up in hospital with heatstroke, surrounded by worried doctors. I did wonder, lying there, whether the whole project had been a terrible mistake.
+
+Nevertheless, that day turned out to be a turning point. It taught me that being stubborn and being determined are not the same thing, and that listening to your body is a strength, not a weakness. I ran my first marathon successfully the following spring, slowly and carefully, and I have never been so proud to finish in the bottom half.

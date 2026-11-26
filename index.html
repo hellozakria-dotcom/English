@@ -274,7 +274,7 @@ async function entryOf(k) {
   return e;
 }
 function idiomEntry(key) {
-  const id = S.learn && S.learn.idioms.find(x => x.p === key); if (!id) return null;
+  const id = S.learn && (S.learn.idioms.find(x => x.p === key) || (S.learn.extra || []).find(x => x.p === key)); if (!id) return null;
   return {pos: ['idiom'], t: 'idiom', arw: [['idiom', id.ar, id.m]], s: [{p: 'idi', d: id.m}], ex2: [id.ex], reg: ['informal']};
 }
 function buildMWE() {
@@ -289,7 +289,7 @@ function buildMWE() {
     if ((v[0] === 'phrasal verb' && v[1] < 3 && /^(from|to|for|at|of|with|into|onto|upon|in|on|by|against|after)$/.test(toks[toks.length - 1])) || toks.every(t => FUNC.has(t)) || (toks.length === 2 && /^(be|have|do|the|a|an|and|or|in|of|to)$/.test(toks[0]))) { delete S.core.mwe[k]; continue; }
     add(k, v[0], v[1]);
   }
-  for (const id of S.learn.idioms) if (!S.core.mwe[id.p]) { S.core.mwe[id.p] = ['idiom', 0]; add(id.p, 'idiom', 0); }
+  for (const id of [...S.learn.idioms, ...(S.learn.extra || [])]) if (!S.core.mwe[id.p] && id.p.includes(' ')) { S.core.mwe[id.p] = ['idiom', 0]; add(id.p, 'idiom', 0); }
   for (const l of Object.values(idx)) l.sort((a, b) => b.lt.length - a.lt.length);
   S.MWE = idx;
 }
@@ -429,7 +429,7 @@ function importData(file) {
       for (const [k, v] of Object.entries(p.cards || {})) { const m = P.cards[k]; if (!m || (v.last || 0) > (m.last || 0)) P.cards[k] = v; }
       for (const [k, v] of Object.entries(p.meta || {})) if (!P.meta[k]) P.meta[k] = v;
       for (const [k, v] of Object.entries(p.stats || {})) { const m = P.stats[k] || {rev: 0, new: 0, pts: 0}; P.stats[k] = {rev: Math.max(m.rev || 0, v.rev || 0), new: Math.max(m.new || 0, v.new || 0), pts: Math.max(m.pts || 0, v.pts || 0)}; }
-      for (const key of ['words', 'prior', 'learned', 'read', 'mis', 'drafts', 'checks', 'grammar', 'quiz']) P[key] = {...(p[key] || {}), ...P[key]};
+      for (const key of ['words', 'prior', 'learned', 'read', 'mis', 'drafts', 'checks', 'grammar', 'quiz', 'hw']) P[key] = {...(p[key] || {}), ...P[key]};
       if (p.place && (!P.place || (p.place.date || 0) > (P.place.date || 0))) P.place = p.place;
       const seen = new Set(P.writing.map(w => w.id)); for (const w of (p.writing || [])) if (!seen.has(w.id)) P.writing.push(w);
       const ids = new Set(S.my.map(t => t.id)); for (const t of (d.texts || [])) if (t && t.id && !ids.has(t.id)) S.my.push(t);
@@ -596,7 +596,7 @@ function placeResult(pl) {
 
 // ================= READER =================
 function allTexts() { return [...S.texts, ...S.my]; }
-const STYLES = [['all', 'All'], ['news', 'News'], ['dialogue', 'Film & TV'], ['ielts-reading', 'IELTS Reading'], ['ielts-listening', 'IELTS Listening'], ['academic', 'Academic'], ['my', 'My texts']];
+const STYLES = [['all', 'All'], ['news', 'News'], ['dialogue', 'Film & TV'], ['ielts-reading', 'IELTS Reading'], ['ielts-listening', 'IELTS Listening'], ['academic', 'Academic'], ['headway', 'Headway course'], ['my', 'My texts']];
 const styleName = s => (STYLES.find(x => x[0] === s) || [0, 'My text'])[1];
 const TOKRE = /[A-Za-z]+(?:['’][A-Za-z]+)*(?:-[A-Za-z]+(?:['’][A-Za-z]+)*)*/g;
 function wordToks(w) {
@@ -879,7 +879,7 @@ function reviewView() {
   if (m.t === 's') return top + spellCard(m, e, meta);
   const arMain = e.arw && e.arw.length ? e.arw.slice(0, 2).map(a => a[1]).join(' · ') : e.ar ? e.ar.slice(0, 2).join('، ') : (S.arCache[word] || '');
   const def = e.s && e.s[0] ? e.s[0].d : (e.arw && e.arw[0] ? e.arw[0][2] : '');
-  const exS = m.ex || (e.x && e.x[0] && e.x[0][0]) || (e.s || []).map(s => s.ex).find(Boolean) || '';
+  const exS = m.ex || (e.x && e.x[0] && e.x[0][0]) || (e.s || []).map(s => s.ex).find(Boolean) || (e.ex2 || [])[0] || '';
   const front = S.prog.prefs.dir === 'ar'
     ? `<div class="big ar" style="margin-top:28px">${esc(arMain || def)}</div><div class="muted">${esc(def)}</div>`
     : `<div class="big" style="margin-top:28px">${esc(word)}</div><div>${e.uk ? `<span class="ipa">/${esc(e.uk)}/</span>` : ''}</div>${spk(word)}${exS ? `<div class="exs">${hl(exS, m.k)}</div>` : ''}`;
@@ -1082,6 +1082,7 @@ function ieltsListView() {
   const hist = S.prog.writing.slice(-6).reverse();
   return `<div class="card"><div style="font-weight:800;font-size:18px">Task 1 <span class="small muted">· 150+ words · 20 min · describe a chart, table or process</span></div><div class="list">${S.learn.task1.map(t => row(t)).join('')}</div></div>
    <div class="card"><div style="font-weight:800;font-size:18px">Task 2 <span class="small muted">· 250+ words · 40 min · essay</span></div><div class="list">${S.learn.task2.map(t => row(t)).join('')}</div></div>
+   <div class="card"><div style="font-weight:800;font-size:18px">Headway Advanced writing <span class="small muted">· one task per unit</span></div><div class="list">${S.learn.task3.map(t => row(t)).join('')}</div></div>
    ${hist.length ? `<div class="sec">Your essays</div><div class="card list">${hist.map(w => `<div class="item"><div class="grow"><b>${esc(w.task)}</b> <span class="small muted">· ${new Date(w.date).toLocaleDateString()} · ${w.wc} words</span></div><span class="tag b">Band ${w.band}</span></div>`).join('')}</div>` : ''}
    <details class="card"><summary>Band descriptors (summary)</summary>${bandsTable()}</details>`;
 }
@@ -1109,11 +1110,11 @@ function chartSVG(c) {
 }
 let wTimer = null;
 function ieltsTaskView() {
-  const id = S.wtask, t1 = S.learn.task1.find(t => t.id === id), t = t1 || S.learn.task2.find(t => t.id === id), isT1 = !!t1;
-  const draft = S.prog.drafts[id] || '', chk = S.prog.checks[id] || {}, list = isT1 ? S.learn.check1 : S.learn.check2, min = isT1 ? 150 : 250;
+  const id = S.wtask, t1 = S.learn.task1.find(t => t.id === id), t3 = S.learn.task3.find(t => t.id === id), t = t1 || t3 || S.learn.task2.find(t => t.id === id), isT1 = !!t1;
+  const draft = S.prog.drafts[id] || '', chk = S.prog.checks[id] || {}, list = isT1 ? S.learn.check1 : S.learn.check2, min = isT1 ? 150 : t3 ? 150 : 250;
   const an = S.wan;
-  return `<div class="toolbar"><button class="iconbtn" data-wback="1">${I.back}</button><b class="grow">IELTS Writing ${isT1 ? 'Task 1' : 'Task 2'}</b><span class="timer" id="wTime">${fmtTime(S.wclock || 0)}</span><button class="btn sm ${S.wrun ? 'red' : 'brand'}" data-wclock="1">${S.wrun ? 'Pause' : 'Start timer'}</button></div>
-  <div class="card"><div class="small muted" style="font-weight:700;text-transform:uppercase;letter-spacing:.05em">${esc(isT1 ? 'You should spend about 20 minutes on this task' : 'You should spend about 40 minutes on this task')}</div><p style="margin:8px 0 0">${esc(t.prompt)}</p>${isT1 ? `<div style="margin-top:12px">${chartSVG(t.chart)}</div>` : ''}<p class="small muted" style="margin-bottom:0">Write at least ${min} words.</p></div>
+  return `<div class="toolbar"><button class="iconbtn" data-wback="1">${I.back}</button><b class="grow">${t3 ? esc(t3.type) : 'IELTS Writing ' + (isT1 ? 'Task 1' : 'Task 2')}</b><span class="timer" id="wTime">${fmtTime(S.wclock || 0)}</span><button class="btn sm ${S.wrun ? 'red' : 'brand'}" data-wclock="1">${S.wrun ? 'Pause' : 'Start timer'}</button></div>
+  <div class="card"><div class="small muted" style="font-weight:700;text-transform:uppercase;letter-spacing:.05em">${esc(t3 ? t3.title : isT1 ? 'You should spend about 20 minutes on this task' : 'You should spend about 40 minutes on this task')}</div><p style="margin:8px 0 0">${esc(t.prompt)}</p>${isT1 ? `<div style="margin-top:12px">${chartSVG(t.chart)}</div>` : ''}<p class="small muted" style="margin-bottom:0">Write at least ${min} words.</p></div>
   <textarea class="editor" id="wText" placeholder="Write your answer here…" spellcheck="false">${esc(draft)}</textarea>
   <div class="row" style="margin:8px 0 14px"><span class="small"><b id="wCount">${(draft.match(TOKRE) || []).length}</b> words <span class="muted">(min ${min})</span></span><span class="grow"></span><button class="btn soft sm" data-wcheck="1">Check my text</button></div>
   ${an ? analysisHTML(an) : ''}
@@ -1203,13 +1204,15 @@ function timeEstimate() {
 }
 function planView() {
   if (S.gram) return grammarView();
+  if (S.hwu) return hwUnitView();
+  if (S.ptab === 'hw') return hwView();
   if (S.cq) return collView();
   if (S.idi !== undefined && S.idi !== null) return idiomView();
   const units = planUnits(), c = counters(), te = timeEstimate();
   const ph = [[1, 'Phase 1 · Consolidate B2 → C1', 'High-frequency gaps, AWL basics, core C1 grammar'], [2, 'Phase 2 · Solid C1', 'Bands to 11k, collocations, idioms, IELTS band 7 writing'], [3, 'Phase 3 · C1 → C2', 'Bands 12–15k, nuance, register, advanced grammar, band 8+ writing']];
   const doneN = units.filter(u => u.done).length;
   const months = d => (d / 30).toFixed(d < 60 ? 1 : 0);
-  return `${header('Plan: B2 → C2', `${doneN} of ${units.length} units done`)}
+  return `${header('Plan: B2 → C2', `${doneN} of ${units.length} units done`)}${planTabs()}
   <div class="stats" style="margin-top:0;margin-bottom:14px">
    <div class="stat"><b>${c.learned}</b><span>new words learned</span></div><div class="stat"><b>${c.learning}</b><span>learning now</span></div><div class="stat"><b>${c.texts}</b><span>texts read</span></div>
   </div>
@@ -1236,6 +1239,27 @@ function awlSheet(n) {
   pop.innerHTML = `<div class="w">AWL sublist ${n}</div><p class="small muted">Academic Word List (Coxhead, 2000): words that are frequent in academic texts across subjects. Sublist 1 is the most frequent. Essential for IELTS reading and writing.</p>
    <button class="btn brand sm" data-awladd="${n}">${I.plus} Add the ones I don't know to cards</button>
    <div class="colls" style="margin-top:12px">${ws.map(w => `<button class="chip sm" data-look="${esc(w)}" style="${wordStatus(w) === 'known' ? 'opacity:.55' : wordStatus(w) === 'learning' ? 'background:var(--learn)' : 'background:var(--new)'}">${esc(w)}</button>`).join('')}</div>`;
+}
+function planTabs() { return `<div class="seg">${[['path', 'Path to C2'], ['hw', 'Headway Advanced']].map(([k, l]) => `<button class="${S.ptab === k ? 'on' : ''}" data-ptab="${k}">${l}</button>`).join('')}</div>`; }
+function hwDone(u) { return !!(S.prog.hw && S.prog.hw[u.n]); }
+function hwView() {
+  const H = S.learn.headway, d = H.filter(hwDone).length;
+  return `${header('Plan: B2 → C2', 'Follow Headway Advanced (5th ed.) unit by unit')}${planTabs()}
+  <div class="card small" style="color:var(--ink2)">Study each unit in your book, then use the app for the same unit: an original reading text on the unit's topic, the grammar lesson with exercises, a word set for your cards and a writing task of the same type. <b>${d} / ${H.length}</b> units done.</div>
+  <div class="card">${H.map(u => `<div class="unit ${hwDone(u) ? 'done' : ''}" data-hwu="${u.n}"><div class="num">${hwDone(u) ? I.check.replace('<svg', '<svg width="18" height="18"') : u.n}</div><div class="grow"><div style="font-weight:700">${esc(u.t)}</div><div class="small muted">Book p. ${u.p} · ${esc(u.focus)}</div></div></div>`).join('')}</div>`;
+}
+function hwUnitView() {
+  const u = S.learn.headway.find(x => x.n === S.hwu), t = S.texts.find(x => x.id === u.text), task = S.learn.task3.find(x => x.id === u.task);
+  const keys = u.vocab.map(w => S.R[w] || FUNC.has(w) ? w : S.R[lemmaOf(w)] && !w.includes(' ') ? lemmaOf(w) : 'p:' + w);
+  return `<div class="toolbar"><button class="iconbtn" data-hwback="1">${I.back}</button><b class="grow">Headway Advanced · Unit ${u.n}</b>${hwDone(u) ? '<span class="tag g">Done ✓</span>' : ''}</div>
+  ${header(esc(u.t), `Student's Book p. ${u.p}–${u.p + 7}`)}
+  <div class="card"><div class="small muted" style="font-weight:700;text-transform:uppercase;letter-spacing:.05em">Language focus</div><p style="margin:4px 0 0">${esc(u.focus)}</p></div>
+  <div class="sec">1 · Grammar</div><div class="card list">${u.gram.map(id => { const g = S.learn.grammar.find(x => x.id === id); return `<div class="item click" data-gram="${id}"><div class="grow"><b>${esc(g.t)}</b><div class="small muted">${g.q.length} exercises</div></div>${S.prog.grammar[id] ? '<span class="tag g">done</span>' : ''}</div>`; }).join('')}</div>
+  <div class="sec">2 · Reading</div><div class="card list"><div class="item click" data-text="${esc(t.id)}"><div class="grow"><b>${esc(t.title.replace(/^Unit \d+ · /, ''))}</b><div class="small muted">Original text on the unit topic · ${t.words} words${t.q.length ? ' · ' + t.q.length + ' questions' : ''}</div></div>${S.prog.read[t.id] ? '<span class="tag g">read</span>' : ''}</div></div>
+  <div class="sec">3 · Vocabulary</div><div class="card"><div class="colls">${keys.map((k, i) => `<button class="chip sm" data-look="${esc(k)}" style="${wordStatus(k) === 'known' ? 'opacity:.6' : wordStatus(k) === 'learning' ? 'background:var(--learn)' : 'background:var(--new)'}">${esc(u.vocab[i])}</button>`).join('')}</div>
+   <button class="btn brand sm" style="margin-top:12px" data-hwadd="${u.n}">${I.plus} Add the ones I don't know to cards</button></div>
+  <div class="sec">4 · Writing</div><div class="card list"><div class="item click" data-wtask="${task.id}"><div class="grow"><b>${esc(task.title)}</b><div class="small muted">${esc(task.prompt)}</div></div>${S.prog.writing.some(w => w.task === task.id) ? '<span class="tag g">done</span>' : ''}</div></div>
+  <button class="btn ${hwDone(u) ? 'ghost' : 'brand'} wide" data-hwdone="${u.n}">${hwDone(u) ? 'Mark as not done' : '✓ I finished this unit (book + app)'}</button>`;
 }
 function grammarView() {
   const g = S.learn.grammar.find(x => x.id === S.gram);
@@ -1336,7 +1360,7 @@ function render() {
   if (S.view === 'words') { const q = $('#q'); q && q.addEventListener('input', () => { S.q = q.value; const pos = q.selectionStart; render(); const n = $('#q'); n.focus(); n.setSelectionRange(pos, pos); }); }
   if (S.view === 'write' && S.wtask) { const ta = $('#wText'); ta.addEventListener('input', () => { S.prog.drafts[S.wtask] = ta.value; $('#wCount').textContent = (ta.value.match(TOKRE) || []).length; saveProg(); }); }
 }
-function go(view) { S.view = view; shown = false; if (view === 'read') { S.rd = null; } if (view === 'place') { S.pt = null; } if (view === 'plan') { S.gram = null; S.cq = null; S.idi = null; S.iq = null; } if (view === 'write') S.wtask = null; if (S.playing) { S.playing = false; speechSynthesis.cancel(); } render(); scrollTo(0, 0); if (view === 'review') setTimeout(autoplayFront, 80); }
+function go(view) { S.view = view; shown = false; if (view === 'read') { S.rd = null; } if (view === 'place') { S.pt = null; } if (view === 'plan') { S.hwu = null; S.gram = null; S.cq = null; S.idi = null; S.iq = null; } if (view === 'write') S.wtask = null; if (S.playing) { S.playing = false; speechSynthesis.cancel(); } render(); scrollTo(0, 0); if (view === 'review') setTimeout(autoplayFront, 80); }
 function startClock() { clearInterval(wTimer); if (!S.wrun) return; wTimer = setInterval(() => { S.wclock = (S.wclock || 0) + 1; const el = $('#wTime'); if (el) el.textContent = fmtTime(S.wclock); else { clearInterval(wTimer); S.wrun = false; } }, 1000); }
 document.addEventListener('click', async e => {
   const say = e.target.closest('[data-say]'); if (say) { speak(say.dataset.say, {lang: say.dataset.lang}); return; }
@@ -1353,7 +1377,7 @@ document.addEventListener('click', async e => {
   if (e.target.id === 'scrim') { hidePop(true); return; }
   const w = e.target.closest('.wd'); if (w) { if (window.getSelection && String(getSelection()).includes(' ')) return; showPop(w, true); return; }
   hidePop(true);
-  const t = e.target.closest('button,[data-text],[data-go],[data-tab],[data-dict],[data-band],[data-look],[data-wtask],[data-pband],[data-pawl],[data-gram],[data-coll],[data-idi],.qa'); if (!t) return;
+  const t = e.target.closest('button,[data-text],[data-go],[data-tab],[data-dict],[data-band],[data-look],[data-wtask],[data-pband],[data-pawl],[data-gram],[data-coll],[data-idi],[data-hwu],.qa'); if (!t) return;
   const d = t.dataset;
   if (d.tab) return go(d.tab);
   if (d.go) return go(d.go);
@@ -1365,6 +1389,11 @@ document.addEventListener('click', async e => {
   if (d.pawl) return awlSheet(+d.pawl);
   if (d.gram) { S.view = 'plan'; S.gram = d.gram; render(); return scrollTo(0, 0); }
   if (d.gback) { S.gram = null; return render(); }
+  if (d.ptab) { S.ptab = d.ptab; return render(); }
+  if (d.hwu) { S.view = 'plan'; S.hwu = +d.hwu; render(); return scrollTo(0, 0); }
+  if (d.hwback) { S.hwu = null; return render(); }
+  if (d.hwdone) { const n = +d.hwdone; S.prog.hw ||= {}; if (S.prog.hw[n]) delete S.prog.hw[n]; else { S.prog.hw[n] = today(); addPts(10); } saveProg(); return render(); }
+  if (d.hwadd) { const u = S.learn.headway.find(x => x.n === +d.hwadd); const keys = u.vocab.map(w => S.R[w] || FUNC.has(w) ? w : S.R[lemmaOf(w)] && !w.includes(' ') ? lemmaOf(w) : 'p:' + w); return addList(keys, 'Headway ' + u.n); }
   if (d.gcheck !== undefined) { const i = +d.gcheck, g = S.learn.grammar.find(x => x.id === S.gram), v = document.querySelector(`[data-gin="${i}"]`).value, ok = normA(v) === normA(g.q[i][1]); $('#gres' + i).innerHTML = (ok ? '<b style="color:var(--green)">✓ Exactly right</b>' : '<span class="muted">Model answer:</span> ') + (ok ? '' : `<b>${esc(g.q[i][1])}</b>`); return; }
   if (d.gdone) { if (!S.prog.grammar[d.gdone]) { S.prog.grammar[d.gdone] = today(); addPts(5); } S.gram = null; saveProg(); return render(); }
   if (d.coll) { S.view = 'plan'; return startColl(d.coll); }
