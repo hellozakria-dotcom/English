@@ -5,11 +5,11 @@ Q: What worries the opposition councillors? || That the money could be spent on 
 ---
 The city council has announced that night bus services will run seven days a week from next spring, in a move it hopes will breathe new life into a late-night economy that has struggled since the pandemic.
 
-Until now, only four routes operated after midnight, and only on Fridays and Saturdays. Under the new plan, twelve routes will run every thirty minutes between midnight and five in the morning, linking the city centre with the main hospitals, the airport and the largest residential districts.
+Until now, only four routes operated after midnight, and only on Fridays and Saturdays. Under the new plan, twelve routes will run every thirty minutes between midnight and five in the morning, linking the city center with the main hospitals, the airport and the largest residential districts.
 
 Council leader Maria Okafor said the decision was about fairness as much as nightlife. "We often talk about the night-time economy as if it were just bars and clubs," she said. "But it is also cleaners, nurses, security guards and kitchen staff. Many of them have been paying for expensive taxis or walking home alone in the dark. That simply isn't acceptable."
 
-The two-year trial will cost around £2.4 million a year, funded partly by a small increase in parking charges in the city centre. Business groups have welcomed the plan. A spokesperson for the local hospitality association said that several restaurants had cut their opening hours because staff could not get home.
+The two-year trial will cost around £2.4 million a year, funded partly by a small increase in parking charges in the city center. Business groups have welcomed the plan. A spokesperson for the local hospitality association said that several restaurants had cut their opening hours because staff could not get home.
 
 However, not everyone is convinced. Opposition councillors argue that the money would be better spent on improving daytime routes, which carry far more passengers. "Of course night workers deserve support," said councillor Tom Reeve, "but we have daytime buses that are packed and late every single morning. We need to get the basics right first."
 
@@ -20,28 +20,28 @@ Q: What is "shrinkflation"? || Reducing the size or quantity of a product while 
 Q: Which products were most affected, according to the consumer group? || Snacks, breakfast cereals and household cleaning products.
 Q: What change does the consumer group want? || Clear labels on shelves when a product's size has been reduced.
 ---
-Shoppers who suspect that their favourite chocolate bar has been getting smaller are not imagining it. A report published this week by a leading consumer group found that more than a third of the products it monitored had been reduced in size over the past two years, while their prices either stayed the same or, in some cases, actually went up.
+Shoppers who suspect that their favorite chocolate bar has been getting smaller are not imagining it. A report published this week by a leading consumer group found that more than a third of the products it monitored had been reduced in size over the past two years, while their prices either stayed the same or, in some cases, actually went up.
 
 The practice, widely known as "shrinkflation", is not illegal, provided the new weight or volume is printed on the packaging. Critics argue, however, that it is deliberately misleading, since few customers check the small print on a familiar product before putting it in their trolley.
 
-The report singled out snacks, breakfast cereals and household cleaning products as the worst offenders. One well-known brand of washing-up liquid had shrunk from 500ml to 433ml, a reduction of more than 13 per cent, with no change to the design of the bottle.
+The report singled out snacks, breakfast cereals and household cleaning products as the worst offenders. One well-known brand of washing-up liquid had shrunk from 500ml to 433ml, a reduction of more than 13 percent, with no change to the design of the bottle.
 
 Manufacturers insist that they have been left with little choice. Energy, packaging and transport costs have risen sharply, and companies say that customers are more resistant to a visible price rise than to a slightly smaller pack. "Consumers consistently tell us that the price on the shelf is what matters most," said a spokesperson for the food and drink industry, adding that firms were "working hard to absorb costs wherever possible".
 
 The consumer group is now calling on the government to require supermarkets to display a clear notice on the shelf whenever a product's size has been cut, for at least six months after the change. Several European countries have already introduced similar rules, and early evidence suggests that the practice has become noticeably less common as a result.
 
-For now, the group's advice is simple: compare the unit price, the cost per 100 grams or per litre, rather than the headline price. It is a small habit, but over a year it can add up to a surprising amount.
+For now, the group's advice is simple: compare the unit price, the cost per 100 grams or per liter, rather than the headline price. It is a small habit, but over a year it can add up to a surprising amount.
 
-=== news-c2-1 | news | C2 | The quiet unravelling of a once-celebrated housing policy
-Q: What was the original aim of the policy? || To help first-time buyers onto the property ladder by subsidising deposits.
+=== news-c2-1 | news | C2 | The quiet unraveling of a once-celebrated housing policy
+Q: What was the original aim of the policy? || To help first-time buyers onto the property ladder by subsidizing deposits.
 Q: According to economists, what was the main unintended effect? || It pushed up house prices, so much of the subsidy ended up with developers and sellers.
 Q: Why is it difficult for the government to abandon the scheme? || Because it is popular with voters and the construction industry has come to depend on it.
 ---
 When the scheme was unveiled a decade ago, it was hailed as a rare piece of policy that would please almost everyone. Young people priced out of the housing market would receive a generous top-up to their deposits; builders would enjoy a steady stream of buyers; and the government could claim to be restoring the dream of home ownership to a generation that had all but given up on it.
 
-Ten years and several billion pounds later, that consensus has quietly unravelled. A cross-party committee this week concluded that the scheme had, in all likelihood, done more to inflate prices than to widen access. Its report, couched in the measured language such documents favour, nonetheless amounts to a damning verdict: a substantial share of the subsidy, it found, had been "capitalised into prices", which is to say that it ended up in the pockets of developers and sellers rather than buyers.
+Ten years and several billion pounds later, that consensus has quietly unraveled. A cross-party committee this week concluded that the scheme had, in all likelihood, done more to inflate prices than to widen access. Its report, couched in the measured language such documents favor, nonetheless amounts to a damning verdict: a substantial share of the subsidy, it found, had been "capitalized into prices", which is to say that it ended up in the pockets of developers and sellers rather than buyers.
 
-None of this would have surprised economists, many of whom warned at the outset that subsidising demand in a market where supply is notoriously sluggish was bound to push prices up. What is striking is how long it took for those warnings to be heeded. Part of the explanation lies in the politics. Schemes that hand money to identifiable voters are easy to defend and hard to withdraw, and the construction industry, having grown accustomed to state-backed demand, lobbied hard for each successive extension.
+None of this would have surprised economists, many of whom warned at the outset that subsidizing demand in a market where supply is notoriously sluggish was bound to push prices up. What is striking is how long it took for those warnings to be heeded. Part of the explanation lies in the politics. Schemes that hand money to identifiable voters are easy to defend and hard to withdraw, and the construction industry, having grown accustomed to state-backed demand, lobbied hard for each successive extension.
 
 Ministers now find themselves in a difficult position. Scrapping the scheme outright risks a sharp slowdown in house building at precisely the moment the country needs more homes, not fewer. Yet extending it again would be difficult to reconcile with the committee's findings. The likeliest outcome, insiders suggest, is a gradual winding down, dressed up as a "reform" and accompanied by promises to tackle the supply side through planning changes.
 
@@ -77,7 +77,7 @@ DANIEL: (laughs) Wow, okay. You don't beat around the bush, do you?
 INTERVIEWER: Not if I can help it. We've got forty minutes, and I'd rather spend them finding out who you actually are.
 DANIEL: Fair enough. The real answer is that my manager takes credit for everything. Last quarter I came up with a plan that cut our delivery times by a third, and by the time it reached the board it had somehow become his idea.
 INTERVIEWER: And how did you handle that?
-DANIEL: Badly, at first. I got moody, if I'm being honest. Then I realised that sulking wasn't getting me anywhere, so I started copying the board into my progress updates. Politely. Just so the paper trail spoke for itself.
+DANIEL: Badly, at first. I got moody, if I'm being honest. Then I realized that sulking wasn't getting me anywhere, so I started copying the board into my progress updates. Politely. Just so the paper trail spoke for itself.
 INTERVIEWER: Did it work?
 DANIEL: Up to a point. People upstairs know who did the work now. But it's made things a bit frosty between us, and I don't want to spend the next five years walking on eggshells.
 INTERVIEWER: That's a far more interesting answer than the first one.
@@ -112,7 +112,7 @@ Q: Which measure does the text say is more useful than adding hives? || Planting
 ---
 Over the past twenty years, beekeeping has moved from the countryside to the rooftops. Hotels, offices and even opera houses in cities such as London, Paris and New York now keep hives, and the number of amateur urban beekeepers has risen sharply.
 
-At first glance, cities might seem an unlikely place for bees. Yet urban environments can be surprisingly rich in food. Parks, private gardens, railway embankments and street trees provide a variety of flowering plants throughout the year, whereas much modern farmland is planted with a single crop that flowers for only a few weeks. As a result, honey produced in cities often contains pollen from a wider range of plants, and some beekeepers argue that its flavour is more complex as a result.
+At first glance, cities might seem an unlikely place for bees. Yet urban environments can be surprisingly rich in food. Parks, private gardens, railway embankments and street trees provide a variety of flowering plants throughout the year, whereas much modern farmland is planted with a single crop that flowers for only a few weeks. As a result, honey produced in cities often contains pollen from a wider range of plants, and some beekeepers argue that its flavor is more complex as a result.
 
 The popularity of urban beekeeping is partly a response to widely reported declines in bee populations. Many people see keeping a hive as a practical way of helping the environment. However, a growing number of ecologists have raised concerns about this assumption. Honeybees are just one of hundreds of species of bee, most of which are wild and solitary. In areas where hives are densely concentrated, honeybees may compete with these wild pollinators for limited supplies of nectar and pollen.
 
@@ -126,15 +126,15 @@ Q: Complete: People tend to put off tasks that make them feel anxious, bored or 
 Q: What is meant by "temporal discounting"? || Valuing immediate rewards more than future ones.
 Q: Which strategy involves imagining your future self? || Increasing the sense of connection with one's future self so that the long-term consequences feel real.
 ---
-For decades, procrastination was treated as a failure of organisation. The standard advice was to make lists, set deadlines and break large tasks into smaller ones. While such techniques can certainly help, a growing body of psychological research suggests that they address the symptoms rather than the cause. Procrastination, many researchers now argue, is fundamentally a problem of managing emotions rather than time.
+For decades, procrastination was treated as a failure of organization. The standard advice was to make lists, set deadlines and break large tasks into smaller ones. While such techniques can certainly help, a growing body of psychological research suggests that they address the symptoms rather than the cause. Procrastination, many researchers now argue, is fundamentally a problem of managing emotions rather than time.
 
-According to this view, people do not delay tasks because they are lazy or unaware of the deadline. Rather, they avoid tasks that trigger unpleasant feelings, such as anxiety, boredom, self-doubt or resentment. Putting the task off brings immediate relief, which in turn reinforces the habit. The next time a similar task appears, the brain has learnt that avoidance works, at least in the short term.
+According to this view, people do not delay tasks because they are lazy or unaware of the deadline. Rather, they avoid tasks that trigger unpleasant feelings, such as anxiety, boredom, self-doubt or resentment. Putting the task off brings immediate relief, which in turn reinforces the habit. The next time a similar task appears, the brain has learned that avoidance works, at least in the short term.
 
 A second factor is what economists call "temporal discounting": the tendency to value rewards that are available now more highly than rewards in the future. The satisfaction of finishing an essay lies weeks away; the pleasure of watching another episode of a series is immediate. Neuroimaging studies have even suggested that, when people think about their future selves, the pattern of brain activity resembles that seen when they think about strangers.
 
-These findings have led to new approaches to tackling the problem. One is to practise self-compassion. Surprisingly, students who forgave themselves for procrastinating before one exam were less likely to procrastinate before the next, perhaps because they no longer associated studying with guilt. Another approach involves strengthening the connection with one's future self, for example by writing a letter to oneself in ten years' time, so that long-term consequences feel more real.
+These findings have led to new approaches to tackling the problem. One is to practice self-compassion. Surprisingly, students who forgave themselves for procrastinating before one exam were less likely to procrastinate before the next, perhaps because they no longer associated studying with guilt. Another approach involves strengthening the connection with one's future self, for example by writing a letter to oneself in ten years' time, so that long-term consequences feel more real.
 
-None of this means that practical tools are useless. But recognising the emotional roots of procrastination may explain why so many people who own expensive planners still find themselves cleaning the kitchen at midnight instead of working.
+None of this means that practical tools are useless. But recognizing the emotional roots of procrastination may explain why so many people who own expensive planners still find themselves cleaning the kitchen at midnight instead of working.
 
 === ielts-r-c2-1 | ielts-reading | C2 | The paradox of choice reconsidered
 Q: TRUE, FALSE or NOT GIVEN: The original jam study found that more people bought jam when fewer varieties were offered. || TRUE
@@ -142,7 +142,7 @@ Q: TRUE, FALSE or NOT GIVEN: The meta-analysis concluded that choice overload ne
 Q: List two conditions under which choice overload seems more likely. || When options are hard to compare, when people have no clear preferences, or when the decision is complex or time-limited.
 Q: What does the writer suggest about the way findings spread? || Simple, surprising findings can spread widely before they have been properly replicated.
 ---
-Few findings in behavioural science have enjoyed the popular success of the "paradox of choice". The idea, popularised in the early 2000s, holds that beyond a certain point additional options do not liberate us but paralyse us, leaving us less likely to decide at all and less satisfied when we do. Its emblematic study is now famous: shoppers presented with twenty-four varieties of jam at a tasting stand were far more likely to stop and look than those offered six, yet considerably less likely to buy.
+Few findings in behavioral science have enjoyed the popular success of the "paradox of choice". The idea, popularized in the early 2000s, holds that beyond a certain point additional options do not liberate us but paralyze us, leaving us less likely to decide at all and less satisfied when we do. Its emblematic study is now famous: shoppers presented with twenty-four varieties of jam at a tasting stand were far more likely to stop and look than those offered six, yet considerably less likely to buy.
 
 The appeal of the finding is not hard to understand. It flatters a widespread intuition that modern life is overwhelming, and it carries a counter-intuitive twist that lends itself to talks and magazine articles. Businesses seized on it as a rationale for trimming product ranges; policy makers invoked it when designing pension schemes.
 
@@ -159,7 +159,7 @@ Q: What day does the evening course start? || Monday the 3rd
 Q: How much is the deposit? || £80
 Q: Where should the caller go on the first day? || Room 12 on the second floor (reception first)
 ---
-RECEPTIONIST: Good morning, Westbridge Language Centre. How can I help you?
+RECEPTIONIST: Good morning, Westbridge Language Center. How can I help you?
 CALLER: Hi, I'd like some information about your English courses, please. I'm thinking of joining one next month.
 RECEPTIONIST: Of course. Are you interested in a general course or exam preparation?
 CALLER: Exam preparation, I think. I need IELTS for a university application.
@@ -180,52 +180,52 @@ CALLER: Room twelve, second floor. Perfect. Thanks very much for your help.
 RECEPTIONIST: You're welcome. See you on the third.
 
 === ielts-l-c1-1 | ielts-listening | C1 | A talk on urban heat islands
-Q: How much warmer can city centres be than the surrounding countryside at night? || Up to 7 degrees Celsius
+Q: How much warmer can city centers be than the surrounding countryside at night? || Up to 7 degrees Celsius
 Q: Name two causes of the urban heat island effect mentioned. || Dark surfaces absorbing heat; lack of vegetation; heat from vehicles and air conditioning; buildings trapping heat.
 Q: What happened to roof temperatures in the white-roof project? || They fell by around 20 degrees on hot afternoons.
 Q: Why does the speaker say trees are better than white roofs? || They cool the street level where people actually are, and provide shade and other benefits.
 ---
-Good afternoon, everyone. Today I want to talk about something that affects more than half of the world's population, often without them realising it: the urban heat island effect.
+Good afternoon, everyone. Today I want to talk about something that affects more than half of the world's population, often without them realizing it: the urban heat island effect.
 
-Put simply, cities tend to be warmer than the countryside around them. During the day the difference may be modest, but at night it can be dramatic. On calm, clear nights, the centre of a large city can be as much as seven degrees warmer than nearby rural areas.
+Put simply, cities tend to be warmer than the countryside around them. During the day the difference may be modest, but at night it can be dramatic. On calm, clear nights, the center of a large city can be as much as seven degrees warmer than nearby rural areas.
 
 So why does this happen? There are several reasons. First, the materials we build with, such as asphalt, concrete and dark roofing, absorb a great deal of the sun's energy during the day and release it slowly after dark. Second, cities have far less vegetation. Plants cool their surroundings by releasing water through their leaves, a process called evapotranspiration, so replacing fields and trees with buildings removes a natural cooling system. Third, cities generate heat of their own, from vehicles, industry and, ironically, air conditioning units. And finally, tall buildings close together trap warm air and reduce wind.
 
 This matters because heat is not just uncomfortable; it is dangerous. During heatwaves, death rates rise significantly, particularly among elderly people and those living in poorly ventilated flats.
 
-What can be done? One widely publicised approach is painting roofs white. In one project I was involved with, roof surface temperatures fell by around twenty degrees on hot afternoons. That's impressive, but there's a catch: the cooling mostly benefits the top floor, not the street below, where people actually walk and wait for buses.
+What can be done? One widely publicized approach is painting roofs white. In one project I was involved with, roof surface temperatures fell by around twenty degrees on hot afternoons. That's impressive, but there's a catch: the cooling mostly benefits the top floor, not the street below, where people actually walk and wait for buses.
 
 That's why many researchers, including me, believe trees are a better long-term investment. They cool the air at street level, provide shade, absorb rainwater and improve people's mental well-being. The challenge, of course, is that trees take years to grow, which is why cities need to start planting now.
 
-=== ielts-l-c2-1 | ielts-listening | C2 | Seminar: does social media polarise us?
+=== ielts-l-c2-1 | ielts-listening | C2 | Seminar: does social media polarize us?
 Q: What is the "filter bubble" hypothesis? || That algorithms show people only content that confirms their existing views, isolating them from opposing opinions.
-Q: What did the deactivation experiment find about polarisation? || Leaving the platform reduced polarisation only slightly, and on some measures not at all.
+Q: What did the deactivation experiment find about polarization? || Leaving the platform reduced polarization only slightly, and on some measures not at all.
 Q: According to Dr Mensah, what may matter more than exposure? || How opposing views are encountered: often in their most hostile, mocking form.
 Q: What does the student suggest at the end? || That the platforms' incentives for engagement, rather than the algorithms alone, are the real problem.
 ---
-TUTOR: Right, let's pick up from last week. The question on the table is whether social media is actually driving political polarisation, or whether we're simply blaming it for trends that were already under way. Amira, you were going to start us off.
+TUTOR: Right, let's pick up from last week. The question on the table is whether social media is actually driving political polarization, or whether we're simply blaming it for trends that were already under way. Amira, you were going to start us off.
 AMIRA: Yes. So the popular argument is the "filter bubble" hypothesis: algorithms learn what we like and feed us more of it, so we end up sealed off from anyone who disagrees. It's intuitively appealing, but the evidence is surprisingly thin. Several large studies have found that most users actually encounter a fair amount of content from the other side.
 TUTOR: So the bubbles are leakier than we assumed.
-AMIRA: Exactly. And there was an experiment where thousands of people were paid to deactivate their accounts for a month before an election. They were happier on average, and slightly less informed, but the effect on polarisation was modest at best, and on some measures negligible.
+AMIRA: Exactly. And there was an experiment where thousands of people were paid to deactivate their accounts for a month before an election. They were happier on average, and slightly less informed, but the effect on polarization was modest at best, and on some measures negligible.
 TUTOR: Dr Mensah, you've worked on this. Does that square with your findings?
 MENSAH: Broadly, yes, but I'd add a caveat. The question isn't only whether people see opposing views, but in what form they see them. On most platforms, the content about the other side that travels furthest tends to be the most outrageous: the angriest post, the most ridiculous quote, often shared in order to mock it. So you're exposed to the other side, but to a caricature of it.
 AMIRA: Which might actually make things worse than not seeing it at all.
 MENSAH: Potentially, yes. Exposure isn't automatically a cure.
 TUTOR: Leon, you look unconvinced.
-LEON: Not unconvinced, just... I think focusing on algorithms lets the companies off the hook. The algorithm is only doing what it's been told to do, which is maximise engagement. If outrage keeps people scrolling, outrage gets promoted. Surely the problem is the business model, not the code.
+LEON: Not unconvinced, just... I think focusing on algorithms lets the companies off the hook. The algorithm is only doing what it's been told to do, which is maximize engagement. If outrage keeps people scrolling, outrage gets promoted. Surely the problem is the business model, not the code.
 TUTOR: That's a nice place to leave it. For next week, I'd like you each to find one study that challenges your own position.
 
 === acad-b2-1 | academic | B2 | The benefits and limits of remote work
 ---
 Since 2020, remote work has shifted from an occasional arrangement to a normal part of working life for millions of employees. This essay examines the main advantages and disadvantages of working from home and argues that a hybrid model is likely to offer the most balanced solution.
 
-The most obvious benefit of remote work is the time saved by not commuting. In large cities, employees may spend more than an hour travelling each day, and eliminating this journey can improve both well-being and productivity. In addition, working from home allows people greater flexibility to organise their day, which can be particularly valuable for parents and carers. From an employer's point of view, reduced demand for office space can lead to significant savings.
+The most obvious benefit of remote work is the time saved by not commuting. In large cities, employees may spend more than an hour traveling each day, and eliminating this journey can improve both well-being and productivity. In addition, working from home allows people greater flexibility to organize their day, which can be particularly valuable for parents and carers. From an employer's point of view, reduced demand for office space can lead to significant savings.
 
 However, remote work also has clear drawbacks. Many employees report feeling isolated, and the boundary between work and private life can become blurred, with some people finding it difficult to switch off at the end of the day. Furthermore, there is evidence that younger staff in particular may lose out, since they learn a great deal by observing more experienced colleagues, something that is much harder to do through a screen. Collaboration and creativity may also suffer when spontaneous conversations no longer take place.
 
 Taking these factors into account, a hybrid approach, in which employees spend part of the week in the office and part at home, appears to combine the strengths of both models. Office days can be reserved for meetings, training and teamwork, while home days can be used for tasks that require concentration.
 
-In conclusion, remote work is neither a perfect solution nor a passing trend. Organisations that design flexible arrangements carefully, paying attention to the needs of different groups of employees, are likely to benefit the most.
+In conclusion, remote work is neither a perfect solution nor a passing trend. Organizations that design flexible arrangements carefully, paying attention to the needs of different groups of employees, are likely to benefit the most.
 
 === acad-c1-1 | academic | C1 | Should university education be free?
 ---
@@ -245,7 +245,7 @@ The proposition that the language we speak shapes the way we think has enjoyed a
 
 The strong version, which holds that language determines the categories available to thought, has fared poorly. Speakers plainly can entertain concepts for which their language lacks a dedicated word, and translation, however imperfect, would scarcely be possible were each language a sealed conceptual system. Moreover, several celebrated examples cited in support of the hypothesis, such as the supposedly vast vocabulary for snow in Inuit languages, have turned out to rest on misunderstandings of how those languages form words.
 
-The weaker claim, namely that linguistic habits influence attention, memory and categorisation at the margins, is a different matter. Experimental work on colour perception, for instance, has shown that speakers of languages which have separate words for two shades of blue discriminate between those shades slightly faster than speakers of languages which do not. Similarly, communities whose languages describe spatial relations in absolute terms ("to the north of") rather than relative ones ("to the left of") appear to remember the arrangement of objects differently. Such effects are measurable and can be repeated; they are also, crucially, small, and frequently diminish when speakers are distracted from verbalising the task.
+The weaker claim, namely that linguistic habits influence attention, memory and categorization at the margins, is a different matter. Experimental work on color perception, for instance, has shown that speakers of languages which have separate words for two shades of blue discriminate between those shades slightly faster than speakers of languages which do not. Similarly, communities whose languages describe spatial relations in absolute terms ("to the north of") rather than relative ones ("to the left of") appear to remember the arrangement of objects differently. Such effects are measurable and can be repeated; they are also, crucially, small, and frequently diminish when speakers are distracted from verbalizing the task.
 
 What emerges, then, is a picture of language not as a prison but as something closer to a set of well-worn paths: routes that thought travels easily and habitually, without being confined to them. This more temperate formulation lacks the rhetorical appeal of its predecessor, yet it has the considerable advantage of being consistent with the evidence.
 
@@ -257,23 +257,23 @@ For centuries, people have tried to identify a single feature that separates hum
 
 Perhaps the most convincing candidate is our ability to imagine. We can picture events that have never happened, plan for a future we cannot see and feel nervous about a job interview that is still a week away. We also tell stories about ourselves, and these stories change as we move through life: the toddler having a tantrum becomes the teenager who is sure that nobody understands them, then the adult who settles down, gets promoted and eventually looks back with a mixture of pride and regret.
 
-Another distinctive trait is how much we care about what others think. We blush, we apologise and we feel embarrassed on behalf of strangers. None of these characteristics makes us better than other animals, but together they explain why human life is so full of plans, worries and second thoughts.
+Another distinctive trait is how much we care about what others think. We blush, we apologize and we feel embarrassed on behalf of strangers. None of these characteristics makes us better than other animals, but together they explain why human life is so full of plans, worries and second thoughts.
 
 === hw2 | headway | C1 | Unit 2 · A man of few words
 Q: Why did the writer stop using long words? || Because readers found them tiring and the message got lost.
 Q: What does "to eat your words" mean in the last paragraph? || To admit that something you said was wrong.
 ---
-When I started writing for a living, I thought impressive vocabulary was the key to good writing. I would never say "use" if I could say "utilise", and I filled every paragraph with adverbs: extremely, incredibly, absolutely. My editor, a man of few words, read my first article, crossed out half of it and wrote one comment in the margin: "Shorter."
+When I started writing for a living, I thought impressive vocabulary was the key to good writing. I would never say "use" if I could say "utilize", and I filled every paragraph with adverbs: extremely, incredibly, absolutely. My editor, a man of few words, read my first article, crossed out half of it and wrote one comment in the margin: "Shorter."
 
-I was annoyed at first. I went over the piece again and again, convinced that he had misunderstood it. But slowly I realised he was right. Readers do not want to fight their way through a sentence; they want to understand it quickly. Long words often hide a lack of clear thinking, and too many adverbs make every statement sound equally dramatic, which means none of them is.
+I was annoyed at first. I went over the piece again and again, convinced that he had misunderstood it. But slowly I realized he was right. Readers do not want to fight their way through a sentence; they want to understand it quickly. Long words often hide a lack of clear thinking, and too many adverbs make every statement sound equally dramatic, which means none of them is.
 
 These days I jot down my ideas in plain language first and only look for a better word when the plain one is genuinely not good enough. I still love language, but I love it most when it is precise. And yes, I had to eat my words: the editor and I are now good friends, and he still cuts my articles in half.
 
 === hw3 | headway | C1 | Unit 3 · Enough is enough?
-Q: What happened to the town's population between 2010 and 2020? || It rose sharply, by about 40 per cent.
+Q: What happened to the town's population between 2010 and 2020? || It rose sharply, by about 40 percent.
 Q: What is the main argument of the people who want to limit growth? || That roads, schools and water supplies cannot keep up.
 ---
-Ten years ago, Westford was a quiet market town of 20,000 people. Then a new railway line opened, cutting the journey to the capital to forty minutes, and the town began to change. By 2020 the population had risen sharply, by around 40 per cent, and house prices had more than doubled.
+Ten years ago, Westford was a quiet market town of 20,000 people. Then a new railway line opened, cutting the journey to the capital to forty minutes, and the town began to change. By 2020 the population had risen sharply, by around 40 percent, and house prices had more than doubled.
 
 Not everyone is happy about it. Local residents complain that roads are permanently congested, that schools are full and that the town's water supply is struggling to keep up. A campaign group is now calling on the council to stop approving new housing developments until the infrastructure has caught up. "Growth is not automatically a good thing," says one of its organisers. "At some point you have to ask whether more is actually better."
 
@@ -297,7 +297,7 @@ For this reason, experts recommend that police record a witness's first account 
 Q: What surprised the visitors most about British cities? || How little people spoke to strangers, even when they were sitting close together.
 Q: What does the writer say about stereotypes? || They contain a small amount of truth but hide how different individuals are.
 ---
-When we talk about culture shock, we usually think of people from rich countries travelling somewhere unfamiliar. But the experience works in both directions. A group of village elders who visited Britain for the first time were asked what had surprised them most. It wasn't the traffic or the tall buildings. It was how little people spoke to each other.
+When we talk about culture shock, we usually think of people from rich countries traveling somewhere unfamiliar. But the experience works in both directions. A group of village elders who visited Britain for the first time were asked what had surprised them most. It wasn't the traffic or the tall buildings. It was how little people spoke to each other.
 
 "On the train, everyone sat close together, but no one said a word," one of them explained. "At home, if you sit next to someone, you ask about their family." They were also puzzled by the number of old people living alone, and by the idea that you might have to make an appointment to visit a friend.
 
@@ -335,7 +335,7 @@ In many countries, the number of fathers who stay at home to look after their ch
 
 Fathers who have made this choice describe it as rewarding but sometimes lonely. One man, who gave up a job in sales to care for his twin daughters, said that the hardest part was not the cooking or the cleaning. "It was walking into a baby group full of mothers and feeling that everyone was looking at me," he explained. "They were just being friendly, but I felt like an outsider."
 
-Attitudes are changing, however. Employers are offering longer paternity leave, and children who grow up seeing both parents doing housework are less likely to see it as women's work. Some experts warn that the change is slower than headlines suggest: in most homes, women still do the majority of unpaid work, including the invisible task of organising everything.
+Attitudes are changing, however. Employers are offering longer paternity leave, and children who grow up seeing both parents doing housework are less likely to see it as women's work. Some experts warn that the change is slower than headlines suggest: in most homes, women still do the majority of unpaid work, including the invisible task of organizing everything.
 
 Just how equal things will become remains to be seen, but the idea that caring is a job only for women is clearly losing ground.
 
@@ -345,7 +345,7 @@ Q: What does "mind you" introduce in the last paragraph? || A point that limits 
 ---
 Quite honestly, it is hard to explain why a few notes can make us cry. Music has no obvious practical use: you can't eat it, and it won't keep you warm. Yet every human culture we know of has created it, which suggests that it plays an important role in our lives.
 
-One explanation is that music is closely linked to emotion. Hearing a favourite song releases chemicals in the brain associated with pleasure, the same ones involved in eating good food. Because emotional moments are remembered more strongly than ordinary ones, songs we heard at important times in our lives can bring back memories with surprising force. Unfortunately, this works both ways: a song from a painful period can be almost impossible to listen to.
+One explanation is that music is closely linked to emotion. Hearing a favorite song releases chemicals in the brain associated with pleasure, the same ones involved in eating good food. Because emotional moments are remembered more strongly than ordinary ones, songs we heard at important times in our lives can bring back memories with surprising force. Unfortunately, this works both ways: a song from a painful period can be almost impossible to listen to.
 
 Music also brings people together. Singing in a choir or dancing at a wedding creates a feeling of belonging that is difficult to achieve in other ways. After all, it is hard to stay angry with someone you have just sung with.
 
@@ -367,22 +367,22 @@ This does not mean that the effect is "all in the mind", or that serious illness
 Q: What does the writer mean by "feature creep"? || Adding more and more functions to a product until it becomes hard to use.
 Q: What prediction does the writer make? || That simple, reliable products will become a selling point again.
 ---
-My new washing machine has twenty-four programmes, a touch screen and an app that will tell me on my phone when the washing has finished. I use exactly two of the programmes. The rest are, I suspect, there because the manufacturer needed something to put in the advertisement.
+My new washing machine has twenty-four programs, a touch screen and an app that will tell me on my phone when the washing has finished. I use exactly two of the programs. The rest are, I suspect, there because the manufacturer needed something to put in the advertisement.
 
 This is what designers call feature creep: a product gets more and more functions until it becomes harder to use than the simple version it replaced. Many household appliances now come with instructions longer than a short novel, and when something goes wrong, it is often the electronics rather than the motor that fails.
 
-Manufacturers argue that consumers want choice and that connected devices will save energy, since a machine that knows the price of electricity can run when it is cheapest. That may be true. But I can't help thinking that by the time I have learnt how to use all these features, the machine will have been replaced by a newer model.
+Manufacturers argue that consumers want choice and that connected devices will save energy, since a machine that knows the price of electricity can run when it is cheapest. That may be true. But I can't help thinking that by the time I have learned how to use all these features, the machine will have been replaced by a newer model.
 
 My prediction is that within ten years, simplicity will be a selling point again. A fridge that just keeps food cold and lasts twenty years might turn out to be the most advanced product of all.
 
 === hw12 | headway | C1 | Unit 12 · The day everything changed
 Q: Why did the writer start running? || A doctor warned her about her health after a check-up.
-Q: What happened during the marathon? || She collapsed with heatstroke a few kilometres from the finish and was taken to hospital.
+Q: What happened during the marathon? || She collapsed with heatstroke a few kilometers from the finish and was taken to hospital.
 ---
 I had never run further than the bus stop when my doctor told me, after a routine check-up, that I needed to change my lifestyle. I was forty, overweight and stressed, and I decided, rather dramatically, that I would run a marathon within a year.
 
 The training went surprisingly well. I followed a plan, increased the distance gradually and, furthermore, started to enjoy it. Meanwhile, I lost weight and slept better than I had for years. By race day I felt ready.
 
-It was, however, one of the hottest days of the year. I ignored the advice to slow down, and a few kilometres from the finish I collapsed. I woke up in hospital with heatstroke, surrounded by worried doctors. I did wonder, lying there, whether the whole project had been a terrible mistake.
+It was, however, one of the hottest days of the year. I ignored the advice to slow down, and a few kilometers from the finish I collapsed. I woke up in hospital with heatstroke, surrounded by worried doctors. I did wonder, lying there, whether the whole project had been a terrible mistake.
 
 Nevertheless, that day turned out to be a turning point. It taught me that being stubborn and being determined are not the same thing, and that listening to your body is a strength, not a weakness. I ran my first marathon successfully the following spring, slowly and carefully, and I have never been so proud to finish in the bottom half.

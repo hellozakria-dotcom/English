@@ -578,7 +578,7 @@ function placeView() {
     return `${header('Placement test', 'A vocabulary-size test by frequency bands, 1k → 30k')}
     <div class="card"><p style="margin-top:0">You'll see about 110 words, one at a time: samples from the 1,000 most common English words up to the 30,000th, plus some <b>fake words</b> that look English but aren't.</p>
      <ul class="small" style="color:var(--ink2);padding-left:20px"><li>Press <b>Yes</b> only if you know at least one meaning of the word (you could explain or translate it).</li><li>Press <b>No</b> if you're not sure. Guessing hurts: each “yes” to a fake word lowers your score.</li><li>Keyboard: <b>Y</b> / <b>N</b> or ← / →. It takes about 6 minutes.</li></ul>
-     <p class="small muted">What it does: estimates your vocabulary size and level, and marks every band you clearly know (80%+ after the fake-word correction) as <b>already known</b>. Those words show uncoloured in the reader and are <b>never counted as learned</b>. The words you answer “no” to are marked new.</p>
+     <p class="small muted">What it does: estimates your vocabulary size and level, and marks every band you clearly know (80%+ after the fake-word correction) as <b>already known</b>. Those words show uncolored in the reader and are <b>never counted as learned</b>. The words you answer “no” to are marked new.</p>
      <button class="btn brand wide" id="ptStart">${pl ? 'Retake the test' : 'Start the test'}</button></div>
      ${pl ? placeResult(pl) : ''}`;
   }
@@ -803,13 +803,39 @@ async function popHTML(k, e, ctx) {
   const st_ = inCards ? (status === 'known' ? '<span class="tag g">Learned ✓</span>' : '<span class="tag o">In your cards · learning</span>') : status === 'known' ? '<span class="tag g">Known</span>' : '<span class="tag blue">New</span>';
   const btns = inCards
     ? `<div class="row" style="margin-top:12px">${st_}<span class="grow"></span>${status !== 'known' ? '<button class="btn soft sm" data-pst="known">I know it now ✓</button>' : ''}</div>`
-    : `<div class="row" style="margin-top:12px;gap:8px"><button class="btn brand grow" data-padd="1">${I.plus} Add to cards</button>${status !== 'known' ? '<button class="btn ghost grow" data-pst="known">I know this</button>' : '<button class="btn ghost grow" data-pst="new">Mark as new</button>'}</div>
+    : `<div class="row" style="margin-top:12px;gap:8px"><button class="btn brand grow" data-padd="1">${I.plus} Add to cards</button>${status !== 'known' ? '<button class="btn ghost grow" data-pst="known">I know this <span class="small muted">⏎</span></button>' : '<button class="btn ghost grow" data-pst="new">Mark as new</button>'}</div>
+       ${matchMedia('(hover: hover) and (pointer: fine)').matches && S.rd && ctx.sent ? '<div class="small muted" style="margin-top:6px">Keys: <b>Enter</b> I know this → next blue word · <b>A</b> add to cards · <b>← →</b> previous / next</div>' : ''}
        <div class="row" style="margin-top:6px">${st_}<span class="grow"></span>${S.rd && ctx.sent ? '<button class="chip sm" data-trsent="1">Translate sentence (online)</button>' : ''}</div>`;
   const rareNote = !isPh && S.R[word] > S.COMMON ? `<div class="note small">Rare word: used less than about once per million words of real English (films, YouTube, news). Learn it only if you need it.</div>` : '';
   const notInDict = !e ? `<p class="small muted">Not in the offline dictionary${/^[A-Z]/.test(ctx.f || '') ? ' (maybe a name)' : ''}.</p>${!isPh ? '<button class="chip sm" data-pst="ignored">Ignore (name / not a word)</button>' : ''}` : '';
   return head + form + ar + rareNote + notInDict + senses + parts + colls + phr + exH + btns + '<div id="trOut" class="note" style="display:none"></div>';
 }
 function hidePop(force) { if (popPinned && !force) return; $('#pop').style.display = 'none'; $('#scrim').style.display = 'none'; popPinned = false; popSeq++; $$('.wd.sel').forEach(x => x.classList.remove('sel')); }
+// Reader keyboard: Enter = I know this (then jump to the next blue word), A = add to cards, → / ← = next / previous blue word
+function blueAfter(from, dir = 1, skipKey) {
+  const all = $$('.wd'); let i = from ? all.indexOf(from) : -1;
+  if (dir < 0 && i < 0) i = all.length;
+  for (let j = i + dir; j >= 0 && j < all.length; j += dir) { const x = all[j]; if (x.classList.contains('st-new') && x.dataset.k !== skipKey) return x; }
+  return null;
+}
+function openWord(el) { if (!el) { hidePop(true); toast('No more blue words in this text 🎉'); return; } el.scrollIntoView({block: 'center', behavior: 'smooth'}); setTimeout(() => showPop(el, true), 180); }
+function readerKey(e) {
+  const pop = $('#pop'), open = pop.style.display === 'block' && pop.dataset.k && +pop.dataset.si >= 0;
+  const cur = document.querySelector('.wd.sel'), k = e.key;
+  if (k === 'Enter') {
+    if (!open) { openWord(blueAfter(cur, 1)); return true; }
+    const key = pop.dataset.k, next = blueAfter(cur, 1, key);
+    if (wordStatus(key) !== 'known') setStatus(key, 'known');
+    refreshWords(); shell(); openWord(next); return true;
+  }
+  if (k === 'ArrowRight' || k === 'ArrowLeft') { openWord(blueAfter(cur, k === 'ArrowRight' ? 1 : -1, open ? pop.dataset.k : null)); return true; }
+  if ((k === 'a' || k === 'A') && open) {
+    const key = pop.dataset.k, next = blueAfter(cur, 1, key);
+    if (!S.prog.meta['v:' + key]) { const si = +pop.dataset.si, sent = S.rd.sents[si] ? S.rd.sents[si].s : ''; addCard(key, sent ? {ex: sent, src: S.rd.t.title} : {}); addPts(1); toast('Added to cards: ' + key.replace(/^p:/, '')); }
+    refreshWords(); shell(); openWord(next); return true;
+  }
+  return false;
+}
 function refreshWords() { $$('.wd').forEach(el => { const k = el.dataset.k; if (el.classList.contains('st-ignored') && !S.prog.words[k]) return; el.classList.remove('st-new', 'st-learning', 'st-known', 'st-ignored'); el.classList.add('st-' + (FUNC.has(k) ? 'known' : wordStatus(k))); }); }
 async function popRefresh() {
   const pop = $('#pop'), k = pop.dataset.k, si = +pop.dataset.si; refreshWords();
@@ -974,7 +1000,7 @@ function dictItems(set) {
   return [];
 }
 function startDict(set) {
-  const items = dictItems(set); if (!items.length) { toast('Nothing to practise in that set yet'); return; }
+  const items = dictItems(set); if (!items.length) { toast('Nothing to practice in that set yet'); return; }
   S.dc = {set, items, i: 0, res: [], cur: null}; S.view = 'write'; S.wtab = 'dict'; render(); setTimeout(() => sayDict(), 150);
 }
 function sayDict(slow) { const it = S.dc && S.dc.items[S.dc.i]; if (it) speak(it.w, {rate: slow ? 0.6 : S.prog.prefs.rate * (it.sent ? 0.9 : 1)}); setTimeout(() => $('#dcIn') && $('#dcIn').focus(), 30); }
@@ -1009,11 +1035,11 @@ function alignWords(a, b) {
 function dictView() {
   const d = S.dc;
   if (!d) return `<div class="card"><div style="font-weight:800;font-size:18px">Dictation</div><p class="small muted" style="margin:4px 0 12px">Hear a word or sentence, type it, and see every letter you got wrong. Every mistake goes into your <b>misspellings deck</b> and comes back with spaced repetition until you get it right for 3 weeks.</p>
-    <div class="list">${[['common', 'Commonly misspelt words', 'The 150 words learners (and natives) get wrong most: accommodate, necessary, separate…'], ['level', 'Tricky words at your level', 'Double letters, silent letters, -ible/-able… from bands around your level'], ['cards', 'Words from your cards', 'Can you spell the words you are learning?'], ['mis', 'My misspellings', `${Object.keys(S.prog.mis).length} words you have got wrong`], ['sent', 'Sentences', 'Whole sentences from the texts: spelling + listening']].map(([k, t, s]) => `<div class="item click" data-dict="${k}"><div class="grow"><div style="font-weight:700">${t}</div><div class="small muted">${s}</div></div>${I.play.replace('<svg', '<svg width="18" height="18" style="color:var(--brand)"')}</div>`).join('')}</div></div>`;
+    <div class="list">${[['common', 'Commonly misspelled words', 'The 150 words learners (and natives) get wrong most: accommodate, necessary, separate…'], ['level', 'Tricky words at your level', 'Double letters, silent letters, -ible/-able… from bands around your level'], ['cards', 'Words from your cards', 'Can you spell the words you are learning?'], ['mis', 'My misspellings', `${Object.keys(S.prog.mis).length} words you have got wrong`], ['sent', 'Sentences', 'Whole sentences from the texts: spelling + listening']].map(([k, t, s]) => `<div class="item click" data-dict="${k}"><div class="grow"><div style="font-weight:700">${t}</div><div class="small muted">${s}</div></div>${I.play.replace('<svg', '<svg width="18" height="18" style="color:var(--brand)"')}</div>`).join('')}</div></div>`;
   if (d.i >= d.items.length) {
     const ok = d.res.filter(Boolean).length;
     return `<div class="card" style="text-align:center"><div style="font-size:44px;font-weight:800">${ok} / ${d.items.length}</div><p class="muted">${ok === d.items.length ? 'Perfect!' : 'The words you missed are now in your misspellings deck.'}</p>
-     <div class="row" style="justify-content:center;flex-wrap:wrap"><button class="btn brand" data-dict="${d.set}">Again</button><button class="btn ghost" data-dcquit="1">Done</button>${Object.keys(S.prog.mis).length ? '<button class="btn ghost" data-spdeck="1">Practise misspellings</button>' : ''}</div></div>`;
+     <div class="row" style="justify-content:center;flex-wrap:wrap"><button class="btn brand" data-dict="${d.set}">Again</button><button class="btn ghost" data-dcquit="1">Done</button>${Object.keys(S.prog.mis).length ? '<button class="btn ghost" data-spdeck="1">Practice misspellings</button>' : ''}</div></div>`;
   }
   const it = d.items[d.i];
   const res = d.cur;
@@ -1031,7 +1057,7 @@ function dictView() {
 }
 function misView() {
   const ms = Object.entries(S.prog.mis).sort((a, b) => b[1].n - a[1].n);
-  return `<div class="card"><div class="row"><div class="grow"><div style="font-weight:800;font-size:18px">My misspellings</div><div class="small muted">${ms.length} words · each is a spelling card in Cards → Spelling</div></div>${ms.length ? '<button class="btn brand sm" data-spdeck="1">Practise</button>' : ''}</div>
+  return `<div class="card"><div class="row"><div class="grow"><div style="font-weight:800;font-size:18px">My misspellings</div><div class="small muted">${ms.length} words · each is a spelling card in Cards → Spelling</div></div>${ms.length ? '<button class="btn brand sm" data-spdeck="1">Practice</button>' : ''}</div>
    <div class="list" style="margin-top:10px">${ms.map(([w, m]) => `<div class="item"><div class="grow"><b>${esc(w)}</b> <span class="small muted">· wrong ${m.n}× · you wrote ${m.typed.map(esc).join(', ') || '—'}</span></div>${spk(w, 1)}</div>`).join('') || '<div class="empty">No misspellings yet. Do a dictation!</div>'}</div></div>
    <div class="card"><label style="margin-top:0">Add a word you often misspell</label><div class="row"><input id="misAdd" placeholder="e.g. definitely" autocapitalize="off"><button class="btn" id="misAddBtn">Add</button></div></div>`;
 }
@@ -1371,7 +1397,13 @@ document.addEventListener('click', async e => {
   if (e.target.closest('#pop')) {
     const b = e.target.closest('button'); if (!b) return; const d = b.dataset, k = $('#pop').dataset.k;
     if (d.padd) return popAdd();
-    if (d.pst) { setStatus(k, d.pst); refreshWords(); shell(); return popRefresh(); }
+    if (d.pst) {
+      const cur = document.querySelector('.wd.sel'), inText = S.view === 'read' && S.rd && +$('#pop').dataset.si >= 0;
+      const next = d.pst === 'known' && inText ? blueAfter(cur, 1, k) : null;
+      setStatus(k, d.pst); refreshWords(); shell();
+      if (d.pst === 'known' && inText) { toast('Marked as known (not counted as learned)'); return openWord(next); }
+      return popRefresh();
+    }
     if (d.look) { if (S.view === 'read' && S.rd) { lookup(d.look); } else lookup(d.look); return; }
     if (d.trsent) return translateSentence();
     if (d.bandadd) { const [bb, n] = d.bandadd.split(':').map(Number); hidePop(true); return addBand(bb, n); }
@@ -1486,6 +1518,7 @@ document.addEventListener('change', e => {
 });
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') hidePop(true);
+  if (S.view === 'read' && S.rd && !/INPUT|TEXTAREA|SELECT/.test(e.target.tagName) && !e.ctrlKey && !e.metaKey && !e.altKey) { if (readerKey(e)) { e.preventDefault(); return; } }
   const tag = e.target.tagName;
   if (S.view === 'place' && S.pt && !S.pt.done) { const k = e.key.toLowerCase(); if (k === 'y' || k === 'arrowright') placeAnswer(true); if (k === 'n' || k === 'arrowleft') placeAnswer(false); return; }
   if (S.view === 'write' && S.dc && e.key === 'Enter' && !e.shiftKey && !S.wtask) { e.preventDefault(); if (S.dc.cur) { S.dc.i++; S.dc.cur = null; render(); setTimeout(() => sayDict(), 120); } else if ($('#dcIn')) checkDict(); return; }
