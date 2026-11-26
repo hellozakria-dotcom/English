@@ -110,7 +110,7 @@ def norm_uk(p):
     p = fix_stress(p)
     return p
 def norm_us(p):
-    p = p.replace('ɹ', 'r')
+    p = p.replace('ɹ', 'r').replace('ɫ', 'l')
     p = re.sub(r'ˈ([^ˈˌəʌaeiouæɑɒɔɛɜɪʊɚɝ]*)ə', r'ˈ\1ʌ', p)
     return p
 def ipa_of(w):
@@ -320,8 +320,7 @@ def entry(l, is_phrase=False):
     key = l.replace(' ', '_')
     e = {}
     uk, us = ipa_of(l)
-    if uk: e['uk'] = uk
-    if us and us != uk: e['us'] = us
+    if us: e['us'] = us   # American pronunciation only
     pos = []
     for s in pick:
         p = PNAME[s.pos()]

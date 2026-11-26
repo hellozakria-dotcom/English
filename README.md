@@ -11,7 +11,7 @@ An installable offline web app (PWA) for going from B2/C1 to C2 English, with Ar
 - **Placement test.** About 110 yes/no words sampled from frequency bands 1k → 30k, with fake-word checks. It estimates your vocabulary size and CEFR level, and marks every band you clearly know as *already known*. Those words are never counted as learned.
 - **Word counter.** It counts dictionary words (lemmas): *run / ran / running* = one word. A word counts as **learned** only if it was new to you and its card reaches a 3-week interval (or you mark a word you've been studying as known).
 - **Reader.** Graded texts from B2 to C2 in four styles: news, film/TV dialogue, IELTS reading and listening (with questions) and academic essays. You can also **import your own text**. Hover (desktop) or tap (phone) a word or phrase to see:
-  - the Arabic meaning, English definitions, UK/US IPA and voice
+  - the Arabic meaning, English definitions, American IPA and voice
   - the part of speech, register (formal / informal / academic), frequency band and AWL sublist
   - collocations, phrasal verbs, and 2–3 usage examples that are never the sentence you're reading
   - buttons: *Add to cards* / *I know this*

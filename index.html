@@ -234,7 +234,7 @@ const LS = 'english-progress-v1', LST = 'english-mytexts-v1', LSA = 'english-arc
 const S = {
   view: 'home', core: null, R: {}, F: {}, MWE: {}, prof: new Set(), fakes: [], texts: [], learn: null, shards: {},
   prog: {cards: {}, meta: {}, stats: {}, words: {}, prior: {}, learned: {}, read: {}, place: null, mis: {}, writing: [], drafts: {}, checks: {}, grammar: {}, quiz: {},
-    prefs: {goal: 60, newPerDay: 15, voice: 'en-GB', rate: 0.95, dir: 'en', minutes: 45}, lastBackup: 0, started: Date.now()},
+    prefs: {goal: 60, newPerDay: 15, voice: 'en-US', rate: 0.95, dir: 'en', minutes: 45}, lastBackup: 0, started: Date.now()},
   my: [], arCache: {}, deck: 'all', readFilter: 'all', wordFilter: 'learned', q: '', wtab: 'dict', ptab: 'path',
 };
 const FUNC = new Set("the a an of and to in that it for you he she they we i with as at by from this but not or his her their our your my its me him them us what which who whom whose there here when where why how if than then so because while although though unless whether until since nor yet also very too only just even each every either neither both all any some no none many much more most few less least such own same other another one two three four five six seven eight nine ten hundred thousand into onto upon about above below over under between among through during before after against without within across along around behind beyond toward towards off out up down near via per despite except like unlike would could should might must shall will can may ought do be have get mr mrs ms ok yes oh myself yourself himself herself itself ourselves yourselves themselves oneself".split(' '));
@@ -330,13 +330,16 @@ if ('speechSynthesis' in window) { loadVoices(); speechSynthesis.onvoiceschanged
 function pickVoice(lang) {
   const vs = voices.filter(v => v.lang && v.lang.replace('_', '-').toLowerCase().startsWith(lang.toLowerCase()));
   const pref = vs.find(v => /natural|neural|google|premium|enhanced/i.test(v.name)) || vs.find(v => v.localService) || vs[0];
-  return pref || voices.find(v => /^en/i.test(v.lang)) || null;
+  return pref || null;
 }
+function usVoices() { return voices.filter(v => /^en[-_]US/i.test(v.lang)); }
 function speak(text, o = {}) {
   if (!('speechSynthesis' in window)) { toast('This device has no voice output'); return; }
   speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text); const lang = o.lang || S.prog.prefs.voice;
-  u.lang = lang; const v = pickVoice(lang); if (v) u.voice = v;
+  const u = new SpeechSynthesisUtterance(text); u.lang = 'en-US';
+  const us = usVoices(), chosen = us.find(x => x.name === S.prog.prefs.voiceName) || pickVoice('en-US');
+  let v = chosen; if (o.alt && us.length > 1) v = us.find(x => x !== chosen) || chosen;
+  if (v) u.voice = v;
   u.rate = o.rate || S.prog.prefs.rate; if (o.onend) { u.onend = o.onend; u.onerror = o.onend; }
   speechSynthesis.speak(u);
 }
@@ -411,6 +414,7 @@ function saveNow() { try { localStorage.setItem(LS, JSON.stringify(S.prog)); } c
 function saveMy() { try { localStorage.setItem(LST, JSON.stringify(S.my)); } catch (e) { toast('Could not save the text (storage full?)'); } }
 function loadLocal() {
   try { const p = JSON.parse(localStorage.getItem(LS) || 'null'); if (p && p.cards) S.prog = {...S.prog, ...p, prefs: {...S.prog.prefs, ...(p.prefs || {})}}; } catch (e) {}
+  S.prog.prefs.voice = 'en-US';
   try { S.my = JSON.parse(localStorage.getItem(LST) || '[]'); } catch (e) { S.my = []; }
   try { S.arCache = JSON.parse(localStorage.getItem(LSA) || '{}'); } catch (e) { S.arCache = {}; }
 }
@@ -770,8 +774,8 @@ async function popHTML(k, e, ctx) {
   const b = bandOf(word), excl = normS(ctx.sent || '');
   const rk = S.R[word] || 99999; const regs = (e && e.reg || []).filter(r => r !== 'neutral' && !(r === 'informal / spoken' && rk <= 4000) && !(r === 'formal' && rk <= 2500));
   const head = `<div class="row" style="align-items:flex-start"><div class="grow"><div class="w">${esc(word)}</div>
-    <div style="margin-top:4px">${e && e.uk ? `<span class="ipa">UK /${esc(e.uk)}/</span> ` : ''}${e && e.us ? `<span class="ipa" style="margin-left:6px">US /${esc(e.us)}/</span>` : ''}</div></div>
-    <div class="row" style="gap:6px">${spk(word, 0, 'en-GB', 'UK')}${spk(word, 0, 'en-US', 'US')}</div></div>
+    <div style="margin-top:4px">${e && e.us ? `<span class="ipa">/${esc(e.us)}/</span>` : ''}</div></div>
+    <div class="row" style="gap:6px">${spk(word)}</div></div>
    <div class="row wrap2" style="gap:6px;margin-top:8px">${(e && e.pos || (isPh ? [(S.core.mwe[word] || ['phrase'])[0]] : [])).slice(0, 3).map(p => `<span class="tag p">${esc(p)}</span>`).join('')}
     ${regs.map(r => `<span class="tag o">${esc(r)}</span>`).join('') || (e ? '<span class="tag">neutral register</span>' : '')}
     ${b ? `<span class="tag blue">${b}k band · ${cefrOfBand(b)}</span>` : ''}${S.R[word] > S.COMMON ? '<span class="tag">rare · low priority</span>' : ''}${e && e.awl ? `<span class="tag g">AWL ${e.awl}</span>` : ''}</div>`;
@@ -838,8 +842,8 @@ function playAll() {
     if (!S.playing || !S.rd || playIdx >= sents.length) { S.playing = false; if (S.rd) render(); return; }
     const sd = sents[playIdx], el = document.querySelector(`[data-sent="${playIdx}"]`);
     if (el) { el.classList.add('playing'); el.scrollIntoView({block: 'center', behavior: 'smooth'}); }
-    let lang = S.prog.prefs.voice; if (sd.who) { if (!whoVoice[sd.who]) whoVoice[sd.who] = alt++ % 2 ? (lang === 'en-GB' ? 'en-US' : 'en-GB') : lang; lang = whoVoice[sd.who]; }
-    playIdx++; speak(sd.s, {lang, onend: () => setTimeout(next, 250)});
+    let lang = 'en-US'; const o2 = {}; if (sd.who) { if (!(sd.who in whoVoice)) whoVoice[sd.who] = alt++ % 2; o2.alt = whoVoice[sd.who]; }
+    playIdx++; speak(sd.s, {lang, alt: o2.alt, onend: () => setTimeout(next, 250)});
   };
   next();
 }
@@ -882,8 +886,8 @@ function reviewView() {
   const exS = m.ex || (e.x && e.x[0] && e.x[0][0]) || (e.s || []).map(s => s.ex).find(Boolean) || (e.ex2 || [])[0] || '';
   const front = S.prog.prefs.dir === 'ar'
     ? `<div class="big ar" style="margin-top:28px">${esc(arMain || def)}</div><div class="muted">${esc(def)}</div>`
-    : `<div class="big" style="margin-top:28px">${esc(word)}</div><div>${e.uk ? `<span class="ipa">/${esc(e.uk)}/</span>` : ''}</div>${spk(word)}${exS ? `<div class="exs">${hl(exS, m.k)}</div>` : ''}`;
-  const back = `<div class="ans">${S.prog.prefs.dir === 'ar' ? `<div class="big">${esc(word)}</div>${e.uk ? `<span class="ipa">/${esc(e.uk)}/</span>` : ''}${spk(word)}` : `<div class="ar" style="font-size:26px;font-weight:700">${esc(arMain)}</div><div style="max-width:520px">${esc(def)}</div>`}
+    : `<div class="big" style="margin-top:28px">${esc(word)}</div><div>${e.us ? `<span class="ipa">/${esc(e.us)}/</span>` : ''}</div>${spk(word)}${exS ? `<div class="exs">${hl(exS, m.k)}</div>` : ''}`;
+  const back = `<div class="ans">${S.prog.prefs.dir === 'ar' ? `<div class="big">${esc(word)}</div>${e.us ? `<span class="ipa">/${esc(e.us)}/</span>` : ''}${spk(word)}` : `<div class="ar" style="font-size:26px;font-weight:700">${esc(arMain)}</div><div style="max-width:520px">${esc(def)}</div>`}
     ${e.c && e.c.length ? `<div class="colls" style="justify-content:center">${e.c.slice(0, 4).map(c => `<span>${esc(c)}</span>`).join('')}</div>` : ''}
     ${S.prog.prefs.dir === 'ar' && exS ? `<div class="exs">${hl(exS, m.k)}</div>` : ''}</div>`;
   const labels = [1, 2, 3, 4].map(g => fmtIvl(schedule(x, g, now).due - now));
@@ -1332,10 +1336,10 @@ function settingsView() {
    <label style="margin-top:0">Daily goal (points)</label><select id="goal">${[30, 40, 60, 80, 100, 150].map(n => `<option ${n === p.goal ? 'selected' : ''}>${n}</option>`).join('')}</select>
    <label>New cards per day</label><select id="npd">${[5, 10, 15, 20, 25, 30, 40].map(n => `<option ${n === p.newPerDay ? 'selected' : ''}>${n}</option>`).join('')}</select>
    <label>Card front</label><select id="dir"><option value="en" ${p.dir === 'en' ? 'selected' : ''}>English word → meaning</option><option value="ar" ${p.dir === 'ar' ? 'selected' : ''}>Arabic / definition → English word</option></select>
-   <label>Voice</label><select id="voice"><option value="en-GB" ${p.voice === 'en-GB' ? 'selected' : ''}>British (en-GB)</option><option value="en-US" ${p.voice === 'en-US' ? 'selected' : ''}>American (en-US)</option></select>
+   <label>American voice</label><select id="voice">${usVoices().length ? usVoices().map(v => `<option ${v.name === p.voiceName ? 'selected' : ''}>${esc(v.name)}</option>`).join('') : '<option>Default American voice</option>'}</select>
    <label>Rare words (used less than ~1× per million words)</label><select id="rareNew"><option value="0" ${!p.rareNew ? 'selected' : ''}>Low priority: dashed underline, not counted as new</option><option value="1" ${p.rareNew ? 'selected' : ''}>Treat like any other new word (blue)</option></select>
    <label>Speech speed</label><select id="rate">${[0.7, 0.8, 0.9, 0.95, 1, 1.1].map(n => `<option value="${n}" ${n === p.rate ? 'selected' : ''}>${n}×</option>`).join('')}</select>
-   <div class="row" style="margin-top:10px"><button class="btn soft sm" data-say="The quick brown fox jumps over the lazy dog.">${I.spk} Test voice</button><span class="small muted">${voices.filter(v => /^en/i.test(v.lang)).length} English voices on this device</span></div>
+   <div class="row" style="margin-top:10px"><button class="btn soft sm" data-say="The quick brown fox jumps over the lazy dog.">${I.spk} Test voice</button><span class="small muted">${usVoices().length} American voices on this device${usVoices().length ? '' : ' (install one in your phone/computer speech settings)'}</span></div>
   </div>
   <div class="sec">Backup & sync</div>
   <div class="card"><p style="margin-top:0" class="small">Everything is stored on this device (no server, no account). Save a backup file and load it on your other device (phone ↔ computer). Loading merges, so nothing is lost.</p>
@@ -1473,7 +1477,7 @@ document.addEventListener('change', e => {
   if (id === 'npd' || id === 'npd2') { p.newPerDay = +e.target.value; saveProg(); render(); }
   if (id === 'goal') { p.goal = +e.target.value; saveProg(); render(); }
   if (id === 'dir') { p.dir = e.target.value; saveProg(); cur = null; render(); }
-  if (id === 'voice') { p.voice = e.target.value; saveProg(); speak('Hello, this is the new voice.'); }
+  if (id === 'voice') { p.voiceName = e.target.value; p.voice = 'en-US'; saveProg(); speak('Hello, this is the new voice.'); }
   if (id === 'rareNew') { p.rareNew = e.target.value === '1'; saveProg(); }
   if (id === 'rate') { p.rate = +e.target.value; saveProg(); }
   if (id === 'planMin') { p.minutes = +e.target.value; saveProg(); render(); }
