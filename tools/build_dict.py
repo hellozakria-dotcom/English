@@ -66,11 +66,13 @@ for w in forms:
 def accepted(l):
     if l in FUNC_EXTRA: return True
     if len(l) < 2 and l not in ('a', 'i'): return False
-    if len(l) <= 3 and low[l] < 5 and l not in ENAR: return False
-    if l not in ENAR and not (l in IPA_UK or l in IPA_US): return False
-    if not wn.synsets(l.replace('-', '_')) and not wn.synsets(l): return False
-    if is_name(l): return False
-    if cap[l] > 3 * max(1, low[l]) and cap[l] >= 3: return False   # mostly capitalised = a name
+    in_ipa = l in IPA_UK or l in IPA_US
+    if len(l) <= 3 and low[l] < 5 and l not in ENAR and wordfreq.zipf_frequency(l, 'en') < 3.5: return False
+    if l not in ENAR and not in_ipa: return False
+    has_wn = bool(wn.synsets(l.replace('-', '_')) or wn.synsets(l))
+    if not has_wn and not (l in ENAR and in_ipa): return False
+    if has_wn and is_name(l): return False
+    if l not in ENAR and cap[l] > 3 * max(1, low[l]) and cap[l] >= 3: return False   # mostly capitalised = a name
     return True
 
 

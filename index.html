@@ -126,7 +126,7 @@ details>summary{cursor:pointer;font-weight:700;list-style:none;display:flex;alig
 .reader .who{font-family:Inter,sans-serif;font-size:12px;font-weight:800;letter-spacing:.05em;color:var(--brand);min-width:88px;padding-top:6px}
 .sent{border-radius:6px;transition:background .2s} .sent.playing{background:#FFF1C9}
 .wd{cursor:pointer;border-radius:5px;padding:0 1px;margin:0 -1px;transition:background .15s,box-shadow .15s}
-.st-new{background:var(--new)} .st-learning{background:var(--learn)} .st-known{background:transparent} .st-ignored{background:transparent}
+.st-new{background:var(--new)} .st-rare{background:transparent;border-bottom:1.5px dashed #aab4b1;border-radius:0} .st-learning{background:var(--learn)} .st-known{background:transparent} .st-ignored{background:transparent}
 .wd.ph{border-bottom:2px solid rgba(47,111,179,.55);border-radius:5px 5px 0 0}
 .wd.ph.st-learning{border-bottom-color:#D4A800} .wd.ph.st-known{border-bottom:2px dotted #b9c2bf}
 .wd:hover{box-shadow:0 0 0 2px rgba(15,118,110,.35)} .wd.sel{box-shadow:0 0 0 2px var(--brand)}
@@ -237,7 +237,7 @@ const S = {
     prefs: {goal: 60, newPerDay: 15, voice: 'en-GB', rate: 0.95, dir: 'en', minutes: 45}, lastBackup: 0, started: Date.now()},
   my: [], arCache: {}, deck: 'all', readFilter: 'all', wordFilter: 'learned', q: '', wtab: 'dict', ptab: 'path',
 };
-const FUNC = new Set("the a an of and to in that it for you he she they we i with as at by from this but not or his her their our your my its me him them us what which who whom whose there here when where why how if than then so because while although though unless whether until since nor yet also very too only just even each every either neither both all any some no none many much more most few less least such own same other another one two three four five six seven eight nine ten hundred thousand into onto upon about above below over under between among through during before after against without within across along around behind beyond toward towards off out up down near via per despite except like unlike would could should might must shall will can may ought do be have get mr mrs ms ok yes oh".split(' '));
+const FUNC = new Set("the a an of and to in that it for you he she they we i with as at by from this but not or his her their our your my its me him them us what which who whom whose there here when where why how if than then so because while although though unless whether until since nor yet also very too only just even each every either neither both all any some no none many much more most few less least such own same other another one two three four five six seven eight nine ten hundred thousand into onto upon about above below over under between among through during before after against without within across along around behind beyond toward towards off out up down near via per despite except like unlike would could should might must shall will can may ought do be have get mr mrs ms ok yes oh myself yourself himself herself itself ourselves yourselves themselves oneself".split(' '));
 const TARGET = 12000; // ranks to know for C2-level reading (~8–9k word families)
 
 // ================= core dictionary =================
@@ -255,6 +255,7 @@ function lemmaOf(w) {
   }
   return w;
 }
+const isRare = k => !S.prog.prefs.rareNew && S.R[k] > S.COMMON;
 const bandOf = k => S.R[k] ? Math.ceil(S.R[k] / 1000) : 0;
 const cefrOfBand = b => !b ? '' : b <= 1 ? 'A1' : b <= 2 ? 'A2' : b <= 3 ? 'B1' : b <= 5 ? 'B2' : b <= 8 ? 'C1' : 'C2';
 const cefrOfSize = n => n < 1500 ? 'A1' : n < 2500 ? 'A2' : n < 3500 ? 'B1' : n < 5500 ? 'B2' : n < 8500 ? 'C1' : 'C2';
@@ -676,7 +677,8 @@ function sentHTML(sd, si) {
       h += `<span class="wd ph st-${keyStatus(k)}" data-k="${esc(k)}" data-si="${si}">${esc(txt)}</span>`; i = j; continue;
     }
     const isName = /^[A-Z]/.test(tk.w) && i !== first && !FUNC.has(tk.l) && (!S.R[tk.l] || S.R[tk.l] > 3000) && !S.prog.words[tk.k] && !S.prog.meta['v:' + tk.k];
-    const k = tk.k, status = isName ? 'ignored' : FUNC.has(k) ? 'known' : keyStatus(k);
+    const k = tk.k; let status = isName ? 'ignored' : FUNC.has(k) ? 'known' : keyStatus(k);
+    if (status === 'new' && isRare(k)) status = 'rare';
     h += `<span class="wd st-${status}" data-k="${esc(k)}" data-f="${esc(tk.w)}" data-si="${si}">${esc(tk.w)}</span>`; i++;
   }
   return `<span class="sent" data-sent="${si}">${h}</span>`;
@@ -684,16 +686,16 @@ function sentHTML(sd, si) {
 function textStats(t) {
   const ks = new Set();
   for (const p of t.paras) for (const m of p.matchAll(TOKRE)) for (const tk of wordToks(m[0])) if (tk.w && S.R[tk.k] && !FUNC.has(tk.k)) ks.add(tk.k);
-  let known = 0, learning = 0, nw = 0; const ranks = [];
-  for (const k of ks) { const s = wordStatus(k); if (s === 'known' || s === 'ignored') known++; else if (s === 'learning') learning++; else nw++; ranks.push(S.R[k]); }
+  let known = 0, learning = 0, nw = 0, rare = 0; const ranks = [];
+  for (const k of ks) { const s = wordStatus(k); if (s === 'known' || s === 'ignored') known++; else if (s === 'learning') learning++; else if (isRare(k)) rare++; else nw++; ranks.push(S.R[k]); }
   ranks.sort((a, b) => a - b); const p95 = ranks[Math.floor(ranks.length * .95)] || 0;
-  return {total: ks.size, known, learning, nw, pct: Math.round(100 * known / Math.max(1, ks.size)), level: cefrOfBand(Math.ceil(p95 / 1000))};
+  return {total: ks.size, known, learning, nw, rare, pct: Math.round(100 * known / Math.max(1, ks.size)), level: cefrOfBand(Math.ceil(p95 / 1000))};
 }
 function readView() {
   if (S.rd) return readerView();
   const list = allTexts().filter(t => S.readFilter === 'all' || t.style === S.readFilter);
   const card = t => { const p = textStats(t); return `<div class="book" data-text="${esc(t.id)}"><div class="row" style="gap:6px;flex-wrap:wrap"><span class="tag b">${esc(t.level || p.level)}</span><span class="tag">${esc(styleName(t.style))}</span>${S.prog.read[t.id] ? '<span class="tag g">✓ read</span>' : ''}</div>
-    <div class="t">${esc(t.title)}</div><div class="small muted">${t.words || ''} words · <b style="color:var(--pr)">${p.nw} new</b> · ${p.learning} learning · ${p.pct}% known</div>
+    <div class="t">${esc(t.title)}</div><div class="small muted">${t.words || ''} words · <b style="color:var(--pr)">${p.nw} new</b> · ${p.learning} learning · ${p.pct}% known${p.rare ? ` · ${p.rare} rare` : ''}</div>
     <div class="bar"><i style="width:${p.pct}%;background:var(--green)"></i><i style="width:${100 * p.learning / Math.max(1, p.total)}%;background:#f1d57a"></i><i style="width:${100 * p.nw / Math.max(1, p.total)}%;background:#9cc0ee"></i></div></div>`; };
   return `${header('Read', 'Graded texts B2 → C2. Hover or tap any word or phrase.')}
   <details class="card" ${S.my.length ? '' : 'open'}><summary>${I.plus.replace('<svg', '<svg width="18" height="18"')} Import your own text</summary>
@@ -715,8 +717,8 @@ function readerView() {
   return `<div class="toolbar"><button class="iconbtn" data-closetext="1" aria-label="Back">${I.back}</button>
    <button class="btn sm ${S.playing ? 'red' : 'brand'}" data-playall="1">${S.playing ? I.stop + ' Stop' : I.play + ' Listen'}</button>
    ${listen ? `<button class="btn ghost sm" data-togtrans="1">${S.rd.showT ? 'Hide' : 'Show'} transcript</button>` : ''}
-   <span class="grow"></span><div class="legend"><span><i style="background:var(--new)"></i>new</span><span><i style="background:var(--learn)"></i>learning</span><span><i style="border-bottom:2px solid #6c9bd6;border-radius:0"></i>phrase</span></div></div>
-  ${header(esc(t.title), `${esc(styleName(t.style))} · ${esc(t.level || p.level)} · ${p.total} dictionary words · <b style="color:var(--pr)">${p.nw} new</b> · ${p.pct}% known`, t.style === 'my' ? `<button class="iconbtn" data-deltext="${esc(t.id)}" aria-label="Delete">${I.trash}</button>` : '')}
+   <span class="grow"></span><div class="legend"><span><i style="background:var(--new)"></i>new</span><span><i style="background:var(--learn)"></i>learning</span><span><i style="border-bottom:2px solid #6c9bd6;border-radius:0"></i>phrase</span><span><i style="border-bottom:1.5px dashed #aab4b1;border-radius:0"></i>rare</span></div></div>
+  ${header(esc(t.title), `${esc(styleName(t.style))} · ${esc(t.level || p.level)} · ${p.total} dictionary words · <b style="color:var(--pr)">${p.nw} new</b> · ${p.pct}% known${p.rare ? ` · ${p.rare} rare (dashed)` : ''}`, t.style === 'my' ? `<button class="iconbtn" data-deltext="${esc(t.id)}" aria-label="Delete">${I.trash}</button>` : '')}
   ${listen && !S.rd.showT ? qs + `<div class="card"><p class="muted" style="margin:0">Press <b>Listen</b> and answer the questions first (as in the exam). Then open the transcript and look up the words you missed.</p></div>` : `<div class="card reader">${body}</div>${qs}`}
   <div class="card"><div style="font-weight:700">Finished?</div><p class="small muted" style="margin:4px 0 12px">LingQ-style: the blue words you didn't look up are probably words you already knew. Marking them known does <b>not</b> count them as learned.</p>
    <div class="row wrap2"><button class="btn brand grow" data-finish="1">✓ Finish: mark remaining blue as known</button><button class="btn ghost grow" data-finish="0">Finish without marking</button></div></div>`;
@@ -772,7 +774,7 @@ async function popHTML(k, e, ctx) {
     <div class="row" style="gap:6px">${spk(word, 0, 'en-GB', 'UK')}${spk(word, 0, 'en-US', 'US')}</div></div>
    <div class="row wrap2" style="gap:6px;margin-top:8px">${(e && e.pos || (isPh ? [(S.core.mwe[word] || ['phrase'])[0]] : [])).slice(0, 3).map(p => `<span class="tag p">${esc(p)}</span>`).join('')}
     ${regs.map(r => `<span class="tag o">${esc(r)}</span>`).join('') || (e ? '<span class="tag">neutral register</span>' : '')}
-    ${b ? `<span class="tag blue">${b}k band · ${cefrOfBand(b)}</span>` : ''}${e && e.awl ? `<span class="tag g">AWL ${e.awl}</span>` : ''}</div>`;
+    ${b ? `<span class="tag blue">${b}k band · ${cefrOfBand(b)}</span>` : ''}${S.R[word] > S.COMMON ? '<span class="tag">rare · low priority</span>' : ''}${e && e.awl ? `<span class="tag g">AWL ${e.awl}</span>` : ''}</div>`;
   const form = ctx.f && ctx.f.toLowerCase() !== word && !isPh ? `<div class="small muted" style="margin-top:6px">“${esc(ctx.f)}” is a form of <b>${esc(word)}</b>${S.R[ctx.f.toLowerCase()] && ctx.f.toLowerCase() !== word ? ` · also a word itself: <button class="chip sm" data-look="${esc(ctx.f.toLowerCase())}">${esc(ctx.f.toLowerCase())}</button>` : ''}</div>` : '';
   let ar = '';
   if (e && e.arw && e.arw.length) ar = `<div class="armain ar">${esc(e.arw[0][1])}</div>${e.arw.length > 1 ? `<div style="margin-top:4px">${e.arw.slice(1, 4).map(x => `<div class="small"><span class="tag">${esc(x[0])}</span> <span class="ar" style="font-size:17px;font-weight:600">${esc(x[1])}</span> <span class="muted">· ${esc(x[2])}</span></div>`).join('')}</div>` : ''}`;
@@ -799,8 +801,9 @@ async function popHTML(k, e, ctx) {
     ? `<div class="row" style="margin-top:12px">${st_}<span class="grow"></span>${status !== 'known' ? '<button class="btn soft sm" data-pst="known">I know it now ✓</button>' : ''}</div>`
     : `<div class="row" style="margin-top:12px;gap:8px"><button class="btn brand grow" data-padd="1">${I.plus} Add to cards</button>${status !== 'known' ? '<button class="btn ghost grow" data-pst="known">I know this</button>' : '<button class="btn ghost grow" data-pst="new">Mark as new</button>'}</div>
        <div class="row" style="margin-top:6px">${st_}<span class="grow"></span>${S.rd && ctx.sent ? '<button class="chip sm" data-trsent="1">Translate sentence (online)</button>' : ''}</div>`;
+  const rareNote = !isPh && S.R[word] > S.COMMON ? `<div class="note small">Rare word: used less than about once per million words of real English (films, YouTube, news). Learn it only if you need it.</div>` : '';
   const notInDict = !e ? `<p class="small muted">Not in the offline dictionary${/^[A-Z]/.test(ctx.f || '') ? ' (maybe a name)' : ''}.</p>${!isPh ? '<button class="chip sm" data-pst="ignored">Ignore (name / not a word)</button>' : ''}` : '';
-  return head + form + ar + notInDict + senses + parts + colls + phr + exH + btns + '<div id="trOut" class="note" style="display:none"></div>';
+  return head + form + ar + rareNote + notInDict + senses + parts + colls + phr + exH + btns + '<div id="trOut" class="note" style="display:none"></div>';
 }
 function hidePop(force) { if (popPinned && !force) return; $('#pop').style.display = 'none'; $('#scrim').style.display = 'none'; popPinned = false; popSeq++; $$('.wd.sel').forEach(x => x.classList.remove('sel')); }
 function refreshWords() { $$('.wd').forEach(el => { const k = el.dataset.k; if (el.classList.contains('st-ignored') && !S.prog.words[k]) return; el.classList.remove('st-new', 'st-learning', 'st-known', 'st-ignored'); el.classList.add('st-' + (FUNC.has(k) ? 'known' : wordStatus(k))); }); }
@@ -923,7 +926,7 @@ function knowCard() { // new card the user already knows: remove from learning, 
   saveProg(); cur = null; render(); toast('Marked as already known (not counted)');
 }
 function autoplayFront() { if (S.view !== 'review' || !cur) return; const m = S.prog.meta[cur]; if (!m) return; if (m.t === 's' && !spellRes) { speak(m.k); setTimeout(() => $('#spIn') && $('#spIn').focus(), 50); } }
-function nextBand() { const b = Math.max(1, Math.floor(baseline() / 1000) + 1); for (let k = b; k <= 32; k++) { const pool = S.core.lemmas.slice((k - 1) * 1000, k * 1000); if (pool.some(l => wordStatus(l) === 'new' && !FUNC.has(l) && !S.prof.has(l))) return k; } return b; }
+function nextBand() { const b = Math.max(1, Math.floor(baseline() / 1000) + 1); for (let k = b; k <= Math.ceil(S.COMMON / 1000); k++) { const pool = S.core.lemmas.slice((k - 1) * 1000, k * 1000); if (pool.some(l => wordStatus(l) === 'new' && !FUNC.has(l) && !S.prof.has(l))) return k; } return b; }
 function addBand(b, n) {
   n = n || Math.min(10, S.prog.prefs.newPerDay);
   const pool = S.core.lemmas.slice((b - 1) * 1000, b * 1000).filter(l => wordStatus(l) === 'new' && !FUNC.has(l) && !S.prof.has(l) && l.length > 2);
@@ -1306,6 +1309,7 @@ function settingsView() {
    <label>New cards per day</label><select id="npd">${[5, 10, 15, 20, 25, 30, 40].map(n => `<option ${n === p.newPerDay ? 'selected' : ''}>${n}</option>`).join('')}</select>
    <label>Card front</label><select id="dir"><option value="en" ${p.dir === 'en' ? 'selected' : ''}>English word → meaning</option><option value="ar" ${p.dir === 'ar' ? 'selected' : ''}>Arabic / definition → English word</option></select>
    <label>Voice</label><select id="voice"><option value="en-GB" ${p.voice === 'en-GB' ? 'selected' : ''}>British (en-GB)</option><option value="en-US" ${p.voice === 'en-US' ? 'selected' : ''}>American (en-US)</option></select>
+   <label>Rare words (used less than ~1× per million words)</label><select id="rareNew"><option value="0" ${!p.rareNew ? 'selected' : ''}>Low priority: dashed underline, not counted as new</option><option value="1" ${p.rareNew ? 'selected' : ''}>Treat like any other new word (blue)</option></select>
    <label>Speech speed</label><select id="rate">${[0.7, 0.8, 0.9, 0.95, 1, 1.1].map(n => `<option value="${n}" ${n === p.rate ? 'selected' : ''}>${n}×</option>`).join('')}</select>
    <div class="row" style="margin-top:10px"><button class="btn soft sm" data-say="The quick brown fox jumps over the lazy dog.">${I.spk} Test voice</button><span class="small muted">${voices.filter(v => /^en/i.test(v.lang)).length} English voices on this device</span></div>
   </div>
@@ -1441,6 +1445,7 @@ document.addEventListener('change', e => {
   if (id === 'goal') { p.goal = +e.target.value; saveProg(); render(); }
   if (id === 'dir') { p.dir = e.target.value; saveProg(); cur = null; render(); }
   if (id === 'voice') { p.voice = e.target.value; saveProg(); speak('Hello, this is the new voice.'); }
+  if (id === 'rareNew') { p.rareNew = e.target.value === '1'; saveProg(); }
   if (id === 'rate') { p.rate = +e.target.value; saveProg(); }
   if (id === 'planMin') { p.minutes = +e.target.value; saveProg(); render(); }
   if (e.target.dataset.wchk !== undefined) { (S.prog.checks[S.wtask] ||= {})[e.target.dataset.wchk] = e.target.checked; saveProg(); }
@@ -1465,7 +1470,7 @@ document.addEventListener('keydown', e => {
     const get = async u => { const r = await fetch(u); if (!r.ok) throw new Error(u); return r.json(); };
     const [core, fakes, texts, learn, colloc] = await Promise.all([get('dict/core.json'), get('dict/fakes.json'), get('content/texts.json'), get('content/learn.json'), get('content/colloc.json')]);
     S.colloc = colloc; S.core = core; S.fakes = fakes; S.texts = texts.texts; S.learn = learn;
-    core.lemmas.forEach((l, i) => S.R[l] = i + 1); S.F = core.forms; S.prof = new Set(core.prof || []);
+    core.lemmas.forEach((l, i) => S.R[l] = i + 1); S.COMMON = Math.max(10000, (core.zipf || []).findIndex(z => z < 3) || 15000); S.F = core.forms; S.prof = new Set(core.prof || []);
     S.awlMap = core.awl || {}; AWLSET = new Set(Object.keys(S.awlMap));
     buildMWE();
   } catch (err) { console.error(err); $('#app').innerHTML = '<div class="empty">Could not load the app data. Check your connection and reopen the app.</div>'; return; }

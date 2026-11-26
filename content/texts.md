@@ -24,7 +24,7 @@ Shoppers who suspect that their favourite chocolate bar has been getting smaller
 
 The practice, widely known as "shrinkflation", is not illegal, provided the new weight or volume is printed on the packaging. Critics argue, however, that it is deliberately misleading, since few customers check the small print on a familiar product before putting it in their trolley.
 
-The report singled out snacks, breakfast cereals and household cleaning products as the worst offenders. One well-known brand of washing-up liquid had shrunk from 500 to 433 millilitres, a reduction of more than 13 per cent, with no change to the design of the bottle.
+The report singled out snacks, breakfast cereals and household cleaning products as the worst offenders. One well-known brand of washing-up liquid had shrunk from 500ml to 433ml, a reduction of more than 13 per cent, with no change to the design of the bottle.
 
 Manufacturers insist that they have been left with little choice. Energy, packaging and transport costs have risen sharply, and companies say that customers are more resistant to a visible price rise than to a slightly smaller pack. "Consumers consistently tell us that the price on the shelf is what matters most," said a spokesperson for the food and drink industry, adding that firms were "working hard to absorb costs wherever possible".
 
@@ -43,9 +43,9 @@ Ten years and several billion pounds later, that consensus has quietly unravelle
 
 None of this would have surprised economists, many of whom warned at the outset that subsidising demand in a market where supply is notoriously sluggish was bound to push prices up. What is striking is how long it took for those warnings to be heeded. Part of the explanation lies in the politics. Schemes that hand money to identifiable voters are easy to defend and hard to withdraw, and the construction industry, having grown accustomed to state-backed demand, lobbied hard for each successive extension.
 
-Ministers now find themselves in an unenviable position. Scrapping the scheme outright risks a sharp slowdown in house building at precisely the moment the country needs more homes, not fewer. Yet extending it again would be difficult to reconcile with the committee's findings. The likeliest outcome, insiders suggest, is a gradual winding down, dressed up as a "reform" and accompanied by promises to tackle the supply side through planning changes.
+Ministers now find themselves in a difficult position. Scrapping the scheme outright risks a sharp slowdown in house building at precisely the moment the country needs more homes, not fewer. Yet extending it again would be difficult to reconcile with the committee's findings. The likeliest outcome, insiders suggest, is a gradual winding down, dressed up as a "reform" and accompanied by promises to tackle the supply side through planning changes.
 
-Whether those promises amount to anything more than rhetoric remains to be seen. Successive governments have pledged to overhaul the planning system, and successive governments have retreated in the face of local opposition. The lesson of the past decade, the committee drily observes, is that "there is no shortcut around the need to build".
+Whether those promises amount to anything more than rhetoric remains to be seen. Successive governments have pledged to overhaul the planning system, and successive governments have retreated in the face of local opposition. The lesson of the past decade, the committee notes, is that "there is no shortcut around the need to build".
 
 === tv-b2-1 | dialogue | B2 | Flatmates: the washing-up war
 ---
@@ -55,15 +55,15 @@ MAYA: Leo, it's been there since Tuesday. It's got its own ecosystem now.
 LEO: That's a bit harsh. It's just soaking.
 MAYA: For four days? It's not soaking, it's living there. Look, I don't want to nag you, I really don't. But I'm sick of coming home and having to clear up before I can even make a cup of tea.
 LEO: Fair enough. I've been snowed under with work, that's all. I keep meaning to sort it out.
-MAYA: I get that, honestly. We're all busy. So how about a rota? We take turns, one week each, and whoever's on duty does the bins as well.
-LEO: A rota. Like at school.
+MAYA: I get that, honestly. We're all busy. So how about a schedule? We take turns, one week each, and whoever's on duty does the bins as well.
+LEO: A schedule. Like at school.
 MAYA: Like adults who share a kitchen. And if you can't do your week, you just swap with someone. No drama.
 LEO: Okay, okay. You've got a point. But can I make one tiny suggestion?
 MAYA: Go on.
 LEO: Can we get a dishwasher? They're not that expensive second-hand, and it'd save us all a lot of arguments.
 MAYA: Who's going to pay for it?
 LEO: We split it three ways. Sam won't mind, he hates washing up more than I do.
-MAYA: That's not saying much. Fine, look into it. But until it turns up, the rota starts tomorrow. And you're first.
+MAYA: That's not saying much. Fine, look into it. But until it turns up, the schedule starts tomorrow. And you're first.
 LEO: Why am I first?
 MAYA: Because the pan is still in the sink.
 LEO: ...Right. Point taken.
@@ -77,7 +77,7 @@ DANIEL: (laughs) Wow, okay. You don't beat around the bush, do you?
 INTERVIEWER: Not if I can help it. We've got forty minutes, and I'd rather spend them finding out who you actually are.
 DANIEL: Fair enough. The real answer is that my manager takes credit for everything. Last quarter I came up with a plan that cut our delivery times by a third, and by the time it reached the board it had somehow become his idea.
 INTERVIEWER: And how did you handle that?
-DANIEL: Badly, at first. I sulked, if I'm being honest. Then I realised that sulking wasn't getting me anywhere, so I started copying the board into my progress updates. Politely. Just so the paper trail spoke for itself.
+DANIEL: Badly, at first. I got moody, if I'm being honest. Then I realised that sulking wasn't getting me anywhere, so I started copying the board into my progress updates. Politely. Just so the paper trail spoke for itself.
 INTERVIEWER: Did it work?
 DANIEL: Up to a point. People upstairs know who did the work now. But it's made things a bit frosty between us, and I don't want to spend the next five years walking on eggshells.
 INTERVIEWER: That's a far more interesting answer than the first one.
@@ -97,7 +97,7 @@ PATRICK: Which covers a multitude of sins.
 JAMES: It does, to be fair. I advise a charity on housing, mostly. Which basically means writing reports that ministers thank us for and then quietly ignore.
 RUTH: Well, that sounds thoroughly depressing.
 JAMES: It has its moments. Every so often something we've been banging on about for years turns up in a speech as if somebody had just thought of it. You learn to take your victories where you can find them.
-PATRICK: A pragmatist. I suppose that's preferable to an idealist. They tend to be exhausting company.
+PATRICK: A realist. I suppose that's preferable to an idealist. They tend to be exhausting company.
 CLARE: Dad was an idealist until about 1983.
 PATRICK: I was a young man, and it was a different country. Besides, idealism is a luxury of people who have never had to balance a budget.
 JAMES: With respect, I'd say it's the other way round. The people balancing the budgets are the ones who most need to remember what the money is for. Otherwise you end up with spreadsheets that add up and policies that don't.
@@ -150,7 +150,7 @@ Yet the evidence has proved considerably less robust than its fame would suggest
 
 The picture, however, is more nuanced. A later analysis argued that the near-zero average concealed considerable variation: choice overload did emerge reliably, but only under particular conditions. It was more likely when the options were difficult to compare, when people lacked clear prior preferences, when the decision itself was complex, and when they were under time pressure. Where these conditions were absent, larger assortments were often welcomed.
 
-The episode is instructive less for what it reveals about jam than for what it reveals about how findings travel. A simple, surprising result can acquire the status of received wisdom long before the slower, less quotable work of replication has been done, and by the time the qualifications arrive, few people are still listening.
+The episode is instructive less for what it reveals about jam than for what it reveals about how findings travel. A simple, surprising result can acquire the status of received wisdom long before the slower, less exciting work of replication has been done, and by the time the qualifications arrive, few people are still listening.
 
 === ielts-l-b2-1 | ielts-listening | B2 | Booking a language course (phone call)
 Q: What is the caller's surname? || Haddad (H-A-D-D-A-D)
@@ -243,8 +243,8 @@ In conclusion, the goal of widening access to higher education is widely shared,
 ---
 The proposition that the language we speak shapes the way we think has enjoyed a curious intellectual career. Associated, somewhat loosely, with the work of Edward Sapir and Benjamin Lee Whorf, it was enthusiastically embraced in the mid-twentieth century, largely discredited in the decades that followed, and has since been rehabilitated in a considerably more modest form. This essay argues that the contemporary evidence supports a weak version of linguistic relativity while giving little comfort to the strong, deterministic claims with which the hypothesis is often, and unfairly, conflated.
 
-The strong version, which holds that language determines the categories available to thought, has fared poorly. Speakers plainly can entertain concepts for which their language lacks a dedicated word, and translation, however imperfect, would scarcely be possible were each language a sealed conceptual system. Moreover, several celebrated examples adduced in support of the hypothesis, such as the supposedly vast vocabulary for snow in Inuit languages, have turned out to rest on misunderstandings of how those languages form words.
+The strong version, which holds that language determines the categories available to thought, has fared poorly. Speakers plainly can entertain concepts for which their language lacks a dedicated word, and translation, however imperfect, would scarcely be possible were each language a sealed conceptual system. Moreover, several celebrated examples cited in support of the hypothesis, such as the supposedly vast vocabulary for snow in Inuit languages, have turned out to rest on misunderstandings of how those languages form words.
 
-The weaker claim, namely that linguistic habits influence attention, memory and categorisation at the margins, is a different matter. Experimental work on colour perception, for instance, has shown that speakers of languages which lexically distinguish two shades of blue discriminate between those shades slightly faster than speakers of languages which do not. Similarly, communities whose languages describe spatial relations in absolute terms ("to the north of") rather than relative ones ("to the left of") appear to remember the arrangement of objects differently. Such effects are measurable and reproducible; they are also, crucially, small, and frequently diminish when speakers are distracted from verbalising the task.
+The weaker claim, namely that linguistic habits influence attention, memory and categorisation at the margins, is a different matter. Experimental work on colour perception, for instance, has shown that speakers of languages which have separate words for two shades of blue discriminate between those shades slightly faster than speakers of languages which do not. Similarly, communities whose languages describe spatial relations in absolute terms ("to the north of") rather than relative ones ("to the left of") appear to remember the arrangement of objects differently. Such effects are measurable and can be repeated; they are also, crucially, small, and frequently diminish when speakers are distracted from verbalising the task.
 
 What emerges, then, is a picture of language not as a prison but as something closer to a set of well-worn paths: routes that thought travels easily and habitually, without being confined to them. This more temperate formulation lacks the rhetorical appeal of its predecessor, yet it has the considerable advantage of being consistent with the evidence.
