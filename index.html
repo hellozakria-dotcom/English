@@ -137,7 +137,14 @@ details>summary{cursor:pointer;font-weight:700;list-style:none;display:flex;alig
 #pop.sheet::before{content:"";display:block;width:40px;height:5px;border-radius:9px;background:var(--line);margin:0 auto 12px}
 #pop .w{font-size:28px;font-weight:800;letter-spacing:-.01em;line-height:1.15}
 #pop .armain{font-size:24px;font-weight:700;margin-top:8px;line-height:1.5}
-#pop .sense{padding:8px 0;border-top:1px solid var(--line2);font-size:14px}
+#pop .sense{padding:9px 8px;border-top:1px solid var(--line2);font-size:14px;border-radius:10px}
+#pop .sense.on{background:#F1F8F6}
+#pop .snum{color:var(--brand);font-size:15px;min-width:14px}
+#pop .sar{font-size:19px;font-weight:700;color:var(--ink)}
+#pop .sg{margin:3px 0 0 22px;color:var(--ink2)}
+#pop .sex{display:flex;gap:8px;align-items:center;margin:6px 0 0 22px;font-family:"Source Serif 4",Georgia,serif;font-size:15.5px;color:var(--ink2)}
+#pop .mainsense{margin-top:8px;padding:10px 12px;background:var(--brand-soft);border-radius:14px}
+#pop .mainsense .armain{margin-top:0}
 #pop .ex{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-top:1px solid var(--line2);font-family:"Source Serif 4",Georgia,serif;font-size:16px}
 #pop .ex .src{font-family:Inter,sans-serif;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
 #pop h4{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
@@ -183,6 +190,9 @@ details>summary{cursor:pointer;font-weight:700;list-style:none;display:flex;alig
 .seg{display:flex;background:var(--line2);border-radius:12px;padding:3px;gap:3px;margin:0 0 14px;overflow-x:auto}
 .seg button{flex:1;border:0;background:none;border-radius:9px;padding:8px 10px;font-weight:700;font-size:13px;cursor:pointer;color:var(--muted);white-space:nowrap}
 .seg button.on{background:var(--surface);color:var(--ink);box-shadow:var(--sh)}
+.blank{display:inline-block;min-width:70px;border-bottom:2px solid var(--brand);color:transparent}
+.ctx{font-family:"Source Serif 4",Georgia,serif;font-size:21px;line-height:1.7;margin:12px 0}
+.ctx b{background:var(--learn);border-radius:4px;padding:0 3px}
 .kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:14px}
 </style>
 </head>
@@ -267,15 +277,20 @@ async function entryOf(k) {
   if (!S.shards[sh]) S.shards[sh] = fetch('dict/d_' + sh + '.json').then(r => { if (!r.ok) throw 0; return r.json(); }).catch(e => { delete S.shards[sh]; return {}; });
   const d = await S.shards[sh];
   let e = d[key] || idiomEntry(key);
-  if (e && !e.arw && !e.ar) { // British spelling → borrow Arabic from the American form
+  if (e && !hasAr(e)) { // British spelling → borrow Arabic from the American form
     const v = key.replace(/is(e|ed|ing|ation)$/, 'iz$1').replace(/our$/, 'or').replace(/tre$/, 'ter').replace(/ogue$/, 'og');
-    if (v !== key) { const e2 = await entryOf(v); if (e2 && (e2.arw || e2.ar)) e = {...e, arw: e2.arw, ar: e2.ar}; }
+    if (v !== key) { const e2 = await entryOf(v); if (e2 && hasAr(e2)) e = {...e, m: e2.m, ar: e2.ar}; }
   }
   return e;
 }
+// ---- sense helpers: each meaning = {p: part of speech, ar: [Arabic with harakat], g: English gloss, ex, syn}
+const sensesOf = e => !e ? [] : e.m || [];
+const hasAr = e => !!(e && (e.ar && e.ar.length || sensesOf(e).some(x => x.ar && x.ar.length)));
+function arOf(e, i = 0) { const ss = sensesOf(e); const x = ss[i] && ss[i].ar && ss[i].ar.length ? ss[i] : ss.find(y => y.ar && y.ar.length); return x ? x.ar.join('، ') : e && e.ar ? e.ar.join('، ') : ''; }
+function defOf(e, i = 0) { const ss = sensesOf(e); return ss[i] ? ss[i].g : ''; }
 function idiomEntry(key) {
   const id = S.learn && (S.learn.idioms.find(x => x.p === key) || (S.learn.extra || []).find(x => x.p === key)); if (!id) return null;
-  return {pos: ['idiom'], t: 'idiom', arw: [['idiom', id.ar, id.m]], s: [{p: 'idi', d: id.m}], ex2: [id.ex], reg: ['informal']};
+  return {pos: ['idiom'], t: 'idiom', m: [{p: 'idiom', ar: [id.ar], g: id.m, ex: id.ex}], reg: ['informal']};
 }
 function buildMWE() {
   const idx = {};
@@ -739,7 +754,7 @@ async function showPop(el, pin) {
   pop.innerHTML = `<div class="w">${esc(k.replace(/^p:/, ''))}</div><div class="muted small">Loading…</div>`;
   place(el, pop, sheet);
   const e = await entryOf(k); if (seq !== popSeq) return;
-  pop.innerHTML = await popHTML(k, e, {f, sent: S.rd && S.rd.sents[si] ? S.rd.sents[si].s : ''});
+  pop.innerHTML = await popHTML(k, e, {f, si, el, sent: S.rd && S.rd.sents[si] ? S.rd.sents[si].s : ''});
   place(el, pop, sheet); fillOnlineArabic(k, e, seq);
 }
 function place(el, pop, sheet) {
@@ -749,7 +764,7 @@ function place(el, pop, sheet) {
   pop.style.top = (r.bottom + h + 16 > innerHeight && r.top > h + 16 ? r.top + scrollY - h - 10 : r.bottom + scrollY + 10) + 'px';
 }
 async function fillOnlineArabic(k, e, seq) {
-  if (e && (e.arw || e.ar)) return; const slot = $('#arOnline'); if (!slot) return;
+  if (hasAr(e)) return; const slot = $('#arOnline'); if (!slot) return;
   const t = await onlineArabic(k.replace(/^p:/, '')); if (seq !== popSeq) return;
   const s2 = $('#arOnline'); if (s2) s2.innerHTML = t ? `<span class="ar">${esc(t)}</span> <span class="tag">online</span>` : '<span class="small muted">No Arabic in the offline dictionary (connect to the internet for a machine translation).</span>';
 }
@@ -780,26 +795,29 @@ async function popHTML(k, e, ctx) {
     ${regs.map(r => `<span class="tag o">${esc(r)}</span>`).join('') || (e ? '<span class="tag">neutral register</span>' : '')}
     ${b ? `<span class="tag blue">${b}k band · ${cefrOfBand(b)}</span>` : ''}${S.R[word] > S.COMMON ? '<span class="tag">rare · low priority</span>' : ''}${e && e.awl ? `<span class="tag g">AWL ${e.awl}</span>` : ''}</div>`;
   const form = ctx.f && ctx.f.toLowerCase() !== word && !isPh ? `<div class="small muted" style="margin-top:6px">“${esc(ctx.f)}” is a form of <b>${esc(word)}</b>${S.R[ctx.f.toLowerCase()] && ctx.f.toLowerCase() !== word ? ` · also a word itself: <button class="chip sm" data-look="${esc(ctx.f.toLowerCase())}">${esc(ctx.f.toLowerCase())}</button>` : ''}</div>` : '';
+  const ss = sensesOf(e), likely = ctx.si >= 0 && S.rd ? guessSense(ss, ctx) : 0;
   let ar = '';
-  if (e && e.arw && e.arw.length) ar = `<div class="armain ar">${esc(e.arw[0][1])}</div>${e.arw.length > 1 ? `<div style="margin-top:4px">${e.arw.slice(1, 4).map(x => `<div class="small"><span class="tag">${esc(x[0])}</span> <span class="ar" style="font-size:17px;font-weight:600">${esc(x[1])}</span> <span class="muted">· ${esc(x[2])}</span></div>`).join('')}</div>` : ''}`;
-  else if (e && e.ar && e.ar.length) ar = `<div class="armain ar">${esc(e.ar.slice(0, 3).join('، '))}</div>`;
+  if (ss.length) {
+    const L = ss[likely] || ss[0];
+    ar = `<div class="mainsense"><div class="armain ar">${esc((L.ar || []).join('، ') || ((e && e.ar) || []).join('، '))}</div>
+      <div class="small"><span class="tag p">${esc(L.p)}</span> ${esc(L.g)}${ss.length > 1 ? ` <span class="muted">· ${ctx.sent && guessSure ? 'likely meaning here' : 'most common meaning, see all below'}</span>` : ''}</div>${!(L.ar && L.ar.length) && !(e && e.ar) ? '<div id="arOnline" class="small"></div>' : ''}</div>`;
+  } else if (e && e.ar && e.ar.length) ar = `<div class="armain ar">${esc(e.ar.join('، '))}</div>`;
   else ar = `<div id="arOnline" style="margin-top:8px;font-size:20px">…</div>`;
-  const senses = e && e.s ? `<h4>Meaning</h4>${e.s.slice(0, 4).map(s => `<div class="sense"><span class="tag">${esc(s.p)}</span> ${esc(s.d)}${s.ar ? ` <span class="ar muted">(${esc(s.ar.join('، '))})</span>` : ''}${s.syn ? `<div class="small muted">≈ ${esc(s.syn.join(', '))}</div>` : ''}</div>`).join('')}` : '';
+  const usedEx = new Set([normS(ctx.sent || '')]);
+  const senses = ss.length > 1 || (ss[0] && ss[0].ex) ? `<h4>${ss.length > 1 ? 'All meanings' : 'Example'}</h4>${ss.map((x, n) => { if (x.ex) usedEx.add(normS(x.ex)); return `<div class="sense${n === likely && ss.length > 1 ? ' on' : ''}"><div class="row" style="align-items:baseline;gap:8px"><b class="snum">${n + 1}</b><span class="tag">${esc(x.p)}</span>${x.ar && x.ar.length ? `<span class="ar sar">${esc(x.ar.join('، '))}</span>` : '<span class="small muted">no Arabic for this meaning yet</span>'}</div>
+      <div class="sg">${esc(x.g)}${x.syn ? ` <span class="muted">· ≈ ${esc(x.syn.join(', '))}</span>` : ''}</div>
+      ${x.ex ? `<div class="sex">${spk(x.ex, 1)}<span>${hl(x.ex, k)}</span></div>` : ''}</div>`; }).join('')}` : '';
   const colls = e && e.c && e.c.length ? `<h4>Collocations</h4><div class="colls">${e.c.map(c => `<span>${esc(c)}</span>`).join('')}</div>` : '';
   const phr = e && e.ph && e.ph.length ? `<h4>Phrases with this word</h4><div class="colls">${e.ph.map(c => `<button class="chip sm" data-look="p:${esc(c)}">${esc(c)}</button>`).join('')}</div>` : '';
   const parts = isPh ? `<h4>Words in it</h4><div class="colls">${word.split(' ').filter(w => !FUNC.has(w)).map(w => `<button class="chip sm" data-look="${esc(lemmaOf(w))}">${esc(w)}</button>`).join('')}</div>` : '';
-  // usage examples: never the sentence being read
+  // more real examples: never the sentence being read, never one already shown above
+  const PL = {n: 'noun', v: 'verb', a: 'adjective', r: 'adverb'};
   let exs = [];
-  if (e) {
-    for (const s of e.s || []) if (s.ex) exs.push([s.ex, 'WordNet']);
-    for (const x of e.ex2 || []) exs.push([x, 'Example']);
-    for (const x of e.x || []) exs.push([x[0], x[1]]);
-  }
-  exs.push(...textExamples(k, excl));
-  const seen = new Set([excl]); exs = exs.filter(x => { const n = normS(x[0]); if (seen.has(n)) return false; seen.add(n); return true; });
-  // prefer: one dictionary example, then corpus/news, then texts
-  exs = [...exs.filter(x => x[1] === 'WordNet' || x[1] === 'Example').slice(0, 1), ...exs.filter(x => x[1] !== 'WordNet' && x[1] !== 'Example')].slice(0, 3);
-  const exH = exs.length ? `<h4>Used like this</h4>${exs.map(x => `<div class="ex">${spk(x[0], 1)}<div class="grow"><div>${hl(x[0], k)}</div><div class="src">${esc(x[1])}</div></div></div>`).join('')}` : '';
+  for (const x of (e && e.x) || []) exs.push([x[0], x[1], x[2] || '']);
+  for (const x of textExamples(k, '')) exs.push([x[0], x[1], '']);
+  exs = exs.filter(x => { const n = normS(x[0]); if (usedEx.has(n)) return false; usedEx.add(n); return true; }).slice(0, 3);
+  const label = pp => { if (!pp) return ''; const nm = PL[pp], idx = ss.map((x, n) => x.p === nm ? n : -1).filter(n => n >= 0); return idx.length === 1 ? `meaning ${idx[0] + 1} · ` : nm ? nm + ' · ' : ''; };
+  const exH = exs.length ? `<h4>More real examples</h4>${exs.map(x => `<div class="ex">${spk(x[0], 1)}<div class="grow"><div>${hl(x[0], k)}</div><div class="src">${esc(label(x[2]))}${esc(x[1])}</div></div></div>`).join('')}` : '';
   const st_ = inCards ? (status === 'known' ? '<span class="tag g">Learned ✓</span>' : '<span class="tag o">In your cards · learning</span>') : status === 'known' ? '<span class="tag g">Known</span>' : '<span class="tag blue">New</span>';
   const btns = inCards
     ? `<div class="row" style="margin-top:12px">${st_}<span class="grow"></span>${status !== 'known' ? '<button class="btn soft sm" data-pst="known">I know it now ✓</button>' : ''}</div>`
@@ -808,7 +826,29 @@ async function popHTML(k, e, ctx) {
        <div class="row" style="margin-top:6px">${st_}<span class="grow"></span>${S.rd && ctx.sent ? '<button class="chip sm" data-trsent="1">Translate sentence (online)</button>' : ''}</div>`;
   const rareNote = !isPh && S.R[word] > S.COMMON ? `<div class="note small">Rare word: used less than about once per million words of real English (films, YouTube, news). Learn it only if you need it.</div>` : '';
   const notInDict = !e ? `<p class="small muted">Not in the offline dictionary${/^[A-Z]/.test(ctx.f || '') ? ' (maybe a name)' : ''}.</p>${!isPh ? '<button class="chip sm" data-pst="ignored">Ignore (name / not a word)</button>' : ''}` : '';
-  return head + form + ar + rareNote + notInDict + senses + parts + colls + phr + exH + btns + '<div id="trOut" class="note" style="display:none"></div>';
+  return head + form + ar + rareNote + notInDict + btns + senses + parts + colls + phr + exH + '<div id="trOut" class="note" style="display:none"></div>';
+}
+// Which meaning is probably used in this sentence? A simple guess from the word form and the word before it.
+let guessSure = false;
+function guessSense(ss, ctx) {
+  guessSure = false;
+  if (ss.length < 2) return 0;
+  const sd = S.rd && S.rd.sents[ctx.si]; let want = null;
+  if (sd && ctx.el) {
+    const idx = [...document.querySelectorAll(`.wd[data-si="${ctx.si}"]`)].indexOf(ctx.el);
+    const words = sd.toks.filter(t => t.w), me = words[idx], prev = idx > 0 && words[idx - 1] ? words[idx - 1].w.toLowerCase() : '';
+    const f = (ctx.f || '').toLowerCase(), has = p => ss.some(x => x.p === p), next = words[idx + 1] ? words[idx + 1].w.toLowerCase() : '';
+    if (/^(to|will|would|can|could|should|must|may|might|did|does|do|not|never|i|you|we|they|he|she|who|don't|didn't|won't|can't)$/.test(prev)) want = 'verb';
+    else if (/^(the|a|an|this|that|these|those|my|your|his|her|its|our|their|some|any|no|every|each|of|much|many|several|such)$/.test(prev)) want = 'noun';
+    else if (/^(very|so|too|more|most|less|quite|really|extremely|rather|pretty|fairly|is|are|was|were|be|been|seem|seems|seemed|become|became|feel|felt|look|looked)$/.test(prev)) want = 'adjective';
+    if (!want && /^(a|an|the|his|her|their|my|your|our|its|this|these|those|them|him|me|us|it)$/.test(next) && has('verb') && !/^(the|a|an|this|that|my|your|his|her|its|our|their)$/.test(prev)) want = 'verb';
+    if (me && me.l !== f && /(ed|ing)$/.test(f) && has('verb') && want !== 'adjective' && want !== 'noun') want = 'verb';
+    if (/ly$/.test(f) && has('adverb')) want = 'adverb';
+    if (want && !has(want)) want = want === 'adjective' && has('verb') && /(ed|ing)$/.test(f) ? 'verb' : null;
+  }
+  const i = want ? ss.findIndex(x => x.p === want) : -1;
+  guessSure = i >= 0;
+  return i >= 0 ? i : 0;
 }
 function hidePop(force) { if (popPinned && !force) return; $('#pop').style.display = 'none'; $('#scrim').style.display = 'none'; popPinned = false; popSeq++; $$('.wd.sel').forEach(x => x.classList.remove('sel')); }
 // Reader keyboard: Enter = I know this (then jump to the next blue word), A = add to cards, → / ← = next / previous blue word
@@ -841,18 +881,19 @@ async function popRefresh() {
   const pop = $('#pop'), k = pop.dataset.k, si = +pop.dataset.si; refreshWords();
   const el = document.querySelector(`.wd[data-k="${CSS.escape(k)}"][data-si="${si}"]`);
   if (el) return showPop(el, true);
-  const e = await entryOf(k); pop.innerHTML = await popHTML(k, e, {f: pop.dataset.f, sent: ''});
+  const e = await entryOf(k); pop.innerHTML = await popHTML(k, e, {f: pop.dataset.f, si: -1, sent: ''});
 }
 async function lookup(k) { // dictionary search / chips
   const pop = $('#pop'); pop.dataset.k = k; pop.dataset.si = -1; pop.dataset.f = '';
   pop.classList.add('sheet'); pop.style.display = 'block'; $('#scrim').style.display = 'block'; popPinned = true; pop.style.left = ''; pop.style.top = '';
   const seq = ++popSeq; const e = await entryOf(k); if (seq !== popSeq) return;
-  pop.innerHTML = await popHTML(k, e, {f: '', sent: ''}); fillOnlineArabic(k, e, seq);
+  pop.innerHTML = await popHTML(k, e, {f: '', si: -1, sent: ''}); fillOnlineArabic(k, e, seq);
 }
-function popAdd() {
+async function popAdd() {
   const pop = $('#pop'), k = pop.dataset.k, si = +pop.dataset.si;
   const sent = S.rd && S.rd.sents[si] ? S.rd.sents[si].s : '';
-  addCard(k, sent ? {ex: sent, src: S.rd.t.title} : {}); addPts(1); toast('Added to cards: ' + k.replace(/^p:/, '')); popRefresh(); shell();
+  const e_ = await entryOf(k), sense = sent ? guessSense(sensesOf(e_), {si, f: pop.dataset.f, el: document.querySelector('.wd.sel')}) : 0;
+  addCard(k, sent ? {ex: sent, src: S.rd.t.title, sense} : {}); addPts(1); toast('Added to cards: ' + k.replace(/^p:/, '')); popRefresh(); shell();
 }
 async function translateSentence() {
   const pop = $('#pop'), si = +pop.dataset.si, s = S.rd && S.rd.sents[si] && S.rd.sents[si].s; if (!s) return;
@@ -891,25 +932,28 @@ function saveImport() {
 // ================= CARDS =================
 let cur = null, shown = false, curE = null, spellRes = null;
 function reviewView() {
+  if (S.cx) return contextView();
   const all = counts(() => true), c = counts();
   const chips = `<div class="chips">${[['all', 'All'], ['v', 'Vocabulary'], ['s', 'Spelling']].map(([k, l]) => `<button class="chip ${S.deck === k ? 'on' : ''}" data-deck="${k}">${l} · ${counts(id => k === 'all' || id.startsWith(k + ':')).total}</button>`).join('')}</div>`;
+  const lk = learningKeys().length;
+  const practice = lk ? `<div class="card row wrap2" style="gap:8px;padding:12px 14px"><div class="grow small"><b>${lk} learning words</b> <span class="muted">· revise them in sentences any time</span></div><button class="btn brand sm" data-cx="1">Practice in sentences</button><button class="btn ghost sm" data-senttext="1">Read them as a text</button><button class="btn ghost sm" data-story="1">Story (AI)</button></div>` : '';
   if (!cur || !S.prog.meta[cur]) { cur = pickNext(); shown = false; curE = null; spellRes = null; }
   if (!cur) {
     const total = Object.keys(S.prog.meta).filter(inDeck).length;
-    return `${header('Cards', `${total} cards in this deck`)}${chips}<div class="card empty"><div style="font-size:40px">🎉</div><div style="font-weight:700;color:var(--ink);margin:8px 0">Nothing due right now</div>
+    return `${header('Cards', `${total} cards in this deck`)}${chips}${practice}<div class="card empty"><div style="font-size:40px">🎉</div><div style="font-weight:700;color:var(--ink);margin:8px 0">Nothing due right now</div>
      <div>${total ? 'Come back later, or add new words.' : 'Add words from the reader, or use the word builder.'}</div>
      <div class="row" style="justify-content:center;margin-top:14px;flex-wrap:wrap"><button class="btn brand" data-band="${nextBand()}">${I.plus} Add ${Math.min(10, S.prog.prefs.newPerDay)} words from the ${nextBand()}k band</button><button class="btn ghost" data-tab="read">Read a text</button></div></div>`;
   }
   const m = S.prog.meta[cur], x = st(cur), now = Date.now();
   const kind = !x || x.state === 'new' ? ['New', 'var(--pr)'] : x.state === 'review' ? ['Review', 'var(--green)'] : ['Learning', 'var(--red)'];
-  const top = `${header('Cards', `${c.learn} learning · ${c.rev} to review · ${c.newToday} new today`)}${chips}`;
+  const top = `${header('Cards', `${c.learn} learning · ${c.rev} to review · ${c.newToday} new today`)}${chips}${practice}`;
   if (!curE) { entryOf(m.k).then(e => { curE = e || {}; if (S.view === 'review') { render(); autoplayFront(); } }); return top + '<div class="card flash"><div class="muted">Loading…</div></div>'; }
   const e = curE, word = m.k.replace(/^p:/, '');
   const meta = `<div class="meta"><span style="color:${kind[1]}">${kind[0]}</span><span>${m.t === 's' ? 'Spelling' : (bandOf(word) ? bandOf(word) + 'k band' : 'phrase')}</span></div>`;
   if (m.t === 's') return top + spellCard(m, e, meta);
-  const arMain = e.arw && e.arw.length ? e.arw.slice(0, 2).map(a => a[1]).join(' · ') : e.ar ? e.ar.slice(0, 2).join('، ') : (S.arCache[word] || '');
-  const def = e.s && e.s[0] ? e.s[0].d : (e.arw && e.arw[0] ? e.arw[0][2] : '');
-  const exS = m.ex || (e.x && e.x[0] && e.x[0][0]) || (e.s || []).map(s => s.ex).find(Boolean) || (e.ex2 || [])[0] || '';
+  const si_ = m.sense || 0, arMain = arOf(e, si_) || (S.arCache[word] || '');
+  const def = defOf(e, si_);
+  const exS = m.ex || sensesOf(e).map(s => s.ex).find(Boolean) || (e.x && e.x[0] && e.x[0][0]) || '';
   const front = S.prog.prefs.dir === 'ar'
     ? `<div class="big ar" style="margin-top:28px">${esc(arMain || def)}</div><div class="muted">${esc(def)}</div>`
     : `<div class="big" style="margin-top:28px">${esc(word)}</div><div>${e.us ? `<span class="ipa">/${esc(e.us)}/</span>` : ''}</div>${spk(word)}${exS ? `<div class="exs">${hl(exS, m.k)}</div>` : ''}`;
@@ -923,8 +967,8 @@ function reviewView() {
    </div><div class="kbd">Space = show · 1–4 = grade · P = play${!x || x.state === 'new' ? ' · <button class="chip sm" data-knowcard="1">I already know this</button>' : ''}</div>`;
 }
 function spellCard(m, e, meta) {
-  const arMain = e.arw && e.arw.length ? e.arw[0][1] : e.ar ? e.ar[0] : '';
-  const def = e.s && e.s[0] ? e.s[0].d : '';
+  const arMain = arOf(e);
+  const def = defOf(e);
   const mis = S.prog.mis[m.k];
   if (!spellRes) return `<div class="card flash">${meta}<div style="margin-top:26px">${spk(m.k)}</div><div class="muted small">Listen and type the word</div>
     ${arMain ? `<div class="ar" style="font-size:22px;font-weight:700">${esc(arMain)}</div>` : ''}<div class="small muted" style="max-width:480px">${esc(def)}</div>
@@ -1046,7 +1090,7 @@ function dictView() {
   const result = !res ? '' : !it.sent
     ? `<div style="text-align:center;margin-top:12px"><div style="font-weight:800;color:${res.ok ? 'var(--green)' : 'var(--red)'}">${res.ok ? 'Correct ✓' : 'Not quite: here are your mistakes'}</div>${res.ok ? '' : diffHTML(res.typed, it.w.toLowerCase())}<div style="font-size:28px;font-weight:800">${esc(it.w)}</div><div id="dcAr" class="ar" style="font-size:20px"></div>${it.tip ? `<div class="note">💡 ${esc(it.tip)}</div>` : ''}</div>`
     : `<div class="sentdiff" style="margin-top:12px">${res.ops.map(o => o[0] === 'ok' ? `<span class="okw">${esc(o[1])}</span>` : o[0] === 'bad' ? `<span class="badw" title="you typed ${esc(o[2])}">${esc(o[1])}</span> <small class="muted">(${esc(o[2])})</small>` : o[0] === 'miss' ? `<span class="badw">${esc(o[1])}</span> <small class="muted">(missing)</small>` : `<s class="muted">${esc(o[2])}</s>`).join(' ')}</div><div style="margin-top:8px;font-family:'Source Serif 4',serif;font-size:18px">${esc(it.w)}</div>`;
-  if (res && !it.sent) entryOf(lemmaOf(it.w)).then(e => { const el = $('#dcAr'); if (el && e) el.textContent = e.arw && e.arw[0] ? e.arw[0][1] : (e.ar || [''])[0]; });
+  if (res && !it.sent) entryOf(lemmaOf(it.w)).then(e => { const el = $('#dcAr'); if (el && e) el.textContent = arOf(e); });
   return `<div class="card"><div class="row"><div class="grow" style="font-weight:700">${it.sent ? 'Sentence' : 'Word'} ${d.i + 1} / ${d.items.length}</div><button class="btn ghost sm" data-dcquit="1">Stop</button></div>
    <div class="bar" style="margin:10px 0 18px"><i style="width:${100 * d.i / d.items.length}%;background:var(--brand)"></i></div>
    <div class="row" style="justify-content:center;gap:12px"><button class="spk" style="width:64px;height:64px" data-dcsay="1">${I.spk}</button><button class="btn soft sm" data-dcsay="slow">🐢 Slower</button>${!it.sent ? '<button class="btn soft sm" data-dchint="1">Meaning</button>' : ''}</div>
@@ -1308,7 +1352,7 @@ async function startColl(id) {
   let pool = S.colloc.filter(x => (S.R[x.n] || 0) >= lo); if (pool.length < 10) pool = S.colloc;
   const items = sample(pool, 10).map(x => ({noun: x.n, answer: x.v, rest: (x.d ? x.d + ' ' : '') + x.n, opts: shuffle([x.v, ...x.x])}));
   S.cq = {id, items, i: 0, ok: 0}; render();
-  for (const it of items) entryOf(it.noun).then(e => { if (e) { it.all = e.c || []; it.ar = e.arw && e.arw[0] ? e.arw[0][1] : (e.ar || [''])[0]; } });
+  for (const it of items) entryOf(it.noun).then(e => { if (e) { it.all = e.c || []; it.ar = arOf(e); } });
 }
 function collView() {
   const q = S.cq;
@@ -1335,6 +1379,90 @@ function idiomView() {
    <div class="card list">${set.map(x => `<div class="item" style="display:block"><div class="row"><b style="font-size:17px" class="grow">${esc(x.p)}</b><span class="pill ${wordStatus('p:' + x.p)}">${wordStatus('p:' + x.p)}</span>${spk(x.p, 1)}</div><div class="small">${esc(x.m)} · <span class="ar" style="font-size:15px">${esc(x.ar)}</span></div><div class="small muted" style="font-style:italic">${esc(x.ex)}</div></div>`).join('')}</div>`;
 }
 
+// ================= PRACTICE LEARNING WORDS IN SENTENCES =================
+const learningKeys = () => Object.values(S.prog.meta).filter(m => m.t === 'v' && !S.prog.learned[m.k] && S.prog.words[m.k] !== 'known').map(m => m.k);
+function blankSentence(sent, k) {
+  const toks = tokenize(sent); let hit = false, ans = [];
+  if (k.startsWith('p:')) {
+    const cover = findPhrases(toks), key = k.slice(2);
+    const html = toks.map((t, i) => { if (cover[i] === key && t.w) { hit = true; ans.push(t.w); return '<span class="blank">_____</span>'; } return esc(t.w || t.t); }).join('');
+    return hit ? {html, ans} : null;
+  }
+  const html = toks.map(t => { if (t.w && t.k === k) { hit = true; ans.push(t.w); return '<span class="blank">_____</span>'; } return esc(t.w || t.t); }).join('');
+  return hit ? {html, ans} : null;
+}
+async function sentencesFor(k, e, m) {
+  const out = [], ss = sensesOf(e), s0 = ss[(m && m.sense) || 0];
+  if (s0 && s0.ex) out.push([s0.ex, 'dictionary']);
+  for (const x of ss) if (x.ex) out.push([x.ex, 'dictionary']);
+  for (const x of (e && e.x) || []) out.push([x[0], x[1]]);
+  for (const x of textExamples(k, '')) out.push(x);
+  if (m && m.ex) out.push([m.ex, m.src || 'your text']);
+  const seen = new Set(); return out.filter(x => { const n = normS(x[0]); if (seen.has(n)) return false; seen.add(n); return true; });
+}
+async function startContext(keys) {
+  keys = shuffle(keys || learningKeys()).slice(0, 15);
+  if (!keys.length) { toast('No learning words yet. Add some from the reader first.'); return; }
+  S.view = 'review'; S.cx = {items: [], i: 0, ok: 0, loading: true}; render();
+  const items = [];
+  for (const k of keys) {
+    const e = await entryOf(k), m = S.prog.meta['v:' + k], cands = await sentencesFor(k, e, m);
+    const seenCount = (S.prog.cxSeen || {})[k] || 0;
+    const ordered = [...cands.slice(seenCount % Math.max(1, cands.length)), ...cands.slice(0, seenCount % Math.max(1, cands.length))];
+    let pick = null; for (const c of ordered) { const b = blankSentence(c[0], k); if (b) { pick = {sent: c[0], src: c[1], ...b}; break; } }
+    if (!pick) continue;
+    const si = (m && m.sense) || 0;
+    items.push({k, ...pick, ar: arOf(e, si), g: defOf(e, si)});
+  }
+  S.cx = {items, i: 0, ok: 0}; render(); setTimeout(() => $('#cxIn') && $('#cxIn').focus(), 50);
+}
+function cxCheck() {
+  const it = S.cx.items[S.cx.i], v = ($('#cxIn').value || '').trim().toLowerCase().replace(/’/g, "'"); if (!v) return;
+  const ans = it.ans.map(a => a.toLowerCase()).join(' '), key = it.k.replace(/^p:/, '');
+  it.typed = v; it.ok = v === ans || v === it.ans[0].toLowerCase() || (!it.k.startsWith('p:') && lemmaOf(v) === it.k) || (it.k.startsWith('p:') && v.split(' ').map(lemmaOf).join(' ') === key);
+  if (it.ok) S.cx.ok++; else { const id = 'v:' + it.k, c = S.prog.cards[id]; if (c && c.state === 'review') S.prog.cards[id] = {...c, due: Date.now()}; }
+  (S.prog.cxSeen ||= {})[it.k] = ((S.prog.cxSeen || {})[it.k] || 0) + 1;
+  addPts(1); speak(it.sent); render();
+}
+function contextView() {
+  const q = S.cx;
+  const top = `<div class="toolbar"><button class="iconbtn" data-cxquit="1">${I.back}</button><b class="grow">Your learning words in sentences</b></div>`;
+  if (q.loading) return top + '<div class="card empty">Finding sentences…</div>';
+  if (!q.items.length) return top + '<div class="card empty">No sentences found for your learning words yet.</div>';
+  if (q.i >= q.items.length) return top + `<div class="card" style="text-align:center"><div style="font-size:44px;font-weight:800">${q.ok} / ${q.items.length}</div><p class="muted">Words you missed are back in today's cards.</p><div class="row" style="justify-content:center;flex-wrap:wrap"><button class="btn brand" data-cxagain="1">New sentences</button><button class="btn ghost" data-cxquit="1">Done</button></div></div>`;
+  const it = q.items[q.i], done = it.typed !== undefined;
+  return top + `<div class="card"><div class="row small muted"><span class="grow">${q.i + 1} / ${q.items.length}</span><span>${esc(it.src)}</span></div>
+   <div class="ctx">${done ? hl(it.sent, it.k) : it.html}</div>
+   <div class="mainsense" style="margin:6px 0 12px"><div class="ar" style="font-size:20px;font-weight:700">${esc(it.ar)}</div><div class="small muted">${esc(it.g)}</div></div>
+   <input class="bigin" id="cxIn" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type the missing word" ${done ? `disabled value="${esc(it.typed)}"` : ''}>
+   ${done ? `<div style="text-align:center;margin-top:10px;font-weight:800;color:${it.ok ? 'var(--green)' : 'var(--red)'}">${it.ok ? 'Correct ✓' : 'Answer: ' + esc(it.ans.join(' … '))}</div>${!it.ok ? diffHTML(it.typed, it.ans.join(' ').toLowerCase()) : ''}<div class="row" style="justify-content:center;margin-top:6px">${spk(it.sent, 0, '', 'sentence')}<button class="chip sm" data-look="${esc(it.k)}">Look up</button></div>` : ''}
+   <button class="btn ${done ? 'brand' : ''} wide" style="margin-top:14px" ${done ? 'data-cxnext="1"' : 'data-cxcheck="1"'}>${done ? 'Next (Enter)' : 'Check (Enter)'}</button></div>`;
+}
+async function sentenceText() {
+  const keys = learningKeys(); if (!keys.length) { toast('No learning words yet'); return; }
+  const paras = []; let n = 0;
+  for (const k of shuffle(keys).slice(0, 25)) {
+    const e = await entryOf(k), m = S.prog.meta['v:' + k], c = (await sentencesFor(k, e, m)).filter(x => !(m && m.ex && normS(x[0]) === normS(m.ex)) && blankSentence(x[0], k));
+    const full = c.filter(x => /^[A-Z"“]/.test(x[0]) && /[.!?]["”')]*$/.test(x[0].trim()) && x[0].length < 180);
+    const pool = full.length ? full : c;
+    if (pool.length) { let t0 = pool[Math.floor(Math.random() * Math.min(3, pool.length))][0].trim(); t0 = t0[0].toUpperCase() + t0.slice(1); if (!/[.!?]["”')]*$/.test(t0)) t0 += '.'; paras.push(t0); n++; }
+  }
+  const t = {id: 'my' + Date.now().toString(36), title: `Practice text: ${n} of your learning words`, style: 'my', paras, words: paras.join(' ').split(' ').length, created: Date.now(), practice: true};
+  t.level = textStats(t).level; S.my.unshift(t); saveMy(); openText(t.id);
+}
+function storySheet() {
+  const keys = learningKeys().slice(0, 25).map(k => k.replace(/^p:/, ''));
+  if (!keys.length) { toast('No learning words yet'); return; }
+  const prompt = `Write a short, natural story in American English (about ${Math.max(150, keys.length * 18)} words, C1 level) that uses ALL of these words or phrases, each one in its most common meaning: ${keys.join(', ')}. Use only common everyday vocabulary for everything else. Don't add a title, a word list or explanations, just the story.`;
+  const pop = $('#pop'); pop.classList.add('sheet'); pop.style.display = 'block'; $('#scrim').style.display = 'block'; popPinned = true; pop.style.left = ''; pop.style.top = ''; pop.dataset.k = '';
+  pop.innerHTML = `<div class="w">A story with your words</div>
+   <p class="small muted">This app works offline and has no AI inside, so the story is written by an AI chat (Claude or ChatGPT). 1) Copy the request below. 2) Paste it into the chat. 3) Paste the story back here. It opens in the reader with your words in yellow.</p>
+   <textarea id="stPrompt" rows="5" readonly>${esc(prompt)}</textarea>
+   <div class="row" style="margin-top:8px"><button class="btn brand sm" data-stcopy="1">Copy request</button><a class="btn ghost sm" href="https://claude.ai/new" target="_blank" rel="noopener">Open Claude</a></div>
+   <label>Paste the story here</label><textarea id="stText" rows="7" placeholder="Paste the story…"></textarea>
+   <button class="btn brand wide" style="margin-top:10px" data-stsave="1">Read the story</button>`;
+}
+
 // ================= WORDS =================
 function wordsView() {
   const c = counters(), q = S.q.trim().toLowerCase();
@@ -1350,6 +1478,7 @@ function wordsView() {
    <p class="small muted" style="margin:10px 0 0">Only words that were <b>new to you</b> count: a word is learned when its card reaches a 3-week interval, or when you mark a word you've been studying as known. Words from the placement test and words you mark “I know this” without studying are not counted.</p></div>
   <div class="card"><div class="row"><input id="dictQ" placeholder="Look up any English word or phrase" autocapitalize="off"><button class="btn" id="dictGo">${I.search}</button></div></div>
   <div class="chips">${[['learned', 'Learned ' + learned.length], ['learning', 'Learning ' + learning.length], ['prior', 'Already known ' + prior.length]].map(([k, l]) => `<button class="chip ${S.wordFilter === k ? 'on' : ''}" data-wf="${k}">${l}</button>`).join('')}</div>
+  ${S.wordFilter === 'learning' && learning.length ? `<div class="row wrap2" style="gap:8px;margin-bottom:12px"><button class="btn brand sm" data-cx="1">Practice in sentences</button><button class="btn ghost sm" data-senttext="1">Read them as a text</button><button class="btn ghost sm" data-story="1">Story (AI)</button></div>` : ''}
   <input id="q" placeholder="Filter" value="${esc(S.q)}" style="margin-bottom:12px">
   <div class="card list">${list.length ? list.slice(0, 500).map(k => `<div class="item click" data-look="${esc(k)}"><div class="grow"><b>${esc(k.replace(/^p:/, ''))}</b> <span class="small muted">${bandOf(k) ? bandOf(k) + 'k' : k.startsWith('p:') ? 'phrase' : ''}${S.prog.learned[k] ? ' · learned ' + esc(S.prog.learned[k]) : ''}</span></div><span class="pill ${S.wordFilter === 'learned' ? 'learned' : S.wordFilter === 'learning' ? 'learning' : 'known'}">${S.wordFilter === 'prior' ? 'known' : S.wordFilter}</span></div>`).join('') : '<div class="empty">Nothing here yet</div>'}</div>`;
 }
@@ -1390,7 +1519,7 @@ function render() {
   if (S.view === 'words') { const q = $('#q'); q && q.addEventListener('input', () => { S.q = q.value; const pos = q.selectionStart; render(); const n = $('#q'); n.focus(); n.setSelectionRange(pos, pos); }); }
   if (S.view === 'write' && S.wtask) { const ta = $('#wText'); ta.addEventListener('input', () => { S.prog.drafts[S.wtask] = ta.value; $('#wCount').textContent = (ta.value.match(TOKRE) || []).length; saveProg(); }); }
 }
-function go(view) { S.view = view; shown = false; if (view === 'read') { S.rd = null; } if (view === 'place') { S.pt = null; } if (view === 'plan') { S.hwu = null; S.gram = null; S.cq = null; S.idi = null; S.iq = null; } if (view === 'write') S.wtask = null; if (S.playing) { S.playing = false; speechSynthesis.cancel(); } render(); scrollTo(0, 0); if (view === 'review') setTimeout(autoplayFront, 80); }
+function go(view) { S.view = view; shown = false; if (view === 'read') { S.rd = null; } if (view === 'place') { S.pt = null; } if (view === 'plan') { S.hwu = null; S.gram = null; S.cq = null; S.idi = null; S.iq = null; } if (view === 'write') S.wtask = null; if (S.playing) { S.playing = false; speechSynthesis.cancel(); } render(); scrollTo(0, 0); if (view === 'review') { S.cx = null; setTimeout(autoplayFront, 80); } }
 function startClock() { clearInterval(wTimer); if (!S.wrun) return; wTimer = setInterval(() => { S.wclock = (S.wclock || 0) + 1; const el = $('#wTime'); if (el) el.textContent = fmtTime(S.wclock); else { clearInterval(wTimer); S.wrun = false; } }, 1000); }
 document.addEventListener('click', async e => {
   const say = e.target.closest('[data-say]'); if (say) { speak(say.dataset.say, {lang: say.dataset.lang}); return; }
@@ -1406,6 +1535,8 @@ document.addEventListener('click', async e => {
     }
     if (d.look) { if (S.view === 'read' && S.rd) { lookup(d.look); } else lookup(d.look); return; }
     if (d.trsent) return translateSentence();
+    if (d.stcopy) { const ta = $('#stPrompt'); ta.select(); (navigator.clipboard ? navigator.clipboard.writeText(ta.value) : Promise.reject()).then(() => toast('Copied. Paste it into the AI chat'), () => { document.execCommand('copy'); toast('Copied'); }); return; }
+    if (d.stsave) { const txt = $('#stText').value.trim(); if (txt.length < 40) { toast('Paste the story first'); return; } const paras = txt.split(/\n\s*\n/).map(x => x.replace(/\s+/g, ' ').trim()).filter(Boolean); const t = {id: 'my' + Date.now().toString(36), title: 'Story with my words · ' + new Date().toLocaleDateString(), style: 'my', paras, words: txt.split(/\s+/).length, created: Date.now()}; t.level = textStats(t).level; S.my.unshift(t); saveMy(); hidePop(true); return openText(t.id); }
     if (d.bandadd) { const [bb, n] = d.bandadd.split(':').map(Number); hidePop(true); return addBand(bb, n); }
     if (d.awladd) { const ws = awlWords(+d.awladd); hidePop(true); addList(ws, 'AWL ' + d.awladd); return; }
     return;
@@ -1426,6 +1557,12 @@ document.addEventListener('click', async e => {
   if (d.gram) { S.view = 'plan'; S.gram = d.gram; render(); return scrollTo(0, 0); }
   if (d.gback) { S.gram = null; return render(); }
   if (d.ptab) { S.ptab = d.ptab; return render(); }
+  if (d.cx || d.cxagain) return startContext();
+  if (d.cxcheck) return cxCheck();
+  if (d.cxnext) { S.cx.i++; render(); return setTimeout(() => $('#cxIn') && $('#cxIn').focus(), 50); }
+  if (d.cxquit) { S.cx = null; return render(); }
+  if (d.senttext) return sentenceText();
+  if (d.story) return storySheet();
   if (d.hwu) { S.view = 'plan'; S.hwu = +d.hwu; render(); return scrollTo(0, 0); }
   if (d.hwback) { S.hwu = null; return render(); }
   if (d.hwdone) { const n = +d.hwdone; S.prog.hw ||= {}; if (S.prog.hw[n]) delete S.prog.hw[n]; else { S.prog.hw[n] = today(); addPts(10); } saveProg(); return render(); }
@@ -1452,7 +1589,7 @@ document.addEventListener('click', async e => {
   if (d.wsave) return saveEssay();
   if (d.wtab) { S.wtab = d.wtab; S.dc = null; S.pq = null; return render(); }
   if (d.dcsay) return sayDict(d.dcsay === 'slow');
-  if (d.dchint) { const it = S.dc.items[S.dc.i]; const e2 = await entryOf(lemmaOf(it.w)); $('#dcHint').textContent = e2 ? ((e2.arw && e2.arw[0] && e2.arw[0][1]) || (e2.s && e2.s[0] && e2.s[0].d) || '') : ''; return; }
+  if (d.dchint) { const it = S.dc.items[S.dc.i]; const e2 = await entryOf(lemmaOf(it.w)); $('#dcHint').textContent = e2 ? (arOf(e2) || defOf(e2)) : ''; return; }
   if (d.dccheck) return checkDict();
   if (d.dcnext) { S.dc.i++; S.dc.cur = null; render(); return setTimeout(() => sayDict(), 120); }
   if (d.dcquit) { S.dc = null; return render(); }
@@ -1522,6 +1659,8 @@ document.addEventListener('keydown', e => {
   const tag = e.target.tagName;
   if (S.view === 'place' && S.pt && !S.pt.done) { const k = e.key.toLowerCase(); if (k === 'y' || k === 'arrowright') placeAnswer(true); if (k === 'n' || k === 'arrowleft') placeAnswer(false); return; }
   if (S.view === 'write' && S.dc && e.key === 'Enter' && !e.shiftKey && !S.wtask) { e.preventDefault(); if (S.dc.cur) { S.dc.i++; S.dc.cur = null; render(); setTimeout(() => sayDict(), 120); } else if ($('#dcIn')) checkDict(); return; }
+  if (S.view === 'review' && S.cx && e.key === 'Enter') { e.preventDefault(); const it = S.cx.items[S.cx.i]; if (!it) return; if (it.typed !== undefined) { S.cx.i++; render(); setTimeout(() => $('#cxIn') && $('#cxIn').focus(), 50); } else cxCheck(); return; }
+  if (S.view === 'review' && S.cx) return;
   if (S.view === 'review' && cur && S.prog.meta[cur] && S.prog.meta[cur].t === 's') { if (e.key === 'Enter') { e.preventDefault(); if (!spellRes) spellCheck(); else grade(spellRes.ok ? 3 : 1); } return; }
   if (S.view !== 'review' || /INPUT|TEXTAREA|SELECT/.test(tag)) return;
   if (e.key === ' ' && !shown) { e.preventDefault(); $('#show') && $('#show').click(); }

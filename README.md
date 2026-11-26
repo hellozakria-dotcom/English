@@ -17,6 +17,7 @@ An installable offline web app (PWA) for going from B2/C1 to C2 English, with Ar
   - buttons: *Add to cards* / *I know this*
 
   Colours: blue = new, yellow = learning, none = known. Phrasal verbs and idioms (including separable ones like *turn it off*) are looked up as one unit. You can also select several words to look up a phrase.
+- **Practise learning words in sentences.** Fill-in-the-blank with real sentences (a different one each time), a practice text made of your learning words, or a story written by an AI chat from a prompt the app prepares.
 - **Cards.** Spaced repetition (Again / Hard / Good / Easy). There's a vocabulary deck and a **spelling deck**, where you hear the word, type it and see letter-by-letter mistakes.
 - **Write**
   - Dictation (words and sentences) with a letter-by-letter diff. Mistakes go into **My misspellings**, which comes back with spaced repetition.
@@ -37,7 +38,8 @@ dict/fakes.json       fake words for the placement test
 content/texts.md      graded texts ← edit these
 content/learn.py      spelling rules, confusing pairs, IELTS tasks, grammar, idioms ← edit these
 tools/build.py        texts.md → texts.json, learn.py → learn.json, generates sw.js
-tools/build_dict.py   rebuilds dict/ from the open sources (run tools/setup.sh first)
+tools/build_dict.py   rebuilds dict/ from the open sources (run tools/setup.sh first),
+                      then tools/postprocess.py, tools/rerank.py, tools/build_colloc.py
 ```
 
 ## Adding a text

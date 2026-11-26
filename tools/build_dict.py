@@ -149,6 +149,34 @@ for ent in ET.parse('data/eng-ara.tei').getroot().iter('{http://www.tei-c.org/ns
                 if v and v not in AE[k] and len(v) < 40: AE[k].append(v)
 print('arabeyes', len(AE))
 
+# ---------------- Arabic diacritics (mishkal, with a part-of-speech hint) ----------------
+import mishkal.tashkeel, pickle as _pk
+_MK = mishkal.tashkeel.TashkeelClass()
+DC = 'data/tashkeel_cache.pkl'
+_dcache = _pk.load(open(DC, 'rb')) if os.path.exists(DC) else {}
+HAR = re.compile('[\u064B-\u0652\u0670]')
+def dia(a, pos):
+    a = a.strip()
+    if not a or HAR.search(a): return a
+    key = (a, pos)
+    if key in _dcache: return _dcache[key]
+    try:
+        if pos == 'verb' and ' ' not in a:
+            out = _MK.tashkeel('قد ' + a).split()[-1]
+        elif pos in ('noun', 'adjective') and ' ' not in a:
+            out = _MK.tashkeel('لقد ' + a).split()[-1]
+            out = re.sub('[\u064B\u064C\u064D\u064E\u064F\u0650\u0652]+$', '', out)  # drop case ending
+        else:
+            out = _MK.tashkeel(a).strip()
+            out = ' '.join(re.sub('[\u064B\u064C\u064D]$', '', w) for w in out.split())
+        if HAR.sub('', out).replace('ٱ', 'ا') != HAR.sub('', a).replace('ٱ', 'ا') and HAR.sub('', out) != a: out = a
+    except Exception:
+        out = a
+    _dcache[key] = out
+    return out
+def dia_list(s, pos):
+    return [dia(x, pos) for x in re.split(r'\s*[,،]\s*', s) if x.strip()]
+
 # ---------------- corpus: sentences, examples, collocations ----------------
 BAD = re.compile(r"\b(negro|negroes|nigger|niggers|darky|darkies|jap|japs|chink|faggot|fag|whore|cunt|fuck|fucking|shit|bitch|bastard|slut|rape|raped|raping|kill yourself|homosexuals?|queer)\b", re.I)
 def detok(toks):
@@ -169,7 +197,7 @@ for fid in brown.fileids():
         tagged_sents.append([(w, UT.get(t, 'x')) for w, t in s])
         toks = [w for w, _ in s]
         if 7 <= len(toks) <= 24 and toks[-1] in '.?!' and toks[0][:1].isupper():
-            sents.append((detok(toks), 'Brown · ' + cat))
+            sents.append((detok(toks), 'Brown · ' + cat, {lem(w): UT.get(t) for w, t in s if UT.get(t) in ('n', 'v', 'a', 'r')}))
 print('brown done')
 import pickle
 RC = 'data/reuters_tagged.pkl'
@@ -184,14 +212,14 @@ for fid in reuters.fileids():
             toks = nltk.word_tokenize(s); tg = nltk.pos_tag(toks, tagset='universal'); rcache[s] = (toks, tg)
         tagged_sents.append([(w, UT.get(t, 'x')) for w, t in tg])
         if 7 <= len(toks) <= 24 and s[-1] in '.?!' and s[0].isupper() and '<' not in s and sum(c.isdigit() for c in s) < 6:
-            sents.append((s, 'Reuters news'))
+            sents.append((s, 'Reuters news', {lem(w): UT.get(t) for w, t in tg if UT.get(t) in ('n', 'v', 'a', 'r')}))
 pickle.dump(rcache, open(RC, 'wb'))
 print('reuters done', len(sents), len(tagged_sents))
 
-sents = [(t, src) for t, src in sents if not BAD.search(t) and len(t) <= 140 and t.count('"') % 2 == 0 and not re.search(r"\b[A-Z]{3,}\b", t)]
+sents = [(t, src, pm) for t, src, pm in sents if not BAD.search(t) and len(t) <= 140 and t.count('"') % 2 == 0 and not re.search(r"\b[A-Z]{3,}\b", t)]
 TOK = re.compile(r"[A-Za-z]+(?:-[A-Za-z]+)*")
 lemma_sents = collections.defaultdict(list)
-for i, (t, src) in enumerate(sents):
+for i, (t, src, pm) in enumerate(sents):
     for l in set(lem(x) for x in TOK.findall(t)):
         if l in RANK: lemma_sents[l].append(i)
 
@@ -315,51 +343,71 @@ def sense_list(l):
         if len(pick) >= 5: break
     return syns, pick
 
+STOPG = set('a an the of to in on for by with or and as at from be is are that this which who something someone one ones its it their his her used make made especially usually etc very more than into out up'.split())
+def gtoks(t): return {lem(w) for w in re.findall(r"[a-z]+", t.lower()) if w not in STOPG and len(w) > 2}
+WPOS = {'verb': 'v', 'noun': 'n', 'adjective': 'a', 'adverb': 'r'}
+def syn_pos(s): return 'a' if s.pos() == 's' else s.pos()
+def wn_example(s, l):
+    stem = l.split()[0][:max(3, len(l.split()[0]) - 2)]
+    xs = [x for x in s.examples() if re.search(r'\b' + re.escape(stem), x, re.I)]
+    return xs[0] if xs else ''
+
 def entry(l, is_phrase=False):
     syns, pick = sense_list(l)
     key = l.replace(' ', '_')
     e = {}
     uk, us = ipa_of(l)
     if us: e['us'] = us   # American pronunciation only
-    pos = []
-    for s in pick:
-        p = PNAME[s.pos()]
-        if p not in pos: pos.append(p)
-    if l in FPOS: pos = [FPOS[l]] + [p for p in pos if p != FPOS[l]]
-    e['pos'] = pos
-    senses = []
-    for s in pick:
-        sd = {'p': PNAME[s.pos()][:3] if s.pos() != 'r' else 'adv', 'd': s.definition()}
-        ar = AWN.get('%08d-%s' % (s.offset(), 'a' if s.pos() == 's' else s.pos()), [])
-        if ar and s.pos() == 'n' and not is_phrase: sd['ar'] = ar[:2]
-        syn = [x.name().replace('_', ' ') for x in s.lemmas() if x.name().lower() != key][:3]
-        if syn: sd['syn'] = syn
-        exs = [x for x in s.examples() if re.search(r'\b' + re.escape(l.split()[0][:max(3, len(l.split()[0]) - 2)]), x, re.I)][:1]
-        if exs: sd['ex'] = exs[0]
-        senses.append(sd)
-    if senses: e['s'] = senses
+    m = []
     wk = ENAR.get(l)
     if wk:
-        wk = [[(x + ['', '', ''])[0], (x + ['', '', ''])[1], (x + ['', '', ''])[2]] for x in wk[0] if len(x) >= 2]
-        wk = [wk]
-        e['arw'] = [[p, a, g] for p, a, g in wk[0][:5] if p != 'proper noun']
-    ar = [] if wk else list(AE.get(l, []))[:4]
-    if not ar and not wk:
-        for s in senses:
-            for a in s.get('ar', []):
-                if a not in ar: ar.append(a)
-        ar = ar[:4]
-    if ar: e['ar'] = ar
-    if not senses and wk:
-        e['s'] = [{'p': p[:3], 'd': g, 'ar': [a]} for p, a, g in wk[0][:4]]
-        if not e.get('pos'): e['pos'] = list(dict.fromkeys(p for p, _, _ in wk[0][:4]))
+        rows = [[(x + ['', '', ''])[0], (x + ['', '', ''])[1], (x + ['', '', ''])[2]] for x in wk[0] if len(x) >= 2]
+        rows = [r for r in rows if r[0] != 'proper noun'][:6]
+        per_pos = collections.Counter(r[0] for r in rows)
+        used = set()
+        for p, a, g in rows:
+            sd = {'p': p, 'ar': dia_list(a, p), 'g': g}
+            wp = WPOS.get(p)
+            cands = [x for x in syns if syn_pos(x) == wp and x not in used] if wp else []
+            best, bs = None, 0
+            gt = gtoks(g)
+            for rank_i, x in enumerate(cands):
+                bag = gtoks(x.definition() + ' ' + ' '.join(n.name().replace('_', ' ') for n in x.lemmas()) + ' ' + ' '.join(x.examples()))
+                sc = len(gt & bag) - rank_i * 0.01
+                if sc > bs: best, bs = x, sc
+            if best is None and per_pos[p] == 1 and cands: best = cands[0]
+            if best is not None:
+                used.add(best)
+                ex = wn_example(best, l)
+                if ex: sd['ex'] = ex
+                sy = [n.name().replace('_', ' ') for n in best.lemmas() if n.name().lower() != key][:3]
+                if sy: sd['syn'] = sy
+            m.append(sd)
+    else:
+        for x in pick[:4]:
+            p = PNAME[x.pos()]
+            sd = {'p': p, 'g': x.definition()}
+            ar = AWN.get('%08d-%s' % (x.offset(), syn_pos(x)), [])
+            if ar and x.pos() == 'n' and not is_phrase: sd['ar'] = [dia(a, 'noun') for a in ar[:2]]
+            ex = wn_example(x, l)
+            if ex: sd['ex'] = ex
+            sy = [n.name().replace('_', ' ') for n in x.lemmas() if n.name().lower() != key][:3]
+            if sy: sd['syn'] = sy
+            m.append(sd)
+        if not any(sd.get('ar') for sd in m):
+            ar = list(AE.get(l, []))[:3]
+            if ar: e['ar'] = [dia(a, '') for a in ar]
+    if m: e['m'] = m
+    pos = list(dict.fromkeys(sd['p'] for sd in m))
+    if l in FPOS: pos = [FPOS[l]] + [p for p in pos if p != FPOS[l]]
+    e['pos'] = pos
     e['reg'] = register(l, syns) if not is_phrase else (['informal'] if any(u.name().startswith(('colloquialism', 'slang')) for s in syns[:2] for u in s.usage_domains()) else ['neutral'])
     if l in AWL: e['awl'] = AWL[l]
     return e, syns
 
 # ---------------- MWEs (phrasal verbs, idioms, compounds) ----------------
 PARTS = {'up', 'down', 'out', 'off', 'on', 'in', 'over', 'away', 'back', 'around', 'about', 'through', 'along', 'across', 'by', 'forward', 'apart', 'aside', 'together', 'into', 'onto', 'after', 'for', 'with', 'from', 'to', 'at', 'of', 'upon', 'against', 'behind', 'ahead'}
-corpus_text = ' ' + ' '.join(t.lower() for t, _ in sents) + ' '
+corpus_text = ' ' + ' '.join(t[0].lower() for t in sents) + ' '
 mwe = {}
 for s in wn.all_synsets():
     for lm in s.lemmas():
@@ -402,10 +450,12 @@ def examples_for(l, exclude=()):
     cand = [sents[i] for i in ids]
     cand.sort(key=lambda x: (abs(len(x[0].split()) - 13), x[0]))
     out, srcs = [], set()
-    for t, src in cand:
-        if src.split(' ·')[0] in srcs and len(cand) > 6: continue
-        out.append([t, src]); srcs.add(src.split(' ·')[0])
-        if len(out) >= 3: break
+    seen_pos = collections.Counter()
+    for t, src, pm in cand:
+        pp = pm.get(l, '')
+        if src.split(' ·')[0] in srcs and len(cand) > 6 and seen_pos[pp]: continue
+        out.append([t, src, pp]); srcs.add(src.split(' ·')[0]); seen_pos[pp] += 1
+        if len(out) >= 4: break
     return out
 
 def coll_for(l):
@@ -428,23 +478,28 @@ for l in ranked:
     e['r'] = RANK[l]
     ex = examples_for(l)
     if ex: e['x'] = ex
+    pc = collections.Counter(sd['p'] for sd in e.get('m', []))
+    for sd in e.get('m', []):
+        if 'ex' not in sd and pc[sd['p']] == 1:
+            hit = next((x for x in ex if x[2] == WPOS.get(sd['p'])), None)
+            if hit: sd['ex'] = hit[0]; sd['exs'] = hit[1]
     co = coll_for(l)
     # phrases starting with this lemma are good collocations too
     if co: e['c'] = co
-    if 'ar' not in e and 'arw' not in e: missing_ar += 1
+    if 'ar' not in e and not any(sd.get('ar') for sd in e.get('m', [])): missing_ar += 1
     shards[shard_of(l)][l] = e
 print('missing arabic', missing_ar, 'of', len(ranked))
-miss_top = [l for l in ranked[:15000] if 'ar' not in shards[shard_of(l)][l] and 'arw' not in shards[shard_of(l)][l]]
+miss_top = []
 print('missing top15k', len(miss_top), miss_top[:80])
 
-sents_lo = [t.lower() for t, _ in sents]
+sents_lo = [t[0].lower() for t in sents]
 for p, typ in mwe.items():
     e, syns = entry(p, True)
     e['t'] = typ
     e['pos'] = [typ]
     ex = []
-    for (t, src), lo in zip(sents, sents_lo):
-        if p in lo and re.search(r'\b' + re.escape(p) + r'\b', lo): ex.append([t, src])
+    for (t, src, pm), lo in zip(sents, sents_lo):
+        if p in lo and re.search(r'\b' + re.escape(p) + r'\b', lo): ex.append([t, src, ''])
         if len(ex) >= 2: break
     if ex: e['x'] = ex
     shards[shard_of(p)][p] = e
@@ -459,6 +514,7 @@ for sh in shards.values():
         if 'ph' in e:
             e['ph'] = sorted(e['ph'], key=lambda p: (len(p), p))[:12]
 
+_pk.dump(_dcache, open(DC, 'wb'))
 tot_size = 0
 for k, sh in shards.items():
     s = json.dumps(sh, ensure_ascii=False, separators=(',', ':'))

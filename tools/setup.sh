@@ -2,7 +2,7 @@
 # Downloads the dictionary sources into tools/data/ (about 120 MB) and installs the Python packages.
 set -e
 cd "$(dirname "$0")"; mkdir -p data/nd/corpora data/nd/taggers data/nd/tokenizers data/langle-en data/langle-en-ar
-pip install --quiet nltk wordfreq spacy-lookups-data
+pip install --quiet nltk wordfreq spacy-lookups-data mishkal
 N=https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages
 for f in corpora/wordnet corpora/omw-1.4 corpora/brown corpora/reuters taggers/averaged_perceptron_tagger_eng taggers/universal_tagset tokenizers/punkt_tab; do
   curl -sSL -o data/tmp.zip $N/$f.zip && unzip -qo data/tmp.zip -d data/nd/$(dirname $f)
