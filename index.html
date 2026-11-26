@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>English C2 — Zakria's English</title>
+<meta name="theme-color" content="#F4F5F2">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+ --bg:#F4F5F2;--surface:#fff;--ink:#16201E;--ink2:#3F4A47;--muted:#7A8582;--line:#E4E8E5;--line2:#EEF1EF;
+ --brand:#0F766E;--brand-soft:#DDF1EE;--pr:#2F6FB3;--new:#D9E8FB;--learn:#FCEFC0;--green:#2E8B57;--green-soft:#E3F3E9;--red:#C2412D;--red-soft:#FBE9E5;--amber:#B7791F;
+ --r:18px;--sh:0 1px 2px rgba(10,30,25,.04),0 6px 20px rgba(10,30,25,.06);
+ --ar:"Noto Naskh Arabic","Segoe UI","Tahoma",sans-serif;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:var(--pr)}
+.shell{display:flex;min-height:100vh}
+.side{display:none}
+.main{flex:1;min-width:0}
+.wrap{max-width:820px;margin:0 auto;padding:calc(18px + env(safe-area-inset-top)) 18px calc(100px + env(safe-area-inset-bottom))}
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border-top:1px solid var(--line);display:flex;padding:6px 2px calc(6px + env(safe-area-inset-bottom))}
+.tabbar button,.side nav button{background:none;border:0;cursor:pointer;color:var(--muted)}
+.tabbar button{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10.5px;font-weight:600;padding:4px 0;position:relative}
+.tabbar button svg{width:23px;height:23px}
+.tabbar button.on{color:var(--brand)}
+.tabbar .badge{position:absolute;top:0;left:calc(50% + 6px);background:var(--red);color:#fff;border-radius:99px;font-size:10px;padding:0 5px;line-height:16px}
+@media (min-width:900px){
+ .side{display:flex;flex-direction:column;width:250px;flex:none;position:sticky;top:0;height:100vh;padding:24px 16px;border-right:1px solid var(--line);background:var(--surface)}
+ .side .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;padding:0 10px 22px}
+ .side .logo img{width:36px;height:36px;border-radius:10px}
+ .side nav{display:flex;flex-direction:column;gap:4px}
+ .side nav button{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;font-weight:600;font-size:15px;text-align:left}
+ .side nav button svg{width:22px;height:22px}
+ .side nav button.on{background:var(--brand-soft);color:var(--brand)}
+ .side nav button:hover:not(.on){background:var(--line2);color:var(--ink)}
+ .side .mini{margin-top:auto;padding:14px;border-radius:14px;background:var(--bg);font-size:13px;color:var(--muted)}
+ .side .mini b{display:block;font-size:26px;color:var(--ink)}
+ .tabbar{display:none}
+ .wrap{padding:36px 36px 60px}
+}
+.hdr{display:flex;align-items:flex-end;gap:12px;margin:4px 0 18px}
+.hdr h1{font-size:28px;line-height:1.15;margin:0;font-weight:800;letter-spacing:-.02em}
+.hdr .sub{color:var(--muted);font-size:14px;margin-top:2px}
+.grow{flex:1;min-width:0}
+.row{display:flex;align-items:center;gap:12px} .row.wrap2{flex-wrap:wrap}
+.card{background:var(--surface);border-radius:var(--r);box-shadow:var(--sh);padding:18px;margin:0 0 14px}
+.card.flat{box-shadow:none;border:1px solid var(--line)}
+.sec{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:26px 0 10px}
+.btn{border:0;border-radius:14px;padding:12px 18px;font-weight:700;background:var(--ink);color:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}
+.btn.brand{background:var(--brand)} .btn.ghost{background:var(--surface);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.btn.soft{background:var(--line2);color:var(--ink)} .btn.wide{width:100%} .btn.sm{padding:8px 12px;font-size:14px;border-radius:12px}
+.btn.red{background:var(--red)} .btn.green{background:var(--green)}
+.btn:disabled{opacity:.45;cursor:default}
+.btn svg{width:18px;height:18px;flex:none}
+.iconbtn{border:0;background:var(--line2);border-radius:99px;width:42px;height:42px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;flex:none;color:var(--ink2)}
+.iconbtn svg{width:20px;height:20px} .iconbtn:hover{background:var(--line)}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0 4px;margin-bottom:12px}
+.chips.wrapc{flex-wrap:wrap;overflow:visible}
+.chip{flex:none;border:0;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);border-radius:99px;padding:7px 14px;font-weight:600;font-size:14px;cursor:pointer}
+.chip.on{background:var(--ink);color:#fff;box-shadow:none}
+.chip.sm{padding:4px 10px;font-size:13px}
+.tag{display:inline-block;border-radius:99px;padding:2px 9px;font-size:11px;font-weight:700;letter-spacing:.02em;vertical-align:2px;background:var(--line2);color:var(--ink2)}
+.tag.b{background:var(--brand-soft);color:var(--brand)} .tag.p{background:#ECE6F7;color:#6A4BA8} .tag.o{background:#FFF0DC;color:#9A5B00} .tag.r{background:var(--red-soft);color:var(--red)} .tag.g{background:var(--green-soft);color:var(--green)} .tag.blue{background:var(--new);color:var(--pr)}
+.muted{color:var(--muted)} .small{font-size:13px}
+.ipa{color:var(--pr);font-weight:500;font-size:15px;font-family:"Lucida Sans Unicode","DejaVu Sans",Inter,sans-serif}
+.ar{font-family:var(--ar);direction:rtl;unicode-bidi:isolate}
+.note{background:var(--line2);border-radius:12px;padding:10px 12px;font-size:14px;margin-top:10px;color:var(--ink2)}
+.note.warn{background:#FFF6E0}
+.empty{text-align:center;color:var(--muted);padding:36px 12px}
+input,select,textarea{width:100%;border:1px solid var(--line);background:#fff;border-radius:12px;padding:11px 13px;outline:none}
+textarea{resize:vertical;min-height:120px;line-height:1.6}
+input:focus,select:focus,textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(15,118,110,.15)}
+input[type=checkbox]{width:20px;height:20px;flex:none;accent-color:var(--brand)}
+label{display:block;font-size:13px;color:var(--muted);font-weight:600;margin:14px 0 5px}
+.toast{position:fixed;left:50%;bottom:96px;transform:translate(-50%,10px);background:var(--ink);color:#fff;padding:11px 18px;border-radius:14px;font-size:14px;font-weight:600;z-index:60;opacity:0;transition:all .2s;pointer-events:none;max-width:90vw}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.spk{border:0;background:var(--brand-soft);color:var(--brand);border-radius:99px;width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;flex:none;gap:4px}
+.spk svg{width:20px;height:20px} .spk.sm{width:32px;height:32px} .spk.sm svg{width:16px;height:16px}
+.spk.lbl{width:auto;padding:0 10px;font-size:12px;font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px} th,td{text-align:left;padding:7px 6px;border-top:1px solid var(--line);vertical-align:top} thead th{border-top:0;color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+details>summary{cursor:pointer;font-weight:700;list-style:none;display:flex;align-items:center;gap:8px} details>summary::-webkit-details-marker{display:none} details>summary::before{content:"›";font-size:20px;color:var(--muted);transition:transform .2s;display:inline-block;width:14px} details[open]>summary::before{transform:rotate(90deg)}
+.hero{background:linear-gradient(135deg,#10322E,#16514A);color:#fff;border-radius:24px;padding:22px;display:flex;gap:18px;align-items:center;box-shadow:var(--sh)}
+.hero .muted{color:#BFD8D3}
+.ring{flex:none;width:96px;height:96px;position:relative}
+.ring svg{transform:rotate(-90deg)} .ring b{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:22px;line-height:1.05}
+.ring b small{font-size:11px;font-weight:500;color:#BFD8D3}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+@media (min-width:560px){.stats{grid-template-columns:repeat(3,1fr)}}
+.stat{background:var(--surface);border-radius:16px;box-shadow:var(--sh);padding:14px 16px}
+.stat b{display:block;font-size:28px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.stat span{font-size:12px;color:var(--muted);font-weight:600}
+.stat.click{cursor:pointer} .stat.click:hover{box-shadow:0 0 0 2px var(--line),var(--sh)}
+.bar{height:6px;border-radius:9px;background:var(--line2);overflow:hidden;display:flex} .bar i{display:block;height:100%}
+.list .item{display:flex;gap:12px;align-items:center;padding:11px 0;border-top:1px solid var(--line2)} .list .item:first-child{border-top:0}
+.item.click{cursor:pointer}
+/* flashcards */
+.flash{min-height:440px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:22px}
+.flash .meta{align-self:stretch;display:flex;justify-content:space-between;font-size:12px;color:var(--muted);font-weight:600}
+.flash .big{font-size:38px;font-weight:800;line-height:1.15;letter-spacing:-.01em}
+.flash .exs{font-family:"Source Serif 4",Georgia,serif;font-size:18px;color:var(--ink2);max-width:560px}
+.flash .exs b{color:var(--ink)}
+.ans{align-self:stretch;border-top:1px dashed var(--line);margin-top:6px;padding-top:14px;display:flex;flex-direction:column;align-items:center;gap:6px}
+.grades{align-self:stretch;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:auto}
+.grades.two{grid-template-columns:repeat(2,1fr)}
+.grades button{border:0;border-radius:14px;padding:11px 4px;color:#fff;font-weight:700;cursor:pointer}
+.grades small{display:block;font-weight:500;opacity:.9;font-size:12px}
+.g1{background:#C2412D} .g2{background:#B7791F} .g3{background:#2E8B57} .g4{background:#2F6FB3}
+.kbd{font-size:12px;color:var(--muted);text-align:center}
+/* reader */
+.lib{display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:640px){.lib{grid-template-columns:1fr 1fr}}
+.book{background:var(--surface);border-radius:var(--r);box-shadow:var(--sh);padding:16px;cursor:pointer;display:flex;flex-direction:column;gap:8px}
+.book:hover{box-shadow:0 0 0 2px var(--line),var(--sh)} .book .t{font-weight:700;font-size:16px;line-height:1.3}
+.toolbar{position:sticky;top:0;z-index:10;background:rgba(244,245,242,.94);backdrop-filter:blur(10px);padding:10px 0;margin:0 0 6px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.reader{font-family:"Source Serif 4",Georgia,serif;font-size:21px;line-height:1.8}
+.reader p{margin:0 0 16px}
+.reader .line{display:flex;gap:10px;margin:0 0 12px}
+.reader .who{font-family:Inter,sans-serif;font-size:12px;font-weight:800;letter-spacing:.05em;color:var(--brand);min-width:88px;padding-top:6px}
+.sent{border-radius:6px;transition:background .2s} .sent.playing{background:#FFF1C9}
+.wd{cursor:pointer;border-radius:5px;padding:0 1px;margin:0 -1px;transition:background .15s,box-shadow .15s}
+.st-new{background:var(--new)} .st-learning{background:var(--learn)} .st-known{background:transparent} .st-ignored{background:transparent}
+.wd.ph{border-bottom:2px solid rgba(47,111,179,.55);border-radius:5px 5px 0 0}
+.wd.ph.st-learning{border-bottom-color:#D4A800} .wd.ph.st-known{border-bottom:2px dotted #b9c2bf}
+.wd:hover{box-shadow:0 0 0 2px rgba(15,118,110,.35)} .wd.sel{box-shadow:0 0 0 2px var(--brand)}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--muted);align-items:center;flex-wrap:wrap;font-weight:600}
+.legend i{display:inline-block;width:14px;height:12px;border-radius:4px;vertical-align:-1px;margin-right:5px}
+#pop{position:absolute;z-index:40;background:var(--surface);border-radius:20px;box-shadow:0 18px 50px rgba(10,30,25,.22),0 0 0 1px var(--line);padding:16px 18px;width:420px;max-height:76vh;overflow:auto;display:none;font-size:15px;line-height:1.45}
+#pop.sheet{position:fixed;left:0;right:0;bottom:0;width:auto;border-radius:24px 24px 0 0;padding:10px 18px calc(18px + env(safe-area-inset-bottom));max-height:82vh}
+#pop.sheet::before{content:"";display:block;width:40px;height:5px;border-radius:9px;background:var(--line);margin:0 auto 12px}
+#pop .w{font-size:28px;font-weight:800;letter-spacing:-.01em;line-height:1.15}
+#pop .armain{font-size:24px;font-weight:700;margin-top:8px;line-height:1.5}
+#pop .sense{padding:8px 0;border-top:1px solid var(--line2);font-size:14px}
+#pop .ex{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-top:1px solid var(--line2);font-family:"Source Serif 4",Georgia,serif;font-size:16px}
+#pop .ex .src{font-family:Inter,sans-serif;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+#pop h4{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+.colls{display:flex;flex-wrap:wrap;gap:6px}
+.colls span{background:var(--line2);border-radius:8px;padding:3px 9px;font-size:14px}
+.colls button{border:0;cursor:pointer}
+#scrim{position:fixed;inset:0;background:rgba(10,20,18,.28);z-index:35;display:none}
+/* placement */
+.ptest{text-align:center;padding:30px 18px}
+.ptest .w{font-size:44px;font-weight:800;letter-spacing:-.02em;margin:24px 0}
+.yn{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.yn button{border:0;border-radius:16px;padding:18px;font-weight:800;font-size:18px;cursor:pointer;color:#fff}
+/* spelling */
+.diff{font-family:"DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:26px;letter-spacing:.04em;display:flex;flex-wrap:wrap;justify-content:center;gap:2px;margin:10px 0}
+.diff span{display:inline-flex;flex-direction:column;align-items:center;min-width:.8em;border-radius:6px;padding:2px 2px}
+.diff .ok{color:var(--green)} .diff .bad{background:var(--red-soft);color:var(--red)} .diff .miss{background:var(--red-soft);color:var(--red);text-decoration:underline} .diff .extra{color:var(--red);text-decoration:line-through;opacity:.7}
+.diff small{font-size:12px;line-height:1;color:var(--muted)}
+.bigin{font-size:24px;text-align:center;padding:14px;letter-spacing:.02em}
+.sentdiff{font-size:19px;line-height:1.9}
+.sentdiff .okw{color:var(--green)} .sentdiff .badw{background:var(--red-soft);color:var(--red);border-radius:5px;padding:0 4px}
+/* writing */
+.editor{min-height:340px;font-family:"Source Serif 4",Georgia,serif;font-size:18px}
+.chk{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-top:1px solid var(--line2);font-size:14px;cursor:pointer} .chk:first-child{border-top:0}
+.flag{background:var(--red-soft);color:var(--red);border-radius:8px;padding:2px 8px;font-weight:600;cursor:pointer;border:0;font-size:14px}
+.chart{width:100%;height:auto;background:#fff;border-radius:12px}
+.proc{display:flex;flex-direction:column;gap:6px;counter-reset:s}
+.proc div{background:var(--line2);border-radius:10px;padding:8px 12px;font-size:14px;counter-increment:s} .proc div::before{content:counter(s) ". ";font-weight:800;color:var(--brand)}
+.timer{font-variant-numeric:tabular-nums;font-weight:800;font-size:20px}
+.pair{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.qsel{display:inline-block;width:auto;padding:2px 8px;border-radius:8px;font-size:16px;font-weight:700}
+.qsel.okq{border-color:var(--green);background:var(--green-soft)} .qsel.badq{border-color:var(--red);background:var(--red-soft)}
+.unit{display:flex;gap:14px;align-items:center;padding:12px 0;border-top:1px solid var(--line2);cursor:pointer} .unit:first-child{border-top:0}
+.unit .num{width:44px;height:44px;border-radius:14px;background:var(--brand-soft);color:var(--brand);font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;flex:none}
+.unit.done .num{background:var(--green);color:#fff}
+.counter{display:flex;gap:14px;align-items:center}
+.counter .big{font-size:52px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.pill{border:0;border-radius:99px;padding:4px 11px;font-size:12px;font-weight:700;cursor:pointer;flex:none}
+.pill.new{background:var(--new);color:var(--pr)} .pill.learning{background:var(--learn);color:#8a6400} .pill.known{background:var(--green-soft);color:var(--green)} .pill.learned{background:var(--brand);color:#fff}
+.qa{padding:10px 0;border-top:1px solid var(--line2)} .qa:first-child{border-top:0}
+.qa .a{display:none;color:var(--green);font-weight:600;margin-top:4px} .qa.open .a{display:block}
+.mcq{display:grid;gap:8px;margin-top:12px} .mcq button{border:0;background:var(--line2);border-radius:12px;padding:12px;text-align:left;font-weight:600;cursor:pointer}
+.mcq button.okq{background:var(--green-soft);color:var(--green)} .mcq button.badq{background:var(--red-soft);color:var(--red)}
+.seg{display:flex;background:var(--line2);border-radius:12px;padding:3px;gap:3px;margin:0 0 14px;overflow-x:auto}
+.seg button{flex:1;border:0;background:none;border-radius:9px;padding:8px 10px;font-weight:700;font-size:13px;cursor:pointer;color:var(--muted);white-space:nowrap}
+.seg button.on{background:var(--surface);color:var(--ink);box-shadow:var(--sh)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:14px}
+</style>
+</head>
+<body>
+<div class="shell">
+ <aside class="side" id="side"></aside>
+ <div class="main"><div class="wrap" id="app"><div class="empty">Loading…</div></div></div>
+</div>
+<nav class="tabbar" id="tabbar"></nav>
+<div id="scrim"></div>
+<div id="pop"></div>
+<div class="toast" id="toast"></div>
+<script>
+(() => {
+'use strict';
+// ================= helpers =================
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
+const dkey = d => d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+const today = () => dkey(new Date());
+const endOfToday = () => { const d = new Date(); d.setHours(23, 59, 59, 999); return d.getTime(); };
+const MIN = 60000, DAY = 86400000;
+const shuffle = a => { a = [...a]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const sample = (a, n) => shuffle(a).slice(0, n);
+function toast(msg) { const t = $('#toast'); t.textContent = msg; t.classList.add('on'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('on'), 2400); }
+const svgi = p => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+const I = {
+  home: svgi('<path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>'),
+  read: svgi('<path d="M2 5h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2zM22 5h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/>'),
+  cards: svgi('<rect x="3" y="7" width="14" height="14" rx="3"/><path d="M7 3h11a3 3 0 0 1 3 3v11"/>'),
+  write: svgi('<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/>'),
+  plan: svgi('<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>'),
+  words: svgi('<path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h6"/>'),
+  gear: svgi('<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/>'),
+  spk: svgi('<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/>'),
+  back: svgi('<path d="M15 18l-6-6 6-6"/>'),
+  play: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>',
+  stop: '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>',
+  check: svgi('<path d="M5 12l5 5 9-10"/>'),
+  plus: svgi('<path d="M12 5v14M5 12h14"/>'),
+  search: svgi('<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>'),
+  trash: svgi('<path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/>'),
+};
+const NAV = [['home', 'Home', I.home], ['read', 'Read', I.read], ['review', 'Cards', I.cards], ['write', 'Write', I.write], ['plan', 'Plan', I.plan], ['words', 'Words', I.words]];
+
+// ================= state =================
+const LS = 'english-progress-v1', LST = 'english-mytexts-v1', LSA = 'english-arcache-v1';
+const S = {
+  view: 'home', core: null, R: {}, F: {}, MWE: {}, prof: new Set(), fakes: [], texts: [], learn: null, shards: {},
+  prog: {cards: {}, meta: {}, stats: {}, words: {}, prior: {}, learned: {}, read: {}, place: null, mis: {}, writing: [], drafts: {}, checks: {}, grammar: {}, quiz: {},
+    prefs: {goal: 60, newPerDay: 15, voice: 'en-GB', rate: 0.95, dir: 'en', minutes: 45}, lastBackup: 0, started: Date.now()},
+  my: [], arCache: {}, deck: 'all', readFilter: 'all', wordFilter: 'learned', q: '', wtab: 'dict', ptab: 'path',
+};
+const FUNC = new Set("the a an of and to in that it for you he she they we i with as at by from this but not or his her their our your my its me him them us what which who whom whose there here when where why how if than then so because while although though unless whether until since nor yet also very too only just even each every either neither both all any some no none many much more most few less least such own same other another one two three four five six seven eight nine ten hundred thousand into onto upon about above below over under between among through during before after against without within across along around behind beyond toward towards off out up down near via per despite except like unlike would could should might must shall will can may ought do be have get mr mrs ms ok yes oh".split(' '));
+const TARGET = 12000; // ranks to know for C2-level reading (~8–9k word families)
+
+// ================= core dictionary =================
+const R = () => S.R;
+function lemmaOf(w) {
+  w = w.toLowerCase().replace(/’/g, "'");
+  if (S.F[w]) return S.F[w];
+  if (S.R[w]) return w;
+  if (w.endsWith("'s")) return lemmaOf(w.slice(0, -2));
+  const tries = [[/ies$/, 'y'], [/ied$/, 'y'], [/ier$/, 'y'], [/iest$/, 'y'], [/ves$/, 'f'], [/ves$/, 'fe'], [/es$/, ''], [/s$/, ''], [/ed$/, ''], [/ed$/, 'e'], [/ing$/, ''], [/ing$/, 'e'], [/er$/, ''], [/er$/, 'e'], [/est$/, ''], [/est$/, 'e'], [/ily$/, 'y'], [/ly$/, '']];
+  for (const [re, rep] of tries) if (re.test(w)) {
+    const c = w.replace(re, rep);
+    if (c.length >= 2 && S.R[c]) return c;
+    if (/(ed|ing|er|est)$/.test(w) && /([bdfgklmnprtz])\1$/.test(c) && S.R[c.slice(0, -1)]) return c.slice(0, -1);
+  }
+  return w;
+}
+const bandOf = k => S.R[k] ? Math.ceil(S.R[k] / 1000) : 0;
+const cefrOfBand = b => !b ? '' : b <= 1 ? 'A1' : b <= 2 ? 'A2' : b <= 3 ? 'B1' : b <= 5 ? 'B2' : b <= 8 ? 'C1' : 'C2';
+const cefrOfSize = n => n < 1500 ? 'A1' : n < 2500 ? 'A2' : n < 3500 ? 'B1' : n < 5500 ? 'B2' : n < 8500 ? 'C1' : 'C2';
+function shardKey(k) { const c = k[0]; return /[a-z]/.test(c) ? c : '_'; }
+async function entryOf(k) {
+  const key = k.startsWith('p:') ? k.slice(2) : k;
+  const sh = shardKey(key);
+  if (!S.core.shards.includes(sh)) return idiomEntry(key);
+  if (!S.shards[sh]) S.shards[sh] = fetch('dict/d_' + sh + '.json').then(r => { if (!r.ok) throw 0; return r.json(); }).catch(e => { delete S.shards[sh]; return {}; });
+  const d = await S.shards[sh];
+  let e = d[key] || idiomEntry(key);
+  if (e && !e.arw && !e.ar) { // British spelling → borrow Arabic from the American form
+    const v = key.replace(/is(e|ed|ing|ation)$/, 'iz$1').replace(/our$/, 'or').replace(/tre$/, 'ter').replace(/ogue$/, 'og');
+    if (v !== key) { const e2 = await entryOf(v); if (e2 && (e2.arw || e2.ar)) e = {...e, arw: e2.arw, ar: e2.ar}; }
+  }
+  return e;
+}
+function idiomEntry(key) {
+  const id = S.learn && S.learn.idioms.find(x => x.p === key); if (!id) return null;
+  return {pos: ['idiom'], t: 'idiom', arw: [['idiom', id.ar, id.m]], s: [{p: 'idi', d: id.m}], ex2: [id.ex], reg: ['informal']};
+}
+function buildMWE() {
+  const idx = {};
+  const add = (k, typ, n) => {
+    const toks = k.split(' '); if (toks.length < 2) return;
+    const lt = toks.map(t => /^(someone|something|one's|your|someone's)$/.test(t) ? '*' + t : lemmaOf(t));
+    (idx[lt[0]] ||= []).push({k, lt, typ, n});
+  };
+  for (const [k, v] of Object.entries(S.core.mwe)) {
+    const toks = k.split(' ');
+    if ((v[0] === 'phrasal verb' && v[1] < 3 && /^(from|to|for|at|of|with|into|onto|upon|in|on|by|against|after)$/.test(toks[toks.length - 1])) || toks.every(t => FUNC.has(t)) || (toks.length === 2 && /^(be|have|do|the|a|an|and|or|in|of|to)$/.test(toks[0]))) { delete S.core.mwe[k]; continue; }
+    add(k, v[0], v[1]);
+  }
+  for (const id of S.learn.idioms) if (!S.core.mwe[id.p]) { S.core.mwe[id.p] = ['idiom', 0]; add(id.p, 'idiom', 0); }
+  for (const l of Object.values(idx)) l.sort((a, b) => b.lt.length - a.lt.length);
+  S.MWE = idx;
+}
+
+// ================= word status & counters =================
+const baseline = () => (S.prog.place && S.prog.place.base) || 0;
+function isMature(id) { const c = S.prog.cards[id]; return !!(c && c.state === 'review' && c.ivl >= 21); }
+function wordStatus(k) {
+  const w = S.prog.words[k]; if (w) return w;
+  if (S.prog.meta['v:' + k]) return S.prog.learned[k] ? 'known' : 'learning';
+  if (k.startsWith('p:')) { const m = S.core.mwe[k.slice(2)]; return m && m[0] === 'compound' ? 'known' : m && m[1] >= 30 && baseline() >= 4000 ? 'known' : 'new'; }
+  if (FUNC.has(k)) return 'known';
+  const r = S.R[k]; if (r && r <= baseline()) return 'known';
+  if (S.prog.place && S.prog.place.yes && S.prog.place.yes.includes(k)) return 'known';
+  return 'new';
+}
+function setStatus(k, st) {
+  if (st === 'known') {
+    if (S.prog.meta['v:' + k] || S.prog.words[k] === 'learning') { if (!S.prog.prior[k]) S.prog.learned[k] = today(); }
+    else S.prog.prior[k] = 1;
+    S.prog.words[k] = 'known';
+  } else if (st === 'new') { delete S.prog.prior[k]; delete S.prog.learned[k]; S.prog.words[k] = 'new'; }
+  else if (st === 'ignored') S.prog.words[k] = 'ignored';
+  else delete S.prog.words[k];
+  saveProg();
+}
+function counters() {
+  const learned = Object.keys(S.prog.learned).filter(k => !S.prog.prior[k]).length;
+  let learning = 0; for (const [id, m] of Object.entries(S.prog.meta)) if (m.t === 'v' && !S.prog.learned[m.k] && S.prog.words[m.k] !== 'known') learning++;
+  const est = (S.prog.place && S.prog.place.est) || 0;
+  return {learned, learning, est, vocab: est + learned, texts: Object.keys(S.prog.read).length};
+}
+
+// ================= speech =================
+let voices = [];
+function loadVoices() { try { voices = speechSynthesis.getVoices(); } catch (e) {} }
+if ('speechSynthesis' in window) { loadVoices(); speechSynthesis.onvoiceschanged = loadVoices; }
+function pickVoice(lang) {
+  const vs = voices.filter(v => v.lang && v.lang.replace('_', '-').toLowerCase().startsWith(lang.toLowerCase()));
+  const pref = vs.find(v => /natural|neural|google|premium|enhanced/i.test(v.name)) || vs.find(v => v.localService) || vs[0];
+  return pref || voices.find(v => /^en/i.test(v.lang)) || null;
+}
+function speak(text, o = {}) {
+  if (!('speechSynthesis' in window)) { toast('This device has no voice output'); return; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text); const lang = o.lang || S.prog.prefs.voice;
+  u.lang = lang; const v = pickVoice(lang); if (v) u.voice = v;
+  u.rate = o.rate || S.prog.prefs.rate; if (o.onend) { u.onend = o.onend; u.onerror = o.onend; }
+  speechSynthesis.speak(u);
+}
+const spk = (text, sm, lang, label) => `<button class="spk ${sm ? 'sm' : ''} ${label ? 'lbl' : ''}" data-say="${esc(text)}" ${lang ? `data-lang="${lang}"` : ''} aria-label="Play">${I.spk}${label ? esc(label) : ''}</button>`;
+
+// ================= SRS =================
+function schedule(prev, grade, now) {
+  const c = Object.assign({state: 'new', step: 0, ivl: 0, ease: 2.5, due: 0, reps: 0, lapses: 0}, prev || {});
+  if (c.state !== 'review') {
+    const steps = c.state === 'relearn' ? [10] : [1, 10];
+    const graduate = days => { c.state = 'review'; c.ivl = days; c.due = now + days * DAY; c.step = 0; };
+    if (grade === 1) { c.step = 0; c.due = now + steps[0] * MIN; if (c.state === 'new') c.state = 'learn'; }
+    else if (grade === 2) { if (c.state === 'new') c.state = 'learn'; c.due = now + Math.round(steps[Math.min(c.step, steps.length - 1)] * 1.5) * MIN; }
+    else if (grade === 3) { if (c.state === 'new') c.state = 'learn'; c.step++; if (c.step >= steps.length) graduate(c.state === 'relearn' ? Math.max(1, c.ivl) : 1); else c.due = now + steps[c.step] * MIN; }
+    else graduate(c.state === 'relearn' ? Math.max(1, c.ivl) + 1 : 4);
+  } else {
+    if (grade === 1) { c.lapses++; c.ease = Math.max(1.3, c.ease - .2); c.ivl = Math.max(1, Math.round(c.ivl * .5)); c.state = 'relearn'; c.step = 0; c.due = now + 10 * MIN; }
+    else {
+      if (grade === 2) { c.ivl = Math.max(c.ivl + 1, Math.round(c.ivl * 1.2)); c.ease = Math.max(1.3, c.ease - .15); }
+      if (grade === 3) c.ivl = Math.max(c.ivl + 1, Math.round(c.ivl * c.ease));
+      if (grade === 4) { c.ivl = Math.max(c.ivl + 2, Math.round(c.ivl * c.ease * 1.3)); c.ease += .15; }
+      c.due = now + c.ivl * DAY;
+    }
+  }
+  c.reps++; c.last = now; c.ease = Math.round(c.ease * 100) / 100;
+  return c;
+}
+function fmtIvl(ms) { const m = Math.round(ms / MIN); if (m < 60) return m + ' min'; const h = Math.round(m / 60); if (h < 24) return h + ' h'; const d = Math.round(ms / DAY); if (d < 31) return d + ' d'; const mo = Math.round(d / 30); return mo < 12 ? mo + ' mo' : (d / 365).toFixed(1) + ' y'; }
+const st = id => S.prog.cards[id];
+const dayStats = (k = today()) => (S.prog.stats[k] ??= {rev: 0, new: 0, pts: 0});
+function addPts(n) { dayStats().pts = (dayStats().pts || 0) + n; saveProg(); }
+const inDeck = id => S.deck === 'all' || (S.deck === 'v' ? id.startsWith('v:') : id.startsWith('s:'));
+function counts(filter = inDeck) {
+  const now = Date.now(), eod = endOfToday(); let learn = 0, rev = 0, fresh = 0;
+  for (const id of Object.keys(S.prog.meta)) {
+    if (!filter(id)) continue; const x = st(id);
+    if (!x || x.state === 'new') fresh++; else if (x.state === 'review') { if (x.due <= eod) rev++; } else if (x.due <= now + 20 * MIN) learn++;
+  }
+  const newLeft = Math.max(0, S.prog.prefs.newPerDay - dayStats().new);
+  return {learn, rev, fresh, newToday: Math.min(fresh, newLeft), total: learn + rev + Math.min(fresh, newLeft)};
+}
+let sinceNew = 0;
+function pickNext() {
+  const now = Date.now(), eod = endOfToday(), pool = Object.keys(S.prog.meta).filter(inDeck);
+  const lrn = pool.filter(id => { const x = st(id); return x && (x.state === 'learn' || x.state === 'relearn') && x.due <= now; }).sort((a, b) => st(a).due - st(b).due);
+  if (lrn.length) return lrn[0];
+  const rev = pool.filter(id => { const x = st(id); return x && x.state === 'review' && x.due <= eod; }).sort((a, b) => st(a).due - st(b).due);
+  const fresh = S.prog.prefs.newPerDay - dayStats().new > 0 ? pool.filter(id => !st(id) || st(id).state === 'new').sort((a, b) => (S.prog.meta[a].added || 0) - (S.prog.meta[b].added || 0)) : [];
+  if (rev.length && (!fresh.length || sinceNew < 3)) { sinceNew++; return rev[0]; }
+  if (fresh.length) { sinceNew = 0; return fresh[0]; }
+  const ahead = pool.filter(id => { const x = st(id); return x && (x.state === 'learn' || x.state === 'relearn') && x.due <= now + 20 * MIN; }).sort((a, b) => st(a).due - st(b).due);
+  return ahead[0] || null;
+}
+function addCard(k, extra = {}) {
+  const id = 'v:' + k; if (S.prog.meta[id]) return false;
+  S.prog.meta[id] = {t: 'v', k, added: Date.now(), ...extra};
+  delete S.prog.prior[k]; if (S.prog.words[k] === 'known' || S.prog.words[k] === 'new') delete S.prog.words[k];
+  saveProg(); return true;
+}
+function addSpell(word, extra = {}) {
+  word = word.toLowerCase(); const id = 's:' + word;
+  const m = S.prog.mis[word] ||= {n: 0, typed: []}; m.n++; m.last = Date.now(); if (extra.typed) { m.typed.unshift(extra.typed); m.typed = m.typed.slice(0, 4); }
+  if (!S.prog.meta[id]) S.prog.meta[id] = {t: 's', k: word, added: Date.now(), tip: extra.tip || ''};
+  else if (st(id) && st(id).state === 'review') { S.prog.cards[id] = {...st(id), due: Date.now()}; }
+  saveProg();
+}
+
+// ================= storage, backup, install =================
+let saveTimer = null;
+function saveProg() { clearTimeout(saveTimer); saveTimer = setTimeout(saveNow, 300); }
+function saveNow() { try { localStorage.setItem(LS, JSON.stringify(S.prog)); } catch (e) { toast('Could not save on this device'); } }
+function saveMy() { try { localStorage.setItem(LST, JSON.stringify(S.my)); } catch (e) { toast('Could not save the text (storage full?)'); } }
+function loadLocal() {
+  try { const p = JSON.parse(localStorage.getItem(LS) || 'null'); if (p && p.cards) S.prog = {...S.prog, ...p, prefs: {...S.prog.prefs, ...(p.prefs || {})}}; } catch (e) {}
+  try { S.my = JSON.parse(localStorage.getItem(LST) || '[]'); } catch (e) { S.my = []; }
+  try { S.arCache = JSON.parse(localStorage.getItem(LSA) || '{}'); } catch (e) { S.arCache = {}; }
+}
+function exportData() {
+  const blob = new Blob([JSON.stringify({app: 'english', version: 1, exported: new Date().toISOString(), progress: S.prog, texts: S.my}, null, 1)], {type: 'application/json'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'english-backup-' + today() + '.json';
+  document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  S.prog.lastBackup = Date.now(); saveProg(); render();
+}
+function importData(file) {
+  const r = new FileReader();
+  r.onload = () => {
+    try {
+      const d = JSON.parse(r.result); if (!d || d.app !== 'english' || !d.progress) throw 0;
+      const p = d.progress, P = S.prog;
+      for (const [k, v] of Object.entries(p.cards || {})) { const m = P.cards[k]; if (!m || (v.last || 0) > (m.last || 0)) P.cards[k] = v; }
+      for (const [k, v] of Object.entries(p.meta || {})) if (!P.meta[k]) P.meta[k] = v;
+      for (const [k, v] of Object.entries(p.stats || {})) { const m = P.stats[k] || {rev: 0, new: 0, pts: 0}; P.stats[k] = {rev: Math.max(m.rev || 0, v.rev || 0), new: Math.max(m.new || 0, v.new || 0), pts: Math.max(m.pts || 0, v.pts || 0)}; }
+      for (const key of ['words', 'prior', 'learned', 'read', 'mis', 'drafts', 'checks', 'grammar', 'quiz']) P[key] = {...(p[key] || {}), ...P[key]};
+      if (p.place && (!P.place || (p.place.date || 0) > (P.place.date || 0))) P.place = p.place;
+      const seen = new Set(P.writing.map(w => w.id)); for (const w of (p.writing || [])) if (!seen.has(w.id)) P.writing.push(w);
+      const ids = new Set(S.my.map(t => t.id)); for (const t of (d.texts || [])) if (t && t.id && !ids.has(t.id)) S.my.push(t);
+      saveNow(); saveMy(); render(); toast('Backup loaded');
+    } catch (e) { toast('That file is not a backup of this app'); }
+  };
+  r.readAsText(file);
+}
+function setupStandalone() {
+  if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
+  if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+    navigator.serviceWorker.addEventListener('message', e => { if (e.data && e.data.type === 'dict-status') { S.dictStatus = e.data; if (S.view === 'settings') render(); } if (e.data && e.data.type === 'dict-ready') { S.dictStatus = null; } });
+  }
+  addEventListener('beforeinstallprompt', e => { e.preventDefault(); S.installEvt = e; if (S.view === 'settings') render(); });
+  addEventListener('appinstalled', () => { S.installEvt = null; toast('Installed!'); render(); });
+  addEventListener('pagehide', saveNow);
+}
+
+// ================= online helpers (optional) =================
+async function onlineArabic(text) {
+  const key = text.toLowerCase(); if (S.arCache[key]) return S.arCache[key];
+  if (!navigator.onLine) return null;
+  try {
+    const r = await fetch('https://api.mymemory.translated.net/get?langpair=en|ar&q=' + encodeURIComponent(text));
+    const j = await r.json(); const t = j && j.responseData && j.responseData.translatedText;
+    if (t && !/MYMEMORY|INVALID|QUERY LENGTH/i.test(t)) { S.arCache[key] = t; try { localStorage.setItem(LSA, JSON.stringify(S.arCache)); } catch (e) {} return t; }
+  } catch (e) {}
+  return null;
+}
+
+// ================= shell =================
+function shell() {
+  const v = S.view === 'settings' ? 'home' : S.view === 'place' ? 'home' : S.view;
+  const due = counts(() => true).total;
+  $('#tabbar').innerHTML = NAV.map(([k, l, i]) => `<button data-tab="${k}" class="${v === k ? 'on' : ''}">${i}${l}${k === 'review' && due ? `<span class="badge">${due}</span>` : ''}</button>`).join('');
+  const c = counters();
+  $('#side').innerHTML = `<div class="logo"><img src="icons/icon-192.png" alt="">English C2</div>
+   <nav>${NAV.map(([k, l, i]) => `<button data-tab="${k}" class="${v === k ? 'on' : ''}">${i}${l}${k === 'review' && due ? `<span class="grow"></span><span class="tag r">${due}</span>` : ''}</button>`).join('')}
+   <button data-tab="settings" class="${S.view === 'settings' ? 'on' : ''}">${I.gear}Settings</button></nav>
+   <div class="mini"><b>${c.learned}</b>new words learned<div style="margin-top:6px">${c.learning} learning · ${streak()} day streak</div></div>`;
+}
+function streak() {
+  let n = 0; const d = new Date();
+  for (let i = 0; i < 400; i++) { const v = S.prog.stats[dkey(d)]; if (v && (v.rev || v.new || v.pts)) n++; else if (i > 0) break; d.setDate(d.getDate() - 1); }
+  return n;
+}
+const header = (title, sub, right = '') => `<div class="hdr"><div class="grow"><h1>${title}</h1>${sub ? `<div class="sub">${sub}</div>` : ''}</div>${right}</div>`;
+
+// ================= HOME =================
+function greeting() { const h = new Date().getHours(); return h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening'; }
+function nextStep() {
+  if (!S.prog.place) return {label: 'Take the placement test (6 min)', go: 'place'};
+  const c = counts(() => true);
+  if (c.total) return {label: `Review ${c.total} cards`, go: 'review'};
+  const open = S.prog.lastText && !S.prog.read[S.prog.lastText] ? allTexts().find(t => t.id === S.prog.lastText) : null;
+  if (open) return {label: `Continue “${open.title}”`, text: open.id};
+  const lvl = levelNow();
+  const unread = allTexts().find(t => !S.prog.read[t.id] && t.level === lvl) || allTexts().find(t => !S.prog.read[t.id] && t.style !== 'my');
+  if (!dayStats().dict) return {label: 'Spelling: 10 dictation words', dict: 'common'};
+  if (unread) return {label: `Read “${unread.title}”`, text: unread.id};
+  return {label: 'Next step in your plan', go: 'plan'};
+}
+function levelNow() { const e = counters().vocab; return e >= 8500 ? 'C2' : e >= 5500 ? 'C1' : 'B2'; }
+function homeView() {
+  const ds = dayStats(), goal = S.prog.prefs.goal || 60, done = ds.pts || 0, pct = Math.min(1, done / goal);
+  const c = counters(), cc = counts(() => true), nx = nextStep(), R2 = 40, C = 2 * Math.PI * R2;
+  const pl = S.prog.place;
+  return `${header(greeting() + ', Zakria', pl ? `Estimated vocabulary ≈ ${c.vocab.toLocaleString()} words · around ${cefrOfSize(c.vocab)} · goal C2` : 'Start with the placement test so known words aren’t counted', `<button class="iconbtn" data-tab="settings" aria-label="Settings">${I.gear}</button>`)}
+  <div class="hero">
+   <div class="ring"><svg width="96" height="96"><circle cx="48" cy="48" r="${R2}" stroke="rgba(255,255,255,.15)" stroke-width="9" fill="none"/><circle cx="48" cy="48" r="${R2}" stroke="${pct >= 1 ? '#5BD08A' : '#5FD3C4'}" stroke-width="9" fill="none" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C * (1 - pct)}"/></svg><b>${done}<small>/ ${goal} pts</small></b></div>
+   <div class="grow"><div style="font-weight:800;font-size:20px">${pct >= 1 ? 'Daily goal done 🎉' : 'Daily goal'}</div><div class="muted small">${streak()} day streak 🔥 · ${cc.total} cards waiting</div>
+    <button class="btn brand" style="margin-top:12px;background:#fff;color:var(--brand)" ${nx.go ? `data-go="${nx.go}"` : nx.text ? `data-text="${esc(nx.text)}"` : `data-dict="${nx.dict}"`}>${I.play} Continue: ${esc(nx.label)}</button></div>
+  </div>
+  <div class="stats">
+   <div class="stat click" data-tab="words"><b>${c.learned}</b><span>new words learned</span></div>
+   <div class="stat click" data-tab="words"><b>${c.learning}</b><span>words learning</span></div>
+   <div class="stat click" data-tab="read"><b>${c.texts}</b><span>texts read</span></div>
+   <div class="stat click" data-go="review"><b>${cc.total}</b><span>cards due</span></div>
+   <div class="stat click" data-tab="write"><b>${Object.keys(S.prog.mis).length}</b><span>misspellings to fix</span></div>
+   <div class="stat click" data-tab="plan"><b>${planPct()}%</b><span>of the plan to C2</span></div>
+  </div>
+  <p class="small muted" style="margin:10px 2px 0">Points: 1 per card, 1 per dictation item, 10 per text, 5 per grammar lesson, 20 per essay. A word counts as <b>learned</b> only if it was new to you and its card reaches a 3-week interval (or you mark it known after studying it).</p>
+  <div class="sec">Today</div>
+  <div class="card list">
+   ${todayItems().map(t => `<div class="item click" ${t.attr}><div class="unit" style="padding:0;border:0"><div class="num" style="${t.done ? 'background:var(--green);color:#fff' : ''}">${t.done ? I.check.replace('<svg', '<svg width="18" height="18"') : t.icon}</div></div><div class="grow"><div style="font-weight:700">${t.t}</div><div class="small muted">${t.s}</div></div></div>`).join('')}
+  </div>`;
+}
+function todayItems() {
+  const ds = dayStats(), cc = counts(() => true);
+  const lvl = levelNow(), unread = allTexts().find(t => !S.prog.read[t.id] && t.level === lvl && t.style !== 'my') || allTexts().find(t => !S.prog.read[t.id] && t.style !== 'my');
+  const out = [];
+  if (!S.prog.place) out.push({t: 'Placement test', s: 'Estimates your level and marks words you already know', attr: 'data-go="place"', icon: '1', done: false});
+  out.push({t: 'Cards', s: cc.total ? `${cc.total} due now` : 'All done for now', attr: 'data-go="review"', icon: '🃏', done: !cc.total && (ds.rev + ds.new) > 0});
+  out.push({t: 'Read one text', s: unread ? `${unread.title} · ${unread.level}` : 'Import your own text', attr: unread ? `data-text="${esc(unread.id)}"` : 'data-tab="read"', icon: '📖', done: !!ds.read});
+  out.push({t: 'Dictation', s: '10 words: hear, type, see your mistakes', attr: 'data-dict="common"', icon: '✍️', done: (ds.dict || 0) >= 10});
+  out.push({t: 'Word builder', s: `Add ${Math.min(10, S.prog.prefs.newPerDay)} new words from your next band`, attr: `data-band="${nextBand()}"`, icon: '➕', done: false});
+  return out;
+}
+
+// ================= PLACEMENT =================
+const PBANDS = [1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 17, 20, 25, 30];
+function startPlacement() {
+  const items = [];
+  for (const b of PBANDS) {
+    const pool = S.core.lemmas.slice((b - 1) * 1000, b * 1000).filter(l => !FUNC.has(l) && !S.prof.has(l) && l.length >= 3 && !l.includes('-'));
+    for (const w of sample(pool, 6)) items.push({w, b});
+  }
+  for (const w of sample(S.fakes, 20)) items.push({w, b: 0});
+  S.pt = {items: shuffle(items), i: 0, ans: []};
+  S.view = 'place'; render();
+}
+function placeAnswer(yes) {
+  const p = S.pt; if (!p || p.i >= p.items.length) return;
+  p.ans.push({...p.items[p.i], yes}); p.i++;
+  if (p.i >= p.items.length) finishPlacement(); else render();
+}
+function finishPlacement() {
+  const a = S.pt.ans, fk = a.filter(x => !x.b), fa = fk.filter(x => x.yes).length / Math.max(1, fk.length);
+  const rate = {};
+  for (const b of PBANDS) { const xs = a.filter(x => x.b === b); const h = xs.filter(x => x.yes).length / Math.max(1, xs.length); rate[b] = Math.max(0, Math.min(1, fa < 1 ? (h - fa) / (1 - fa) : 0)); }
+  const rateAt = k => { // interpolate band k (1..32)
+    if (k <= PBANDS[0]) return rate[PBANDS[0]];
+    for (let i = 1; i < PBANDS.length; i++) if (k <= PBANDS[i]) { const a0 = PBANDS[i - 1], a1 = PBANDS[i]; return rate[a0] + (rate[a1] - rate[a0]) * (k - a0) / (a1 - a0); }
+    return rate[PBANDS[PBANDS.length - 1]];
+  };
+  // known vocabulary can only fall as words get rarer: smooth out noise in the rare bands
+  let mx = 1; for (const b of PBANDS) { rate[b] = Math.min(rate[b], mx + 0.1); mx = Math.min(mx, rate[b] + 0.1); }
+  let est = 0; const nb = Math.ceil(S.core.lemmas.length / 1000);
+  for (let k = 1; k <= nb; k++) est += rateAt(k) * Math.min(1000, S.core.lemmas.length - (k - 1) * 1000);
+  let base = 0; for (const b of PBANDS) { if (rate[b] >= 0.8) base = b * 1000; else break; }
+  const yes = a.filter(x => x.b && x.yes && fa <= 0.25).map(x => x.w), no = a.filter(x => x.b && !x.yes).map(x => x.w);
+  for (const w of no) if (!S.prog.meta['v:' + w]) S.prog.words[w] = 'new';
+  if (fa > 0.4) { base = 0; est = Math.min(est, 3000); }
+  S.prog.place = {date: Date.now(), est: Math.round(est / 50) * 50, base, rate, fa: Math.round(fa * 100), yes, no};
+  S.pt.done = true; addPts(10); saveNow(); render();
+}
+function placeView() {
+  const p = S.pt;
+  if (!p) {
+    const pl = S.prog.place;
+    return `${header('Placement test', 'A vocabulary-size test by frequency bands, 1k → 30k')}
+    <div class="card"><p style="margin-top:0">You'll see about 110 words, one at a time: samples from the 1,000 most common English words up to the 30,000th, plus some <b>fake words</b> that look English but aren't.</p>
+     <ul class="small" style="color:var(--ink2);padding-left:20px"><li>Press <b>Yes</b> only if you know at least one meaning of the word (you could explain or translate it).</li><li>Press <b>No</b> if you're not sure. Guessing hurts: each “yes” to a fake word lowers your score.</li><li>Keyboard: <b>Y</b> / <b>N</b> or ← / →. It takes about 6 minutes.</li></ul>
+     <p class="small muted">What it does: estimates your vocabulary size and level, and marks every band you clearly know (80%+ after the fake-word correction) as <b>already known</b>. Those words show uncoloured in the reader and are <b>never counted as learned</b>. The words you answer “no” to are marked new.</p>
+     <button class="btn brand wide" id="ptStart">${pl ? 'Retake the test' : 'Start the test'}</button></div>
+     ${pl ? placeResult(pl) : ''}`;
+  }
+  if (p.done) return `${header('Your result')}${placeResult(S.prog.place)}<button class="btn brand wide" data-tab="home">Go to Home</button>`;
+  const it = p.items[p.i];
+  return `${header('Placement test', `${p.i + 1} / ${p.items.length}`, `<button class="btn ghost sm" id="ptQuit">Stop</button>`)}
+   <div class="bar" style="margin-bottom:14px"><i style="width:${100 * p.i / p.items.length}%;background:var(--brand)"></i></div>
+   <div class="card ptest"><div class="muted small">Do you know this word?</div><div class="w">${esc(it.w)}</div>
+    <div class="yn"><button style="background:var(--red)" data-pa="0">No  ←</button><button style="background:var(--green)" data-pa="1">Yes  →</button></div></div>`;
+}
+function placeResult(pl) {
+  const lv = cefrOfSize(pl.est);
+  const bars = PBANDS.map(b => `<div style="display:flex;align-items:center;gap:8px;font-size:13px"><span style="width:38px;color:var(--muted);font-weight:600">${b}k</span><div class="bar grow" style="height:10px"><i style="width:${Math.round(100 * pl.rate[b])}%;background:${pl.rate[b] >= .8 ? 'var(--green)' : pl.rate[b] >= .5 ? '#E0B84A' : 'var(--red)'}"></i></div><span style="width:38px;text-align:right">${Math.round(100 * pl.rate[b])}%</span></div>`).join('');
+  return `<div class="card"><div class="counter"><div class="big">${pl.est.toLocaleString()}</div><div class="grow"><div style="font-weight:700">estimated word families/lemmas you know</div><div class="small muted">Vocabulary level ≈ <b>${lv}</b> · tested ${new Date(pl.date).toLocaleDateString()}</div></div></div>
+   <div style="display:grid;gap:6px;margin-top:14px">${bars}</div>
+   <p class="small" style="margin-bottom:0">Marked as already known: <b>all words up to the ${(pl.base / 1000) || 0}k band</b>${pl.yes.length ? ` plus the ${pl.yes.length} test words you knew` : ''}. ${pl.fa > 10 ? `<span style="color:var(--red)">You said yes to ${pl.fa}% of the fake words, so the scores were lowered. Retake it and only say yes when you're sure.</span>` : `Fake-word check: ${pl.fa}% false yes, which is good.`}</p>
+   <p class="small muted" style="margin-bottom:0">Rough guide (lemmas): B2 ≈ 3.5–5.5k · C1 ≈ 5.5–8.5k · C2 ≈ 8.5k+. Reading newspapers and novels comfortably needs about 8–9k word families (Nation, 2006).</p></div>`;
+}
+
+// ================= READER =================
+function allTexts() { return [...S.texts, ...S.my]; }
+const STYLES = [['all', 'All'], ['news', 'News'], ['dialogue', 'Film & TV'], ['ielts-reading', 'IELTS Reading'], ['ielts-listening', 'IELTS Listening'], ['academic', 'Academic'], ['my', 'My texts']];
+const styleName = s => (STYLES.find(x => x[0] === s) || [0, 'My text'])[1];
+const TOKRE = /[A-Za-z]+(?:['’][A-Za-z]+)*(?:-[A-Za-z]+(?:['’][A-Za-z]+)*)*/g;
+function wordToks(w) {
+  const n = w.replace(/’/g, "'"), lo = n.toLowerCase();
+  if (n.includes('-') && !S.R[lo] && !S.F[lo]) {
+    const out = []; n.split(/(-)/).forEach(p => p === '-' ? out.push({t: '-'}) : out.push(...wordToks(p))); return out;
+  }
+  const m = n.match(/^(.+?)(n't|'s|'re|'ve|'ll|'d|'m)$/i);
+  if (m) {
+    const b = m[1], bl = b.toLowerCase(); let l = {ca: 'can', wo: 'will', sha: 'shall', ai: 'be'}[bl] || lemmaOf(b);
+    const base = {w: w.slice(0, b.length), l, k: S.R[l] || FUNC.has(l) ? l : bl};
+    return [base, {t: w.slice(b.length)}];
+  }
+  const l = lemmaOf(n);
+  return [{w, l, k: S.R[l] || FUNC.has(l) ? l : lo}];
+}
+function tokenize(s) {
+  const out = []; let last = 0;
+  for (const m of s.matchAll(TOKRE)) { if (m.index > last) out.push({t: s.slice(last, m.index)}); out.push(...wordToks(m[0])); last = m.index + m[0].length; }
+  if (last < s.length) out.push({t: s.slice(last)});
+  return out;
+}
+const POSS = new Set(['my', 'your', 'his', 'her', 'its', 'our', 'their', "one's"]);
+function findPhrases(toks) {
+  // word positions only
+  const wi = toks.map((t, i) => t.w ? i : -1).filter(i => i >= 0);
+  const cover = {};
+  const gapOK = (a, b) => { for (let j = a + 1; j < b; j++) if (toks[j].t && /[.,;:!?()"“”—–]/.test(toks[j].t)) return false; return true; };
+  for (let p = 0; p < wi.length; p++) {
+    const i = wi[p]; if (cover[i]) continue;
+    const cands = S.MWE[toks[i].l]; if (!cands) continue;
+    const prevW = p > 0 ? toks[wi[p - 1]].w.toLowerCase() : '';
+    const nounUse = /^(the|a|an|this|that|these|those|his|her|their|our|my|your|its|some|any|no|much|more|of|experimental|further|hard|good|new|social|recent)$/.test(prevW);
+    for (const c of cands) {
+      if (c.typ === 'phrasal verb' && nounUse) continue;
+      const hit = [i]; let q = p + 1, ok = true;
+      for (let n = 1; n < c.lt.length; n++) {
+        const want = c.lt[n];
+        if (want[0] === '*') {
+          if (/your|one's|someone's/.test(want)) { if (q < wi.length && POSS.has(toks[wi[q]].w.toLowerCase()) && gapOK(wi[q - 1], wi[q])) { q++; continue; } ok = false; break; }
+          let took = 0; while (took < 3 && q < wi.length && gapOK(wi[q - 1], wi[q]) && toks[wi[q]].l !== c.lt[n + 1]) { q++; took++; } if (!took) { ok = false; break; } continue;
+        }
+        if (c.typ === 'phrasal verb' && n === 1 && c.lt.length === 2 && q < wi.length && toks[wi[q]].l !== want) {
+          // separable: "turn it off", "give the book up"
+          let g = 0; while (g < 2 && q + g < wi.length && toks[wi[q + g]].l !== want) g++;
+          if (q + g < wi.length && toks[wi[q + g]].l === want && g > 0 && /^(it|them|him|her|me|us|you|this|that|the|a|an|my|your|his|our|their)$/i.test(toks[wi[q]].w) && gapOK(wi[q - 1], wi[q + g])) { q += g; }
+        }
+        if (q < wi.length && toks[wi[q]].l === want && gapOK(wi[q - 1], wi[q])) { hit.push(wi[q]); q++; } else { ok = false; break; }
+      }
+      if (ok && hit.every(h => !cover[h])) { for (const h of hit) cover[h] = c.k; break; }
+    }
+  }
+  return cover;
+}
+function splitSents(p) { return (p.match(/[^.!?]+(?:[.!?]+["'”’)]*|$)\s*/g) || [p]).filter(s => s.trim()); }
+function prepText(t) {
+  const sents = [], blocks = [];
+  for (const para of t.paras) {
+    let who = null, body = para;
+    const m = para.match(/^([A-Z][A-Z]+(?: [A-Z]+)?):\s+(.*)$/); if (m) { who = m[1]; body = m[2]; }
+    const ids = [];
+    for (const s of splitSents(body)) { const toks = tokenize(s); const cover = findPhrases(toks); sents.push({s: s.trim(), toks, cover, who}); ids.push(sents.length - 1); }
+    blocks.push({who, ids});
+  }
+  return {t, sents, blocks};
+}
+function keyStatus(k) { return wordStatus(k); }
+function sentHTML(sd, si) {
+  let h = '', i = 0; const toks = sd.toks, first = toks.findIndex(x => x.w);
+  while (i < toks.length) {
+    const tk = toks[i];
+    if (!tk.w) { h += esc(tk.t); i++; continue; }
+    const ph = sd.cover[i];
+    if (ph) {
+      let j = i, txt = '';
+      while (j < toks.length && (sd.cover[j] === ph || (!toks[j].w && sd.cover[j + 1] === ph && j + 1 < toks.length && !/[.,;:!?]/.test(toks[j].t)))) { txt += toks[j].w || toks[j].t; j++; }
+      const k = 'p:' + ph;
+      h += `<span class="wd ph st-${keyStatus(k)}" data-k="${esc(k)}" data-si="${si}">${esc(txt)}</span>`; i = j; continue;
+    }
+    const isName = /^[A-Z]/.test(tk.w) && i !== first && !FUNC.has(tk.l) && (!S.R[tk.l] || S.R[tk.l] > 3000) && !S.prog.words[tk.k] && !S.prog.meta['v:' + tk.k];
+    const k = tk.k, status = isName ? 'ignored' : FUNC.has(k) ? 'known' : keyStatus(k);
+    h += `<span class="wd st-${status}" data-k="${esc(k)}" data-f="${esc(tk.w)}" data-si="${si}">${esc(tk.w)}</span>`; i++;
+  }
+  return `<span class="sent" data-sent="${si}">${h}</span>`;
+}
+function textStats(t) {
+  const ks = new Set();
+  for (const p of t.paras) for (const m of p.matchAll(TOKRE)) for (const tk of wordToks(m[0])) if (tk.w && S.R[tk.k] && !FUNC.has(tk.k)) ks.add(tk.k);
+  let known = 0, learning = 0, nw = 0; const ranks = [];
+  for (const k of ks) { const s = wordStatus(k); if (s === 'known' || s === 'ignored') known++; else if (s === 'learning') learning++; else nw++; ranks.push(S.R[k]); }
+  ranks.sort((a, b) => a - b); const p95 = ranks[Math.floor(ranks.length * .95)] || 0;
+  return {total: ks.size, known, learning, nw, pct: Math.round(100 * known / Math.max(1, ks.size)), level: cefrOfBand(Math.ceil(p95 / 1000))};
+}
+function readView() {
+  if (S.rd) return readerView();
+  const list = allTexts().filter(t => S.readFilter === 'all' || t.style === S.readFilter);
+  const card = t => { const p = textStats(t); return `<div class="book" data-text="${esc(t.id)}"><div class="row" style="gap:6px;flex-wrap:wrap"><span class="tag b">${esc(t.level || p.level)}</span><span class="tag">${esc(styleName(t.style))}</span>${S.prog.read[t.id] ? '<span class="tag g">✓ read</span>' : ''}</div>
+    <div class="t">${esc(t.title)}</div><div class="small muted">${t.words || ''} words · <b style="color:var(--pr)">${p.nw} new</b> · ${p.learning} learning · ${p.pct}% known</div>
+    <div class="bar"><i style="width:${p.pct}%;background:var(--green)"></i><i style="width:${100 * p.learning / Math.max(1, p.total)}%;background:#f1d57a"></i><i style="width:${100 * p.nw / Math.max(1, p.total)}%;background:#9cc0ee"></i></div></div>`; };
+  return `${header('Read', 'Graded texts B2 → C2. Hover or tap any word or phrase.')}
+  <details class="card" ${S.my.length ? '' : 'open'}><summary>${I.plus.replace('<svg', '<svg width="18" height="18"')} Import your own text</summary>
+   <label>Title</label><input id="imTitle" placeholder="e.g. Guardian article on housing">
+   <label>Text (paste an article, a transcript, anything in English)</label><textarea id="imText" rows="8" placeholder="Paste here…"></textarea>
+   <button class="btn brand wide" id="imSave" style="margin-top:12px">Save and open</button></details>
+  <div class="chips">${STYLES.map(([k, l]) => `<button class="chip ${S.readFilter === k ? 'on' : ''}" data-rf="${k}">${l}</button>`).join('')}</div>
+  <div class="lib">${list.map(card).join('') || '<div class="empty">No texts here yet</div>'}</div>`;
+}
+function openText(id) {
+  const t = allTexts().find(x => x.id === id); if (!t) return;
+  S.rd = prepText(t); S.rd.showT = t.style !== 'ielts-listening'; S.prog.lastText = id; saveProg();
+  S.view = 'read'; render(); scrollTo(0, 0);
+}
+function readerView() {
+  const {t, sents, blocks} = S.rd, p = textStats(t), listen = t.style === 'ielts-listening';
+  const body = blocks.map(b => b.who ? `<div class="line"><div class="who">${esc(b.who)}</div><div class="grow">${b.ids.map(i => sentHTML(sents[i], i)).join(' ')}</div></div>` : `<p>${b.ids.map(i => sentHTML(sents[i], i)).join(' ')}</p>`).join('');
+  const qs = t.q && t.q.length ? `<div class="sec">${listen ? 'Listen and answer' : 'Questions'}</div><div class="card">${t.q.map((q, i) => `<div class="qa" data-qa="${i}"><div><b>${i + 1}.</b> ${esc(q[0])}</div><button class="btn soft sm" style="margin-top:6px" data-showa="${i}">Show answer</button><div class="a">${esc(q[1])}</div></div>`).join('')}</div>` : '';
+  return `<div class="toolbar"><button class="iconbtn" data-closetext="1" aria-label="Back">${I.back}</button>
+   <button class="btn sm ${S.playing ? 'red' : 'brand'}" data-playall="1">${S.playing ? I.stop + ' Stop' : I.play + ' Listen'}</button>
+   ${listen ? `<button class="btn ghost sm" data-togtrans="1">${S.rd.showT ? 'Hide' : 'Show'} transcript</button>` : ''}
+   <span class="grow"></span><div class="legend"><span><i style="background:var(--new)"></i>new</span><span><i style="background:var(--learn)"></i>learning</span><span><i style="border-bottom:2px solid #6c9bd6;border-radius:0"></i>phrase</span></div></div>
+  ${header(esc(t.title), `${esc(styleName(t.style))} · ${esc(t.level || p.level)} · ${p.total} dictionary words · <b style="color:var(--pr)">${p.nw} new</b> · ${p.pct}% known`, t.style === 'my' ? `<button class="iconbtn" data-deltext="${esc(t.id)}" aria-label="Delete">${I.trash}</button>` : '')}
+  ${listen && !S.rd.showT ? qs + `<div class="card"><p class="muted" style="margin:0">Press <b>Listen</b> and answer the questions first (as in the exam). Then open the transcript and look up the words you missed.</p></div>` : `<div class="card reader">${body}</div>${qs}`}
+  <div class="card"><div style="font-weight:700">Finished?</div><p class="small muted" style="margin:4px 0 12px">LingQ-style: the blue words you didn't look up are probably words you already knew. Marking them known does <b>not</b> count them as learned.</p>
+   <div class="row wrap2"><button class="btn brand grow" data-finish="1">✓ Finish: mark remaining blue as known</button><button class="btn ghost grow" data-finish="0">Finish without marking</button></div></div>`;
+}
+let popPinned = false, popTimer = null, popSeq = 0;
+async function showPop(el, pin) {
+  const k = el.dataset.k, si = +el.dataset.si, f = el.dataset.f || '';
+  $$('.wd.sel').forEach(x => x.classList.remove('sel')); el.classList.add('sel');
+  const pop = $('#pop'); pop.dataset.k = k; pop.dataset.si = si; pop.dataset.f = f;
+  const sheet = !matchMedia('(hover: hover) and (pointer: fine)').matches || innerWidth < 640;
+  pop.classList.toggle('sheet', sheet); pop.style.display = 'block'; $('#scrim').style.display = sheet ? 'block' : 'none';
+  popPinned = !!pin;
+  const seq = ++popSeq;
+  pop.innerHTML = `<div class="w">${esc(k.replace(/^p:/, ''))}</div><div class="muted small">Loading…</div>`;
+  place(el, pop, sheet);
+  const e = await entryOf(k); if (seq !== popSeq) return;
+  pop.innerHTML = await popHTML(k, e, {f, sent: S.rd && S.rd.sents[si] ? S.rd.sents[si].s : ''});
+  place(el, pop, sheet); fillOnlineArabic(k, e, seq);
+}
+function place(el, pop, sheet) {
+  if (sheet || !el) { pop.style.left = ''; pop.style.top = ''; return; }
+  const r = el.getBoundingClientRect(), w = pop.offsetWidth, h = pop.offsetHeight;
+  pop.style.left = Math.max(8, Math.min(innerWidth - w - 8, r.left + scrollX + r.width / 2 - w / 2)) + 'px';
+  pop.style.top = (r.bottom + h + 16 > innerHeight && r.top > h + 16 ? r.top + scrollY - h - 10 : r.bottom + scrollY + 10) + 'px';
+}
+async function fillOnlineArabic(k, e, seq) {
+  if (e && (e.arw || e.ar)) return; const slot = $('#arOnline'); if (!slot) return;
+  const t = await onlineArabic(k.replace(/^p:/, '')); if (seq !== popSeq) return;
+  const s2 = $('#arOnline'); if (s2) s2.innerHTML = t ? `<span class="ar">${esc(t)}</span> <span class="tag">online</span>` : '<span class="small muted">No Arabic in the offline dictionary (connect to the internet for a machine translation).</span>';
+}
+const normS = s => s.toLowerCase().replace(/[^a-z]+/g, ' ').trim();
+function textExamples(k, exclude) {
+  // sentences from the graded texts that contain the word / phrase
+  const out = []; const key = k.replace(/^p:/, '');
+  for (const t of S.texts) for (const p of t.paras) for (const s of splitSents(p.replace(/^[A-Z][A-Z]+(?: [A-Z]+)?:\s+/, ''))) {
+    if (out.length >= 4) return out;
+    const n = normS(s); if (n === exclude || s.length > 220) continue;
+    if (k.startsWith('p:')) { if ((' ' + n + ' ').includes(' ' + key + ' ')) out.push([s.trim(), t.title]); }
+    else if (tokenize(s).some(x => x.w && x.k === k)) out.push([s.trim(), t.title]);
+  }
+  return out;
+}
+function hl(s, k) {
+  const toks = tokenize(s); const key = k.replace(/^p:/, '').split(' ');
+  return toks.map(x => x.w ? (x.k === k || key.includes(x.l) && k.startsWith('p:') ? `<b>${esc(x.w)}</b>` : esc(x.w)) : esc(x.t)).join('');
+}
+async function popHTML(k, e, ctx) {
+  const isPh = k.startsWith('p:'), word = k.replace(/^p:/, ''), status = wordStatus(k), inCards = !!S.prog.meta['v:' + k];
+  const b = bandOf(word), excl = normS(ctx.sent || '');
+  const rk = S.R[word] || 99999; const regs = (e && e.reg || []).filter(r => r !== 'neutral' && !(r === 'informal / spoken' && rk <= 4000) && !(r === 'formal' && rk <= 2500));
+  const head = `<div class="row" style="align-items:flex-start"><div class="grow"><div class="w">${esc(word)}</div>
+    <div style="margin-top:4px">${e && e.uk ? `<span class="ipa">UK /${esc(e.uk)}/</span> ` : ''}${e && e.us ? `<span class="ipa" style="margin-left:6px">US /${esc(e.us)}/</span>` : ''}</div></div>
+    <div class="row" style="gap:6px">${spk(word, 0, 'en-GB', 'UK')}${spk(word, 0, 'en-US', 'US')}</div></div>
+   <div class="row wrap2" style="gap:6px;margin-top:8px">${(e && e.pos || (isPh ? [(S.core.mwe[word] || ['phrase'])[0]] : [])).slice(0, 3).map(p => `<span class="tag p">${esc(p)}</span>`).join('')}
+    ${regs.map(r => `<span class="tag o">${esc(r)}</span>`).join('') || (e ? '<span class="tag">neutral register</span>' : '')}
+    ${b ? `<span class="tag blue">${b}k band · ${cefrOfBand(b)}</span>` : ''}${e && e.awl ? `<span class="tag g">AWL ${e.awl}</span>` : ''}</div>`;
+  const form = ctx.f && ctx.f.toLowerCase() !== word && !isPh ? `<div class="small muted" style="margin-top:6px">“${esc(ctx.f)}” is a form of <b>${esc(word)}</b>${S.R[ctx.f.toLowerCase()] && ctx.f.toLowerCase() !== word ? ` · also a word itself: <button class="chip sm" data-look="${esc(ctx.f.toLowerCase())}">${esc(ctx.f.toLowerCase())}</button>` : ''}</div>` : '';
+  let ar = '';
+  if (e && e.arw && e.arw.length) ar = `<div class="armain ar">${esc(e.arw[0][1])}</div>${e.arw.length > 1 ? `<div style="margin-top:4px">${e.arw.slice(1, 4).map(x => `<div class="small"><span class="tag">${esc(x[0])}</span> <span class="ar" style="font-size:17px;font-weight:600">${esc(x[1])}</span> <span class="muted">· ${esc(x[2])}</span></div>`).join('')}</div>` : ''}`;
+  else if (e && e.ar && e.ar.length) ar = `<div class="armain ar">${esc(e.ar.slice(0, 3).join('، '))}</div>`;
+  else ar = `<div id="arOnline" style="margin-top:8px;font-size:20px">…</div>`;
+  const senses = e && e.s ? `<h4>Meaning</h4>${e.s.slice(0, 4).map(s => `<div class="sense"><span class="tag">${esc(s.p)}</span> ${esc(s.d)}${s.ar ? ` <span class="ar muted">(${esc(s.ar.join('، '))})</span>` : ''}${s.syn ? `<div class="small muted">≈ ${esc(s.syn.join(', '))}</div>` : ''}</div>`).join('')}` : '';
+  const colls = e && e.c && e.c.length ? `<h4>Collocations</h4><div class="colls">${e.c.map(c => `<span>${esc(c)}</span>`).join('')}</div>` : '';
+  const phr = e && e.ph && e.ph.length ? `<h4>Phrases with this word</h4><div class="colls">${e.ph.map(c => `<button class="chip sm" data-look="p:${esc(c)}">${esc(c)}</button>`).join('')}</div>` : '';
+  const parts = isPh ? `<h4>Words in it</h4><div class="colls">${word.split(' ').filter(w => !FUNC.has(w)).map(w => `<button class="chip sm" data-look="${esc(lemmaOf(w))}">${esc(w)}</button>`).join('')}</div>` : '';
+  // usage examples: never the sentence being read
+  let exs = [];
+  if (e) {
+    for (const s of e.s || []) if (s.ex) exs.push([s.ex, 'WordNet']);
+    for (const x of e.ex2 || []) exs.push([x, 'Example']);
+    for (const x of e.x || []) exs.push([x[0], x[1]]);
+  }
+  exs.push(...textExamples(k, excl));
+  const seen = new Set([excl]); exs = exs.filter(x => { const n = normS(x[0]); if (seen.has(n)) return false; seen.add(n); return true; });
+  // prefer: one dictionary example, then corpus/news, then texts
+  exs = [...exs.filter(x => x[1] === 'WordNet' || x[1] === 'Example').slice(0, 1), ...exs.filter(x => x[1] !== 'WordNet' && x[1] !== 'Example')].slice(0, 3);
+  const exH = exs.length ? `<h4>Used like this</h4>${exs.map(x => `<div class="ex">${spk(x[0], 1)}<div class="grow"><div>${hl(x[0], k)}</div><div class="src">${esc(x[1])}</div></div></div>`).join('')}` : '';
+  const st_ = inCards ? (status === 'known' ? '<span class="tag g">Learned ✓</span>' : '<span class="tag o">In your cards · learning</span>') : status === 'known' ? '<span class="tag g">Known</span>' : '<span class="tag blue">New</span>';
+  const btns = inCards
+    ? `<div class="row" style="margin-top:12px">${st_}<span class="grow"></span>${status !== 'known' ? '<button class="btn soft sm" data-pst="known">I know it now ✓</button>' : ''}</div>`
+    : `<div class="row" style="margin-top:12px;gap:8px"><button class="btn brand grow" data-padd="1">${I.plus} Add to cards</button>${status !== 'known' ? '<button class="btn ghost grow" data-pst="known">I know this</button>' : '<button class="btn ghost grow" data-pst="new">Mark as new</button>'}</div>
+       <div class="row" style="margin-top:6px">${st_}<span class="grow"></span>${S.rd && ctx.sent ? '<button class="chip sm" data-trsent="1">Translate sentence (online)</button>' : ''}</div>`;
+  const notInDict = !e ? `<p class="small muted">Not in the offline dictionary${/^[A-Z]/.test(ctx.f || '') ? ' (maybe a name)' : ''}.</p>${!isPh ? '<button class="chip sm" data-pst="ignored">Ignore (name / not a word)</button>' : ''}` : '';
+  return head + form + ar + notInDict + senses + parts + colls + phr + exH + btns + '<div id="trOut" class="note" style="display:none"></div>';
+}
+function hidePop(force) { if (popPinned && !force) return; $('#pop').style.display = 'none'; $('#scrim').style.display = 'none'; popPinned = false; popSeq++; $$('.wd.sel').forEach(x => x.classList.remove('sel')); }
+function refreshWords() { $$('.wd').forEach(el => { const k = el.dataset.k; if (el.classList.contains('st-ignored') && !S.prog.words[k]) return; el.classList.remove('st-new', 'st-learning', 'st-known', 'st-ignored'); el.classList.add('st-' + (FUNC.has(k) ? 'known' : wordStatus(k))); }); }
+async function popRefresh() {
+  const pop = $('#pop'), k = pop.dataset.k, si = +pop.dataset.si; refreshWords();
+  const el = document.querySelector(`.wd[data-k="${CSS.escape(k)}"][data-si="${si}"]`);
+  if (el) return showPop(el, true);
+  const e = await entryOf(k); pop.innerHTML = await popHTML(k, e, {f: pop.dataset.f, sent: ''});
+}
+async function lookup(k) { // dictionary search / chips
+  const pop = $('#pop'); pop.dataset.k = k; pop.dataset.si = -1; pop.dataset.f = '';
+  pop.classList.add('sheet'); pop.style.display = 'block'; $('#scrim').style.display = 'block'; popPinned = true; pop.style.left = ''; pop.style.top = '';
+  const seq = ++popSeq; const e = await entryOf(k); if (seq !== popSeq) return;
+  pop.innerHTML = await popHTML(k, e, {f: '', sent: ''}); fillOnlineArabic(k, e, seq);
+}
+function popAdd() {
+  const pop = $('#pop'), k = pop.dataset.k, si = +pop.dataset.si;
+  const sent = S.rd && S.rd.sents[si] ? S.rd.sents[si].s : '';
+  addCard(k, sent ? {ex: sent, src: S.rd.t.title} : {}); addPts(1); toast('Added to cards: ' + k.replace(/^p:/, '')); popRefresh(); shell();
+}
+async function translateSentence() {
+  const pop = $('#pop'), si = +pop.dataset.si, s = S.rd && S.rd.sents[si] && S.rd.sents[si].s; if (!s) return;
+  const out = $('#trOut'); out.style.display = 'block'; out.textContent = navigator.onLine ? 'Translating…' : 'You are offline.';
+  const t = await onlineArabic(s); out.innerHTML = t ? `<div class="ar" style="font-size:17px">${esc(t)}</div><div class="small muted">Machine translation (MyMemory), may be imperfect.</div>` : 'Could not translate (offline or the service is busy).';
+}
+let playIdx = -1;
+function playAll() {
+  if (S.playing) { S.playing = false; speechSynthesis.cancel(); $$('.playing').forEach(x => x.classList.remove('playing')); render(); return; }
+  S.playing = true; render(); playIdx = 0; const sents = S.rd.sents; const whoVoice = {}; let alt = 0;
+  const next = () => {
+    $$('.playing').forEach(x => x.classList.remove('playing'));
+    if (!S.playing || !S.rd || playIdx >= sents.length) { S.playing = false; if (S.rd) render(); return; }
+    const sd = sents[playIdx], el = document.querySelector(`[data-sent="${playIdx}"]`);
+    if (el) { el.classList.add('playing'); el.scrollIntoView({block: 'center', behavior: 'smooth'}); }
+    let lang = S.prog.prefs.voice; if (sd.who) { if (!whoVoice[sd.who]) whoVoice[sd.who] = alt++ % 2 ? (lang === 'en-GB' ? 'en-US' : 'en-GB') : lang; lang = whoVoice[sd.who]; }
+    playIdx++; speak(sd.s, {lang, onend: () => setTimeout(next, 250)});
+  };
+  next();
+}
+function finishText(mark) {
+  const t = S.rd.t; let n = 0;
+  if (mark) for (const sd of S.rd.sents) { sd.toks.forEach((tk, i) => { if (!tk.w || sd.cover[i] || !S.R[tk.k] || FUNC.has(tk.k)) return; if (wordStatus(tk.k) === 'new' && !S.prog.meta['v:' + tk.k]) { S.prog.words[tk.k] = 'known'; S.prog.prior[tk.k] = 1; n++; } }); }
+  if (!S.prog.read[t.id]) { S.prog.read[t.id] = today(); dayStats().read = (dayStats().read || 0) + 1; addPts(10); }
+  saveProg(); toast(mark ? `${n} words marked as already known (not counted as learned)` : 'Text finished');
+  S.rd = null; S.playing = false; speechSynthesis.cancel(); render(); scrollTo(0, 0);
+}
+function saveImport() {
+  const title = $('#imTitle').value.trim() || 'My text ' + (S.my.length + 1), text = $('#imText').value.trim();
+  if (text.length < 20) { toast('Paste a longer text first'); return; }
+  const paras = text.split(/\n\s*\n|\r\n\s*\r\n/).map(p => p.replace(/\s+/g, ' ').trim()).filter(Boolean);
+  const t = {id: 'my' + Date.now().toString(36), title, style: 'my', paras, words: (text.match(TOKRE) || []).length, created: Date.now()};
+  t.level = textStats(t).level; S.my.unshift(t); saveMy(); openText(t.id);
+}
+
+// ================= CARDS =================
+let cur = null, shown = false, curE = null, spellRes = null;
+function reviewView() {
+  const all = counts(() => true), c = counts();
+  const chips = `<div class="chips">${[['all', 'All'], ['v', 'Vocabulary'], ['s', 'Spelling']].map(([k, l]) => `<button class="chip ${S.deck === k ? 'on' : ''}" data-deck="${k}">${l} · ${counts(id => k === 'all' || id.startsWith(k + ':')).total}</button>`).join('')}</div>`;
+  if (!cur || !S.prog.meta[cur]) { cur = pickNext(); shown = false; curE = null; spellRes = null; }
+  if (!cur) {
+    const total = Object.keys(S.prog.meta).filter(inDeck).length;
+    return `${header('Cards', `${total} cards in this deck`)}${chips}<div class="card empty"><div style="font-size:40px">🎉</div><div style="font-weight:700;color:var(--ink);margin:8px 0">Nothing due right now</div>
+     <div>${total ? 'Come back later, or add new words.' : 'Add words from the reader, or use the word builder.'}</div>
+     <div class="row" style="justify-content:center;margin-top:14px;flex-wrap:wrap"><button class="btn brand" data-band="${nextBand()}">${I.plus} Add ${Math.min(10, S.prog.prefs.newPerDay)} words from the ${nextBand()}k band</button><button class="btn ghost" data-tab="read">Read a text</button></div></div>`;
+  }
+  const m = S.prog.meta[cur], x = st(cur), now = Date.now();
+  const kind = !x || x.state === 'new' ? ['New', 'var(--pr)'] : x.state === 'review' ? ['Review', 'var(--green)'] : ['Learning', 'var(--red)'];
+  const top = `${header('Cards', `${c.learn} learning · ${c.rev} to review · ${c.newToday} new today`)}${chips}`;
+  if (!curE) { entryOf(m.k).then(e => { curE = e || {}; if (S.view === 'review') { render(); autoplayFront(); } }); return top + '<div class="card flash"><div class="muted">Loading…</div></div>'; }
+  const e = curE, word = m.k.replace(/^p:/, '');
+  const meta = `<div class="meta"><span style="color:${kind[1]}">${kind[0]}</span><span>${m.t === 's' ? 'Spelling' : (bandOf(word) ? bandOf(word) + 'k band' : 'phrase')}</span></div>`;
+  if (m.t === 's') return top + spellCard(m, e, meta);
+  const arMain = e.arw && e.arw.length ? e.arw.slice(0, 2).map(a => a[1]).join(' · ') : e.ar ? e.ar.slice(0, 2).join('، ') : (S.arCache[word] || '');
+  const def = e.s && e.s[0] ? e.s[0].d : (e.arw && e.arw[0] ? e.arw[0][2] : '');
+  const exS = m.ex || (e.x && e.x[0] && e.x[0][0]) || (e.s || []).map(s => s.ex).find(Boolean) || '';
+  const front = S.prog.prefs.dir === 'ar'
+    ? `<div class="big ar" style="margin-top:28px">${esc(arMain || def)}</div><div class="muted">${esc(def)}</div>`
+    : `<div class="big" style="margin-top:28px">${esc(word)}</div><div>${e.uk ? `<span class="ipa">/${esc(e.uk)}/</span>` : ''}</div>${spk(word)}${exS ? `<div class="exs">${hl(exS, m.k)}</div>` : ''}`;
+  const back = `<div class="ans">${S.prog.prefs.dir === 'ar' ? `<div class="big">${esc(word)}</div>${e.uk ? `<span class="ipa">/${esc(e.uk)}/</span>` : ''}${spk(word)}` : `<div class="ar" style="font-size:26px;font-weight:700">${esc(arMain)}</div><div style="max-width:520px">${esc(def)}</div>`}
+    ${e.c && e.c.length ? `<div class="colls" style="justify-content:center">${e.c.slice(0, 4).map(c => `<span>${esc(c)}</span>`).join('')}</div>` : ''}
+    ${S.prog.prefs.dir === 'ar' && exS ? `<div class="exs">${hl(exS, m.k)}</div>` : ''}</div>`;
+  const labels = [1, 2, 3, 4].map(g => fmtIvl(schedule(x, g, now).due - now));
+  return top + `<div class="card flash">${meta}${front}${shown ? back : ''}
+   ${shown ? `<div class="grades">${['Again', 'Hard', 'Good', 'Easy'].map((l, i) => `<button class="g${i + 1}" data-grade="${i + 1}">${l}<small>${labels[i]}</small></button>`).join('')}</div>`
+    : `<button class="btn wide" id="show" style="margin-top:auto">Show answer</button>`}
+   </div><div class="kbd">Space = show · 1–4 = grade · P = play${!x || x.state === 'new' ? ' · <button class="chip sm" data-knowcard="1">I already know this</button>' : ''}</div>`;
+}
+function spellCard(m, e, meta) {
+  const arMain = e.arw && e.arw.length ? e.arw[0][1] : e.ar ? e.ar[0] : '';
+  const def = e.s && e.s[0] ? e.s[0].d : '';
+  const mis = S.prog.mis[m.k];
+  if (!spellRes) return `<div class="card flash">${meta}<div style="margin-top:26px">${spk(m.k)}</div><div class="muted small">Listen and type the word</div>
+    ${arMain ? `<div class="ar" style="font-size:22px;font-weight:700">${esc(arMain)}</div>` : ''}<div class="small muted" style="max-width:480px">${esc(def)}</div>
+    <input class="bigin" id="spIn" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type here">
+    <button class="btn wide" id="spCheck" style="margin-top:auto">Check</button></div>`;
+  const ok = spellRes.ok;
+  return `<div class="card flash">${meta}<div style="font-weight:800;font-size:20px;color:${ok ? 'var(--green)' : 'var(--red)'};margin-top:20px">${ok ? 'Correct ✓' : 'Not quite'}</div>
+    ${diffHTML(spellRes.typed, m.k)}<div class="big">${esc(m.k)}</div>${spk(m.k)}
+    ${m.tip || (S.learn.misspelt.find(x => x.w === m.k) || {}).tip ? `<div class="note">💡 ${esc(m.tip || S.learn.misspelt.find(x => x.w === m.k).tip)}</div>` : ''}
+    ${mis && mis.typed.length ? `<div class="small muted">You've written: ${mis.typed.map(esc).join(', ')}</div>` : ''}
+    <div class="grades two">${ok ? `<button class="g3" data-grade="3">Good<small>Enter</small></button><button class="g4" data-grade="4">Easy</button>` : `<button class="g1" data-grade="1">Again<small>Enter</small></button><button class="g3" data-grade="3">I made a typo</button>`}</div></div>`;
+}
+function spellCheck() {
+  const m = S.prog.meta[cur], v = ($('#spIn').value || '').trim().toLowerCase(); if (!v) return;
+  spellRes = {typed: v, ok: v === m.k}; if (!spellRes.ok) { const mm = S.prog.mis[m.k] ||= {n: 0, typed: []}; mm.n++; mm.typed = [v, ...mm.typed.filter(x => x !== v)].slice(0, 4); }
+  render();
+}
+function grade(g) {
+  const id = cur, m = S.prog.meta[id], prev = st(id), wasNew = !prev || prev.state === 'new';
+  const nx = schedule(prev, g, Date.now()); S.prog.cards[id] = nx;
+  const ds = dayStats(); if (wasNew) ds.new++; else ds.rev++; ds.pts = (ds.pts || 0) + 1;
+  if (m.t === 'v' && nx.state === 'review' && nx.ivl >= 21 && !S.prog.prior[m.k] && !S.prog.learned[m.k]) { S.prog.learned[m.k] = today(); toast('🎉 Learned: ' + m.k.replace(/^p:/, '')); }
+  if (m.t === 's' && nx.state === 'review' && nx.ivl >= 21) delete S.prog.mis[m.k];
+  saveProg(); cur = null; shown = false; curE = null; spellRes = null; render(); setTimeout(autoplayFront, 80);
+}
+function knowCard() { // new card the user already knows: remove from learning, mark as prior known (not counted)
+  const m = S.prog.meta[cur]; delete S.prog.meta[cur]; delete S.prog.cards[cur];
+  if (m.t === 'v') { S.prog.prior[m.k] = 1; S.prog.words[m.k] = 'known'; }
+  saveProg(); cur = null; render(); toast('Marked as already known (not counted)');
+}
+function autoplayFront() { if (S.view !== 'review' || !cur) return; const m = S.prog.meta[cur]; if (!m) return; if (m.t === 's' && !spellRes) { speak(m.k); setTimeout(() => $('#spIn') && $('#spIn').focus(), 50); } }
+function nextBand() { const b = Math.max(1, Math.floor(baseline() / 1000) + 1); for (let k = b; k <= 32; k++) { const pool = S.core.lemmas.slice((k - 1) * 1000, k * 1000); if (pool.some(l => wordStatus(l) === 'new' && !FUNC.has(l) && !S.prof.has(l))) return k; } return b; }
+function addBand(b, n) {
+  n = n || Math.min(10, S.prog.prefs.newPerDay);
+  const pool = S.core.lemmas.slice((b - 1) * 1000, b * 1000).filter(l => wordStatus(l) === 'new' && !FUNC.has(l) && !S.prof.has(l) && l.length > 2);
+  const pick = pool.slice(0, n); pick.forEach(l => addCard(l, {src: b + 'k band'}));
+  toast(pick.length ? `Added ${pick.length} words from the ${b}k band` : 'No new words left in that band'); S.deck = 'all'; cur = null; go('review');
+}
+function addList(words, src) { let n = 0; for (const w of words) if (wordStatus(w) !== 'known' && addCard(w, {src})) n++; toast(n ? `Added ${n} words to your cards` : 'You already have or know all of them'); render(); }
+
+// ================= letter diff =================
+function align(a, b) { // a typed, b correct → ops
+  const n = a.length, m = b.length, d = Array.from({length: n + 1}, () => new Array(m + 1).fill(0));
+  for (let i = 0; i <= n; i++) d[i][0] = i; for (let j = 0; j <= m; j++) d[0][j] = j;
+  for (let i = 1; i <= n; i++) for (let j = 1; j <= m; j++) d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+  const ops = []; let i = n, j = m;
+  while (i > 0 || j > 0) {
+    if (i > 0 && j > 0 && d[i][j] === d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)) { ops.unshift(a[i - 1] === b[j - 1] ? ['ok', b[j - 1]] : ['bad', b[j - 1], a[i - 1]]); i--; j--; }
+    else if (j > 0 && d[i][j] === d[i][j - 1] + 1) { ops.unshift(['miss', b[j - 1]]); j--; }
+    else { ops.unshift(['extra', a[i - 1]]); i--; }
+  }
+  return {ops, dist: d[n][m]};
+}
+function diffHTML(typed, correct) {
+  const {ops} = align(typed, correct);
+  return `<div class="diff">${ops.map(o => o[0] === 'ok' ? `<span class="ok">${esc(o[1])}<small>&nbsp;</small></span>` : o[0] === 'bad' ? `<span class="bad">${esc(o[1])}<small>${esc(o[2])}</small></span>` : o[0] === 'miss' ? `<span class="miss">${esc(o[1])}<small>missing</small></span>` : `<span class="extra">${esc(o[1])}<small>extra</small></span>`).join('')}</div>`;
+}
+function edit(a, b) { return align(a, b).dist; }
+
+// ================= WRITE: dictation, misspellings, rules, pairs, IELTS =================
+const TRICKY = /(.)\1|ie|ei|ough|augh|ph|gh|sc|mn|ps|kn|wr|rh|ible|able|ance|ence|ant$|ent$|ous$|ious|eous|cial|tial|sion|tion|ary$|ery$|ory$|ise$|ize$|que$|gue$/;
+function dictItems(set) {
+  if (set === 'common') return sample(S.learn.misspelt, 10).map(x => ({w: x.w, tip: x.tip}));
+  if (set === 'level') { const lo = Math.max(1500, baseline() - 3000), hi = Math.max(6000, baseline() + 3000); return sample(S.core.lemmas.slice(lo, hi).filter(l => TRICKY.test(l) && l.length >= 6 && !S.prof.has(l) && !l.includes('-')), 10).map(w => ({w})); }
+  if (set === 'cards') { const ws = Object.values(S.prog.meta).filter(m => m.t === 'v' && !m.k.startsWith('p:')).map(m => m.k); return sample(ws, 10).map(w => ({w})); }
+  if (set === 'mis') return sample(Object.keys(S.prog.mis), 10).map(w => ({w}));
+  if (set.startsWith('rule:')) return shuffle(S.learn.rules[+set.slice(5)].ex).map(w => ({w}));
+  if (set.startsWith('pair:')) { const p = S.learn.pairs[+set.slice(5)]; return [{w: p.a}, {w: p.b}]; }
+  if (set === 'sent') {
+    const pool = []; for (const t of S.texts) for (const p of t.paras) for (const s of splitSents(p.replace(/^[A-Z][A-Z]+(?: [A-Z]+)?:\s+/, ''))) { const n = (s.match(TOKRE) || []).length; if (n >= 6 && n <= 14 && !/\d/.test(s)) pool.push(s.trim()); }
+    return sample(pool, 6).map(s => ({w: s, sent: true}));
+  }
+  return [];
+}
+function startDict(set) {
+  const items = dictItems(set); if (!items.length) { toast('Nothing to practise in that set yet'); return; }
+  S.dc = {set, items, i: 0, res: [], cur: null}; S.view = 'write'; S.wtab = 'dict'; render(); setTimeout(() => sayDict(), 150);
+}
+function sayDict(slow) { const it = S.dc && S.dc.items[S.dc.i]; if (it) speak(it.w, {rate: slow ? 0.6 : S.prog.prefs.rate * (it.sent ? 0.9 : 1)}); setTimeout(() => $('#dcIn') && $('#dcIn').focus(), 30); }
+const wordsOf = s => (s.match(TOKRE) || []).map(w => w.toLowerCase().replace(/’/g, "'"));
+function checkDict() {
+  const d = S.dc, it = d.items[d.i], v = ($('#dcIn').value || '').trim(); if (!v) return;
+  if (!it.sent) {
+    const ok = v.toLowerCase() === it.w.toLowerCase();
+    d.cur = {typed: v.toLowerCase(), ok};
+    if (!ok) addSpell(it.w, {typed: v.toLowerCase(), tip: it.tip});
+  } else {
+    const a = wordsOf(v), b = wordsOf(it.w), bad = [];
+    const {ops} = alignWords(a, b);
+    for (const o of ops) if (o[0] !== 'ok' && o[1] && !FUNC.has(o[1])) bad.push(o);
+    for (const o of ops) if (o[0] === 'bad' && o[2] && edit(o[2], o[1]) <= 3) addSpell(o[1], {typed: o[2]});
+    d.cur = {typed: v, ok: ops.every(o => o[0] === 'ok'), ops};
+  }
+  d.res.push(d.cur.ok); const ds = dayStats(); ds.dict = (ds.dict || 0) + 1; ds.pts = (ds.pts || 0) + 1; saveProg(); render();
+}
+function alignWords(a, b) {
+  const n = a.length, m = b.length, d = Array.from({length: n + 1}, () => new Array(m + 1).fill(0));
+  for (let i = 0; i <= n; i++) d[i][0] = i; for (let j = 0; j <= m; j++) d[0][j] = j;
+  for (let i = 1; i <= n; i++) for (let j = 1; j <= m; j++) d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+  const ops = []; let i = n, j = m;
+  while (i > 0 || j > 0) {
+    if (i > 0 && j > 0 && d[i][j] === d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)) { ops.unshift(a[i - 1] === b[j - 1] ? ['ok', b[j - 1]] : ['bad', b[j - 1], a[i - 1]]); i--; j--; }
+    else if (j > 0 && d[i][j] === d[i][j - 1] + 1) { ops.unshift(['miss', b[j - 1]]); j--; }
+    else { ops.unshift(['extra', null, a[i - 1]]); i--; }
+  }
+  return {ops};
+}
+function dictView() {
+  const d = S.dc;
+  if (!d) return `<div class="card"><div style="font-weight:800;font-size:18px">Dictation</div><p class="small muted" style="margin:4px 0 12px">Hear a word or sentence, type it, and see every letter you got wrong. Every mistake goes into your <b>misspellings deck</b> and comes back with spaced repetition until you get it right for 3 weeks.</p>
+    <div class="list">${[['common', 'Commonly misspelt words', 'The 150 words learners (and natives) get wrong most: accommodate, necessary, separate…'], ['level', 'Tricky words at your level', 'Double letters, silent letters, -ible/-able… from bands around your level'], ['cards', 'Words from your cards', 'Can you spell the words you are learning?'], ['mis', 'My misspellings', `${Object.keys(S.prog.mis).length} words you have got wrong`], ['sent', 'Sentences', 'Whole sentences from the texts: spelling + listening']].map(([k, t, s]) => `<div class="item click" data-dict="${k}"><div class="grow"><div style="font-weight:700">${t}</div><div class="small muted">${s}</div></div>${I.play.replace('<svg', '<svg width="18" height="18" style="color:var(--brand)"')}</div>`).join('')}</div></div>`;
+  if (d.i >= d.items.length) {
+    const ok = d.res.filter(Boolean).length;
+    return `<div class="card" style="text-align:center"><div style="font-size:44px;font-weight:800">${ok} / ${d.items.length}</div><p class="muted">${ok === d.items.length ? 'Perfect!' : 'The words you missed are now in your misspellings deck.'}</p>
+     <div class="row" style="justify-content:center;flex-wrap:wrap"><button class="btn brand" data-dict="${d.set}">Again</button><button class="btn ghost" data-dcquit="1">Done</button>${Object.keys(S.prog.mis).length ? '<button class="btn ghost" data-spdeck="1">Practise misspellings</button>' : ''}</div></div>`;
+  }
+  const it = d.items[d.i];
+  const res = d.cur;
+  const result = !res ? '' : !it.sent
+    ? `<div style="text-align:center;margin-top:12px"><div style="font-weight:800;color:${res.ok ? 'var(--green)' : 'var(--red)'}">${res.ok ? 'Correct ✓' : 'Not quite: here are your mistakes'}</div>${res.ok ? '' : diffHTML(res.typed, it.w.toLowerCase())}<div style="font-size:28px;font-weight:800">${esc(it.w)}</div><div id="dcAr" class="ar" style="font-size:20px"></div>${it.tip ? `<div class="note">💡 ${esc(it.tip)}</div>` : ''}</div>`
+    : `<div class="sentdiff" style="margin-top:12px">${res.ops.map(o => o[0] === 'ok' ? `<span class="okw">${esc(o[1])}</span>` : o[0] === 'bad' ? `<span class="badw" title="you typed ${esc(o[2])}">${esc(o[1])}</span> <small class="muted">(${esc(o[2])})</small>` : o[0] === 'miss' ? `<span class="badw">${esc(o[1])}</span> <small class="muted">(missing)</small>` : `<s class="muted">${esc(o[2])}</s>`).join(' ')}</div><div style="margin-top:8px;font-family:'Source Serif 4',serif;font-size:18px">${esc(it.w)}</div>`;
+  if (res && !it.sent) entryOf(lemmaOf(it.w)).then(e => { const el = $('#dcAr'); if (el && e) el.textContent = e.arw && e.arw[0] ? e.arw[0][1] : (e.ar || [''])[0]; });
+  return `<div class="card"><div class="row"><div class="grow" style="font-weight:700">${it.sent ? 'Sentence' : 'Word'} ${d.i + 1} / ${d.items.length}</div><button class="btn ghost sm" data-dcquit="1">Stop</button></div>
+   <div class="bar" style="margin:10px 0 18px"><i style="width:${100 * d.i / d.items.length}%;background:var(--brand)"></i></div>
+   <div class="row" style="justify-content:center;gap:12px"><button class="spk" style="width:64px;height:64px" data-dcsay="1">${I.spk}</button><button class="btn soft sm" data-dcsay="slow">🐢 Slower</button>${!it.sent ? '<button class="btn soft sm" data-dchint="1">Meaning</button>' : ''}</div>
+   <div id="dcHint" class="ar" style="text-align:center;font-size:18px;min-height:8px;margin-top:6px"></div>
+   ${it.sent ? `<textarea id="dcIn" rows="3" style="margin-top:14px;font-size:18px" autocapitalize="off" spellcheck="false" ${res ? 'disabled' : ''} placeholder="Type the sentence…">${res ? esc(res.typed) : ''}</textarea>` : `<input class="bigin" id="dcIn" style="margin-top:14px" autocomplete="off" autocapitalize="off" spellcheck="false" ${res ? `disabled value="${esc(res.typed)}"` : ''} placeholder="type what you hear">`}
+   ${result}
+   <button class="btn ${res ? 'brand' : ''} wide" style="margin-top:14px" ${res ? 'data-dcnext="1"' : 'data-dccheck="1"'}>${res ? 'Next (Enter)' : 'Check (Enter)'}</button></div>`;
+}
+function misView() {
+  const ms = Object.entries(S.prog.mis).sort((a, b) => b[1].n - a[1].n);
+  return `<div class="card"><div class="row"><div class="grow"><div style="font-weight:800;font-size:18px">My misspellings</div><div class="small muted">${ms.length} words · each is a spelling card in Cards → Spelling</div></div>${ms.length ? '<button class="btn brand sm" data-spdeck="1">Practise</button>' : ''}</div>
+   <div class="list" style="margin-top:10px">${ms.map(([w, m]) => `<div class="item"><div class="grow"><b>${esc(w)}</b> <span class="small muted">· wrong ${m.n}× · you wrote ${m.typed.map(esc).join(', ') || '—'}</span></div>${spk(w, 1)}</div>`).join('') || '<div class="empty">No misspellings yet. Do a dictation!</div>'}</div></div>
+   <div class="card"><label style="margin-top:0">Add a word you often misspell</label><div class="row"><input id="misAdd" placeholder="e.g. definitely" autocapitalize="off"><button class="btn" id="misAddBtn">Add</button></div></div>`;
+}
+function rulesView() {
+  return S.learn.rules.map((r, i) => `<div class="card"><div class="row"><div class="grow" style="font-weight:800;font-size:17px">${i + 1}. ${esc(r.h)}</div><button class="btn soft sm" data-dict="rule:${i}">Dictation</button></div>
+   <p style="margin:8px 0">${r.body}</p>${r.warn ? `<div class="note warn small">⚠️ ${esc(r.warn)}</div>` : ''}<div class="colls" style="margin-top:10px">${r.ex.map(w => `<button class="chip sm" data-say="${esc(w)}">${esc(w)}</button>`).join('')}</div></div>`).join('');
+}
+function pairsView() {
+  const q = S.pq;
+  if (q) {
+    if (q.i >= q.items.length) return `<div class="card" style="text-align:center"><div style="font-size:44px;font-weight:800">${q.ok} / ${q.items.length}</div><div class="row" style="justify-content:center"><button class="btn brand" data-pq="1">New quiz</button><button class="btn ghost" data-pqquit="1">Done</button></div></div>`;
+    const it = q.items[q.i];
+    const html = it.parts.map((p, i) => typeof p === 'string' ? esc(p) : `<select class="qsel ${it.done ? (it.ans[i] === p.c ? 'okq' : 'badq') : ''}" data-qi="${i}" ${it.done ? 'disabled' : ''}><option value="">…</option>${p.opts.map(o => `<option ${it.ans[i] === o ? 'selected' : ''}>${esc(o)}</option>`).join('')}</select>`).join('');
+    return `<div class="card"><div class="row"><div class="grow" style="font-weight:700">Confusing pairs · ${q.i + 1} / ${q.items.length}</div><button class="btn ghost sm" data-pqquit="1">Stop</button></div>
+     <div style="font-family:'Source Serif 4',serif;font-size:21px;line-height:2;margin:16px 0">${html}</div>
+     ${it.done ? `<div class="note"><b>${esc(it.pair.a)} / ${esc(it.pair.b)}</b>: ${esc(it.pair.rule)} <span class="ar">(${esc(it.pair.ar)})</span></div>` : ''}
+     <button class="btn ${it.done ? 'brand' : ''} wide" style="margin-top:12px" ${it.done ? 'data-pqnext="1"' : 'data-pqcheck="1"'}>${it.done ? 'Next' : 'Check'}</button></div>`;
+  }
+  return `<div class="card row"><div class="grow"><b>Quiz:</b> <span class="small muted">choose the right word in 10 sentences</span></div><button class="btn brand sm" data-pq="1">Start</button></div>
+  <div class="card list">${S.learn.pairs.map((p, i) => `<div class="item" style="display:block"><div class="pair"><b style="font-size:17px">${esc(p.a)}</b><span class="muted">vs</span><b style="font-size:17px">${esc(p.b)}</b><span class="ar small muted">${esc(p.ar)}</span><span class="grow"></span><button class="chip sm" data-dict="pair:${i}">🔊 dictate</button></div><div class="small">${esc(p.rule)}</div><div class="small muted" style="font-style:italic">${esc(p.ex)}</div></div>`).join('')}</div>`;
+}
+function startPairQuiz() {
+  const items = [];
+  for (const p of shuffle(S.learn.pairs)) {
+    const sents = p.ex.split(' · ');
+    for (const s of shuffle(sents)) {
+      const words = [p.a, p.b].sort((x, y) => y.length - x.length).map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+      const re = new RegExp(`\\b(${words.join('|')})\\b`, 'gi');
+      if (!re.test(s)) continue; re.lastIndex = 0;
+      const parts = []; let last = 0;
+      for (const m of s.matchAll(re)) { parts.push(s.slice(last, m.index)); const c = m[0]; const cap = /^[A-Z]/.test(c); const opts = shuffle([p.a, p.b]).map(o => cap ? o[0].toUpperCase() + o.slice(1) : o); parts.push({c, opts}); last = m.index + c.length; }
+      parts.push(s.slice(last)); items.push({pair: p, parts, ans: {}}); break;
+    }
+    if (items.length >= 10) break;
+  }
+  S.pq = {items, i: 0, ok: 0}; render();
+}
+function pairCheck() {
+  const it = S.pq.items[S.pq.i]; $$('.qsel').forEach(s => it.ans[+s.dataset.qi] = s.value);
+  it.done = true; if (it.parts.every((p, i) => typeof p === 'string' || it.ans[i] === p.c)) S.pq.ok++; else { addPts(0); }
+  addPts(1); render();
+}
+function writeView() {
+  const tabs = [['dict', 'Dictation'], ['mis', 'Misspellings'], ['rules', 'Spelling rules'], ['pairs', 'Confusing pairs'], ['ielts', 'IELTS writing']];
+  if (S.wtask) return ieltsTaskView();
+  const body = {dict: dictView, mis: misView, rules: rulesView, pairs: pairsView, ielts: ieltsListView}[S.wtab]();
+  return `${header('Write', 'Spelling, dictation and IELTS writing')}<div class="seg">${tabs.map(([k, l]) => `<button class="${S.wtab === k ? 'on' : ''}" data-wtab="${k}">${l}</button>`).join('')}</div>${body}`;
+}
+function ieltsListView() {
+  const done = id => S.prog.writing.filter(w => w.task === id);
+  const row = (t, kind) => { const d = done(t.id); return `<div class="item click" data-wtask="${t.id}"><div class="grow"><div style="font-weight:700">${esc(t.title || t.type)}</div><div class="small muted" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${esc(t.prompt)}</div></div>${d.length ? `<span class="tag g">${d.length}× · band ${d[d.length - 1].band}</span>` : S.prog.drafts[t.id] ? '<span class="tag o">draft</span>' : ''}</div>`; };
+  const hist = S.prog.writing.slice(-6).reverse();
+  return `<div class="card"><div style="font-weight:800;font-size:18px">Task 1 <span class="small muted">· 150+ words · 20 min · describe a chart, table or process</span></div><div class="list">${S.learn.task1.map(t => row(t)).join('')}</div></div>
+   <div class="card"><div style="font-weight:800;font-size:18px">Task 2 <span class="small muted">· 250+ words · 40 min · essay</span></div><div class="list">${S.learn.task2.map(t => row(t)).join('')}</div></div>
+   ${hist.length ? `<div class="sec">Your essays</div><div class="card list">${hist.map(w => `<div class="item"><div class="grow"><b>${esc(w.task)}</b> <span class="small muted">· ${new Date(w.date).toLocaleDateString()} · ${w.wc} words</span></div><span class="tag b">Band ${w.band}</span></div>`).join('')}</div>` : ''}
+   <details class="card"><summary>Band descriptors (summary)</summary>${bandsTable()}</details>`;
+}
+function bandsTable() {
+  const B = S.learn.bands;
+  return `<p class="small muted">A short summary in our own words of the public IELTS writing band descriptors. The official versions are on ielts.org.</p><div style="overflow-x:auto"><table><thead><tr><th>Band</th>${B.criteria.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${B.bands.map(b => `<tr><td><b>${b.b}</b></td>${b.d.map(x => `<td class="small">${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+}
+function chartSVG(c) {
+  if (c.type === 'process') return `<div class="proc">${c.steps.map(s => `<div>${esc(s)}</div>`).join('')}</div>`;
+  if (c.type === 'table') return `<div style="overflow-x:auto"><table><thead><tr>${c.cols.map(x => `<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>${c.rows.map(r => `<tr>${r.map((x, i) => i ? `<td>${esc(x)}</td>` : `<td><b>${esc(x)}</b></td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+  const W = 640, H = 300, L = 48, B2 = 40, T = 20, Rr = 120, cols = ['#0F766E', '#2F6FB3', '#C2412D', '#B7791F'];
+  const max = Math.ceil(Math.max(...c.series.flatMap(s => s.v)) / 50) * 50 || 10, y = v => T + (H - T - B2) * (1 - v / max), pw = W - L - Rr;
+  let g = ''; for (let i = 0; i <= 5; i++) { const v = max * i / 5; g += `<line x1="${L}" x2="${W - Rr}" y1="${y(v)}" y2="${y(v)}" stroke="#e5e9e6"/><text x="${L - 6}" y="${y(v) + 4}" font-size="11" text-anchor="end" fill="#7a8582">${v}</text>`; }
+  let body = '';
+  if (c.type === 'line') {
+    const x = i => L + pw * i / (c.x.length - 1);
+    c.series.forEach((s, si) => { body += `<polyline fill="none" stroke="${cols[si]}" stroke-width="3" points="${s.v.map((v, i) => x(i) + ',' + y(v)).join(' ')}"/>` + s.v.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="3.5" fill="${cols[si]}"/>`).join(''); });
+    body += c.x.map((l, i) => `<text x="${x(i)}" y="${H - B2 + 18}" font-size="12" text-anchor="middle" fill="#3f4a47">${esc(l)}</text>`).join('');
+  } else {
+    const gw = pw / c.x.length, bw = (gw - 20) / c.series.length;
+    c.x.forEach((l, i) => { c.series.forEach((s, si) => { const v = s.v[i]; body += `<rect x="${L + i * gw + 10 + si * bw}" y="${y(v)}" width="${bw - 3}" height="${y(0) - y(v)}" fill="${cols[si]}" rx="3"/><text x="${L + i * gw + 10 + si * bw + bw / 2 - 1}" y="${y(v) - 4}" font-size="10" text-anchor="middle" fill="#3f4a47">${v}</text>`; }); body += `<text x="${L + i * gw + gw / 2}" y="${H - B2 + 18}" font-size="12" text-anchor="middle" fill="#3f4a47">${esc(l)}</text>`; });
+  }
+  const leg = c.series.map((s, si) => `<rect x="${W - Rr + 14}" y="${T + 10 + si * 22}" width="14" height="14" rx="3" fill="${cols[si]}"/><text x="${W - Rr + 34}" y="${T + 22 + si * 22}" font-size="13" fill="#16201e">${esc(s.name)}</text>`).join('');
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}">${g}${body}${leg}<text x="${L}" y="${H - 6}" font-size="11" fill="#7a8582">${esc(c.unit)}</text></svg>`;
+}
+let wTimer = null;
+function ieltsTaskView() {
+  const id = S.wtask, t1 = S.learn.task1.find(t => t.id === id), t = t1 || S.learn.task2.find(t => t.id === id), isT1 = !!t1;
+  const draft = S.prog.drafts[id] || '', chk = S.prog.checks[id] || {}, list = isT1 ? S.learn.check1 : S.learn.check2, min = isT1 ? 150 : 250;
+  const an = S.wan;
+  return `<div class="toolbar"><button class="iconbtn" data-wback="1">${I.back}</button><b class="grow">IELTS Writing ${isT1 ? 'Task 1' : 'Task 2'}</b><span class="timer" id="wTime">${fmtTime(S.wclock || 0)}</span><button class="btn sm ${S.wrun ? 'red' : 'brand'}" data-wclock="1">${S.wrun ? 'Pause' : 'Start timer'}</button></div>
+  <div class="card"><div class="small muted" style="font-weight:700;text-transform:uppercase;letter-spacing:.05em">${esc(isT1 ? 'You should spend about 20 minutes on this task' : 'You should spend about 40 minutes on this task')}</div><p style="margin:8px 0 0">${esc(t.prompt)}</p>${isT1 ? `<div style="margin-top:12px">${chartSVG(t.chart)}</div>` : ''}<p class="small muted" style="margin-bottom:0">Write at least ${min} words.</p></div>
+  <textarea class="editor" id="wText" placeholder="Write your answer here…" spellcheck="false">${esc(draft)}</textarea>
+  <div class="row" style="margin:8px 0 14px"><span class="small"><b id="wCount">${(draft.match(TOKRE) || []).length}</b> words <span class="muted">(min ${min})</span></span><span class="grow"></span><button class="btn soft sm" data-wcheck="1">Check my text</button></div>
+  ${an ? analysisHTML(an) : ''}
+  <details class="card" open><summary>Self-check list</summary><div style="margin-top:8px">${list.map((c, i) => `<label class="chk"><input type="checkbox" data-wchk="${i}" ${chk[i] ? 'checked' : ''}><span>${esc(c)}</span></label>`).join('')}</div></details>
+  <details class="card"><summary>Useful language</summary><div style="margin-top:8px">${isT1 ? `<div class="small muted">Describing trends</div><div class="colls" style="margin:6px 0 10px">${S.learn.trend.map(x => `<span>${esc(x)}</span>`).join('')}</div>` : ''}${Object.entries(S.learn.linkers).map(([k, v]) => `<div class="small muted">${esc(k)}</div><div class="colls" style="margin:6px 0 10px">${v.map(x => `<span>${esc(x)}</span>`).join('')}</div>`).join('')}</div></details>
+  <div class="card"><div style="font-weight:800">Mark yourself</div><p class="small muted" style="margin:4px 0 10px">Compare your text with the descriptors and choose a band for each criterion. The overall band is the average, rounded like IELTS (to the nearest half band).</p>
+   ${S.learn.bands.criteria.map((c, i) => `<label>${esc(c)}</label><select data-wband="${i}">${[9, 8.5, 8, 7.5, 7, 6.5, 6, 5.5, 5, 4.5, 4].map(b => `<option ${(S.wb || [])[i] == b ? 'selected' : ''}>${b}</option>`).join('')}</select>`).join('')}
+   <div class="row" style="margin-top:14px"><div class="grow">Overall: <b id="wOverall" style="font-size:22px">${overall()}</b></div><button class="btn brand" data-wsave="1">Save essay</button></div>
+   <details style="margin-top:12px"><summary class="small">Band descriptors</summary>${bandsTable()}</details></div>`;
+}
+const fmtTime = s => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+function overall() { const b = (S.wb || [6, 6, 6, 6]).map(Number); const avg = b.reduce((a, c) => a + c, 0) / 4; return Math.floor(avg * 2 + 0.5) / 2; }
+function knownWord(w) { const lo = w.toLowerCase().replace(/’/g, "'"); if (S.R[lo] || S.F[lo] || FUNC.has(lo)) return true; if (/ly$/.test(lo) && !S.R[lo]) return false; const l = lemmaOf(lo); if (S.R[l]) return true; if (/^(.+)(n't|'s|'re|'ve|'ll|'d|'m)$/.test(lo)) return knownWord(lo.replace(/(n't|'s|'re|'ve|'ll|'d|'m)$/, '')); return false; }
+function suggestions(w) {
+  w = w.toLowerCase(); const out = [];
+  for (const c of S.core.lemmas) { if (Math.abs(c.length - w.length) > 2 || c[0] !== w[0] && c[1] !== w[1]) continue; const d = edit(w, c); if (d <= 2) out.push([d, S.R[c], c]); }
+  for (const c of Object.keys(S.F)) { if (Math.abs(c.length - w.length) > 2 || c[0] !== w[0]) continue; const d = edit(w, c); if (d <= 2) out.push([d, S.R[S.F[c]] || 99999, c]); }
+  return out.sort((a, b) => a[0] - b[0] || a[1] - b[1]).map(x => x[2]).filter((x, i, a) => a.indexOf(x) === i).slice(0, 5);
+}
+function analyse(text) {
+  const words = text.match(TOKRE) || [], sents = text.split(/[.!?]+\s/).filter(s => s.trim().length > 3), paras = text.split(/\n\s*\n/).filter(p => p.trim());
+  const flagged = [...new Set(words.filter(w => !/^[A-Z]/.test(w) && !knownWord(w)).map(w => w.toLowerCase()))];
+  const freq = {}; for (const w of words) { const l = lemmaOf(w); if (!FUNC.has(l) && l.length > 3) freq[l] = (freq[l] || 0) + 1; }
+  const rep = Object.entries(freq).filter(([, n]) => n >= 4).sort((a, b) => b[1] - a[1]).slice(0, 6);
+  const lo = ' ' + text.toLowerCase().replace(/\s+/g, ' ') + ' ';
+  const linkers = Object.values(S.learn.linkers).flat().filter(l => lo.includes(' ' + l.replace(/ … .*/, '') + ' ') || lo.includes(' ' + l + ','));
+  const lem = words.map(w => lemmaOf(w)), uniq = new Set(lem.filter(l => !FUNC.has(l)));
+  const adv = [...uniq].filter(l => S.R[l] > 5000).length, awl = [...uniq].filter(l => AWLSET.has(l));
+  return {wc: words.length, sents: sents.length, paras: paras.length, avg: Math.round(words.length / Math.max(1, sents.length)), flagged, rep, linkers, adv, awl, uniq: uniq.size};
+}
+let AWLSET = new Set();
+function analysisHTML(a) {
+  return `<div class="card"><div style="font-weight:800;margin-bottom:8px">Automatic checks</div>
+  <div class="kv"><span class="muted">Words</span><b>${a.wc}</b><span class="muted">Paragraphs</span><b>${a.paras} ${a.paras < 4 ? '<span class="tag o">aim for 4–5</span>' : ''}</b><span class="muted">Sentences · avg length</span><b>${a.sents} · ${a.avg} words ${a.avg > 30 ? '<span class="tag o">long, check punctuation</span>' : a.avg < 12 ? '<span class="tag o">short, combine some</span>' : ''}</b>
+  <span class="muted">Different content words</span><b>${a.uniq}</b><span class="muted">Less common words (5k+)</span><b>${a.adv}</b><span class="muted">Academic words (AWL)</span><b>${a.awl.length} <span class="small muted">${esc(a.awl.slice(0, 8).join(', '))}</span></b>
+  <span class="muted">Linking words</span><b>${a.linkers.length ? esc(a.linkers.join(', ')) : '<span class="tag o">none found</span>'}</b>
+  <span class="muted">Repeated a lot</span><b>${a.rep.length ? a.rep.map(([w, n]) => `${esc(w)} ×${n}`).join(', ') + ' <span class="small muted">(use synonyms or pronouns)</span>' : '—'}</b></div>
+  <div style="margin-top:10px;font-weight:700">Possible spelling mistakes</div>${a.flagged.length ? `<p class="small muted" style="margin:2px 0 8px">Tap a word to see suggestions. Choosing one fixes it in your text and adds it to your misspellings deck.</p><div class="colls">${a.flagged.map(w => `<button class="flag" data-flag="${esc(w)}">${esc(w)}</button>`).join('')}</div><div id="sugg"></div>` : '<p class="small" style="color:var(--green);margin:2px 0">No unknown words found ✓</p>'}</div>`;
+}
+function fixWord(bad, good) {
+  const ta = $('#wText'); const re = new RegExp(`\\b${bad.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
+  ta.value = ta.value.replace(re, m => /^[A-Z]/.test(m) ? good[0].toUpperCase() + good.slice(1) : good);
+  S.prog.drafts[S.wtask] = ta.value; addSpell(good, {typed: bad}); S.wan = analyse(ta.value); render(); toast(`Fixed: ${bad} → ${good} (added to misspellings)`);
+}
+function saveEssay() {
+  const text = $('#wText').value, a = analyse(text); if (a.wc < 50) { toast('Write a bit more first'); return; }
+  S.prog.writing.push({id: 'w' + Date.now().toString(36), task: S.wtask, date: Date.now(), wc: a.wc, band: overall(), crit: (S.wb || []).map(Number), text});
+  addPts(20); saveProg(); toast('Essay saved · band ' + overall()); S.wtask = null; S.wan = null; render();
+}
+
+// ================= PLAN =================
+function bandProgress(b) {
+  const pool = S.core.lemmas.slice((b - 1) * 1000, b * 1000).filter(l => !FUNC.has(l));
+  let k = 0, lr = 0; for (const l of pool) { const s = wordStatus(l); if (s === 'known') k++; else if (s === 'learning') lr++; }
+  return {k, lr, n: pool.length};
+}
+function awlWords(n) { return [...AWLSET].filter(w => S.awlMap[w] === n); }
+function planUnits() {
+  const base = Math.max(3, Math.floor(baseline() / 1000));
+  const units = [];
+  units.push({id: 'place', ph: 1, t: 'Placement test', s: S.prog.place ? `Done · ≈ ${S.prog.place.est.toLocaleString()} words` : 'Find your level first', done: !!S.prog.place, go: 'place'});
+  const bands = []; for (let b = base + 1; b <= 15; b++) bands.push(b);
+  const g = S.learn.grammar;
+  const phase = (b) => b <= 8 ? 1 : b <= 11 ? 2 : 3;
+  bands.forEach((b, i) => {
+    const p = bandProgress(b), pct = Math.round(100 * (p.k + p.lr * .5) / Math.max(1, p.n));
+    units.push({id: 'band' + b, ph: phase(b), t: `Vocabulary band ${b}k (${cefrOfBand(b)})`, s: `${p.k} known · ${p.lr} learning of ${p.n} · add words with the word builder`, pct, done: pct >= 90, band: b});
+    const aw = i + 1; if (aw <= 10) { const ws = awlWords(aw); const kn = ws.filter(w => wordStatus(w) === 'known').length, lr = ws.filter(w => wordStatus(w) === 'learning').length; units.push({id: 'awl' + aw, ph: phase(b), t: `Academic Word List · sublist ${aw}`, s: `${kn} known · ${lr} learning of ${ws.length}`, pct: Math.round(100 * (kn + lr * .5) / Math.max(1, ws.length)), done: kn + lr >= ws.length * .9, awl: aw}); }
+    const gi = g[i]; if (gi) units.push({id: gi.id, ph: phase(b), t: `Grammar: ${gi.t}`, s: `${gi.lvl} · explanation + ${gi.q.length} exercises`, done: !!S.prog.grammar[gi.id], gram: gi.id});
+    if (i % 2 === 0) units.push({id: 'coll' + i, ph: phase(b), t: 'Collocations practice', s: 'Which verb or adjective goes with the noun? 10 questions', done: !!S.prog.quiz['coll' + i], coll: 'coll' + i});
+    if (i % 3 === 1) { const n = Math.floor(i / 3); const set = S.learn.idioms.slice(n * 20, n * 20 + 20); if (set.length) units.push({id: 'idi' + n, ph: phase(b), t: `Idioms set ${n + 1}`, s: `${set.filter(x => wordStatus('p:' + x.p) !== 'new').length} / ${set.length} known or learning`, done: set.every(x => wordStatus('p:' + x.p) !== 'new'), idi: n}); }
+    if (i % 3 === 2) { const t = [...S.learn.task1, ...S.learn.task2][Math.floor(i / 3) % 12]; units.push({id: 'w' + t.id, ph: phase(b), t: `IELTS writing: ${t.title || t.type}`, s: S.prog.writing.some(w => w.task === t.id) ? 'Done' : 'Write it, check it, mark yourself', done: S.prog.writing.some(w => w.task === t.id), wtask: t.id}); }
+  });
+  for (const gi of g) if (!units.some(u => u.gram === gi.id)) units.push({id: gi.id, ph: 3, t: `Grammar: ${gi.t}`, s: `${gi.lvl} · explanation + ${gi.q.length} exercises`, done: !!S.prog.grammar[gi.id], gram: gi.id});
+  for (const lv of ['B2', 'C1', 'C2']) { const ts = S.texts.filter(t => t.level === lv); const r = ts.filter(t => S.prog.read[t.id]).length; units.push({id: 'read' + lv, ph: lv === 'B2' ? 1 : lv === 'C1' ? 2 : 3, t: `Read all ${lv} texts`, s: `${r} / ${ts.length} read (news, TV, IELTS, academic)`, done: r === ts.length, pct: Math.round(100 * r / Math.max(1, ts.length)), go: 'read'}); }
+  return units;
+}
+function planPct() { if (!S.core) return 0; const u = planUnits(); return Math.round(100 * u.filter(x => x.done).length / Math.max(1, u.length)); }
+function timeEstimate() {
+  const pl = S.prog.place, c = counters();
+  let need = 0; for (let b = 1; b <= TARGET / 1000; b++) { const p = bandProgress(b); need += p.n - p.k; }
+  const npd = S.prog.prefs.newPerDay, mins = S.prog.prefs.minutes;
+  const vocabDays = Math.ceil(need / Math.max(1, npd * 0.85)); // ~15% of new words lapse and need relearning
+  const lvl = cefrOfSize(c.vocab); const glh = lvl === 'C2' ? 100 : lvl === 'C1' ? 250 : lvl === 'B2' ? 450 : 650; // guided learning hours still needed (Cambridge: ~200 per level)
+  const hourDays = Math.ceil(glh * 60 / Math.max(10, mins));
+  return {need, vocabDays, glh, hourDays, days: Math.max(vocabDays, hourDays), npd, mins, pl};
+}
+function planView() {
+  if (S.gram) return grammarView();
+  if (S.cq) return collView();
+  if (S.idi !== undefined && S.idi !== null) return idiomView();
+  const units = planUnits(), c = counters(), te = timeEstimate();
+  const ph = [[1, 'Phase 1 · Consolidate B2 → C1', 'High-frequency gaps, AWL basics, core C1 grammar'], [2, 'Phase 2 · Solid C1', 'Bands to 11k, collocations, idioms, IELTS band 7 writing'], [3, 'Phase 3 · C1 → C2', 'Bands 12–15k, nuance, register, advanced grammar, band 8+ writing']];
+  const doneN = units.filter(u => u.done).length;
+  const months = d => (d / 30).toFixed(d < 60 ? 1 : 0);
+  return `${header('Plan: B2 → C2', `${doneN} of ${units.length} units done`)}
+  <div class="stats" style="margin-top:0;margin-bottom:14px">
+   <div class="stat"><b>${c.learned}</b><span>new words learned</span></div><div class="stat"><b>${c.learning}</b><span>learning now</span></div><div class="stat"><b>${c.texts}</b><span>texts read</span></div>
+  </div>
+  <div class="card"><div style="font-weight:800;font-size:18px">Honest time estimate</div>
+   ${!S.prog.place ? '<p class="small" style="color:var(--red)">Take the placement test for a real estimate.</p>' : ''}
+   <p class="small" style="margin:6px 0">Words still to learn up to the ${TARGET / 1000}k band (≈ the 8–9k word families needed for C2-level reading): <b>${te.need.toLocaleString()}</b>. At <b>${te.npd}</b> new cards a day (and ~15% forgotten and relearnt) that is about <b>${te.vocabDays} days (${months(te.vocabDays)} months)</b>.</p>
+   <p class="small" style="margin:6px 0">Cambridge estimates about <b>200 guided learning hours per CEFR level</b>. From ${cefrOfSize(c.vocab)} that's roughly <b>${te.glh} more hours</b> of study (reading, writing, grammar, listening, not only cards). At <b>${te.mins} min a day</b> → <b>${te.hourDays} days (${months(te.hourDays)} months)</b>.</p>
+   <div class="note"><b>Estimate: about ${months(te.days)} months</b> of daily study at this pace. Realistically, with missed days, plan for ${months(Math.round(te.days * 1.3))}. Note: C2 also needs <b>speaking</b> practice with people, which this app can't give you, so add conversation practice or a tutor weekly.</div>
+   <div class="row" style="margin-top:12px"><div class="grow"><label style="margin-top:0">Study minutes per day</label><select id="planMin">${[20, 30, 45, 60, 90, 120].map(n => `<option ${n === te.mins ? 'selected' : ''}>${n}</option>`).join('')}</select></div><div class="grow"><label style="margin-top:0">New cards per day</label><select id="npd2">${[5, 10, 15, 20, 25, 30].map(n => `<option ${n === te.npd ? 'selected' : ''}>${n}</option>`).join('')}</select></div></div>
+   <p class="small muted" style="margin-bottom:0">Suggested day (${te.mins} min): cards ${Math.round(te.mins * .35)} min · reading/listening ${Math.round(te.mins * .35)} min · dictation & spelling ${Math.round(te.mins * .1)} min · grammar or writing ${Math.round(te.mins * .2)} min (one IELTS essay a week).</p></div>
+  ${ph.map(([n, t, s]) => { const us = units.filter(u => u.ph === n); if (!us.length) return ''; return `<div class="sec">${t}</div><div class="small muted" style="margin:-6px 0 10px">${s}</div><div class="card">${us.map((u, i) => `<div class="unit ${u.done ? 'done' : ''}" ${u.go ? `data-go="${u.go}"` : u.band ? `data-pband="${u.band}"` : u.awl ? `data-pawl="${u.awl}"` : u.gram ? `data-gram="${u.gram}"` : u.coll ? `data-coll="${u.coll}"` : u.idi !== undefined ? `data-idi="${u.idi}"` : u.wtask ? `data-wtask="${u.wtask}"` : ''}>
+     <div class="num">${u.done ? I.check.replace('<svg', '<svg width="18" height="18"') : (u.pct !== undefined ? u.pct + '%' : '•')}</div><div class="grow"><div style="font-weight:700">${esc(u.t)}</div><div class="small muted">${esc(u.s)}</div>${u.pct !== undefined && !u.done ? `<div class="bar" style="margin-top:5px;max-width:260px"><i style="width:${u.pct}%;background:var(--green)"></i></div>` : ''}</div></div>`).join('')}</div>`; }).join('')}`;
+}
+async function bandSheet(b) {
+  const p = bandProgress(b); const nw = S.core.lemmas.slice((b - 1) * 1000, b * 1000).filter(l => wordStatus(l) === 'new' && !FUNC.has(l) && !S.prof.has(l));
+  const pop = $('#pop'); pop.classList.add('sheet'); pop.style.display = 'block'; $('#scrim').style.display = 'block'; popPinned = true; pop.style.left = ''; pop.style.top = ''; pop.dataset.k = '';
+  pop.innerHTML = `<div class="w">Band ${b}k · ${cefrOfBand(b)}</div><p class="small muted">${p.k} known · ${p.lr} learning · ${nw.length} new. New words are added in frequency order (most useful first).</p>
+   <div class="row" style="gap:8px;flex-wrap:wrap">${[10, 20, 30].map(n => `<button class="btn ${n === 10 ? 'brand' : 'ghost'} sm" data-bandadd="${b}:${n}">Add ${n}</button>`).join('')}</div>
+   <h4>Next new words (tap to look up)</h4><div class="colls">${nw.slice(0, 60).map(l => `<button class="chip sm" data-look="${esc(l)}">${esc(l)}</button>`).join('')}</div>`;
+}
+function awlSheet(n) {
+  const ws = awlWords(n).sort();
+  const pop = $('#pop'); pop.classList.add('sheet'); pop.style.display = 'block'; $('#scrim').style.display = 'block'; popPinned = true; pop.style.left = ''; pop.style.top = ''; pop.dataset.k = '';
+  pop.innerHTML = `<div class="w">AWL sublist ${n}</div><p class="small muted">Academic Word List (Coxhead, 2000): words that are frequent in academic texts across subjects. Sublist 1 is the most frequent. Essential for IELTS reading and writing.</p>
+   <button class="btn brand sm" data-awladd="${n}">${I.plus} Add the ones I don't know to cards</button>
+   <div class="colls" style="margin-top:12px">${ws.map(w => `<button class="chip sm" data-look="${esc(w)}" style="${wordStatus(w) === 'known' ? 'opacity:.55' : wordStatus(w) === 'learning' ? 'background:var(--learn)' : 'background:var(--new)'}">${esc(w)}</button>`).join('')}</div>`;
+}
+function grammarView() {
+  const g = S.learn.grammar.find(x => x.id === S.gram);
+  return `<div class="toolbar"><button class="iconbtn" data-gback="1">${I.back}</button><b class="grow">Grammar</b>${S.prog.grammar[g.id] ? '<span class="tag g">Done ✓</span>' : ''}</div>
+  ${header(esc(g.t), g.lvl)}<div class="card"><p style="margin-top:0">${g.body}</p><div class="sec" style="margin-top:12px">Examples</div>${g.ex.map(x => `<div class="row" style="padding:6px 0;border-top:1px solid var(--line2)">${spk(x, 1)}<div class="grow" style="font-family:'Source Serif 4',serif;font-size:17px">${esc(x)}</div></div>`).join('')}</div>
+  <div class="sec">Practice: rewrite the sentence</div>${g.q.map((q, i) => `<div class="card"><div style="font-weight:600">${i + 1}. ${esc(q[0])}</div><textarea rows="2" style="margin-top:8px;min-height:60px" data-gin="${i}" placeholder="Your sentence"></textarea>
+   <div class="row" style="margin-top:8px"><button class="btn soft sm" data-gcheck="${i}">Check</button><div class="grow small" id="gres${i}"></div></div></div>`).join('')}
+  <button class="btn brand wide" data-gdone="${g.id}">${S.prog.grammar[g.id] ? 'Done ✓ (back to plan)' : 'Mark lesson done'}</button>`;
+}
+const normA = s => s.toLowerCase().replace(/[^a-z' ]+/g, ' ').replace(/\s+/g, ' ').trim();
+// collocations quiz
+const QV_UNUSED = ['make', 'do', 'take', 'have', 'give', 'get', 'keep', 'pay', 'raise', 'reach', 'meet', 'set', 'run', 'hold', 'draw', 'play', 'catch', 'bear', 'break', 'carry', 'lose', 'miss', 'put', 'save', 'spend', 'tell', 'face', 'follow', 'gain', 'achieve', 'cause', 'pose', 'conduct', 'launch', 'reduce', 'increase', 'provide', 'solve', 'win', 'open', 'close', 'join', 'lead', 'leave', 'build', 'form', 'offer', 'show', 'cut', 'fill', 'sign', 'express', 'adopt', 'commit', 'deliver', 'hit', 'meet', 'serve', 'strike', 'tackle', 'address'];
+const QA = ['strong', 'heavy', 'high', 'large', 'great', 'deep', 'hard', 'thick', 'wide', 'powerful', 'big', 'fast', 'quick', 'bright', 'sharp', 'serious', 'major', 'key', 'main', 'close', 'broad', 'long', 'short', 'low', 'small', 'slight', 'vast', 'huge', 'strict', 'tough', 'firm', 'rich', 'poor', 'full', 'clear', 'direct', 'final', 'common', 'public', 'private', 'local', 'general', 'special', 'real', 'growing', 'rising', 'increasing', 'significant', 'considerable', 'substantial', 'bitter', 'fierce', 'keen', 'utter', 'sheer', 'vivid', 'mere', 'acute', 'severe', 'intense', 'heated'];
+async function startColl(id) {
+  const lo = Math.max(0, baseline() - 4000);
+  let pool = S.colloc.filter(x => (S.R[x.n] || 0) >= lo); if (pool.length < 10) pool = S.colloc;
+  const items = sample(pool, 10).map(x => ({noun: x.n, answer: x.v, rest: (x.d ? x.d + ' ' : '') + x.n, opts: shuffle([x.v, ...x.x])}));
+  S.cq = {id, items, i: 0, ok: 0}; render();
+  for (const it of items) entryOf(it.noun).then(e => { if (e) { it.all = e.c || []; it.ar = e.arw && e.arw[0] ? e.arw[0][1] : (e.ar || [''])[0]; } });
+}
+function collView() {
+  const q = S.cq;
+  if (q.loading) return `<div class="card empty">Building your quiz…</div>`;
+  if (!q.items.length) return `<div class="card empty">Not enough collocation data yet. <button class="btn ghost sm" data-cqquit="1">Back</button></div>`;
+  if (q.i >= q.items.length) return `<div class="card" style="text-align:center"><div style="font-size:44px;font-weight:800">${q.ok} / ${q.items.length}</div><p class="muted">Collocations are the difference between B2 and C1/C2 English.</p><button class="btn brand" data-cqquit="1">Back to plan</button></div>`;
+  const it = q.items[q.i];
+  return `<div class="toolbar"><button class="iconbtn" data-cqquit="1">${I.back}</button><b class="grow">Collocations · ${q.i + 1} / ${q.items.length}</b></div>
+   <div class="card"><div class="muted small">Which verb is most often used with <b>${esc(it.noun)}</b>?${it.ar ? ` <span class="ar">(${esc(it.ar)})</span>` : ''}</div>
+   <div style="font-size:30px;font-weight:800;margin:14px 0">___ ${esc(it.rest)}</div>
+   <div class="mcq">${it.opts.map(o => `<button data-cqa="${esc(o)}" class="${it.got ? (o === it.answer ? 'okq' : o === it.got ? 'badq' : '') : ''}" ${it.got ? 'disabled' : ''}>${esc(o)} ${esc(it.rest)}</button>`).join('')}</div>
+   ${it.got ? `<div class="note"><b>${esc(it.answer)} ${esc(it.rest)}</b>${it.all && it.all.length ? ` · other collocations: ${esc(it.all.join(' · '))}` : ''}</div><div class="row" style="margin-top:10px"><button class="btn soft sm" data-look="${esc(it.noun)}">Look up “${esc(it.noun)}”</button><span class="grow"></span><button class="btn brand" data-cqnext="1">Next</button></div>` : ''}</div>`;
+}
+function idiomView() {
+  const n = S.idi, set = S.learn.idioms.slice(n * 20, n * 20 + 20), q = S.iq;
+  if (q) {
+    if (q.i >= q.items.length) return `<div class="card" style="text-align:center"><div style="font-size:44px;font-weight:800">${q.ok} / ${q.items.length}</div><button class="btn brand" data-iqquit="1">Back</button></div>`;
+    const it = q.items[q.i];
+    return `<div class="toolbar"><button class="iconbtn" data-iqquit="1">${I.back}</button><b class="grow">Idioms quiz · ${q.i + 1} / ${q.items.length}</b></div><div class="card"><div class="muted small">What does it mean?</div><div style="font-size:26px;font-weight:800;margin:10px 0">${esc(it.p)}</div><div style="font-family:'Source Serif 4',serif;color:var(--ink2)">${esc(it.ex)}</div>
+     <div class="mcq">${it.opts.map(o => `<button data-iqa="${esc(o)}" class="${it.got ? (o === it.m ? 'okq' : o === it.got ? 'badq' : '') : ''}" ${it.got ? 'disabled' : ''}>${esc(o)}</button>`).join('')}</div>
+     ${it.got ? `<div class="note ar" style="font-size:18px">${esc(it.ar)}</div><button class="btn brand wide" style="margin-top:10px" data-iqnext="1">Next</button>` : ''}</div>`;
+  }
+  return `<div class="toolbar"><button class="iconbtn" data-idiback="1">${I.back}</button><b class="grow">Idioms set ${n + 1}</b><button class="btn ghost sm" data-iqstart="1">Quiz</button><button class="btn brand sm" data-idiadd="${n}">Add new ones to cards</button></div>
+   <div class="card list">${set.map(x => `<div class="item" style="display:block"><div class="row"><b style="font-size:17px" class="grow">${esc(x.p)}</b><span class="pill ${wordStatus('p:' + x.p)}">${wordStatus('p:' + x.p)}</span>${spk(x.p, 1)}</div><div class="small">${esc(x.m)} · <span class="ar" style="font-size:15px">${esc(x.ar)}</span></div><div class="small muted" style="font-style:italic">${esc(x.ex)}</div></div>`).join('')}</div>`;
+}
+
+// ================= WORDS =================
+function wordsView() {
+  const c = counters(), q = S.q.trim().toLowerCase();
+  const learned = Object.keys(S.prog.learned).filter(k => !S.prog.prior[k]);
+  const learning = Object.values(S.prog.meta).filter(m => m.t === 'v' && !S.prog.learned[m.k] && S.prog.words[m.k] !== 'known').map(m => m.k);
+  const prior = Object.keys(S.prog.prior);
+  const lists = {learned, learning, prior};
+  let list = lists[S.wordFilter] || [];
+  if (q) list = list.filter(k => k.includes(q));
+  list = list.slice().sort((a, b) => (S.R[a.replace(/^p:/, '')] || 1e6) - (S.R[b.replace(/^p:/, '')] || 1e6));
+  return `${header('Words', 'Dictionary words (lemmas): run · ran · running count as one word')}
+  <div class="card"><div class="counter"><div class="big">${c.learned}</div><div class="grow"><div style="font-weight:700">new words learned</div><div class="small muted">${c.learning} learning · ${prior.length} marked as already known (not counted)${S.prog.place ? ` · ≈ ${S.prog.place.est.toLocaleString()} known at placement` : ''}</div></div></div>
+   <p class="small muted" style="margin:10px 0 0">Only words that were <b>new to you</b> count: a word is learned when its card reaches a 3-week interval, or when you mark a word you've been studying as known. Words from the placement test and words you mark “I know this” without studying are not counted.</p></div>
+  <div class="card"><div class="row"><input id="dictQ" placeholder="Look up any English word or phrase" autocapitalize="off"><button class="btn" id="dictGo">${I.search}</button></div></div>
+  <div class="chips">${[['learned', 'Learned ' + learned.length], ['learning', 'Learning ' + learning.length], ['prior', 'Already known ' + prior.length]].map(([k, l]) => `<button class="chip ${S.wordFilter === k ? 'on' : ''}" data-wf="${k}">${l}</button>`).join('')}</div>
+  <input id="q" placeholder="Filter" value="${esc(S.q)}" style="margin-bottom:12px">
+  <div class="card list">${list.length ? list.slice(0, 500).map(k => `<div class="item click" data-look="${esc(k)}"><div class="grow"><b>${esc(k.replace(/^p:/, ''))}</b> <span class="small muted">${bandOf(k) ? bandOf(k) + 'k' : k.startsWith('p:') ? 'phrase' : ''}${S.prog.learned[k] ? ' · learned ' + esc(S.prog.learned[k]) : ''}</span></div><span class="pill ${S.wordFilter === 'learned' ? 'learned' : S.wordFilter === 'learning' ? 'learning' : 'known'}">${S.wordFilter === 'prior' ? 'known' : S.wordFilter}</span></div>`).join('') : '<div class="empty">Nothing here yet</div>'}</div>`;
+}
+
+// ================= SETTINGS =================
+function settingsView() {
+  const p = S.prog.prefs, ds = S.dictStatus;
+  return `${header('Settings')}
+  <div class="card">
+   <label style="margin-top:0">Daily goal (points)</label><select id="goal">${[30, 40, 60, 80, 100, 150].map(n => `<option ${n === p.goal ? 'selected' : ''}>${n}</option>`).join('')}</select>
+   <label>New cards per day</label><select id="npd">${[5, 10, 15, 20, 25, 30, 40].map(n => `<option ${n === p.newPerDay ? 'selected' : ''}>${n}</option>`).join('')}</select>
+   <label>Card front</label><select id="dir"><option value="en" ${p.dir === 'en' ? 'selected' : ''}>English word → meaning</option><option value="ar" ${p.dir === 'ar' ? 'selected' : ''}>Arabic / definition → English word</option></select>
+   <label>Voice</label><select id="voice"><option value="en-GB" ${p.voice === 'en-GB' ? 'selected' : ''}>British (en-GB)</option><option value="en-US" ${p.voice === 'en-US' ? 'selected' : ''}>American (en-US)</option></select>
+   <label>Speech speed</label><select id="rate">${[0.7, 0.8, 0.9, 0.95, 1, 1.1].map(n => `<option value="${n}" ${n === p.rate ? 'selected' : ''}>${n}×</option>`).join('')}</select>
+   <div class="row" style="margin-top:10px"><button class="btn soft sm" data-say="The quick brown fox jumps over the lazy dog.">${I.spk} Test voice</button><span class="small muted">${voices.filter(v => /^en/i.test(v.lang)).length} English voices on this device</span></div>
+  </div>
+  <div class="sec">Backup & sync</div>
+  <div class="card"><p style="margin-top:0" class="small">Everything is stored on this device (no server, no account). Save a backup file and load it on your other device (phone ↔ computer). Loading merges, so nothing is lost.</p>
+   <div class="row"><button class="btn grow" id="export">Save backup</button><button class="btn ghost grow" id="importBtn">Load backup</button></div>
+   <input type="file" id="importFile" accept="application/json,.json" style="display:none">
+   <p class="small muted" style="margin-bottom:0">${S.prog.lastBackup ? 'Last backup: ' + new Date(S.prog.lastBackup).toLocaleDateString() : 'No backup saved yet.'}</p></div>
+  <div class="sec">Offline</div>
+  <div class="card"><p class="small" style="margin-top:0">The dictionary (≈ 31,000 words + 5,000 phrases, ~17 MB) downloads in the background after the first visit, so lookups then work without internet. Arabic for very new words (e.g. “podcast”-type words missing offline) and sentence translation use the internet when available.</p>
+   <button class="btn soft sm" id="dictCheck">Check offline dictionary</button> <span class="small">${ds ? `${ds.have} / ${ds.total} parts downloaded` : ''}</span></div>
+  <div class="sec">Install</div>
+  <div class="card">${S.installEvt ? '<button class="btn brand wide" id="install">Install the app</button>' : '<p class="small" style="margin:0">Android: Chrome ⋮ menu → <b>Install app</b>. Computer: Chrome / Edge → install icon in the address bar.</p>'}</div>
+  <div class="sec">Placement</div>
+  <div class="card row"><div class="grow small">${S.prog.place ? `Last test: ${new Date(S.prog.place.date).toLocaleDateString()} · ≈ ${S.prog.place.est.toLocaleString()} words` : 'Not taken yet'}</div><button class="btn ghost sm" data-go="place">${S.prog.place ? 'Retake' : 'Take it'}</button></div>
+  <p class="small muted">Data: Princeton WordNet 3.0; Wiktionary translations via @langle/en-ar (CC BY-SA 4.0); Arabic WordNet; Arabeyes/FreeDict (GPL); wordfreq frequencies; ipa-dict; Brown & Reuters corpora; Academic Word List (Coxhead 2000).</p>`;
+}
+
+// ================= render & events =================
+function render() {
+  hidePop(true); shell();
+  const v = {home: homeView, settings: settingsView, read: readView, review: reviewView, write: writeView, plan: planView, words: wordsView, place: placeView}[S.view] || homeView;
+  $('#app').innerHTML = v();
+  if (S.view === 'words') { const q = $('#q'); q && q.addEventListener('input', () => { S.q = q.value; const pos = q.selectionStart; render(); const n = $('#q'); n.focus(); n.setSelectionRange(pos, pos); }); }
+  if (S.view === 'write' && S.wtask) { const ta = $('#wText'); ta.addEventListener('input', () => { S.prog.drafts[S.wtask] = ta.value; $('#wCount').textContent = (ta.value.match(TOKRE) || []).length; saveProg(); }); }
+}
+function go(view) { S.view = view; shown = false; if (view === 'read') { S.rd = null; } if (view === 'place') { S.pt = null; } if (view === 'plan') { S.gram = null; S.cq = null; S.idi = null; S.iq = null; } if (view === 'write') S.wtask = null; if (S.playing) { S.playing = false; speechSynthesis.cancel(); } render(); scrollTo(0, 0); if (view === 'review') setTimeout(autoplayFront, 80); }
+function startClock() { clearInterval(wTimer); if (!S.wrun) return; wTimer = setInterval(() => { S.wclock = (S.wclock || 0) + 1; const el = $('#wTime'); if (el) el.textContent = fmtTime(S.wclock); else { clearInterval(wTimer); S.wrun = false; } }, 1000); }
+document.addEventListener('click', async e => {
+  const say = e.target.closest('[data-say]'); if (say) { speak(say.dataset.say, {lang: say.dataset.lang}); return; }
+  if (e.target.closest('#pop')) {
+    const b = e.target.closest('button'); if (!b) return; const d = b.dataset, k = $('#pop').dataset.k;
+    if (d.padd) return popAdd();
+    if (d.pst) { setStatus(k, d.pst); refreshWords(); shell(); return popRefresh(); }
+    if (d.look) { if (S.view === 'read' && S.rd) { lookup(d.look); } else lookup(d.look); return; }
+    if (d.trsent) return translateSentence();
+    if (d.bandadd) { const [bb, n] = d.bandadd.split(':').map(Number); hidePop(true); return addBand(bb, n); }
+    if (d.awladd) { const ws = awlWords(+d.awladd); hidePop(true); addList(ws, 'AWL ' + d.awladd); return; }
+    return;
+  }
+  if (e.target.id === 'scrim') { hidePop(true); return; }
+  const w = e.target.closest('.wd'); if (w) { if (window.getSelection && String(getSelection()).includes(' ')) return; showPop(w, true); return; }
+  hidePop(true);
+  const t = e.target.closest('button,[data-text],[data-go],[data-tab],[data-dict],[data-band],[data-look],[data-wtask],[data-pband],[data-pawl],[data-gram],[data-coll],[data-idi],.qa'); if (!t) return;
+  const d = t.dataset;
+  if (d.tab) return go(d.tab);
+  if (d.go) return go(d.go);
+  if (d.text) return openText(d.text);
+  if (d.dict) { if (S.view !== 'write') S.wtask = null; return startDict(d.dict); }
+  if (d.band) return addBand(+d.band);
+  if (d.look) return lookup(d.look);
+  if (d.pband) return bandSheet(+d.pband);
+  if (d.pawl) return awlSheet(+d.pawl);
+  if (d.gram) { S.view = 'plan'; S.gram = d.gram; render(); return scrollTo(0, 0); }
+  if (d.gback) { S.gram = null; return render(); }
+  if (d.gcheck !== undefined) { const i = +d.gcheck, g = S.learn.grammar.find(x => x.id === S.gram), v = document.querySelector(`[data-gin="${i}"]`).value, ok = normA(v) === normA(g.q[i][1]); $('#gres' + i).innerHTML = (ok ? '<b style="color:var(--green)">✓ Exactly right</b>' : '<span class="muted">Model answer:</span> ') + (ok ? '' : `<b>${esc(g.q[i][1])}</b>`); return; }
+  if (d.gdone) { if (!S.prog.grammar[d.gdone]) { S.prog.grammar[d.gdone] = today(); addPts(5); } S.gram = null; saveProg(); return render(); }
+  if (d.coll) { S.view = 'plan'; return startColl(d.coll); }
+  if (d.cqa) { const it = S.cq.items[S.cq.i]; it.got = d.cqa; if (d.cqa === it.answer) S.cq.ok++; addPts(1); return render(); }
+  if (d.cqnext) { S.cq.i++; if (S.cq.i >= S.cq.items.length) { S.prog.quiz[S.cq.id] = S.cq.ok; saveProg(); } return render(); }
+  if (d.cqquit) { S.cq = null; return render(); }
+  if (d.idi !== undefined) { S.view = 'plan'; S.idi = +d.idi; S.iq = null; render(); return scrollTo(0, 0); }
+  if (d.idiback) { S.idi = null; return render(); }
+  if (d.idiadd !== undefined) { const set = S.learn.idioms.slice(+d.idiadd * 20, +d.idiadd * 20 + 20); return addList(set.map(x => 'p:' + x.p), 'Idioms'); }
+  if (d.iqstart) { const set = S.learn.idioms.slice(S.idi * 20, S.idi * 20 + 20); S.iq = {i: 0, ok: 0, items: shuffle(set).slice(0, 10).map(x => ({...x, opts: shuffle([x.m, ...sample(S.learn.idioms.filter(y => y.p !== x.p).map(y => y.m), 3)])}))}; return render(); }
+  if (d.iqa) { const it = S.iq.items[S.iq.i]; it.got = d.iqa; if (d.iqa === it.m) S.iq.ok++; addPts(1); return render(); }
+  if (d.iqnext) { S.iq.i++; return render(); }
+  if (d.iqquit) { S.iq = null; return render(); }
+  if (d.wtask) { S.view = 'write'; S.wtask = d.wtask; S.wan = null; S.wb = [6, 6, 6, 6]; S.wclock = 0; S.wrun = false; render(); return scrollTo(0, 0); }
+  if (d.wback) { S.wtask = null; S.wrun = false; S.wtab = 'ielts'; return render(); }
+  if (d.wclock) { S.wrun = !S.wrun; startClock(); const b = $('[data-wclock]'); b.textContent = S.wrun ? 'Pause' : 'Start timer'; b.className = 'btn sm ' + (S.wrun ? 'red' : 'brand'); return; }
+  if (d.wcheck) { S.wan = analyse($('#wText').value); render(); return; }
+  if (d.flag) { const sg = suggestions(d.flag); $('#sugg').innerHTML = `<div class="note">“${esc(d.flag)}” → ${sg.length ? sg.map(s => `<button class="chip sm" data-fix="${esc(d.flag)}|${esc(s)}">${esc(s)}</button>`).join(' ') : 'no suggestions'} <button class="chip sm" data-say="${esc(d.flag)}">🔊</button></div>`; return; }
+  if (d.fix) { const [bad, good] = d.fix.split('|'); return fixWord(bad, good); }
+  if (d.wsave) return saveEssay();
+  if (d.wtab) { S.wtab = d.wtab; S.dc = null; S.pq = null; return render(); }
+  if (d.dcsay) return sayDict(d.dcsay === 'slow');
+  if (d.dchint) { const it = S.dc.items[S.dc.i]; const e2 = await entryOf(lemmaOf(it.w)); $('#dcHint').textContent = e2 ? ((e2.arw && e2.arw[0] && e2.arw[0][1]) || (e2.s && e2.s[0] && e2.s[0].d) || '') : ''; return; }
+  if (d.dccheck) return checkDict();
+  if (d.dcnext) { S.dc.i++; S.dc.cur = null; render(); return setTimeout(() => sayDict(), 120); }
+  if (d.dcquit) { S.dc = null; return render(); }
+  if (d.spdeck) { S.deck = 's'; cur = null; return go('review'); }
+  if (d.pq) return startPairQuiz();
+  if (d.pqcheck) return pairCheck();
+  if (d.pqnext) { S.pq.i++; return render(); }
+  if (d.pqquit) { S.pq = null; return render(); }
+  if (d.rf) { S.readFilter = d.rf; return render(); }
+  if (d.closetext) { S.rd = null; if (S.playing) { S.playing = false; speechSynthesis.cancel(); } render(); return scrollTo(0, 0); }
+  if (d.playall) return playAll();
+  if (d.togtrans) { S.rd.showT = !S.rd.showT; return render(); }
+  if (d.showa !== undefined) { t.closest('.qa').classList.add('open'); t.remove(); return; }
+  if (d.finish !== undefined) return finishText(d.finish === '1');
+  if (d.deltext) { if (confirm('Delete this text?')) { S.my = S.my.filter(x => x.id !== d.deltext); saveMy(); S.rd = null; render(); } return; }
+  if (d.deck) { S.deck = d.deck; cur = null; shown = false; render(); return setTimeout(autoplayFront, 80); }
+  if (d.grade) return grade(+d.grade);
+  if (d.knowcard) return knowCard();
+  if (d.wf) { S.wordFilter = d.wf; return render(); }
+  if (d.pa !== undefined) return placeAnswer(d.pa === '1');
+  if (t.id === 'ptStart') return startPlacement();
+  if (t.id === 'ptQuit') { S.pt = null; return render(); }
+  if (t.id === 'show') { shown = true; render(); if (S.prog.prefs.dir === 'ar') { const m = S.prog.meta[cur]; m && speak(m.k.replace(/^p:/, '')); } return; }
+  if (t.id === 'spCheck') return spellCheck();
+  if (t.id === 'imSave') return saveImport();
+  if (t.id === 'misAddBtn') { const v = $('#misAdd').value.trim().toLowerCase(); if (v) { addSpell(v); toast('Added to your spelling cards'); render(); } return; }
+  if (t.id === 'dictGo') { const v = $('#dictQ').value.trim().toLowerCase(); if (v) lookup(v.includes(' ') ? (S.core.mwe[v] ? 'p:' + v : lemmaOf(v.split(' ')[0])) : lemmaOf(v)); return; }
+  if (t.id === 'export') return exportData();
+  if (t.id === 'importBtn') return $('#importFile').click();
+  if (t.id === 'dictCheck') { if (navigator.serviceWorker && navigator.serviceWorker.controller) navigator.serviceWorker.controller.postMessage('dict-status'); else toast('Offline mode starts after the app is reloaded once'); return; }
+  if (t.id === 'install' && S.installEvt) { S.installEvt.prompt(); S.installEvt.userChoice.finally(() => { S.installEvt = null; render(); }); }
+});
+// select several words in the reader → look up the phrase
+document.addEventListener('mouseup', () => {
+  if (S.view !== 'read' || !S.rd) return;
+  const s = String(getSelection() || '').trim(); if (!s.includes(' ') || s.length > 60) return;
+  const words = wordsOf(s); if (words.length < 2 || words.length > 6) return;
+  const key = words.join(' '), lk = words.map(lemmaOf).join(' ');
+  const k = S.core.mwe[key] ? key : S.core.mwe[lk] ? lk : null;
+  if (k) lookup('p:' + k); else { lookup('p:' + key); }
+});
+document.addEventListener('mouseover', e => {
+  const el = e.target.closest && e.target.closest('.wd');
+  if (!el || popPinned || !matchMedia('(hover: hover) and (pointer: fine)').matches || innerWidth < 640) return;
+  clearTimeout(popTimer); popTimer = setTimeout(() => showPop(el, false), 120);
+});
+document.addEventListener('mouseout', e => {
+  if (popPinned || !e.target.closest || !e.target.closest('.wd, #pop')) return;
+  clearTimeout(popTimer); popTimer = setTimeout(() => { if (!$('#pop').matches(':hover') && !document.querySelector('.wd:hover')) hidePop(); }, 350);
+});
+document.addEventListener('change', e => {
+  const id = e.target.id, p = S.prog.prefs;
+  if (id === 'importFile' && e.target.files[0]) { importData(e.target.files[0]); e.target.value = ''; return; }
+  if (id === 'npd' || id === 'npd2') { p.newPerDay = +e.target.value; saveProg(); render(); }
+  if (id === 'goal') { p.goal = +e.target.value; saveProg(); render(); }
+  if (id === 'dir') { p.dir = e.target.value; saveProg(); cur = null; render(); }
+  if (id === 'voice') { p.voice = e.target.value; saveProg(); speak('Hello, this is the new voice.'); }
+  if (id === 'rate') { p.rate = +e.target.value; saveProg(); }
+  if (id === 'planMin') { p.minutes = +e.target.value; saveProg(); render(); }
+  if (e.target.dataset.wchk !== undefined) { (S.prog.checks[S.wtask] ||= {})[e.target.dataset.wchk] = e.target.checked; saveProg(); }
+  if (e.target.dataset.wband !== undefined) { (S.wb ||= [6, 6, 6, 6])[+e.target.dataset.wband] = +e.target.value; $('#wOverall').textContent = overall(); }
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') hidePop(true);
+  const tag = e.target.tagName;
+  if (S.view === 'place' && S.pt && !S.pt.done) { const k = e.key.toLowerCase(); if (k === 'y' || k === 'arrowright') placeAnswer(true); if (k === 'n' || k === 'arrowleft') placeAnswer(false); return; }
+  if (S.view === 'write' && S.dc && e.key === 'Enter' && !e.shiftKey && !S.wtask) { e.preventDefault(); if (S.dc.cur) { S.dc.i++; S.dc.cur = null; render(); setTimeout(() => sayDict(), 120); } else if ($('#dcIn')) checkDict(); return; }
+  if (S.view === 'review' && cur && S.prog.meta[cur] && S.prog.meta[cur].t === 's') { if (e.key === 'Enter') { e.preventDefault(); if (!spellRes) spellCheck(); else grade(spellRes.ok ? 3 : 1); } return; }
+  if (S.view !== 'review' || /INPUT|TEXTAREA|SELECT/.test(tag)) return;
+  if (e.key === ' ' && !shown) { e.preventDefault(); $('#show') && $('#show').click(); }
+  else if (shown && '1234'.includes(e.key)) grade(+e.key);
+  else if (e.key.toLowerCase() === 'p' && cur) speak(S.prog.meta[cur].k.replace(/^p:/, ''));
+});
+
+// ================= start =================
+(async () => {
+  loadLocal();
+  try {
+    const get = async u => { const r = await fetch(u); if (!r.ok) throw new Error(u); return r.json(); };
+    const [core, fakes, texts, learn, colloc] = await Promise.all([get('dict/core.json'), get('dict/fakes.json'), get('content/texts.json'), get('content/learn.json'), get('content/colloc.json')]);
+    S.colloc = colloc; S.core = core; S.fakes = fakes; S.texts = texts.texts; S.learn = learn;
+    core.lemmas.forEach((l, i) => S.R[l] = i + 1); S.F = core.forms; S.prof = new Set(core.prof || []);
+    S.awlMap = core.awl || {}; AWLSET = new Set(Object.keys(S.awlMap));
+    buildMWE();
+  } catch (err) { console.error(err); $('#app').innerHTML = '<div class="empty">Could not load the app data. Check your connection and reopen the app.</div>'; return; }
+  render(); setupStandalone();
+})();
+})();
+</script>
+</body>
+</html>

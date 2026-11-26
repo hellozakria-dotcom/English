@@ -1,0 +1,15 @@
+{
+  "name": "English C2 — Zakria's English",
+  "short_name": "English C2",
+  "description": "LingQ-style English reader with Arabic meanings, spaced-repetition cards, spelling and IELTS writing practice. Works offline.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F4F5F2",
+  "theme_color": "#F4F5F2",
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
