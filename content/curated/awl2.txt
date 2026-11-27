@@ -1,0 +1,76 @@
+achieve | verb | حَقَّقَ | to succeed in doing something after effort | She achieved her goal of running a marathon. | We achieved a lot in a short time.
+acquire | verb | اِكْتَسَبَ، حَصَلَ عَلَى | to get or gain something | He acquired good English by watching films. | The company was acquired by Google in 2020.
+administrate | verb | أَدَارَ | to manage the work of an organization | She administrates the scholarship program. | The fund is administrated by a small team.
+affect | verb | أَثَّرَ فِي | to have an influence on someone or something | Lack of sleep affects your concentration. | The storm affected thousands of homes.
+appropriate | adjective | مُنَاسِب، لَائِق | suitable or right for a situation | Jeans aren't appropriate for a job interview. | Please wait for an appropriate moment to ask.
+aspect | noun | جَانِب | one part or feature of a situation or problem | Cost is only one aspect of the problem. | We discussed every aspect of the plan.
+assist | verb | سَاعَدَ | to help someone | The nurse assisted the doctor during the operation. | Can I assist you with your bags?
+category | noun | فِئَة، صِنْف | a group of things that are similar | The products are sorted into three categories. | She won in the best actress category.
+chapter | noun | فَصْل | one of the main parts of a book | Read chapter three for next week. | Moving abroad opened a new chapter in my life.
+commission | noun | لَجْنَة؛ عُمُولَة | an official group, or money paid for selling something | A commission was set up to investigate the accident. | Salespeople earn a 10% commission.
++ verb | كَلَّفَ بِـ | to officially ask someone to do a piece of work | The city commissioned a new statue. | The report was commissioned by the government.
+community | noun | مُجْتَمَع | the people who live in one area or share interests | The local community raised money for the school. | There is a large Arab community in Detroit.
+complex | adjective | مُعَقَّد | having many connected parts, so difficult to understand | The problem is more complex than it looks. | The brain is an extremely complex organ.
++ noun | مُجَمَّع | a group of buildings used for one purpose | They live in a large apartment complex. | The sports complex has three pools.
+compute | verb | حَسَبَ | to calculate a number or amount | The program computes the total cost automatically. | Scores are computed from five tests.
+conclude | verb | اِسْتَنْتَجَ | to decide something is true after thinking about it | The study concluded that the drug was safe. | What can we conclude from these results?
++ verb | اِخْتَتَمَ | to end something | The concert concluded with a song from his first album. | She concluded her speech by thanking everyone.
+conduct | verb | أَجْرَى | to organize and do an activity | We conducted a survey of 500 students. | The interview was conducted in English.
++ noun | سُلُوك | the way someone behaves | He was praised for his good conduct. | The company has a strict code of conduct.
+consequent | adjective | نَاتِج، مُتَرَتِّب | happening as a result of something | The storm and the consequent flooding closed the roads. | Prices rose, with a consequent fall in sales.
+construct | verb | بَنَى، شَيَّدَ | to build something | The bridge was constructed in 1932. | Try to construct a clear argument.
+consume | verb | اِسْتَهْلَكَ | to use something, or to eat or drink it | The US consumes a huge amount of energy. | This app consumes a lot of battery.
+credit | noun | اِئْتِمَان؛ فَضْل | buying now and paying later, or praise for something done | You can pay by credit card. | She deserves credit for all her hard work.
++ verb | نَسَبَ الفَضْلَ إِلَى | to say that someone is responsible for something good | He is credited with saving the company. | The money was credited to your account.
+culture | noun | ثَقَافَة | the customs, beliefs, art and way of life of a group | I love learning about other cultures. | The company has a very relaxed culture.
+design | noun | تَصْمِيم | the way something is planned and made | I love the design of this phone. | She studied graphic design.
++ verb | صَمَّمَ | to plan and draw how something will be made | He designed his own house. | The course is designed for beginners.
+distinct | adjective | مُتَمَيِّز، وَاضِح | clearly different or separate; clearly noticed | There are three distinct types of the disease. | There's a distinct smell of gas in here.
+element | noun | عُنْصُر | a part of something; a simple chemical substance | Trust is an essential element of any relationship. | Oxygen is a chemical element.
+equate | verb | سَاوَى بَيْنَ | to consider one thing to be the same as another | Many people equate success with money. | You can't equate a degree with intelligence.
+evaluate | verb | قَيَّمَ | to judge how good or useful something is | We need to evaluate the results carefully. | Teachers evaluate each project.
+feature | noun | مِيزَة، سِمَة | an important or interesting part of something | The phone has some great new features. | Her eyes are her best feature.
++ verb | تَضَمَّنَ، عَرَضَ | to include something as an important part | The film features music by a local band. | The museum features art from Africa.
+final | adjective | نِهَائِيّ، أَخِير | coming at the end; that cannot be changed | This is your final chance. | The judge's decision is final.
+focus | verb | رَكَّزَ | to give all your attention to something | I can't focus with all this noise. | The course focuses on speaking skills.
++ noun | تَرْكِيز، مِحْوَر | the main subject that gets attention | The focus of the meeting was the budget. | She was the focus of everyone's attention.
+impact | noun | أَثَر، تَأْثِير | a strong effect | Social media has a huge impact on young people. | The new road will have a negative impact on the environment.
+injure | verb | جَرَحَ، أَصَابَ | to hurt a person or animal | Two people were injured in the accident. | He injured his knee playing football.
+institute | noun | مَعْهَد | an organization for research or education | She works at a research institute. | He studied at the Massachusetts Institute of Technology.
+invest | verb | اِسْتَثْمَرَ | to put money, time or effort into something to get a benefit | He invested his savings in property. | We need to invest more in education.
+item | noun | بَنْد، قِطْعَة | a single thing in a list or group | There are ten items on the shopping list. | The first item on the agenda is the budget.
+journal | noun | مَجَلَّة عِلْمِيَّة؛ يَوْمِيَّات | a serious magazine on a subject, or a diary | The study was published in a medical journal. | She keeps a journal of her travels.
+maintain | verb | حَافَظَ عَلَى | to keep something at the same level or in good condition | It's hard to maintain a healthy diet. | The building is poorly maintained.
++ verb | أَكَّدَ، أَصَرَّ عَلَى | to keep saying that something is true | He maintains that he is innocent. | She has always maintained that the plan would fail.
+normal | adjective | طَبِيعِيّ، عَادِيّ | usual and expected | It's normal to feel nervous before an exam. | Things are slowly getting back to normal.
+obtain | verb | حَصَلَ عَلَى | to get something, especially with effort | You need to obtain a visa before you travel. | Further information can be obtained from our website.
+participate | verb | شَارَكَ | to take part in an activity | All students are encouraged to participate in class. | Over 100 countries participated in the event.
+perceive | verb | أَدْرَكَ، رَأَى | to notice something, or to think of it in a particular way | He is perceived as a strong leader. | Dogs perceive sounds we can't hear.
+positive | adjective | إِيجَابِيّ | hopeful and confident; good | Try to stay positive. | The response to the new product has been very positive.
+potential | adjective | مُحْتَمَل | possible in the future | We discussed the potential risks. | He's a potential customer.
++ noun | إِمْكَانَات | the ability to develop and succeed in the future | She has the potential to become a great player. | The town has huge potential for tourism.
+previous | adjective | سَابِق | happening or existing before | She has two children from a previous marriage. | No previous experience is required.
+primary | adjective | رَئِيسِيّ، أَوَّلِيّ | most important, or happening first | Our primary goal is safety. | He's a teacher at a primary school.
+purchase | verb | اِشْتَرَى | to buy something | You can purchase tickets online. | The house was purchased for $300,000.
++ noun | شِرَاء، مُشْتَرَيَات | something you buy, or the act of buying | Keep the receipt as proof of purchase. | A car is a major purchase.
+range | noun | مَجْمُوعَة، نِطَاق | a group of different things of the same type; the limits of something | The store sells a wide range of products. | The price range is $10 to $50.
++ verb | تَرَاوَحَ | to vary between two limits | Prices range from $5 to $20. | Their ages range from 18 to 25.
+region | noun | مِنْطَقَة، إِقْلِيم | a large area of a country or the world | The region is famous for its wine. | Snow is expected in northern regions.
+regulate | verb | نَظَّمَ | to control something with rules | The government regulates the price of electricity. | Your body regulates its own temperature.
+relevant | adjective | ذُو صِلَة | closely connected with the subject | Please include all relevant information. | That question isn't relevant to our discussion.
+reside | verb | أَقَامَ، سَكَنَ | to live in a particular place (formal) | She currently resides in Canada. | The power resides with the people.
+resource | noun | مَوْرِد | something useful such as money, materials or skills | The country is rich in natural resources. | The library is a great resource for students.
+restrict | verb | قَيَّدَ، حَدَّدَ | to limit something | Speed is restricted to 30 mph near schools. | The new law restricts the sale of alcohol.
+secure | adjective | آمِن، مُسْتَقِرّ | safe and protected; certain not to change | Keep your password in a secure place. | He has a secure job with a good salary.
++ verb | ضَمِنَ، حَصَلَ عَلَى | to get something important after effort | She secured a place at a top university. | The team secured a 2–1 win.
+seek | verb | سَعَى إِلَى، طَلَبَ | to try to find or get something | You should seek advice from a lawyer. | Thousands of people are seeking work.
+select | verb | اِخْتَارَ | to choose from a group | Select the option you want from the list. | She was selected for the national team.
+site | noun | مَوْقِع | a place where something is, was or will be built; a website | This is the site of the new hospital. | The site was visited by a million people last month.
+strategy | noun | اِسْتِرَاتِيجِيَّة، خُطَّة | a plan to achieve a goal | What's your strategy for the exam? | The company needs a new marketing strategy.
+survey | noun | اِسْتِطْلَاع، مَسْح | a set of questions to find out what people think or do | A recent survey found that most people work from home once a week. | Please complete this short survey.
++ verb | اِسْتَطْلَعَ | to ask people questions to learn about their opinions | We surveyed 200 customers. | Most of the teachers surveyed were unhappy.
+text | noun | نَصّ | written words; a written message on a phone | Read the text and answer the questions. | I'll send you a text when I arrive.
++ verb | رَاسَلَ نَصِّيًّا | to send someone a message on a phone | Text me when you get home. | She texted me the address.
+tradition | noun | تَقْلِيد، عَادَة | a custom passed down from one generation to the next | It's a family tradition to eat together on Fridays. | The festival is an old tradition.
+transfer | verb | نَقَلَ، حَوَّلَ | to move someone or something from one place to another | I'll transfer the money to your account. | He transferred to a university in Berlin.
++ noun | تَحْوِيل، اِنْتِقَال | the act of moving something or someone | The bank charges a fee for international transfers. | His transfer to Real Madrid cost millions.

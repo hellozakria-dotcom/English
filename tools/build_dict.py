@@ -445,16 +445,38 @@ print('mwe', len(mwe), collections.Counter(mwe.values()))
 # own idiom list (content/idioms.json) is merged in the app build
 
 # ---------------- write ----------------
+# GDEX-style scoring: a good dictionary example is short, complete, uses common words,
+# doesn't depend on earlier context (no "He", "It", "This" at the start), has no names or numbers.
+_ZIP = {}
+def zipf(w):
+    if w not in _ZIP: _ZIP[w] = wordfreq.zipf_frequency(w, 'en')
+    return _ZIP[w]
+CTX_START = re.compile(r"^(He|She|It|They|This|That|These|Those|His|Her|Their|Its|And|But|So|Or|Then|There|Here|Yet|Also|However|Such|Thus|Hence|Now|Still|Both|Neither)\b")
+def gdex(t, src, l):
+    toks = re.findall(r"[A-Za-z']+", t); n = len(toks)
+    if n < 6 or n > 22: return -99
+    if re.search(r'[\d"“”()\[\];:]|--|–|\.\.\.', t) or not re.search(r'[.?!]$', t): return -99
+    sc = 10 - abs(n - 12) * 0.35
+    caps = sum(1 for w in toks[1:] if w[0].isupper() and w not in ('I',))
+    sc -= caps * 2.5
+    if CTX_START.match(t): sc -= 3
+    rare = [w for w in toks if lem(w) != l and zipf(w.lower()) < 3.0]
+    sc -= len(rare) * 2.2
+    sc += sum(min(zipf(w.lower()), 6) for w in toks) / n * 0.6
+    if src.startswith('Reuters'): sc -= 2.5
+    if 'fiction' in src or 'romance' in src or 'adventure' in src or 'mystery' in src: sc += 0.5
+    return sc
+
 def examples_for(l, exclude=()):
     ids = lemma_sents.get(l, [])
-    cand = [sents[i] for i in ids]
-    cand.sort(key=lambda x: (abs(len(x[0].split()) - 13), x[0]))
-    out, srcs = [], set()
-    seen_pos = collections.Counter()
-    for t, src, pm in cand:
+    cand = [(gdex(sents[i][0], sents[i][1], l), sents[i]) for i in ids]
+    cand = [c for c in cand if c[0] > 2]
+    cand.sort(key=lambda x: -x[0])
+    out, seen_pos = [], collections.Counter()
+    for sc, (t, src, pm) in cand:
         pp = pm.get(l, '')
-        if src.split(' ·')[0] in srcs and len(cand) > 6 and seen_pos[pp]: continue
-        out.append([t, src, pp]); srcs.add(src.split(' ·')[0]); seen_pos[pp] += 1
+        if seen_pos[pp] >= 2: continue
+        out.append([t, src, pp]); seen_pos[pp] += 1
         if len(out) >= 4: break
     return out
 

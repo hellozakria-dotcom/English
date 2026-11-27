@@ -1,0 +1,32 @@
+adjacent | adjective | مُجَاوِر | next to something | The hotel is adjacent to the station. | They live in adjacent apartments.
+albeit | conjunction | وَإِنْ كَانَ | although (formal) | It was a good result, albeit a small one. | He agreed, albeit reluctantly.
+assemble | verb | جَمَعَ؛ رَكَّبَ | to come or bring together; to put the parts of something together | A crowd assembled outside the court. | The desk is easy to assemble.
+collapse | verb | اِنْهَارَ | to fall down suddenly; to fail completely | The bridge collapsed in the storm. | He collapsed during the race.
++ noun | اِنْهِيَار | a sudden fall or failure | The collapse of the bank shocked everyone. | The building is in danger of collapse.
+colleague | noun | زَمِيل (فِي العَمَل) | a person you work with | I'm going to lunch with some colleagues. | She's a former colleague of mine.
+compile | verb | جَمَعَ، أَعَدَّ | to collect information and put it together | We compiled a list of useful websites. | The report was compiled by experts.
+conceive | verb | تَصَوَّرَ؛ حَمَلَتْ | to imagine or think of an idea; to become pregnant | I can't conceive of a life without music. | The plan was conceived in 2015.
+convince | verb | أَقْنَعَ | to make someone believe something or agree to do something | She convinced me to apply for the job. | I'm not convinced it will work.
+depress | verb | أَحْزَنَ، أَحْبَطَ؛ أَضْعَفَ | to make someone sad; to reduce the value or activity of something | The news really depressed me. | The crisis depressed house prices.
+encounter | verb | صَادَفَ، وَاجَهَ | to experience or meet something, often unexpectedly | We encountered a few problems along the way. | I encountered an old friend in the market.
++ noun | لِقَاء | a meeting, often unexpected | It was a strange encounter. | She described her encounter with a bear.
+enormous | adjective | ضَخْم، هَائِل | extremely large | They live in an enormous house. | The project was an enormous success.
+forthcoming | adjective | قَادِم، وَشِيك؛ مُتَعَاوِن | going to happen soon; willing to give information | Details of the forthcoming election were announced. | She wasn't very forthcoming about her past.
+incline | verb | مَالَ إِلَى | to tend to think or behave in a particular way (be inclined to) | I'm inclined to agree with you. | He's inclined to be lazy.
+integrity | noun | نَزَاهَة | the quality of being honest and having strong moral principles | He's a man of great integrity. | The scandal damaged the integrity of the election.
+intrinsic | adjective | جَوْهَرِيّ، ذَاتِيّ | being part of the basic nature of something | The ring has little intrinsic value. | Curiosity is intrinsic to human nature.
+invoke | verb | اِسْتَنَدَ إِلَى؛ اِسْتَحْضَرَ | to use a law or idea to support an argument; to bring a feeling to mind | He invoked his right to remain silent. | The music invokes memories of home.
+levy | noun | ضَرِيبَة، رَسْم | an amount of money you must pay, like a tax | There's a levy on plastic bags. | The government introduced a new levy.
+likewise | adverb | كَذَلِكَ، بِالمِثْل | in the same way; also | Watch what she does and do likewise. | "Nice to meet you." "Likewise."
+nonetheless | adverb | وَمَعَ ذَلِك | despite this | It was a hard trip; nonetheless, we enjoyed it. | The food was cold but tasty nonetheless.
+notwithstanding | preposition | بِالرَّغْمِ مِن | despite (formal) | Notwithstanding the bad weather, the event was a success. | The plan went ahead, objections notwithstanding.
+odd | adjective | غَرِيب؛ فَرْدِيّ | strange or unusual; (of a number) not divisible by two | That's odd; I'm sure I left my keys here. | 1, 3 and 5 are odd numbers.
+ongoing | adjective | جَارٍ، مُسْتَمِرّ | still happening | The investigation is ongoing. | There's an ongoing debate about the law.
+panel | noun | لَجْنَة؛ لَوْح | a group of experts who give opinions; a flat piece of a surface | A panel of judges chose the winner. | They installed solar panels on the roof.
+persist | verb | اِسْتَمَرَّ؛ أَصَرَّ | to continue to exist; to keep doing something despite difficulty | If the pain persists, see a doctor. | She persisted with her studies despite many problems.
+pose | verb | شَكَّلَ (خَطَرًا أَو سُؤَالًا)؛ وَقَفَ لِلتَّصْوِير | to create a problem or ask a question; to stand for a photo | Smoking poses a serious risk to health. | The team posed for a photo.
+reluctance | noun | تَرَدُّد، عَدَم رَغْبَة | not wanting to do something | He showed some reluctance to leave. | I understand your reluctance to talk about it.
+so-called | adjective | مَا يُسَمَّى | named this way, but you don't think it's true | Her so-called friends left her when she needed them. | The so-called experts got it wrong.
+straightforward | adjective | سَهْل، بَسِيط؛ صَرِيح | easy to understand or do; honest | The instructions are very straightforward. | She's a straightforward person.
+undergo | verb | خَضَعَ لِـ | to experience something, especially something difficult or a medical treatment | He underwent surgery on his knee. | The city is undergoing big changes.
+whereby | adverb | بِمُوجِبِه، حَيْثُ | by which (formal) | They introduced a system whereby workers can choose their hours. | It's an agreement whereby both sides benefit.

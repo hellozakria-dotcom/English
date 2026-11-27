@@ -1,0 +1,161 @@
+analysis | noun | تَحْلِيل | a careful study of something to understand it | The analysis shows that prices will keep rising. | We need a deeper analysis of the problem.
+insurance | noun | تَأْمِين | an arrangement where you pay a company and it pays you if something bad happens | Do you have health insurance? | The insurance covered the damage to the car.
+firm | noun | شَرِكَة | a business, especially a small one | She works for a law firm. | The firm employs 50 people.
++ adjective | حَازِم؛ صُلْب | strong and not easily changed; hard | She gave a firm answer: no. | The bed is too firm for me.
+mistake | noun | خَطَأ | something that is wrong | I made a mistake in the address. | Everyone makes mistakes.
+earn | verb | كَسَبَ | to get money for work; to get something you deserve | She earns $3,000 a month. | He earned the respect of his team.
+extend | verb | مَدَّدَ، وَسَّعَ | to make something longer or bigger | They extended the deadline by a week. | We're extending the kitchen.
+pack | verb | حَزَمَ (الأَمْتِعَة) | to put things into a bag or box | Have you packed your suitcase yet? | The train was packed with people.
+active | adjective | نَشِيط، فَعَّال | busy doing things, especially physical activity | My grandmother is still very active. | She's an active member of the club.
+struggle | verb | كَافَحَ، عَانَى | to try very hard to do something difficult | Many families struggle to pay the rent. | I struggled with the last question.
++ noun | كِفَاح، صِرَاع | a great effort to do something difficult | Learning a new language is a daily struggle. | the struggle for independence
+basic | adjective | أَسَاسِيّ | simple and necessary | You need basic computer skills for this job. | The hotel was basic but clean.
+clearly | adverb | بِوُضُوح | in a way that is easy to see or understand | Please speak clearly. | She was clearly upset.
+balance | noun | تَوَازُن؛ رَصِيد | a state where things have equal weight or importance; the money in an account | It's hard to find a balance between work and family. | Check your bank balance online.
+loan | noun | قَرْض | money that you borrow and must pay back | She took out a loan to buy a car. | Student loans can take years to repay.
+injury | noun | إِصَابَة | physical harm to the body | He missed the season with a knee injury. | Nobody suffered serious injuries.
+reality | noun | وَاقِع | the way things really are | In reality, the job was much harder than I expected. | It's time to face reality.
+guard | noun | حَارِس | a person who protects a place or people | Security guards checked our bags. | The prisoner escaped past the guards.
++ verb | حَرَسَ | to protect or watch a place or person | Soldiers guard the border. | She guards her privacy carefully.
+leaf | noun | وَرَقَة شَجَر | a flat green part of a plant | The leaves turn red in the fall. | Tea is made from dried leaves.
+garden | noun | حَدِيقَة | land next to a house where flowers or vegetables grow | We grow tomatoes in the garden. | They have a beautiful rose garden.
+candidate | noun | مُرَشَّح | a person who applies for a job or is in an election | We interviewed five candidates for the job. | Which candidate will you vote for?
+recommend | verb | أَوْصَى، نَصَحَ | to suggest that something is good or that someone should do something | Can you recommend a good restaurant? | Doctors recommend eight hours of sleep.
+surface | noun | سَطْح | the top or outside part of something | The surface of the table was scratched. | Most of the Earth's surface is water.
+easily | adverb | بِسُهُولَة | without difficulty | She passed the exam easily. | The station is easily reached by bus.
+recognize | verb | تَعَرَّفَ عَلَى؛ اِعْتَرَفَ بِـ | to know someone or something you have seen before; to accept that something is true | I didn't recognize you with short hair! | He recognized that he was wrong.
+literally | adverb | حَرْفِيًّا؛ فِعْلًا (لِلتَّأْكِيد) | exactly as the words say; used informally to emphasize | The word literally means "small house". | I'm literally about to do it.
+village | noun | قَرْيَة | a very small town in the countryside | She grew up in a small village. | The village has one shop.
+argue | verb | جَادَلَ، تَشَاجَرَ؛ اِحْتَجَّ بِأَنَّ | to disagree angrily; to give reasons for an opinion | My brothers argue all the time. | Some experts argue that the plan won't work.
+traffic | noun | حَرَكَة المُرُور | the cars and other vehicles on the road | Sorry I'm late; the traffic was terrible. | There's heavy traffic in the city center.
+distance | noun | مَسَافَة | the amount of space between two places | What's the distance from Riga to Tallinn? | I can see the mountains in the distance.
+speech | noun | خِطَاب؛ كَلَام | a formal talk to an audience; the ability to speak | The president gave a speech on TV. | Freedom of speech is important.
+soldier | noun | جُنْدِيّ | a member of an army | Thousands of soldiers died in the war. | He became a soldier at 18.
+appeal | noun | نِدَاء، اِسْتِئْنَاف؛ جَاذِبِيَّة | an urgent request; a request to change a legal decision; attraction | The police made an appeal for witnesses. | I don't understand the appeal of reality TV.
++ verb | نَاشَدَ؛ اِسْتَأْنَفَ؛ جَذَبَ | to make an urgent request; to ask a court to change a decision; to attract | The charity appealed for donations. | The idea doesn't appeal to me.
+connection | noun | صِلَة؛ اِتِّصَال | a link between things or people; a link to the internet | Is there a connection between the two crimes? | The Wi-Fi connection is very slow.
+deserve | verb | اِسْتَحَقَّ | to have earned something because of your actions | You deserve a break after all that work. | He didn't deserve to be treated like that.
+effective | adjective | فَعَّال | producing the result that you want | This medicine is very effective. | We need a more effective way to save energy.
+square | noun | مَيْدَان، سَاحَة؛ مُرَبَّع | an open area in a town; a shape with four equal sides | There's a market in the main square. | Draw a square on the paper.
+sick | adjective | مَرِيض | ill | She stayed home because she was sick. | I'm sick of waiting!
+advice | noun | نَصِيحَة | an opinion about what someone should do | Can I give you some advice? | She followed her doctor's advice.
+tool | noun | أَدَاة | a piece of equipment used for a job | You'll need some basic tools. | Social media is a powerful marketing tool.
+conversation | noun | مُحَادَثَة | a talk between two or more people | We had a long conversation about the future. | I'd like to improve my conversation skills.
+eventually | adverb | فِي النِّهَايَة | after a long time | He eventually found a job. | Eventually, everyone agreed.
+otherwise | adverb | وَإِلَّا؛ مِن نَاحِيَةٍ أُخْرَى | if not; apart from that | Hurry up, otherwise we'll be late. | The food was cold, but otherwise it was a good meal.
+payment | noun | دَفْع، دُفْعَة | an amount of money that is paid | Monthly payments are $200. | We accept payment by card.
+taste | noun | طَعْم؛ ذَوْق | the flavor of food; the kind of things you like | I love the taste of fresh mint. | We have similar taste in music.
++ verb | تَذَوَّقَ | to try food to see what it's like; to have a flavor | Taste the soup before you add salt. | This tastes delicious.
+combine | verb | جَمَعَ بَيْنَ، دَمَجَ | to join two or more things together | It's hard to combine work and study. | Combine the flour and the eggs.
+budget | noun | مِيزَانِيَّة | the money available for something | The project went over budget. | What's your budget for the trip?
+warm | adjective | دَافِئ | a little hot; friendly | It's warm today. | They gave us a warm welcome.
+stream | noun | جَدْوَل مَاء؛ تَدَفُّق؛ بَثّ | a small river; a continuous flow; a live video online | We walked along a mountain stream. | He watched the stream of the match on his phone.
++ verb | بَثَّ مُبَاشَرَة؛ تَدَفَّقَ | to play video or music online as it downloads; to flow | You can stream the series online. | Tears streamed down her face.
+politics | noun | سِيَاسَة | the activities of governments and political parties | I'm not interested in politics. | She wants to go into politics.
+therefore | adverb | لِذَلِك | for that reason | He was ill and therefore missed the exam. | The bus was late; therefore, we took a taxi.
+flower | noun | زَهْرَة | the colored part of a plant | He bought her flowers. | The garden is full of flowers.
+bottom | noun | قَاع، أَسْفَل | the lowest part of something | Write your name at the bottom of the page. | The ring fell to the bottom of the pool.
+cheap | adjective | رَخِيص | not expensive | Food is cheap here. | Cheap clothes don't last long.
+advantage | noun | مِيزَة، أَفْضَلِيَّة | something that helps you to be more successful | Speaking two languages is a big advantage. | One advantage of the city is good public transport.
+object | noun | شَيْء؛ هَدَف؛ مَفْعُول بِه | a thing you can see or touch; a purpose; (grammar) the object of a verb | There was a strange object on the table. | The object of the game is to score points.
++ verb | اِعْتَرَضَ | to say that you don't approve of something | Many residents object to the new road. | I object to being treated like a child.
+reserve | verb | حَجَزَ | to book a seat, table or room | I've reserved a table for two. | This seat is reserved.
+duty | noun | وَاجِب | something you must do because it's your job or the right thing | It's my duty to help my parents. | Who's on duty tonight?
+switch | verb | بَدَّلَ، حَوَّلَ | to change from one thing to another | I switched to a cheaper phone plan. | Switch off the lights when you leave.
++ noun | مِفْتَاح كَهْرَبَاء؛ تَحَوُّل | a button that turns something on or off; a change | The light switch is by the door. | The switch to electric cars is happening fast.
+engage | verb | شَارَكَ؛ جَذَبَ اهْتِمَام | to take part in something; to keep someone interested | She engages in a lot of volunteer work. | Good teachers engage their students.
+glass | noun | زُجَاج؛ كَأْس | a hard, clear material; a cup made of glass | The window is made of glass. | Can I have a glass of water?
+powerful | adjective | قَوِيّ، ذُو نُفُوذ | having a lot of power or strength | He's one of the most powerful men in the country. | It's a powerful computer.
+species | noun | نَوْع (مِن الكَائِنَات) | a group of animals or plants of the same type | Many species are in danger of extinction. | There are over 20,000 species of bee.
+progress | noun | تَقَدُّم | improvement or development | You're making good progress with your English. | Medical progress has saved millions of lives.
+responsibility | noun | مَسْؤُولِيَّة | a duty to take care of something | It's your responsibility to lock the door. | She took responsibility for the mistake.
+quarter | noun | رُبْع؛ حَيّ | one of four equal parts; a part of a town | It's a quarter past three. | They live in the old quarter of the city.
+warn | verb | حَذَّرَ | to tell someone about a possible danger | I warned you not to touch it! | Experts warn that prices will rise.
+prison | noun | سِجْن | a building where criminals are kept | He spent five years in prison. | The prison is overcrowded.
+strength | noun | قُوَّة؛ نُقْطَة قُوَّة | physical power; a good quality or ability | He doesn't have the strength to lift it. | What are your main strengths?
+signal | noun | إِشَارَة | a sign or sound that gives information | There's no phone signal here. | The traffic signal turned red.
+encourage | verb | شَجَّعَ | to give someone confidence or support to do something | My parents encouraged me to study abroad. | The government is encouraging people to recycle.
+restaurant | noun | مَطْعَم | a place where you buy and eat meals | Let's go to a Lebanese restaurant. | The restaurant closes at 11.
+exercise | noun | تَمْرِين؛ رِيَاضَة | physical activity to stay healthy; a task to practice a skill | Walking is good exercise. | Do exercises 1 to 5 for homework.
+famous | adjective | مَشْهُور | known by many people | She's a famous singer. | Paris is famous for its museums.
+celebrate | verb | اِحْتَفَلَ | to do something enjoyable for a special occasion | We celebrated her birthday at a restaurant. | The team celebrated their victory.
+wild | adjective | بَرِّيّ؛ جَامِح | living in nature, not controlled by people; excited and uncontrolled | Wild animals live in the forest. | The fans went wild when he scored.
+sentence | noun | جُمْلَة؛ حُكْم | a group of words with a verb; a punishment given by a judge | Write five sentences about your family. | He received a ten-year sentence.
+resident | noun | مُقِيم، سَاكِن | a person who lives in a place | Local residents are angry about the noise. | She's a permanent resident of Canada.
+mostly | adverb | فِي الغَالِب | mainly | The audience was mostly students. | I mostly work from home.
+magazine | noun | مَجَلَّة | a thin book with articles and photos, published regularly | I read the magazine on the train. | She writes for a fashion magazine.
+accident | noun | حَادِث؛ صُدْفَة | something bad that happens by chance; something that happens without planning | He was injured in a car accident. | I met her by accident.
+billion | number | مِلْيَار | 1,000,000,000 | The city has a budget of $2 billion. | Billions of people use smartphones.
+variety | noun | تَنَوُّع؛ نَوْع | many different types of things; a type | The shop sells a wide variety of products. | This is a new variety of apple.
+argument | noun | شِجَار؛ حُجَّة | an angry disagreement; a reason that supports an opinion | They had an argument about money. | There are strong arguments for and against.
+temperature | noun | دَرَجَة الحَرَارَة | how hot or cold something is | The temperature dropped below zero. | The nurse took my temperature.
+background | noun | خَلْفِيَّة | a person's family, education and experience; the area behind the main thing | Students from different backgrounds study here. | There's a mountain in the background of the photo.
+strange | adjective | غَرِيب | unusual or unexpected | I heard a strange noise. | It's strange that she didn't call.
+guest | noun | ضَيْف | someone who is invited to your home or an event | We have guests for dinner tonight. | My guest today is a famous writer.
+pattern | noun | نَمَط؛ نَقْش | a regular way that something happens; a design | Scientists noticed a pattern in the data. | I like the pattern on your shirt.
+defend | verb | دَافَعَ عَن | to protect someone or something from attack or criticism | He defended his friend in the argument. | The army defended the city.
+ignore | verb | تَجَاهَلَ | to pay no attention to something | She ignored my message. | Don't ignore the warning signs.
+shock | noun | صَدْمَة | a sudden, unpleasant surprise | The news came as a shock. | He's still in shock after the accident.
++ verb | صَدَمَ | to surprise and upset someone | The results shocked everyone. | I was shocked by the price.
+somebody | pronoun | شَخْصٌ مَا | someone; a person | Somebody left their bag here. | Can somebody help me?
+remains | noun | بَقَايَا | the parts that are left of something | The remains of an old castle stand on the hill. | Human remains were found in the forest.
+surround | verb | أَحَاطَ بِـ | to be all around something | The house is surrounded by trees. | She's surrounded by people who love her.
+belong | verb | اِنْتَمَى؛ خَصَّ | to be owned by someone; to be in the right place or group | This book belongs to me. | I feel like I belong here.
+platform | noun | رَصِيف؛ مِنَصَّة | the area next to the train tracks; a raised floor; a website or service | The train leaves from platform 3. | YouTube is a huge platform for creators.
+failure | noun | فَشَل | lack of success | The plan was a complete failure. | Failure is part of learning.
+path | noun | مَمَرّ، طَرِيق | a narrow way for walking | Follow the path through the forest. | She chose a different career path.
+blame | verb | لَامَ | to say someone is responsible for something bad | Don't blame me; it wasn't my fault. | He blamed the weather for the delay.
+dangerous | adjective | خَطِير | likely to cause harm | It's dangerous to swim here. | Smoking is dangerous to your health.
+extremely | adverb | لِلغَايَة | very | It's extremely cold today. | She's extremely talented.
+rare | adjective | نَادِر | not common | This is a rare type of bird. | It's rare to see snow in Libya.
+graduate | verb | تَخَرَّجَ | to finish a university degree or school | She graduated from university in 2025. | After he graduated, he moved to Berlin.
++ noun | خِرِّيج | a person with a university degree | She's a graduate of Riga Technical University. | The company hires many graduates.
+proud | adjective | فَخُور | pleased about something you or someone close did | I'm so proud of you! | He's proud of his country.
+consumer | noun | مُسْتَهْلِك | a person who buys goods or services | Consumers want cheaper prices. | The law protects consumers.
+nurse | noun | مُمَرِّض، مُمَرِّضَة | a person who cares for sick people in a hospital | My sister is a nurse. | The nurse gave me an injection.
+approve | verb | وَافَقَ عَلَى؛ اِسْتَحْسَنَ | to officially accept a plan; to think something is good | The council approved the new building. | My parents don't approve of my boyfriend.
+repeat | verb | كَرَّرَ | to say or do something again | Could you repeat the question, please? | Don't repeat the same mistake.
+victory | noun | اِنْتِصَار | a win in a war, game or election | The team celebrated their victory. | It was a historic victory.
+settle | verb | اِسْتَقَرَّ؛ سَوَّى | to start living in a place; to end an argument | They settled in Canada in the 1990s. | Let's settle this once and for all.
+flat | adjective | مُسْتَوٍ؛ (إِطَار) مَثْقُوب | level and smooth; (a tire) without air | The land here is very flat. | I've got a flat tire.
++ noun | شَقَّة (بِرِيطَانِيّ) | an apartment (British English) | She rents a small flat in Riga. | Their flat is on the fifth floor.
+impossible | adjective | مُسْتَحِيل | not able to happen | It's impossible to finish by Friday. | Nothing is impossible.
+pound | noun | جُنَيْه إِسْتِرْلِينِيّ؛ رَطْل | the money of the UK; a unit of weight (about 450 g) | It costs ten pounds. | She lost five pounds.
+remind | verb | ذَكَّرَ | to make someone remember something | Remind me to call my mom. | This song reminds me of my childhood.
+crow | noun | غُرَاب | a large black bird | A crow was sitting on the fence. | Crows are very intelligent birds.
+busy | adjective | مَشْغُول؛ مُزْدَحِم | having a lot to do; full of people | I'm too busy to talk right now. | The streets are busy on Saturdays.
+medicine | noun | دَوَاء؛ طِبّ | a substance to treat illness; the study of treating illness | Take your medicine twice a day. | She wants to study medicine.
+debt | noun | دَيْن | money that you owe | He has huge credit card debts. | They're trying to get out of debt.
+tend | verb | مَالَ إِلَى | to usually do something | I tend to wake up early. | Prices tend to rise in the summer.
+root | noun | جَذْر | the part of a plant under the ground; the cause or origin of something | The tree has deep roots. | Money is the root of the problem.
+newspaper | noun | جَرِيدَة | a paper with news, printed daily or weekly | I read the newspaper every morning. | The story was in all the newspapers.
+weak | adjective | ضَعِيف | not strong | I felt weak after the illness. | The economy is still weak.
+bottle | noun | زُجَاجَة | a container for liquids with a narrow top | Can I have a bottle of water? | Recycle your plastic bottles.
+wash | verb | غَسَلَ | to clean with water | Wash your hands before eating. | I'll wash the dishes.
+slightly | adverb | قَلِيلًا | a little | I feel slightly better today. | Prices have risen slightly.
+suspect | verb | اِشْتَبَهَ، شَكَّ | to think something is probably true | I suspect he's lying. | Police suspect that the fire was started deliberately.
++ noun | مُشْتَبَه بِه | a person thought to be guilty of a crime | Police arrested two suspects. | He's the main suspect.
+pool | noun | حَوْض سِبَاحَة؛ بِرْكَة | a place for swimming; a small area of water | The hotel has a swimming pool. | There was a pool of water on the floor.
+novel | noun | رِوَايَة | a long written story | She's reading a novel by Naguib Mahfouz. | His first novel was a best seller.
++ adjective | جَدِيد، مُبْتَكَر | new and different | It's a novel idea. | They found a novel solution.
+tea | noun | شَاي | a hot drink made from leaves | Would you like a cup of tea? | We drink mint tea after dinner.
+somewhere | adverb | فِي مَكَانٍ مَا | in or to a place you don't know or don't say | I left my keys somewhere. | Let's go somewhere quiet.
+oppose | verb | عَارَضَ | to disagree with something and try to stop it | Many people oppose the new law. | She opposed the war.
+afternoon | noun | بَعْدَ الظُّهْر | the time between midday and evening | I have a meeting this afternoon. | We spent the afternoon at the beach.
+split | verb | قَسَّمَ؛ اِنْقَسَمَ؛ اِنْفَصَلَ | to divide into parts; to end a relationship | Let's split the bill. | The couple split up last year.
+honest | adjective | صَادِق، أَمِين | telling the truth | Be honest: do you like it? | He's an honest man.
+rent | noun | إِيجَار | money paid regularly to live in a place | The rent is $600 a month. | They can't afford the rent.
++ verb | اِسْتَأْجَرَ؛ أَجَّرَ | to pay to live in or use something | We rented a car for the weekend. | They rent out their apartment to tourists.
+lesson | noun | دَرْس | a period of teaching; something you learn from experience | I have a driving lesson tomorrow. | That mistake taught me a lesson.
+proof | noun | دَلِيل، إِثْبَات | evidence that shows something is true | Do you have proof of your address? | There's no proof that he did it.
+electric | adjective | كَهْرَبَائِيّ | using electricity | I want to buy an electric car. | Be careful of electric shocks.
+delay | noun | تَأْخِير | a situation where something happens later than planned | There's a two-hour delay on all flights. | Do it without delay.
++ verb | أَخَّرَ، أَجَّلَ | to make something happen later | The flight was delayed by fog. | Don't delay; apply now.
+editor | noun | مُحَرِّر | a person who corrects or is in charge of a newspaper, book or film | She's the editor of a local newspaper. | My editor asked me to cut the article.
+plenty | pronoun | الكَثِير | a large amount; more than enough | Don't worry; we have plenty of time. | There's plenty of food for everyone.
+organize | verb | نَظَّمَ | to plan or arrange something | She organized a party for his birthday. | Organize your notes before the exam.
+equal | adjective | مُتَسَاوٍ | the same in size, value or rights | All people are equal before the law. | Cut the cake into equal pieces.
+bore | verb | أَمَلَّ، أَضْجَرَ | to make someone feel bored | His long speeches bore everyone. | I'm bored; let's go out.
+package | noun | طَرْد؛ بَاقَة | a box sent by mail; a set of things offered together | A package arrived for you. | The holiday package includes flights and hotel.
+anywhere | adverb | فِي أَيِّ مَكَان | in or to any place | You can sit anywhere. | I can't find my phone anywhere.
+terrible | adjective | فَظِيع، سَيِّئ جِدًّا | very bad | The weather was terrible. | I feel terrible about what happened.

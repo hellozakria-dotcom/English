@@ -28,7 +28,7 @@ for t in texts:
     for l in t.pop('body') + ['']:
         if l.strip(): buf.append(l.strip())
         elif buf: paras.append(' '.join(buf)); buf = []
-    if t['style'] in ('dialogue', 'ielts-listening') and any(re.match(r'^[A-Z][A-Z ]+:', p) for p in paras):
+    if t['style'] in ('dialogue', 'ielts-listening', 'podcast') and any(re.match(r'^[A-Z][A-Z ]+:', p) for p in paras):
         lines = []
         for p in paras:
             for l in re.split(r'\n', p):

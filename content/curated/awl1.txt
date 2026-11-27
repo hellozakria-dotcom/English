@@ -1,0 +1,79 @@
+# word | part of speech | Arabic | definition | example 1 | example 2      (+ = another meaning of the same word)
+analyze | verb | حَلَّلَ | to examine something carefully to understand it | We need to analyze the data before we make a decision. | The report analyzes why young people are leaving the city.
+approach | noun | نَهْج، أُسْلُوب | a way of dealing with something | Her approach to the problem was completely different. | We need a new approach to teaching math.
++ verb | اِقْتَرَبَ مِن | to come nearer to someone or something | As we approached the house, the dog started barking. | The deadline is approaching fast.
+area | noun | مِنْطَقَة | a part of a place, a town or a country | They live in a quiet area outside the city. | This area is famous for its beaches.
++ noun | مَجَال | a subject or type of activity | Marketing is not really my area. | She works in the area of public health.
+assess | verb | قَيَّمَ | to judge how good, bad or important something is | Doctors are still assessing the damage to his knee. | Teachers assess students' progress every term.
+assume | verb | اِفْتَرَضَ | to think something is true without proof | I assumed you already knew about the meeting. | Don't assume that everyone agrees with you.
++ verb | تَوَلَّى | to take on a job or responsibility | She assumed control of the company in 2019. | He assumed the role of team captain.
+authority | noun | سُلْطَة | the power to make decisions or give orders | Only the manager has the authority to sign the contract. | The police have the authority to stop any car.
++ noun | خَبِير، مَرْجِع | an expert on a subject | She is a leading authority on climate change. | He's an authority on Islamic history.
+available | adjective | مُتَاح، مُتَوَفِّر | able to be used, bought or contacted | Tickets are available online. | Sorry, the manager isn't available right now.
+benefit | noun | فَائِدَة | an advantage or good effect | One benefit of living here is the clean air. | The new law will be of benefit to small businesses.
++ verb | اِسْتَفَادَ، أَفَادَ | to be helped by something, or to help someone | Everyone will benefit from the new park. | Regular exercise benefits your heart.
+concept | noun | مَفْهُوم | an idea of how something is or works | The concept of time is hard to explain to children. | It's a simple concept, but it works.
+consist | verb | تَأَلَّفَ مِن | to be made of particular parts | The team consists of five engineers and a designer. | Breakfast consisted of bread, cheese and olives.
+constitute | verb | شَكَّلَ | to be or form something | Women constitute more than half of the workforce. | His actions constitute a serious mistake.
+context | noun | سِيَاق | the situation or words around something that help explain it | You can often guess a word's meaning from the context. | The quote was taken out of context.
+contract | noun | عَقْد | a written legal agreement | She signed a two-year contract with the club. | Read the contract carefully before you sign it.
++ verb | تَقَلَّصَ؛ أُصِيبَ بِـ | to become smaller, or to catch an illness | Metal contracts as it cools. | He contracted malaria while traveling.
+create | verb | أَنْشَأَ، خَلَقَ | to make something new | The project will create 500 new jobs. | She created a website for her business.
+data | noun | بَيَانَات | facts or information, especially numbers | The data shows a clear rise in prices. | We collected data from over 2,000 students.
+define | verb | عَرَّفَ، حَدَّدَ | to explain the exact meaning of something, or describe it clearly | How would you define success? | The contract clearly defines our responsibilities.
+derive | verb | اِشْتَقَّ، اِسْتَمَدَّ | to get something from a particular source | Many English words are derived from Latin. | She derives a lot of pleasure from gardening.
+distribute | verb | وَزَّعَ | to give or share things among people or places | Volunteers distributed food to the families. | The company distributes its products across Europe.
+economy | noun | اِقْتِصَاد | the system of money, trade and industry in a country | The economy grew by 3% last year. | Tourism is important to the local economy.
+environment | noun | بِيئَة | the natural world, or the conditions around you | We must protect the environment for future generations. | Children need a safe and loving environment.
+establish | verb | أَسَّسَ | to start an organization or system | The university was established in 1862. | They established a new company together.
++ verb | أَثْبَتَ | to find out or prove that something is true | Police are trying to establish the cause of the fire. | It's hard to establish exactly what happened.
+estimate | verb | قَدَّرَ | to guess a number or amount using the information you have | Experts estimate that 2 million people visited the city. | Can you estimate how long the job will take?
++ noun | تَقْدِير | an approximate calculation | This is only a rough estimate. | According to one estimate, prices will double.
+evident | adjective | وَاضِح، جَلِيّ | easy to see or understand | It was evident that she was nervous. | His love of music is evident in everything he writes.
+export | verb | صَدَّرَ | to sell goods to another country | Libya exports oil to many countries. | The company exports furniture to the US.
++ noun | صَادِرَات | goods sold to another country | Exports rose by 10% this year. | Coffee is Brazil's main export.
+factor | noun | عَامِل | one of the things that cause or influence a situation | Price is an important factor when people choose a phone. | Stress was a major factor in his illness.
+finance | noun | مَالِيَّة، تَمْوِيل | money, or the management of money | She works in finance. | The project failed because of a lack of finance.
++ verb | مَوَّلَ | to provide money for something | The new hospital was financed by the government. | How are you going to finance your studies?
+formula | noun | صِيغَة، مُعَادَلَة | a rule written in letters and numbers, or a method for success | Do you remember the formula for the area of a circle? | There's no magic formula for a happy marriage.
+function | noun | وَظِيفَة | the purpose of something or someone | The main function of the heart is to pump blood. | What's the function of this button?
++ verb | عَمِلَ، أَدَّى وَظِيفَتَه | to work or operate | The machine isn't functioning properly. | I can't function without coffee in the morning.
+identify | verb | حَدَّدَ، تَعَرَّفَ عَلَى | to recognize someone or something and say who or what they are | She identified the man who had stolen her bag. | We need to identify the main problems first.
+income | noun | دَخْل | money that you earn or receive regularly | Many families live on a very low income. | Tourism is the island's main source of income.
+indicate | verb | أَشَارَ إِلَى، دَلَّ عَلَى | to show that something exists or is likely to be true | Research indicates that sleep improves memory. | A red light indicates that the battery is low.
+individual | adjective | فَرْدِيّ | relating to one person or thing, not a group | Each student receives individual attention. | We discussed each individual case.
++ noun | فَرْد | one person, separate from a group | Every individual has the right to privacy. | She's a very talented individual.
+interpret | verb | فَسَّرَ؛ تَرْجَمَ شَفَهِيًّا | to explain the meaning of something, or to translate spoken words | How do you interpret these results? | Her brother interpreted for her at the hospital.
+involve | verb | تَضَمَّنَ، اِسْتَلْزَمَ | to include something as a necessary part | The job involves a lot of traveling. | What does the operation involve?
++ verb | أَشْرَكَ | to make someone take part in something | We try to involve parents in school activities. | I don't want to get involved in their argument.
+issue | noun | قَضِيَّة، مَسْأَلَة | an important subject or problem that people discuss | Climate change is a global issue. | The real issue is money.
++ verb | أَصْدَرَ | to officially give or announce something | The government issued a warning about the storm. | All visitors are issued with a pass.
+labor | noun | عَمَل، أَيْدٍ عَامِلَة | work, especially physical work, or the workers who do it | The price includes parts and labor. | There is a shortage of skilled labor.
+legal | adjective | قَانُونِيّ | allowed by the law, or relating to the law | Is it legal to park here? | You should get legal advice before you sign.
+legislate | verb | شَرَّعَ، سَنَّ قَانُونًا | to make laws about something | The government plans to legislate against online hate. | It's hard to legislate for every situation.
+major | adjective | رَئِيسِيّ، كَبِير | very large or important | Traffic is a major problem in the city. | She played a major role in the project.
++ noun | تَخَصُّص رَئِيسِيّ | the main subject a student studies at university | My major is computer science. | What are you majoring in?
+method | noun | طَرِيقَة، أُسْلُوب | a planned way of doing something | What's the best method of learning vocabulary? | Cash is still the most common payment method here.
+occur | verb | حَدَثَ، وَقَعَ | to happen | The accident occurred at about 9 p.m. | It never occurred to me that she might be lying.
+percent | noun | بِالمِئَة | for or out of every hundred | Prices rose by 5 percent last year. | Only 20 percent of students passed the test.
+period | noun | فَتْرَة | a length of time | She lived in Paris for a short period. | The museum covers the period from 1900 to 1950.
+policy | noun | سِيَاسَة | a plan of action agreed by a government, company or person | The company has a strict no-smoking policy. | The government's housing policy has failed.
+principle | noun | مَبْدَأ | a basic rule or belief | She refused to lie; it was against her principles. | The basic principles of physics are simple.
+proceed | verb | تَابَعَ، مَضَى قُدُمًا | to continue, or to start doing something after a pause | Passengers should proceed to gate 12. | After a short break, we proceeded with the meeting.
+process | noun | عَمَلِيَّة | a series of actions that produce a result | Learning a language is a slow process. | The application process takes about two weeks.
++ verb | عَالَجَ، مَعَالَجَة | to deal with documents or information in an official way | Your visa application is being processed. | The computer processes millions of numbers a second.
+require | verb | تَطَلَّبَ، اِشْتَرَطَ | to need something, or to make it necessary | This job requires a lot of patience. | All passengers are required to show their passports.
+research | noun | بَحْث | a detailed study of a subject to discover new facts | She's doing research on brain development. | Research shows that exercise improves mood.
++ verb | بَحَثَ فِي | to study a subject in detail | He spent two years researching the book. | Always research a company before your interview.
+respond | verb | رَدَّ، اِسْتَجَابَ | to say or do something as a reaction | She didn't respond to my email. | The patient is responding well to treatment.
+role | noun | دَوْر | the job or purpose someone or something has | Parents play an important role in a child's education. | He played the role of a doctor in the film.
+section | noun | قِسْم، جُزْء | one of the parts that something is divided into | Read the first section of the book. | The store has a large children's section.
+sector | noun | قِطَاع | a part of the economy or of a society | He works in the public sector. | The tourism sector employs thousands of people.
+significant | adjective | مُهِمّ، مَلْحُوظ | large or important enough to have an effect | There has been a significant increase in crime. | This is a significant moment in our history.
+similar | adjective | مُشَابِه، مُمَاثِل | almost the same but not exactly | My sister and I have similar tastes in music. | The two cities are similar in size.
+source | noun | مَصْدَر | where something comes from | Oranges are a good source of vitamin C. | The journalist refused to name her source.
+specific | adjective | مُحَدَّد | particular, exact and clear | Can you give me a specific example? | The drug is designed for a specific type of cancer.
+structure | noun | بِنْيَة، هَيْكَل | the way the parts of something are organized | The structure of the essay is very clear. | They studied the structure of the human brain.
++ verb | نَظَّمَ، رَتَّبَ | to arrange something in an organized way | How should I structure my presentation? | The course is structured around weekly projects.
+theory | noun | نَظَرِيَّة | an idea or set of ideas that tries to explain something | Darwin's theory of evolution changed science. | In theory, the plan should work.
+vary | verb | تَفَاوَتَ، تَنَوَّعَ | to be different in different situations | Prices vary from store to store. | The weather varies a lot at this time of year.

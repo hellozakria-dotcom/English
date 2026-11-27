@@ -1,0 +1,62 @@
+accommodate | verb | اِسْتَوْعَبَ؛ أَسْكَنَ | to have enough space for; to provide a place to stay | The hall can accommodate 500 people. | We can accommodate you in a double room.
+analogy | noun | تَشْبِيه، قِيَاس | a comparison that explains something by showing it's similar to something else | He drew an analogy between the brain and a computer. | Let me explain with an analogy.
+anticipate | verb | تَوَقَّعَ | to expect something and prepare for it | We don't anticipate any problems. | Good players anticipate their opponent's moves.
+assure | verb | طَمْأَنَ، أَكَّدَ | to tell someone that something is true so they won't worry | I assure you that everything is fine. | He assured me he would come.
+attain | verb | بَلَغَ، أَدْرَكَ | to reach or achieve something, usually after effort | She attained a high level of fluency. | Few people attain such success.
+behalf | noun | نِيَابَةً عَن | as the representative of someone (on behalf of) | I'm writing on behalf of my client. | She accepted the prize on behalf of her team.
+bulk | noun | الجُزْء الأَكْبَر؛ بِكَمِّيَّات كَبِيرَة | the largest part; large quantities | The bulk of the work is done. | It's cheaper to buy in bulk.
+cease | verb | تَوَقَّفَ | to stop (formal) | The company ceased trading in 2019. | Fighting ceased after midnight.
+coherent | adjective | مُتَمَاسِك، مُتَرَابِط | clear and logical | Your essay needs a more coherent structure. | He was too tired to give a coherent answer.
+coincide | verb | تَزَامَنَ | to happen at the same time | My birthday coincides with Eid this year. | The trip was planned to coincide with the festival.
+commence | verb | بَدَأَ | to begin (formal) | The ceremony will commence at 10 a.m. | Work commenced on the new bridge.
+compatible | adjective | مُتَوَافِق | able to work or exist together | This charger isn't compatible with my phone. | They're not compatible as a couple.
+concurrent | adjective | مُتَزَامِن | happening at the same time | He is serving two concurrent prison sentences. | The two events were concurrent.
+confine | verb | حَصَرَ، قَصَرَ | to keep within limits | Please confine your comments to the topic. | The disease is confined to one region.
+controversy | noun | جَدَل | a lot of public disagreement about something | The decision caused a lot of controversy. | There's controversy over the new law.
+converse | verb | تَحَادَثَ | to have a conversation (formal) | They conversed in English. | It's hard to converse over loud music.
+device | noun | جِهَاز، أَدَاة | a machine or tool for a particular purpose | Turn off all electronic devices. | It's a device for measuring heart rate.
+devote | verb | كَرَّسَ | to give your time or energy to something | She devoted her life to helping others. | I devote an hour a day to English.
+diminish | verb | تَضَاءَلَ، قَلَّلَ | to become or make smaller or less important | The pain will diminish over time. | Don't let anyone diminish your achievements.
+distort | verb | شَوَّهَ، حَرَّفَ | to change the shape or meaning of something so it's false | The media distorted his words. | The mirror distorts your face.
+duration | noun | مُدَّة | the length of time something lasts | The course has a duration of six weeks. | Please stay seated for the duration of the flight.
+erode | verb | تَآكَلَ؛ أَضْعَفَ | to gradually destroy or weaken | The sea is eroding the cliffs. | Trust in politicians has eroded.
+ethic | noun | أَخْلَاقِيَّات، مَبْدَأ أَخْلَاقِيّ | a set of moral principles | She has a strong work ethic. | Medical ethics are important for doctors.
+format | noun | تَنْسِيق، شَكْل | the way something is arranged or designed | The exam follows the same format every year. | Save the file in PDF format.
+found | verb | أَسَّسَ | to start an organization | The company was founded in 1998. | He founded a charity for children.
+inherent | adjective | مُتَأَصِّل، كَامِن | existing as a natural part of something | There are risks inherent in any business. | Her inherent kindness made her popular.
+insight | noun | فَهْم عَمِيق، بَصِيرَة | a deep and clear understanding of something | The book gives an insight into life in Gaza. | She has great insight into people.
+integral | adjective | أَسَاسِيّ، لَا يَتَجَزَّأ | necessary and important as part of a whole | Music is an integral part of the culture. | Exercise is integral to good health.
+intermediate | adjective | مُتَوَسِّط | between two levels | She's in the intermediate class. | It's an intermediate stage of the project.
+manual | adjective | يَدَوِيّ | done with the hands, not by machine | Most of the work is manual labor. | The car has a manual gearbox.
++ noun | دَلِيل الاسْتِخْدَام | a book of instructions | Read the manual before you use it. | The user manual is available online.
+mature | adjective | نَاضِج | behaving like an adult; fully grown | She's very mature for her age. | The mature trees give shade.
+mediate | verb | تَوَسَّطَ | to help people who disagree reach an agreement | The UN tried to mediate between the two sides. | A lawyer mediated the dispute.
+medium | adjective | مُتَوَسِّط | in the middle in size or amount | I'd like a medium coffee, please. | She's of medium height.
++ noun | وَسِيلَة، وَسِيط | a way of communicating or expressing something | English is the medium of instruction. | Television is a powerful medium.
+military | adjective | عَسْكَرِيّ | relating to the army, navy or air force | He did two years of military service. | The country spends a lot on military equipment.
+minimal | adjective | ضَئِيل | very small in amount | The damage was minimal. | The job requires minimal training.
+mutual | adjective | مُتَبَادَل؛ مُشْتَرَك | felt or done by both people; shared | The respect is mutual. | We met through a mutual friend.
+norm | noun | قَاعِدَة، المَعْيَار المُعْتَاد | a usual way of behaving | Working from home is now the norm. | Social norms vary between cultures.
+overlap | verb | تَدَاخَلَ | to cover part of the same area or time | The two jobs overlap in some ways. | My holiday overlaps with yours.
+passive | adjective | سَلْبِيّ؛ مَبْنِيّ لِلْمَجْهُول | accepting what happens without acting; (grammar) passive voice | Don't be so passive; speak up! | "The letter was written" is in the passive.
+portion | noun | جُزْء؛ حِصَّة | a part of something; an amount of food for one person | A large portion of the budget goes on salaries. | The portions in this restaurant are huge.
+preliminary | adjective | أَوَّلِيّ، تَمْهِيدِيّ | coming before the main part | The preliminary results look good. | We had a preliminary meeting.
+protocol | noun | بُرُوتُوكُول | a set of rules for official situations or for how computers communicate | Follow the safety protocol. | The president broke protocol by hugging the queen.
+qualitative | adjective | نَوْعِيّ | relating to quality, not numbers | The study uses qualitative research methods. | There's a qualitative difference between the two.
+refine | verb | صَقَلَ، نَقَّى | to improve something with small changes; to make a substance pure | She refined her presentation before the conference. | Oil is refined to make petrol.
+relax | verb | اِسْتَرْخَى؛ خَفَّفَ | to rest and become calm; to make rules less strict | I just want to relax this weekend. | The government relaxed the travel rules.
+restrain | verb | كَبَحَ، مَنَعَ | to stop someone from doing something, often by force | Police had to restrain the angry man. | I couldn't restrain my laughter.
+revolution | noun | ثَوْرَة | a sudden big change, especially in government | The revolution began in 2011. | The internet caused a revolution in communication.
+rigid | adjective | صَارِم؛ صُلْب | not able to change or bend | The school has very rigid rules. | The box is made of rigid plastic.
+route | noun | طَرِيق، مَسَار | the way from one place to another | What's the fastest route to the airport? | The bus route goes past the university.
+scenario | noun | سِينَارْيُو، احْتِمَال | a possible situation | In the worst-case scenario, we lose everything. | Let's imagine a different scenario.
+sphere | noun | كُرَة؛ مَجَال | a round 3D shape; an area of activity | The earth is almost a sphere. | She's well known in the political sphere.
+subordinate | adjective | تَابِع، أَدْنَى رُتْبَة | less important or lower in rank | His wishes were subordinate to the needs of the group. | She treats her subordinates with respect.
+supplement | noun | مُكَمِّل | something added to improve or complete something | She takes vitamin supplements. | The newspaper has a weekend supplement.
+suspend | verb | عَلَّقَ؛ أَوْقَفَ مُؤَقَّتًا | to stop something for a time; to hang | The match was suspended because of rain. | He was suspended from school for a week.
+team | noun | فَرِيق | a group of people who work or play together | She's the captain of the volleyball team. | Our team works well together.
+temporary | adjective | مُؤَقَّت | lasting for a limited time | She has a temporary job for the summer. | The problem is only temporary.
+trigger | verb | أَثَارَ، تَسَبَّبَ فِي | to make something happen | Stress can trigger headaches. | The news triggered protests.
+unify | verb | وَحَّدَ | to join things or people together | The leader tried to unify the country. | A shared goal unifies the team.
+violate | verb | اِنْتَهَكَ | to break a law, rule or agreement | The company violated safety laws. | That violates my privacy.
+vision | noun | بَصَر؛ رُؤْيَة | the ability to see; an idea of the future | She has good vision. | He has a clear vision for the company.

@@ -1,0 +1,69 @@
+alternative | noun | بَدِيل | another possible choice | Is there an alternative to surgery? | We had no alternative but to wait.
++ adjective | بَدِيل | different from the usual one | We took an alternative route to avoid the traffic. | Solar power is an alternative energy source.
+circumstance | noun | ظَرْف | a fact or condition that affects a situation | Under the circumstances, you did very well. | He died in mysterious circumstances.
+comment | noun | تَعْلِيق | something you say or write that gives an opinion | She made a rude comment about my clothes. | Thanks for all your comments on my essay.
++ verb | عَلَّقَ | to give an opinion about something | The minister refused to comment on the report. | Many people commented on her new hairstyle.
+compensate | verb | عَوَّضَ | to pay someone for loss or damage, or to balance a bad thing with a good thing | The airline compensated passengers for the delay. | Hard work can compensate for a lack of talent.
+component | noun | مُكَوِّن، جُزْء | one of the parts of a machine or system | The factory makes car components. | Trust is a key component of teamwork.
+consent | noun | مُوَافَقَة، إِذْن | permission | You need your parents' consent to go on the trip. | Nobody can use your photo without your consent.
+considerable | adjective | كَبِير، مُعْتَبَر | large in size or amount | The project cost a considerable amount of money. | She has considerable experience in sales.
+constant | adjective | دَائِم، مُسْتَمِرّ | happening all the time; staying the same | The baby needs constant attention. | Keep the oven at a constant temperature.
+constrain | verb | قَيَّدَ، حَدَّ مِن | to limit or control something | Our research was constrained by a lack of money. | Don't let fear constrain you.
+contribute | verb | سَاهَمَ | to give money, time or ideas to help something | Everyone contributed to the gift. | Smoking contributes to heart disease.
+convene | verb | عَقَدَ اجْتِمَاعًا، اجْتَمَعَ | to bring people together for a formal meeting | The committee will convene next week. | The president convened an emergency meeting.
+coordinate | verb | نَسَّقَ | to organize people or things so they work well together | She coordinates the volunteer program. | We need to coordinate our plans.
+core | noun | جَوْهَر، لُبّ | the most important or central part | Honesty is at the core of our values. | Remove the core of the apple.
++ adjective | أَسَاسِيّ | most important or basic | Math and English are core subjects. | Our core business is software.
+corporate | adjective | خَاصّ بِالشَّرِكَات | relating to a large company | She works as a corporate lawyer. | The corporate world can be very competitive.
+correspond | verb | تَطَابَقَ، تَوَافَقَ | to match or be similar to something | His story doesn't correspond with the facts. | Each number corresponds to a letter.
++ verb | تَرَاسَلَ | to write letters or emails to someone | We corresponded for years before we met. | She corresponds with a pen friend in Japan.
+criterion | noun | مِعْيَار | a standard used for judging something | What criteria do you use to choose a university? | Price is not the only criterion.
+deduce | verb | اِسْتَنْتَجَ | to reach a conclusion from the facts you know | From his accent, I deduced he was from Texas. | Scientists deduced the age of the rocks.
+demonstrate | verb | أَظْهَرَ، بَرْهَنَ | to show or prove something clearly | The study demonstrates the importance of sleep. | Let me demonstrate how the machine works.
++ verb | تَظَاهَرَ | to take part in a public protest | Thousands demonstrated against the new law. | Students demonstrated outside parliament.
+document | noun | وَثِيقَة، مُسْتَنَد | an official paper or a computer file | Please sign the documents and return them. | Save the document before you close it.
++ verb | وَثَّقَ | to record information about something in detail | The film documents her life in prison. | All complaints must be documented.
+dominate | verb | هَيْمَنَ، سَيْطَرَ | to control or be the most important part of something | A few big companies dominate the market. | Economic issues dominated the election.
+emphasis | noun | تَأْكِيد، تَرْكِيز | special importance or attention | The school puts a lot of emphasis on sports. | In 'record' the emphasis is on the first syllable when it's a noun.
+ensure | verb | ضَمِنَ، تَأَكَّدَ مِن | to make certain that something happens | Please ensure that all doors are locked. | We must ensure that every child can read.
+exclude | verb | اِسْتَبْعَدَ، اِسْتَثْنَى | to deliberately not include someone or something | The price excludes tax. | She felt excluded by the other girls.
+framework | noun | إِطَار | a structure or set of ideas that something is built on | The agreement provides a framework for future talks. | The house has a steel framework.
+fund | noun | صُنْدُوق، أَمْوَال | an amount of money saved or collected for a purpose | We're raising funds for a new library. | The project ran out of funds.
++ verb | مَوَّلَ | to provide money for something | The research is funded by the EU. | Who funds the hospital?
+illustrate | verb | وَضَّحَ؛ رَسَمَ | to explain with examples, or to draw pictures for a book | Let me illustrate this point with a story. | The book is beautifully illustrated.
+immigrate | verb | هَاجَرَ (إِلَى) | to come to live permanently in a new country | Her parents immigrated to Canada in 1995. | Thousands immigrate to the US every year.
+imply | verb | لَمَّحَ، دَلَّ ضِمْنًا | to suggest something without saying it directly | Are you implying that I'm lying? | Silence often implies agreement.
+initial | adjective | أَوَّلِيّ، مَبْدَئِيّ | happening at the beginning | My initial reaction was shock. | The initial results look promising.
+instance | noun | مِثَال، حَالَة | an example of something | For instance, you could take the bus. | There have been several instances of fraud.
+interact | verb | تَفَاعَلَ | to communicate or work with someone; to affect each other | Children learn by interacting with others. | The two drugs may interact dangerously.
+justify | verb | بَرَّرَ | to give a good reason for something | How can you justify spending so much? | Nothing justifies violence.
+layer | noun | طَبَقَة | a flat amount of something on or between other things | There was a thick layer of dust on the table. | The cake has three layers.
+link | noun | صِلَة؛ رَابِط | a connection; a word or image on a website that opens another page | There's a clear link between smoking and cancer. | Click the link to download the file.
++ verb | رَبَطَ | to connect two things or places | The bridge links the island to the mainland. | Police have linked him to the crime.
+locate | verb | حَدَّدَ مَوْقِعَ؛ وَقَعَ | to find the exact position of something; to be in a place | Rescuers located the missing hikers. | The hotel is located near the beach.
+maximize | verb | زَادَ إِلَى أَقْصَى حَدّ | to make something as large as possible | We want to maximize profits. | Maximize the window to see the whole page.
+minor | adjective | بَسِيط، ثَانَوِيّ | small or not very important | It's only a minor problem. | She had minor injuries.
+negate | verb | أَبْطَلَ، أَلْغَى | to cancel the effect of something | The price rise negated the benefits of the tax cut. | One mistake can negate months of work.
+outcome | noun | نَتِيجَة | the final result of something | We're waiting for the outcome of the election. | Nobody can predict the outcome.
+partner | noun | شَرِيك | one of two people who do something together, or a husband, wife or boyfriend | My business partner handles the money. | Can I bring my partner to the party?
+philosophy | noun | فَلْسَفَة | the study of ideas about life and knowledge; a set of beliefs | She studied philosophy at university. | My philosophy is to enjoy every day.
+physical | adjective | جَسَدِيّ؛ مَادِّيّ | relating to the body, or to real things you can touch | Physical exercise is good for your mind too. | There is no physical evidence.
+proportion | noun | نِسْبَة | a part or share of a whole | A large proportion of students work part-time. | The proportion of women in politics is growing.
+publish | verb | نَشَرَ | to print a book or put information online for the public | Her first novel was published in 2018. | The results will be published next month.
+react | verb | تَفَاعَلَ، رَدَّ | to behave in a particular way because of something | How did she react to the news? | Some people react badly to this medicine.
+register | verb | سَجَّلَ | to put your name on an official list | You must register before the course starts. | Is the car registered in your name?
++ noun | مُسْتَوَى اللُّغَة؛ سِجِلّ | the style of language used in a situation, or an official list | Use a formal register in your essay. | The teacher checked the register.
+rely | verb | اِعْتَمَدَ عَلَى | to depend on someone or something | You can always rely on me. | Many people rely on their cars to get to work.
+remove | verb | أَزَالَ | to take something away | Please remove your shoes. | The stain was hard to remove.
+scheme | noun | خُطَّة، بَرْنَامَج؛ مُؤَامَرَة | an official plan, or a secret clever plan | The government introduced a scheme to help first-time buyers. | It was a scheme to steal money from old people.
+sequence | noun | تَسَلْسُل | a series of things in a particular order | Put the events in the correct sequence. | The film opens with a dramatic sequence.
+shift | noun | تَحَوُّل؛ وَرْدِيَّة | a change; a period of work | There has been a shift in public opinion. | She works the night shift at the hospital.
++ verb | حَوَّلَ، نَقَلَ | to move or change | He shifted his weight to the other foot. | Attention has shifted to the economy.
+specify | verb | حَدَّدَ بِدِقَّة | to say exactly what you want or need | Please specify your size when ordering. | The rules don't specify an age limit.
+sufficient | adjective | كَافٍ | enough | There isn't sufficient evidence to charge him. | Is one week sufficient time?
+task | noun | مُهِمَّة | a piece of work you have to do | Your first task is to clean the kitchen. | Writing the report was a difficult task.
+technical | adjective | تِقْنِيّ، فَنِّيّ | relating to machines, science or special knowledge | We had some technical problems with the sound. | The article is too technical for most readers.
+technique | noun | تِقْنِيَّة، أُسْلُوب | a particular way of doing something | She's learning new painting techniques. | Breathing techniques can reduce stress.
+technology | noun | تِكْنُولُوجْيَا | scientific knowledge used to make machines and tools | Technology is changing the way we work. | The company invests heavily in new technology.
+valid | adjective | صَالِح؛ مَنْطِقِيّ | officially acceptable; reasonable | Your passport must be valid for six months. | That's a valid point.
+volume | noun | حَجْم؛ مُسْتَوَى الصَّوْت؛ مُجَلَّد | amount; how loud something is; one book in a series | The volume of traffic has doubled. | Can you turn the volume down?

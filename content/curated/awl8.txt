@@ -1,0 +1,64 @@
+abandon | verb | تَخَلَّى عَن، هَجَرَ | to leave someone or something forever; to stop doing something | The puppy was abandoned on the street. | They abandoned the plan because of the cost.
+accompany | verb | رَافَقَ | to go somewhere with someone; to happen at the same time | Children must be accompanied by an adult. | The fever was accompanied by a headache.
+accumulate | verb | تَرَاكَمَ، جَمَعَ | to gradually increase in amount | Dust had accumulated on the shelves. | He accumulated a lot of debt.
+ambiguous | adjective | غَامِض، مُلْتَبِس | having more than one possible meaning | The question was ambiguous. | Her answer was deliberately ambiguous.
+append | verb | أَلْحَقَ، أَضَافَ | to add something at the end of a document | The data is appended to the report. | Append your signature at the bottom.
+appreciate | verb | قَدَّرَ؛ اِمْتَنَّ | to be grateful for something; to understand how good or important something is | I really appreciate your help. | You don't appreciate how hard this is.
++ verb | اِرْتَفَعَتْ قِيمَتُه | to increase in value | Houses in this area have appreciated a lot. | The dollar appreciated against the euro.
+arbitrary | adjective | اِعْتِبَاطِيّ | based on chance or a personal decision, not a reason | The rules seem completely arbitrary. | He was arrested for no reason; it was arbitrary.
+automate | verb | أَتْمَتَ | to make a process work by machines instead of people | Many factory jobs have been automated. | You can automate your monthly payments.
+bias | noun | تَحَيُّز | an unfair preference for one person or group | The report shows a clear bias against women. | Journalists should avoid bias.
+chart | noun | رَسْم بَيَانِيّ | a drawing that shows information as lines, bars, etc. | The chart shows sales over the last year. | Their song is at the top of the charts.
+clarify | verb | وَضَّحَ | to make something clearer | Could you clarify what you mean? | The company clarified its position.
+commodity | noun | سِلْعَة | a product that can be bought and sold | Oil is the country's most important commodity. | Time is a valuable commodity.
+complement | verb | كَمَّلَ | to go well with something and make it better | The wine complements the food perfectly. | Their skills complement each other.
+conform | verb | اِمْتَثَلَ، وَافَقَ | to follow rules or what most people do | The building doesn't conform to safety standards. | Teenagers often feel pressure to conform.
+contemporary | adjective | مُعَاصِر | belonging to the present time; existing at the same time | I prefer contemporary art. | He was a contemporary of Shakespeare.
+contradict | verb | نَاقَضَ | to say the opposite of what someone said; to be different from | Don't contradict your father. | The evidence contradicts his story.
+crucial | adjective | حَاسِم، بَالِغ الأَهَمِّيَّة | extremely important | The next few days are crucial. | Sleep is crucial for learning.
+currency | noun | عُمْلَة | the money used in a country | The euro is the currency of Latvia. | You can pay in any currency.
+denote | verb | دَلَّ عَلَى، رَمَزَ إِلَى | to represent or mean something | A red flag denotes danger. | The symbol × denotes multiplication.
+detect | verb | اِكْتَشَفَ، رَصَدَ | to notice or discover something that is hard to see | The test can detect cancer early. | I detected a hint of anger in her voice.
+deviate | verb | اِنْحَرَفَ، حَادَ عَن | to do something different from the usual or planned | The plane deviated from its route. | Don't deviate from the plan.
+displace | verb | أَزَاحَ؛ هَجَّرَ | to force people to leave their homes; to take the place of | The war displaced millions of people. | Robots may displace many workers.
+drama | noun | دْرَامَا؛ إِثَارَة | plays and acting; exciting or emotional events | She studied drama at college. | There's always some drama in their family.
+eventual | adjective | نِهَائِيّ، لَاحِق | happening at the end of a process | The eventual winner was a 19-year-old. | Hard work led to eventual success.
+exhibit | verb | عَرَضَ؛ أَظْهَرَ | to show something in public; to show a feeling or quality | Her paintings are exhibited in Paris. | The patient exhibited signs of stress.
+exploit | verb | اِسْتَغَلَّ | to treat people unfairly to get benefit; to use something fully | The company exploits its workers. | We should exploit solar energy more.
+fluctuate | verb | تَذَبْذَبَ، تَقَلَّبَ | to change often from one level to another | Prices fluctuate depending on the season. | Her mood fluctuates a lot.
+guideline | noun | إِرْشَاد، تَوْجِيه | advice or a rule on how to do something | Follow the safety guidelines. | The government issued new guidelines on diet.
+highlight | verb | سَلَّطَ الضَّوْءَ عَلَى؛ ظَلَّلَ | to emphasize something; to mark text with a bright color | The report highlights the need for change. | Highlight the key words in yellow.
++ noun | أَبْرَز لَحْظَة | the best or most exciting part | The highlight of the trip was the desert tour. | Watch the highlights of the match.
+implicit | adjective | ضِمْنِيّ | suggested but not said directly | There was an implicit threat in his words. | I have implicit trust in her.
+induce | verb | دَفَعَ إِلَى؛ سَبَّبَ | to persuade someone; to cause something | Nothing could induce me to go back there. | The drug may induce sleep.
+inevitable | adjective | حَتْمِيّ | certain to happen | Change is inevitable. | It was inevitable that they would lose.
+infrastructure | noun | بِنْيَة تَحْتِيَّة | basic systems like roads, power and water | The country needs to invest in infrastructure. | The war destroyed the city's infrastructure.
+inspect | verb | فَتَّشَ، تَفَقَّدَ | to look at something carefully to check it | Officials inspected the restaurant's kitchen. | Inspect the car before you buy it.
+intense | adjective | شَدِيد، مُكَثَّف | very strong or extreme | The heat was intense. | It was an intense training program.
+manipulate | verb | تَلَاعَبَ بِـ | to control someone or something in a clever, unfair way | He manipulates people to get what he wants. | The data was manipulated.
+minimize | verb | قَلَّلَ إِلَى أَدْنَى حَدّ | to make something as small as possible | We want to minimize the risk. | Minimize the window to see your desktop.
+nuclear | adjective | نَوَوِيّ | relating to the energy from atoms | The country has two nuclear power stations. | Nuclear weapons are a global threat.
+offset | verb | عَوَّضَ، وَازَنَ | to balance one effect with an opposite one | Higher prices were offset by higher salaries. | Plant trees to offset your carbon emissions.
+paragraph | noun | فِقْرَة | a section of writing that starts on a new line | Each paragraph should have one main idea. | Read the first paragraph again.
+plus | preposition | زَائِد؛ بِالإِضَافَة إِلَى | and also; added to | Two plus two is four. | The job is interesting, plus it pays well.
+practitioner | noun | مُمَارِس (مِهْنَة) | someone who works in a profession, especially medicine or law | See your general practitioner if the pain continues. | She's an experienced legal practitioner.
+predominant | adjective | سَائِد، غَالِب | most common or strongest | Arabic is the predominant language in the region. | Fear was the predominant feeling.
+prospect | noun | اِحْتِمَال؛ آفَاق | the possibility of something happening; chances of success | There's little prospect of peace. | Learning English will improve your job prospects.
+radical | adjective | جَذْرِيّ؛ مُتَطَرِّف | very new and different; supporting extreme change | We need radical changes to the system. | He holds radical political views.
+random | adjective | عَشْوَائِيّ | happening without a plan or pattern | The winners were chosen at random. | It was a random act of kindness.
+reinforce | verb | عَزَّزَ، دَعَّمَ | to make something stronger | Review reinforces what you've learned. | The walls were reinforced with steel.
+restore | verb | رَمَّمَ؛ أَعَادَ | to repair something old; to bring back | The old church has been beautifully restored. | Police restored order after the riot.
+revise | verb | رَاجَعَ؛ عَدَّلَ | to change something to improve it; to study again before an exam | I revised my essay three times. | Students are revising for their final exams.
+schedule | noun | جَدْوَل زَمَنِيّ | a plan of what will happen and when | I have a busy schedule this week. | The project is ahead of schedule.
++ verb | حَدَّدَ مَوْعِدًا | to plan for something to happen at a particular time | The meeting is scheduled for Monday. | Let's schedule a call.
+tension | noun | تَوَتُّر | a feeling of worry or anxiety; disagreement between groups | You could feel the tension in the room. | There are growing tensions between the two countries.
+terminate | verb | أَنْهَى | to end something | His contract was terminated. | This train terminates here.
+theme | noun | مَوْضُوع رَئِيسِيّ | the main subject or idea | Love is the main theme of the novel. | The party had a 1980s theme.
+thereby | adverb | وَبِذَلِك | as a result of this (formal) | He signed the contract, thereby agreeing to the terms. | Exercise improves blood flow, thereby reducing stress.
+uniform | noun | زِيّ مُوَحَّد | special clothes worn by people in a group | Students must wear a school uniform. | The nurse was in uniform.
++ adjective | مُوَحَّد، مُتَجَانِس | the same everywhere | The rooms are uniform in size. | Prices are not uniform across the country.
+vehicle | noun | مَرْكَبَة، سَيَّارَة | a machine used for transporting people or goods | Electric vehicles are becoming cheaper. | No vehicles are allowed in the city center.
+via | preposition | عَبْرَ، مِن خِلَال | through a place or by means of something | We flew to Riga via Istanbul. | I'll send the file via email.
+virtual | adjective | اِفْتِرَاضِيّ؛ شِبْه | existing on computers; almost but not completely | We had a virtual meeting on Zoom. | The city came to a virtual standstill.
+visual | adjective | بَصَرِيّ | relating to seeing | The film has amazing visual effects. | I'm a visual learner.
+widespread | adjective | وَاسِع الانْتِشَار | happening in many places or among many people | There is widespread support for the plan. | The disease is widespread in the region.

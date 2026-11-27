@@ -1,0 +1,65 @@
+abstract | adjective | مُجَرَّد | based on ideas, not real things you can touch | Love and freedom are abstract concepts. | His explanation was too abstract for me.
++ noun | مُلَخَّص (بَحْث) | a short summary of a research article | Read the abstract before the full paper. | Submit a 200-word abstract.
+accurate | adjective | دَقِيق | correct and exact | The weather forecast was accurate. | Make sure your figures are accurate.
+acknowledge | verb | اِعْتَرَفَ بِـ؛ أَقَرَّ | to accept or admit that something is true; to thank someone publicly | He finally acknowledged his mistake. | The author acknowledges the help of her colleagues.
+aggregate | noun | مَجْمُوع | a total made of several smaller amounts | They won 4–2 on aggregate. | The aggregate score decides the winner.
+allocate | verb | خَصَّصَ | to give money, time or space for a particular purpose | The city allocated $2 million to the project. | Each student is allocated a mentor.
+assign | verb | كَلَّفَ، أَسْنَدَ | to give someone a job or task | The teacher assigned us an essay. | She was assigned to the London office.
+attach | verb | أَرْفَقَ، رَبَطَ | to fasten or connect something to something else | I've attached the file to the email. | Attach the label to your suitcase.
+author | noun | مُؤَلِّف، كَاتِب | the writer of a book or article | Who's your favorite author? | The author of the report is a professor.
+bond | noun | رَابِطَة؛ سَنَد | a close connection between people; a type of investment | There's a strong bond between the twins. | Government bonds are a safe investment.
+brief | adjective | قَصِير، مُوجَز | lasting a short time; using few words | We had a brief conversation. | Please be brief; we're short on time.
+capable | adjective | قَادِر، كُفْء | able to do something; skilled | She's capable of running the company. | He's a very capable manager.
+cite | verb | اِسْتَشْهَدَ بِـ؛ ذَكَرَ | to mention something as an example or proof | She cited three studies in her essay. | Cost was cited as the main reason.
+cooperate | verb | تَعَاوَنَ | to work together with someone | The two countries agreed to cooperate on security. | Witnesses are cooperating with the police.
+discriminate | verb | مَيَّزَ ضِدّ | to treat someone unfairly because of their race, sex, religion, etc. | It's illegal to discriminate against women at work. | The law discriminates against the poor.
+display | verb | عَرَضَ، أَظْهَرَ | to show something | The museum displays art from the 19th century. | He displayed great courage.
++ noun | عَرْض؛ شَاشَة | an arrangement of things for people to see; a screen | The phone has a large display. | There was a fireworks display at midnight.
+diverse | adjective | مُتَنَوِّع | very different from each other | London is a very diverse city. | She has diverse interests.
+domain | noun | مَجَال؛ نِطَاق | an area of knowledge or activity; an internet address | Medicine is not my domain. | He bought a new domain name for his website.
+edit | verb | حَرَّرَ، رَاجَعَ | to correct and change a text, film or photo | She edits a fashion magazine. | Can I edit my post after publishing it?
+enhance | verb | عَزَّزَ، حَسَّنَ | to improve the quality or value of something | Good lighting can enhance a room. | The course will enhance your career prospects.
+estate | noun | عَقَار، مِلْكِيَّة | a large area of land with a house; all the property a person owns | He left his estate to his children. | She works as a real estate agent.
+exceed | verb | تَجَاوَزَ | to be more than a number or limit | Costs exceeded $1 million. | Don't exceed the speed limit.
+expert | noun | خَبِير | a person with special knowledge or skill | She's an expert on Middle Eastern history. | Experts warn that prices will rise.
+explicit | adjective | صَرِيح، وَاضِح | clear and detailed, with nothing hidden | He gave explicit instructions. | The film contains explicit scenes.
+federal | adjective | فِيدِرَالِيّ، اتِّحَادِيّ | relating to the national government of a country with states | The federal government sets the rules. | It's a federal crime.
+fee | noun | رَسْم، أَتْعَاب | money you pay for a service | University fees have risen sharply. | There's no fee to enter the museum.
+flexible | adjective | مَرِن | able to change easily | I have flexible working hours. | Our plans are flexible.
+furthermore | adverb | عِلَاوَةً عَلَى ذَلِك | in addition (formal) | The plan is expensive. Furthermore, it won't work. | Furthermore, the study found no side effects.
+gender | noun | جِنْس، نَوْع اجْتِمَاعِيّ | being male or female | The job is open to all, regardless of gender. | There's still a gender gap in pay.
+ignorance | noun | جَهْل | lack of knowledge or information | Ignorance of the law is no excuse. | His comments showed his ignorance.
+incentive | noun | حَافِز | something that encourages you to do something | Tax cuts are an incentive for businesses to invest. | There's no incentive to work harder.
+incidence | noun | مُعَدَّل الحُدُوث | how often something happens | There's a high incidence of heart disease in the area. | The incidence of crime has fallen.
+incorporate | verb | دَمَجَ، تَضَمَّنَ | to include something as part of something else | We incorporated your ideas into the design. | The new phone incorporates the latest technology.
+index | noun | فِهْرِس؛ مُؤَشِّر | an alphabetical list at the end of a book; a number that shows change | Look up the topic in the index. | The price index rose by 2%.
+inhibit | verb | أَعَاقَ، كَبَحَ | to stop something from happening or developing | Fear can inhibit learning. | The drug inhibits the growth of cancer cells.
+initiate | verb | بَدَأَ، أَطْلَقَ | to start something | The government initiated a series of reforms. | She initiated the conversation.
+input | noun | مُدْخَلَات؛ مُسَاهَمَة | ideas or information that you give; data put into a computer | Thanks for your input on the project. | The machine needs electrical input.
+instruct | verb | أَمَرَ؛ عَلَّمَ | to tell someone to do something; to teach | The pilot instructed us to stay seated. | She instructs new staff on safety.
+intelligence | noun | ذَكَاء؛ اسْتِخْبَارَات | the ability to learn and understand; secret information | Artificial intelligence is changing many jobs. | He works for military intelligence.
+interval | noun | فَتْرَة؛ فَاصِل | a period of time between two events | The buses run at 15-minute intervals. | There will be a short interval after the first act.
+lecture | noun | مُحَاضَرَة | a talk given to students | I have a lecture at 9 a.m. | She gave a lecture on climate change.
++ verb | وَعَظَ، أَلْقَى مُحَاضَرَة | to talk angrily to someone about their behavior; to teach | Don't lecture me about money! | He lectures in economics.
+migrate | verb | هَاجَرَ | to move from one place to another, especially to live or work | Many birds migrate south in winter. | Thousands migrated to the cities for work.
+minimum | noun | حَدّ أَدْنَى | the smallest amount possible or allowed | You need a minimum of three years' experience. | Keep costs to a minimum.
+ministry | noun | وِزَارَة | a government department | She works at the Ministry of Education. | The ministry issued a statement.
+motive | noun | دَافِع | a reason for doing something | Police don't know the motive for the attack. | What was her motive?
+neutral | adjective | مُحَايِد | not supporting either side | Switzerland stayed neutral during the war. | Try to use neutral language.
+nevertheless | adverb | وَمَعَ ذَلِك | despite what has just been said | The task was hard; nevertheless, we finished it. | It was raining. Nevertheless, the game continued.
+overseas | adverb | فِي الخَارِج | in or to a foreign country | She's been working overseas for two years. | Many students study overseas.
+precede | verb | سَبَقَ | to happen or come before something | Lightning usually precedes thunder. | The talk was preceded by a short film.
+presume | verb | اِفْتَرَضَ، ظَنَّ | to think something is probably true | I presume you've heard the news. | He is presumed dead.
+rational | adjective | عَقْلَانِيّ | based on reason, not emotion | There must be a rational explanation. | She made a rational decision.
+recover | verb | تَعَافَى؛ اِسْتَرَدَّ | to get better after an illness; to get something back | He's recovering from an operation. | Police recovered the stolen car.
+reveal | verb | كَشَفَ | to make something known that was secret or hidden | She revealed that she was leaving. | The survey revealed some interesting facts.
+scope | noun | نِطَاق؛ مَجَال | the range of a subject; the opportunity to do something | That question is beyond the scope of this course. | There's scope for improvement.
+subsidy | noun | دَعْم (مَالِيّ) | money the government pays to reduce the cost of something | Farmers receive large subsidies. | The government cut fuel subsidies.
+tape | noun | شَرِيط لَاصِق؛ شَرِيط تَسْجِيل | a sticky strip used to stick things; a strip for recording | Fix it with some tape. | Police found a tape of the conversation.
+trace | verb | تَتَبَّعَ | to find someone or something, or the origin of something | Police traced the call to a phone box. | She can trace her family back to the 1600s.
++ noun | أَثَر | a very small amount or sign of something | There was no trace of the missing boat. | Traces of poison were found in his blood.
+transform | verb | حَوَّلَ، غَيَّرَ جَذْرِيًّا | to change something completely | The internet has transformed the way we live. | The old factory was transformed into apartments.
+transport | noun | نَقْل، مُوَاصَلَات | vehicles or a system for moving people and goods | Public transport in Riga is cheap. | The price includes transport to the hotel.
++ verb | نَقَلَ | to move people or goods | The goods are transported by ship. | Patients were transported to hospital.
+underlie | verb | كَانَ أَسَاسًا لِـ | to be the real reason for something | Poverty underlies many health problems. | What are the underlying causes?
+utilize | verb | اِسْتَخْدَمَ، اسْتَغَلَّ | to use something effectively (formal) | We need to utilize our resources better. | The room is not fully utilized.

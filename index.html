@@ -18,6 +18,23 @@
  --r:18px;--sh:0 1px 2px rgba(10,30,25,.04),0 6px 20px rgba(10,30,25,.06);
  --ar:"Noto Naskh Arabic","Segoe UI","Tahoma",sans-serif;
 }
+html[data-theme=dark]{
+ --bg:#0F1514;--surface:#18201F;--ink:#E7EEEC;--ink2:#B9C6C2;--muted:#8A9894;--line:#2A3533;--line2:#222C2A;
+ --brand:#3FB8A8;--brand-soft:#16332F;--pr:#8DB9F0;--new:#1E3350;--learn:#4A3D12;--green:#5BC88A;--green-soft:#173326;--red:#F0826E;--red-soft:#3A1F1A;
+ --sh:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);color-scheme:dark}
+html[data-theme=dark] .tabbar{background:rgba(24,32,31,.95)} html[data-theme=dark] .toolbar{background:rgba(15,21,20,.94)}
+html[data-theme=dark] input,html[data-theme=dark] select,html[data-theme=dark] textarea{background:#121918}
+html[data-theme=dark] .chart{background:#fff} html[data-theme=dark] .hero{background:linear-gradient(135deg,#0E2A27,#123F39)}
+html[data-theme=dark] .note.warn{background:#3a3217} html[data-theme=dark] #pop .sense.on{background:#1B2E2B}
+html[data-theme=dark] .tag.p{background:#2C2540;color:#C4B2F0} html[data-theme=dark] .tag.o{background:#3A2C14;color:#F2C277}
+html[data-theme=dark] .sent.playing{background:#3D3412} html[data-theme=dark] .wd.ph{border-bottom-color:rgba(141,185,240,.6)}
+@keyframes viewin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.viewin{animation:viewin .18s ease-out}
+@keyframes popin{from{opacity:0;transform:translateY(4px) scale(.985)}to{opacity:1;transform:none}}
+#pop.show{animation:popin .14s ease-out} #pop.sheet.show{animation:none}
+@keyframes sheetin{from{transform:translateY(40px);opacity:.4}to{transform:none;opacity:1}}
+#pop.sheet.show{animation:sheetin .2s ease-out}
+@media (prefers-reduced-motion:reduce){.viewin,#pop.show{animation:none}}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
 button,input,select,textarea{font:inherit;color:inherit}
@@ -64,6 +81,9 @@ a{color:var(--pr)}
 .iconbtn svg{width:20px;height:20px} .iconbtn:hover{background:var(--line)}
 .chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0 4px;margin-bottom:12px}
 .chips.wrapc{flex-wrap:wrap;overflow:visible}
+@media (min-width:900px){.chips{flex-wrap:wrap;overflow:visible}}
+.book .snip{font-family:"Source Serif 4",Georgia,serif;color:var(--ink2);font-size:15px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.book .ico{font-size:15px}
 .chip{flex:none;border:0;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);border-radius:99px;padding:7px 14px;font-weight:600;font-size:14px;cursor:pointer}
 .chip.on{background:var(--ink);color:#fff;box-shadow:none}
 .chip.sm{padding:4px 10px;font-size:13px}
@@ -75,7 +95,7 @@ a{color:var(--pr)}
 .note{background:var(--line2);border-radius:12px;padding:10px 12px;font-size:14px;margin-top:10px;color:var(--ink2)}
 .note.warn{background:#FFF6E0}
 .empty{text-align:center;color:var(--muted);padding:36px 12px}
-input,select,textarea{width:100%;border:1px solid var(--line);background:#fff;border-radius:12px;padding:11px 13px;outline:none}
+input,select,textarea{width:100%;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:11px 13px;outline:none}
 textarea{resize:vertical;min-height:120px;line-height:1.6}
 input:focus,select:focus,textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(15,118,110,.15)}
 input[type=checkbox]{width:20px;height:20px;flex:none;accent-color:var(--brand)}
@@ -120,7 +140,7 @@ details>summary{cursor:pointer;font-weight:700;list-style:none;display:flex;alig
 .book{background:var(--surface);border-radius:var(--r);box-shadow:var(--sh);padding:16px;cursor:pointer;display:flex;flex-direction:column;gap:8px}
 .book:hover{box-shadow:0 0 0 2px var(--line),var(--sh)} .book .t{font-weight:700;font-size:16px;line-height:1.3}
 .toolbar{position:sticky;top:0;z-index:10;background:rgba(244,245,242,.94);backdrop-filter:blur(10px);padding:10px 0;margin:0 0 6px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.reader{font-family:"Source Serif 4",Georgia,serif;font-size:21px;line-height:1.8}
+.reader{font-family:"Source Serif 4",Georgia,serif;font-size:var(--rfs,21px);line-height:1.8}
 .reader p{margin:0 0 16px}
 .reader .line{display:flex;gap:10px;margin:0 0 12px}
 .reader .who{font-family:Inter,sans-serif;font-size:12px;font-weight:800;letter-spacing:.05em;color:var(--brand);min-width:88px;padding-top:6px}
@@ -147,6 +167,7 @@ details>summary{cursor:pointer;font-weight:700;list-style:none;display:flex;alig
 #pop .mainsense .armain{margin-top:0}
 #pop .ex{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-top:1px solid var(--line2);font-family:"Source Serif 4",Georgia,serif;font-size:16px}
 #pop .ex .src{font-family:Inter,sans-serif;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+#pop .olderex{margin-top:14px} #pop .olderex>summary{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 #pop h4{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
 .colls{display:flex;flex-wrap:wrap;gap:6px}
 .colls span{background:var(--line2);border-radius:8px;padding:3px 9px;font-size:14px}
@@ -531,7 +552,7 @@ function homeView() {
    <div class="stat click" data-tab="write"><b>${Object.keys(S.prog.mis).length}</b><span>misspellings to fix</span></div>
    <div class="stat click" data-tab="plan"><b>${planPct()}%</b><span>of the plan to C2</span></div>
   </div>
-  <p class="small muted" style="margin:10px 2px 0">Points: 1 per card, 1 per dictation item, 10 per text, 5 per grammar lesson, 20 per essay. A word counts as <b>learned</b> only if it was new to you and its card reaches a 3-week interval (or you mark it known after studying it).</p>
+  <details class="small muted" style="margin:10px 2px 0"><summary class="small" style="font-weight:600">How points and the word counter work</summary><p style="margin:6px 0 0">Points: 1 per card, 1 per dictation item, 10 per text, 5 per grammar lesson, 20 per essay. A word counts as <b>learned</b> only if it was new to you and its card reaches a 3-week interval (or you mark it known after studying it).</p></details>
   <div class="sec">Today</div>
   <div class="card list">
    ${todayItems().map(t => `<div class="item click" ${t.attr}><div class="unit" style="padding:0;border:0"><div class="num" style="${t.done ? 'background:var(--green);color:#fff' : ''}">${t.done ? I.check.replace('<svg', '<svg width="18" height="18"') : t.icon}</div></div><div class="grow"><div style="font-weight:700">${t.t}</div><div class="small muted">${t.s}</div></div></div>`).join('')}
@@ -615,7 +636,7 @@ function placeResult(pl) {
 
 // ================= READER =================
 function allTexts() { return [...S.texts, ...S.my]; }
-const STYLES = [['all', 'All'], ['news', 'News'], ['dialogue', 'Film & TV'], ['ielts-reading', 'IELTS Reading'], ['ielts-listening', 'IELTS Listening'], ['academic', 'Academic'], ['headway', 'Headway course'], ['my', 'My texts']];
+const STYLES = [['all', 'All'], ['news', 'News'], ['dialogue', 'Film & TV'], ['ielts-reading', 'IELTS Reading'], ['ielts-listening', 'IELTS Listening'], ['academic', 'Academic'], ['podcast', 'Podcasts'], ['headway', 'Headway course'], ['my', 'My texts']];
 const styleName = s => (STYLES.find(x => x[0] === s) || [0, 'My text'])[1];
 const TOKRE = /[A-Za-z]+(?:['’][A-Za-z]+)*(?:-[A-Za-z]+(?:['’][A-Za-z]+)*)*/g;
 function wordToks(w) {
@@ -712,16 +733,18 @@ function textStats(t) {
 }
 function readView() {
   if (S.rd) return readerView();
-  const list = allTexts().filter(t => S.readFilter === 'all' || t.style === S.readFilter);
+  const list = allTexts().filter(t => (S.readFilter === 'all' || t.style === S.readFilter) && (!S.lvl || t.level === S.lvl));
+  const ICON = {news: '📰', dialogue: '🎬', 'ielts-reading': '📝', 'ielts-listening': '🎧', academic: '🎓', podcast: '🎙️', headway: '📘', my: '📄'};
   const card = t => { const p = textStats(t); return `<div class="book" data-text="${esc(t.id)}"><div class="row" style="gap:6px;flex-wrap:wrap"><span class="tag b">${esc(t.level || p.level)}</span><span class="tag">${esc(styleName(t.style))}</span>${S.prog.read[t.id] ? '<span class="tag g">✓ read</span>' : ''}</div>
-    <div class="t">${esc(t.title)}</div><div class="small muted">${t.words || ''} words · <b style="color:var(--pr)">${p.nw} new</b> · ${p.learning} learning · ${p.pct}% known${p.rare ? ` · ${p.rare} rare` : ''}</div>
+    <div class="t"><span class="ico">${ICON[t.style] || '📄'}</span> ${esc(t.title)}</div><div class="snip">${esc((t.paras[0] || '').replace(/^[A-Z][A-Z]+(?: [A-Z]+)?:\s+/, '').slice(0, 220))}</div><div class="small muted">${t.words || ''} words · <b style="color:var(--pr)">${p.nw} new</b> · ${p.learning} learning · ${p.pct}% known${p.rare ? ` · ${p.rare} rare` : ''}</div>
     <div class="bar"><i style="width:${p.pct}%;background:var(--green)"></i><i style="width:${100 * p.learning / Math.max(1, p.total)}%;background:#f1d57a"></i><i style="width:${100 * p.nw / Math.max(1, p.total)}%;background:#9cc0ee"></i></div></div>`; };
   return `${header('Read', 'Graded texts B2 → C2. Hover or tap any word or phrase.')}
-  <details class="card" ${S.my.length ? '' : 'open'}><summary>${I.plus.replace('<svg', '<svg width="18" height="18"')} Import your own text</summary>
+  <details class="card"><summary>${I.plus.replace('<svg', '<svg width="18" height="18"')} Import your own text</summary>
    <label>Title</label><input id="imTitle" placeholder="e.g. Guardian article on housing">
    <label>Text (paste an article, a transcript, anything in English)</label><textarea id="imText" rows="8" placeholder="Paste here…"></textarea>
    <button class="btn brand wide" id="imSave" style="margin-top:12px">Save and open</button></details>
   <div class="chips">${STYLES.map(([k, l]) => `<button class="chip ${S.readFilter === k ? 'on' : ''}" data-rf="${k}">${l}</button>`).join('')}</div>
+  <div class="chips" style="margin-top:-4px">${['', 'B2', 'C1', 'C2'].map(l => `<button class="chip sm ${(S.lvl || '') === l ? 'on' : ''}" data-lvl="${l || 'all'}">${l || 'All levels'}</button>`).join('')}</div>
   <div class="lib">${list.map(card).join('') || '<div class="empty">No texts here yet</div>'}</div>`;
 }
 function openText(id) {
@@ -736,6 +759,7 @@ function readerView() {
   return `<div class="toolbar"><button class="iconbtn" data-closetext="1" aria-label="Back">${I.back}</button>
    <button class="btn sm ${S.playing ? 'red' : 'brand'}" data-playall="1">${S.playing ? I.stop + ' Stop' : I.play + ' Listen'}</button>
    ${listen ? `<button class="btn ghost sm" data-togtrans="1">${S.rd.showT ? 'Hide' : 'Show'} transcript</button>` : ''}
+   <button class="iconbtn" data-rfs="-1" aria-label="Smaller text" style="font-weight:800;font-size:13px">A−</button><button class="iconbtn" data-rfs="1" aria-label="Bigger text" style="font-weight:800;font-size:17px">A+</button>
    <span class="grow"></span><div class="legend"><span><i style="background:var(--new)"></i>new</span><span><i style="background:var(--learn)"></i>learning</span><span><i style="border-bottom:2px solid #6c9bd6;border-radius:0"></i>phrase</span><span><i style="border-bottom:1.5px dashed #aab4b1;border-radius:0"></i>rare</span></div></div>
   ${header(esc(t.title), `${esc(styleName(t.style))} · ${esc(t.level || p.level)} · ${p.total} dictionary words · <b style="color:var(--pr)">${p.nw} new</b> · ${p.pct}% known${p.rare ? ` · ${p.rare} rare (dashed)` : ''}`, t.style === 'my' ? `<button class="iconbtn" data-deltext="${esc(t.id)}" aria-label="Delete">${I.trash}</button>` : '')}
   ${listen && !S.rd.showT ? qs + `<div class="card"><p class="muted" style="margin:0">Press <b>Listen</b> and answer the questions first (as in the exam). Then open the transcript and look up the words you missed.</p></div>` : `<div class="card reader">${body}</div>${qs}`}
@@ -748,7 +772,7 @@ async function showPop(el, pin) {
   $$('.wd.sel').forEach(x => x.classList.remove('sel')); el.classList.add('sel');
   const pop = $('#pop'); pop.dataset.k = k; pop.dataset.si = si; pop.dataset.f = f;
   const sheet = !matchMedia('(hover: hover) and (pointer: fine)').matches || innerWidth < 640;
-  pop.classList.toggle('sheet', sheet); pop.style.display = 'block'; $('#scrim').style.display = sheet ? 'block' : 'none';
+  pop.classList.toggle('sheet', sheet); pop.style.display = 'block'; pop.classList.remove('show'); void pop.offsetWidth; pop.classList.add('show'); $('#scrim').style.display = sheet ? 'block' : 'none';
   popPinned = !!pin;
   const seq = ++popSeq;
   pop.innerHTML = `<div class="w">${esc(k.replace(/^p:/, ''))}</div><div class="muted small">Loading…</div>`;
@@ -804,9 +828,9 @@ async function popHTML(k, e, ctx) {
   } else if (e && e.ar && e.ar.length) ar = `<div class="armain ar">${esc(e.ar.join('، '))}</div>`;
   else ar = `<div id="arOnline" style="margin-top:8px;font-size:20px">…</div>`;
   const usedEx = new Set([normS(ctx.sent || '')]);
-  const senses = ss.length > 1 || (ss[0] && ss[0].ex) ? `<h4>${ss.length > 1 ? 'All meanings' : 'Example'}</h4>${ss.map((x, n) => { if (x.ex) usedEx.add(normS(x.ex)); return `<div class="sense${n === likely && ss.length > 1 ? ' on' : ''}"><div class="row" style="align-items:baseline;gap:8px"><b class="snum">${n + 1}</b><span class="tag">${esc(x.p)}</span>${x.ar && x.ar.length ? `<span class="ar sar">${esc(x.ar.join('، '))}</span>` : '<span class="small muted">no Arabic for this meaning yet</span>'}</div>
+  const senses = ss.length > 1 || (ss[0] && ss[0].ex) ? `<h4>${ss.length > 1 ? 'All meanings' : 'Examples'}${e && e.cur ? ' <span class="tag g" style="vertical-align:1px">✓ checked entry</span>' : ''}</h4>${ss.map((x, n) => { if (x.ex) usedEx.add(normS(x.ex)); return `<div class="sense${n === likely && ss.length > 1 ? ' on' : ''}"><div class="row" style="align-items:baseline;gap:8px"><b class="snum">${n + 1}</b><span class="tag">${esc(x.p)}</span>${x.ar && x.ar.length ? `<span class="ar sar">${esc(x.ar.join('، '))}</span>` : '<span class="small muted">no Arabic for this meaning yet</span>'}</div>
       <div class="sg">${esc(x.g)}${x.syn ? ` <span class="muted">· ≈ ${esc(x.syn.join(', '))}</span>` : ''}</div>
-      ${x.ex ? `<div class="sex">${spk(x.ex, 1)}<span>${hl(x.ex, k)}</span></div>` : ''}</div>`; }).join('')}` : '';
+      ${[x.ex, x.ex2].filter(Boolean).map(t => { usedEx.add(normS(t)); return `<div class="sex">${spk(t, 1)}<span>${hl(t, k)}</span></div>`; }).join('')}</div>`; }).join('')}` : '';
   const colls = e && e.c && e.c.length ? `<h4>Collocations</h4><div class="colls">${e.c.map(c => `<span>${esc(c)}</span>`).join('')}</div>` : '';
   const phr = e && e.ph && e.ph.length ? `<h4>Phrases with this word</h4><div class="colls">${e.ph.map(c => `<button class="chip sm" data-look="p:${esc(c)}">${esc(c)}</button>`).join('')}</div>` : '';
   const parts = isPh ? `<h4>Words in it</h4><div class="colls">${word.split(' ').filter(w => !FUNC.has(w)).map(w => `<button class="chip sm" data-look="${esc(lemmaOf(w))}">${esc(w)}</button>`).join('')}</div>` : '';
@@ -817,12 +841,12 @@ async function popHTML(k, e, ctx) {
   for (const x of textExamples(k, '')) exs.push([x[0], x[1], '']);
   exs = exs.filter(x => { const n = normS(x[0]); if (usedEx.has(n)) return false; usedEx.add(n); return true; }).slice(0, 3);
   const label = pp => { if (!pp) return ''; const nm = PL[pp], idx = ss.map((x, n) => x.p === nm ? n : -1).filter(n => n >= 0); return idx.length === 1 ? `meaning ${idx[0] + 1} · ` : nm ? nm + ' · ' : ''; };
-  const exH = exs.length ? `<h4>More real examples</h4>${exs.map(x => `<div class="ex">${spk(x[0], 1)}<div class="grow"><div>${hl(x[0], k)}</div><div class="src">${esc(label(x[2]))}${esc(x[1])}</div></div></div>`).join('')}` : '';
+  const exH = exs.length ? `<details class="olderex"${!ss.some(x => x.ex) ? ' open' : ''}><summary>${ss.some(x => x.ex) ? 'More examples' : 'Examples'} <span class="muted small">· from books & news, 1960s–80s</span></summary>${exs.map(x => `<div class="ex">${spk(x[0], 1)}<div class="grow"><div>${hl(x[0], k)}</div><div class="src">${esc(label(x[2]))}${esc(x[1])}</div></div></div>`).join('')}</details>` : '';
   const st_ = inCards ? (status === 'known' ? '<span class="tag g">Learned ✓</span>' : '<span class="tag o">In your cards · learning</span>') : status === 'known' ? '<span class="tag g">Known</span>' : '<span class="tag blue">New</span>';
   const btns = inCards
     ? `<div class="row" style="margin-top:12px">${st_}<span class="grow"></span>${status !== 'known' ? '<button class="btn soft sm" data-pst="known">I know it now ✓</button>' : ''}</div>`
     : `<div class="row" style="margin-top:12px;gap:8px"><button class="btn brand grow" data-padd="1">${I.plus} Add to cards</button>${status !== 'known' ? '<button class="btn ghost grow" data-pst="known">I know this <span class="small muted">⏎</span></button>' : '<button class="btn ghost grow" data-pst="new">Mark as new</button>'}</div>
-       ${matchMedia('(hover: hover) and (pointer: fine)').matches && S.rd && ctx.sent ? '<div class="small muted" style="margin-top:6px">Keys: <b>Enter</b> I know this → next blue word · <b>A</b> add to cards · <b>← →</b> previous / next</div>' : ''}
+       ${matchMedia('(hover: hover) and (pointer: fine)').matches && S.rd && ctx.sent ? '<div class="small muted" style="margin-top:6px;font-size:12px">⌨ <b>Enter</b> know · <b>A</b> add · <b>← →</b> move</div>' : ''}
        <div class="row" style="margin-top:6px">${st_}<span class="grow"></span>${S.rd && ctx.sent ? '<button class="chip sm" data-trsent="1">Translate sentence (online)</button>' : ''}</div>`;
   const rareNote = !isPh && S.R[word] > S.COMMON ? `<div class="note small">Rare word: used less than about once per million words of real English (films, YouTube, news). Learn it only if you need it.</div>` : '';
   const notInDict = !e ? `<p class="small muted">Not in the offline dictionary${/^[A-Z]/.test(ctx.f || '') ? ' (maybe a name)' : ''}.</p>${!isPh ? '<button class="chip sm" data-pst="ignored">Ignore (name / not a word)</button>' : ''}` : '';
@@ -1394,7 +1418,7 @@ function blankSentence(sent, k) {
 async function sentencesFor(k, e, m) {
   const out = [], ss = sensesOf(e), s0 = ss[(m && m.sense) || 0];
   if (s0 && s0.ex) out.push([s0.ex, 'dictionary']);
-  for (const x of ss) if (x.ex) out.push([x.ex, 'dictionary']);
+  for (const x of ss) { if (x.ex) out.push([x.ex, 'dictionary']); if (x.ex2) out.push([x.ex2, 'dictionary']); }
   for (const x of (e && e.x) || []) out.push([x[0], x[1]]);
   for (const x of textExamples(k, '')) out.push(x);
   if (m && m.ex) out.push([m.ex, m.src || 'your text']);
@@ -1493,6 +1517,7 @@ function settingsView() {
    <label>Card front</label><select id="dir"><option value="en" ${p.dir === 'en' ? 'selected' : ''}>English word → meaning</option><option value="ar" ${p.dir === 'ar' ? 'selected' : ''}>Arabic / definition → English word</option></select>
    <label>American voice</label><select id="voice">${usVoices().length ? usVoices().map(v => `<option ${v.name === p.voiceName ? 'selected' : ''}>${esc(v.name)}</option>`).join('') : '<option>Default American voice</option>'}</select>
    <label>Rare words (used less than ~1× per million words)</label><select id="rareNew"><option value="0" ${!p.rareNew ? 'selected' : ''}>Low priority: dashed underline, not counted as new</option><option value="1" ${p.rareNew ? 'selected' : ''}>Treat like any other new word (blue)</option></select>
+   <label>Appearance</label><select id="theme"><option value="auto" ${(p.theme || 'auto') === 'auto' ? 'selected' : ''}>Automatic (follow the device)</option><option value="light" ${p.theme === 'light' ? 'selected' : ''}>Light</option><option value="dark" ${p.theme === 'dark' ? 'selected' : ''}>Dark</option></select>
    <label>Speech speed</label><select id="rate">${[0.7, 0.8, 0.9, 0.95, 1, 1.1].map(n => `<option value="${n}" ${n === p.rate ? 'selected' : ''}>${n}×</option>`).join('')}</select>
    <div class="row" style="margin-top:10px"><button class="btn soft sm" data-say="The quick brown fox jumps over the lazy dog.">${I.spk} Test voice</button><span class="small muted">${usVoices().length} American voices on this device${usVoices().length ? '' : ' (install one in your phone/computer speech settings)'}</span></div>
   </div>
@@ -1512,10 +1537,13 @@ function settingsView() {
 }
 
 // ================= render & events =================
+function applyTheme() { const t = S.prog.prefs.theme || 'auto'; const dark = t === 'dark' || (t === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches); document.documentElement.dataset.theme = dark ? 'dark' : 'light'; const m = document.querySelector('meta[name=theme-color]'); if (m) m.content = dark ? '#0F1514' : '#F4F5F2'; document.documentElement.style.setProperty('--rfs', (S.prog.prefs.rfs || 21) + 'px'); }
 function render() {
-  hidePop(true); shell();
+  hidePop(true); shell(); applyTheme();
   const v = {home: homeView, settings: settingsView, read: readView, review: reviewView, write: writeView, plan: planView, words: wordsView, place: placeView}[S.view] || homeView;
-  $('#app').innerHTML = v();
+  const app = $('#app'), key = S.view + (S.rd ? 'r' : '') + (S.wtask || '') + (S.gram || '') + (S.hwu || '') + (S.cx ? 'c' : '');
+  app.innerHTML = v();
+  if (key !== render.last) { app.classList.remove('viewin'); void app.offsetWidth; app.classList.add('viewin'); render.last = key; }
   if (S.view === 'words') { const q = $('#q'); q && q.addEventListener('input', () => { S.q = q.value; const pos = q.selectionStart; render(); const n = $('#q'); n.focus(); n.setSelectionRange(pos, pos); }); }
   if (S.view === 'write' && S.wtask) { const ta = $('#wText'); ta.addEventListener('input', () => { S.prog.drafts[S.wtask] = ta.value; $('#wCount').textContent = (ta.value.match(TOKRE) || []).length; saveProg(); }); }
 }
@@ -1556,6 +1584,7 @@ document.addEventListener('click', async e => {
   if (d.pawl) return awlSheet(+d.pawl);
   if (d.gram) { S.view = 'plan'; S.gram = d.gram; render(); return scrollTo(0, 0); }
   if (d.gback) { S.gram = null; return render(); }
+  if (d.rfs) { S.prog.prefs.rfs = Math.max(16, Math.min(30, (S.prog.prefs.rfs || 21) + 2 * +d.rfs)); saveProg(); applyTheme(); return; }
   if (d.ptab) { S.ptab = d.ptab; return render(); }
   if (d.cx || d.cxagain) return startContext();
   if (d.cxcheck) return cxCheck();
@@ -1599,6 +1628,7 @@ document.addEventListener('click', async e => {
   if (d.pqnext) { S.pq.i++; return render(); }
   if (d.pqquit) { S.pq = null; return render(); }
   if (d.rf) { S.readFilter = d.rf; return render(); }
+  if (d.lvl) { S.lvl = d.lvl === 'all' ? '' : d.lvl; return render(); }
   if (d.closetext) { S.rd = null; if (S.playing) { S.playing = false; speechSynthesis.cancel(); } render(); return scrollTo(0, 0); }
   if (d.playall) return playAll();
   if (d.togtrans) { S.rd.showT = !S.rd.showT; return render(); }
@@ -1647,6 +1677,7 @@ document.addEventListener('change', e => {
   if (id === 'goal') { p.goal = +e.target.value; saveProg(); render(); }
   if (id === 'dir') { p.dir = e.target.value; saveProg(); cur = null; render(); }
   if (id === 'voice') { p.voiceName = e.target.value; p.voice = 'en-US'; saveProg(); speak('Hello, this is the new voice.'); }
+  if (id === 'theme') { p.theme = e.target.value; saveProg(); applyTheme(); }
   if (id === 'rareNew') { p.rareNew = e.target.value === '1'; saveProg(); }
   if (id === 'rate') { p.rate = +e.target.value; saveProg(); }
   if (id === 'planMin') { p.minutes = +e.target.value; saveProg(); render(); }
@@ -1680,6 +1711,7 @@ document.addEventListener('keydown', e => {
     buildMWE();
   } catch (err) { console.error(err); $('#app').innerHTML = '<div class="empty">Could not load the app data. Check your connection and reopen the app.</div>'; return; }
   render(); setupStandalone();
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
 })();
 })();
 </script>

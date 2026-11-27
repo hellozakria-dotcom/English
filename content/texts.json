@@ -697,6 +697,156 @@
 "Nevertheless, that day turned out to be a turning point. It taught me that being stubborn and being determined are not the same thing, and that listening to your body is a strength, not a weakness. I ran my first marathon successfully the following spring, slowly and carefully, and I have never been so proud to finish in the bottom half."
 ],
 "words": 196
+},
+{
+"id": "pod-1",
+"style": "podcast",
+"level": "C1",
+"title": "The Everyday Science Podcast · Why can't I remember names?",
+"q": [
+[
+"According to Dr. Patel, why are names harder to remember than jobs?",
+"A name is just a label with no meaning attached, while a job connects to lots of things you already know."
+],
+[
+"What is the \"baker–Baker\" example meant to show?",
+"The same word is easier to remember as a job (a baker) than as a surname (Mr. Baker)."
+],
+[
+"Name one tip she gives.",
+"Repeat the name out loud, connect it to something meaningful, or ask about the name."
+]
+],
+"paras": [
+"JESS: Welcome back to The Everyday Science Podcast. I'm Jess, and today we're tackling something that drives me absolutely crazy. You meet someone, they tell you their name, and ten seconds later it's just… gone. With me is Dr. Priya Patel, who studies memory. Priya, please tell me I'm not alone.",
+"PRIYA: You're definitely not alone. It's one of the most common complaints I hear. And the good news is, it doesn't mean your memory is bad.",
+"JESS: Okay, that's a relief. So why does it happen?",
+"PRIYA: Well, a name is basically a label. It doesn't mean anything. If I tell you I'm a doctor, that connects to a whole network of things you already know: hospitals, white coats, long hours. But \"Priya\" doesn't connect to anything, so there's nothing for your brain to hold on to.",
+"JESS: That makes a lot of sense.",
+"PRIYA: There's a classic experiment on this. If you show people a photo and say, \"This man is a baker,\" they remember it much better than if you say, \"This man's name is Baker.\" Same word, but one has meaning and the other doesn't.",
+"JESS: That's fascinating. So what can I actually do about it?",
+"PRIYA: A few things. First, say the name out loud right away. \"Nice to meet you, Daniel.\" It sounds simple, but it works. Second, try to link the name to something meaningful. Maybe Daniel reminds you of a friend with the same name.",
+"JESS: And what if it doesn't remind me of anything?",
+"PRIYA: Then ask about it. \"Is that Danny or Daniel?\" or \"Where's your name from?\" People usually love talking about their names, and the conversation gives your brain more to work with.",
+"JESS: I love that, because it's also just good manners.",
+"PRIYA: Exactly. Honestly, the main reason we forget names is that we're not really listening. We're too busy thinking about what we're going to say next.",
+"JESS: Ouch. That's a little too accurate. Priya, thank you so much.",
+"PRIYA: My pleasure, Jess."
+],
+"words": 337
+},
+{
+"id": "pod-2",
+"style": "podcast",
+"level": "C1",
+"title": "Money Talk · Is renting really \"throwing money away\"?",
+"q": [
+[
+"What does Marcus say people forget when they compare renting and buying?",
+"The extra costs of owning: interest, repairs, taxes, insurance, and the money tied up in the down payment."
+],
+[
+"When does buying usually make more sense, according to Marcus?",
+"When you plan to stay in the same place for a long time, usually at least five to seven years."
+],
+[
+"What does Tanya decide at the end?",
+"She'll keep renting for now and save, then reconsider when she knows where she wants to settle."
+]
+],
+"paras": [
+"TANYA: Hey everyone, welcome to Money Talk. I'm Tanya. Today's question comes from a listener who says her parents keep telling her that renting is \"throwing money away.\" And honestly, I've heard that my whole life. So I've brought in financial planner Marcus Reed to settle this once and for all. Marcus, is renting a waste of money?",
+"MARCUS: Short answer? Not necessarily. It's one of the most common money myths out there.",
+"TANYA: Okay, but when you rent, you're paying for something you'll never own. Isn't that the whole point?",
+"MARCUS: Sure, but people forget that owning a home has its own costs that you never get back. You pay interest on your mortgage, and in the first few years, most of your payment is interest, not the house itself. Then there's property tax, insurance, repairs…",
+"TANYA: Right, the roof doesn't fix itself.",
+"MARCUS: Exactly. When the water heater breaks, that's your problem now, not the landlord's. And there's one more thing people overlook: the down payment. That's a big chunk of money that could be invested somewhere else and growing.",
+"TANYA: So when does buying actually make sense?",
+"MARCUS: Generally, when you're planning to stay put for a long time. Buying and selling a home is expensive, so if you move after two years, the fees can easily wipe out any gains. As a rule of thumb, I'd say you want to stay at least five to seven years.",
+"TANYA: That's interesting, because I'm not even sure what city I'll be living in next year.",
+"MARCUS: Then renting gives you flexibility, and flexibility has real value. The key is what you do with the difference. If renting is cheaper, save and invest the extra money every month. That's how renters build wealth too.",
+"TANYA: So the real waste isn't rent. It's spending the difference.",
+"MARCUS: You nailed it.",
+"TANYA: Alright, I'm going to keep renting, keep saving, and revisit this when I know where I want to settle down. Marcus, thanks for coming on.",
+"MARCUS: Anytime."
+],
+"words": 338
+},
+{
+"id": "pod-3",
+"style": "podcast",
+"level": "C1",
+"title": "Work in Progress · How to get your first tech job without experience",
+"q": [
+[
+"What is the \"experience trap\" Leah describes?",
+"You need experience to get a job, but you need a job to get experience."
+],
+[
+"What three things does Omar recommend?",
+"Build real projects, show your work publicly, and talk to people in the industry."
+],
+[
+"Why does Omar say support jobs can be a good first step?",
+"You learn how systems work, you get experience with real problems, and many people move from support into engineering or cloud roles."
+]
+],
+"paras": [
+"LEAH: Welcome to Work in Progress, the show about building a career you actually want. I'm Leah. Today we're talking about one of the most frustrating problems for students: the experience trap. You need experience to get a job, but you need a job to get experience. My guest is Omar Haddad, who went from customer support to cloud engineer in three years. Omar, welcome.",
+"OMAR: Thanks, Leah. Happy to be here, and yeah, I remember that trap really well.",
+"LEAH: So how did you get out of it?",
+"OMAR: Honestly, I stopped waiting for permission. I realized that \"experience\" doesn't have to mean a paid job. It can mean real projects that solve real problems.",
+"LEAH: Can you give an example?",
+"OMAR: Sure. I set up a small website for my uncle's shop, put it on a cloud server, and automated the backups. It wasn't glamorous, but in interviews I could talk about something I'd actually built and fixed when it broke.",
+"LEAH: That's a great point. Interviewers love hearing what went wrong.",
+"OMAR: Exactly. The second thing is to show your work publicly. Put your projects on GitHub, write a short post about what you learned. It doesn't have to be perfect. It just has to exist, so people can find it.",
+"LEAH: And the third?",
+"OMAR: Talk to people. Go to local meetups, join online communities, ask questions. A lot of jobs are never advertised; they're filled through someone who knows someone.",
+"LEAH: What about taking a support job first? Some people see that as a step down.",
+"OMAR: I'd push back on that. Technical support was the best training I ever had. You learn how systems work, you deal with real problems under pressure, and you learn how to explain technical things to normal people. Plenty of engineers I know started in support.",
+"LEAH: So the message is: start somewhere, build something, and tell people about it.",
+"OMAR: That's it. And be patient with yourself. Nobody figures it out overnight.",
+"LEAH: Omar, thank you. This was really encouraging."
+],
+"words": 342
+},
+{
+"id": "pod-4",
+"style": "podcast",
+"level": "C2",
+"title": "The Long View · Are we too busy to be bored?",
+"q": [
+[
+"What does the guest mean by \"boredom is a signal\"?",
+"It tells us that what we're doing isn't meaningful or engaging enough, and pushes us to look for something better."
+],
+[
+"What happened in the study where people sat alone with their thoughts?",
+"Many people chose to give themselves a mild electric shock rather than sit with nothing to do."
+],
+[
+"What does the host decide to try?",
+"Leaving her phone in another room for the first hour of the day."
+]
+],
+"paras": [
+"NORA: This is The Long View, and I'm Nora Kim. A confession to start us off: I genuinely can't remember the last time I was bored. Not because my life is endlessly fascinating, but because the moment there's a gap, I reach for my phone. My guest today, the psychologist Dr. Elena Ruiz, thinks that might be a problem. Elena, welcome.",
+"ELENA: Thank you, Nora. And for what it's worth, you're describing almost everyone I know, myself included.",
+"NORA: That's reassuring. So make the case for boredom. It seems like a strange thing to defend.",
+"ELENA: It does, doesn't it? But boredom is essentially a signal. It's your mind telling you that whatever you're doing right now isn't meaningful or engaging enough. And like hunger, it's uncomfortable precisely so that you'll do something about it.",
+"NORA: But if I just scroll every time I feel it…",
+"ELENA: Then you're silencing the signal without answering it. It's a bit like eating a bag of chips every time you're hungry. You feel full, but you're not actually nourished.",
+"NORA: That's a painfully good analogy. Is there evidence that people avoid boredom at all costs?",
+"ELENA: There's a rather notorious study where people were left alone in a room for about fifteen minutes with nothing to do but think. They also had a button that gave them a mild electric shock. A surprising number chose to shock themselves rather than sit quietly with their thoughts.",
+"NORA: Wow. That says a lot.",
+"ELENA: It does. And yet some of our best ideas arrive precisely in those empty moments: in the shower, on a walk, staring out of a train window. When the mind is under-stimulated, it starts to wander, and wandering is where a lot of creative connections happen.",
+"NORA: So what would you suggest? I'm not throwing my phone in the river.",
+"ELENA: Nor should you. Start small. Protect one empty space in your day. Walk somewhere without headphones, or leave your phone in another room for the first hour of the morning.",
+"NORA: The first hour. Okay, I'll try that, though I suspect I'll be climbing the walls by day three.",
+"ELENA: That's the point. Notice what you do with the restlessness.",
+"NORA: Elena Ruiz, thank you. I'll report back."
+],
+"words": 379
 }
 ]
 }

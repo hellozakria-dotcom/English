@@ -1,0 +1,135 @@
+reform | noun | إِصْلَاح | a change to improve a system | The government promised education reform. | Tax reform is badly needed.
++ verb | أَصْلَحَ | to improve a system by changing it | They want to reform the health system. | The police force has been reformed.
+electronic | adjective | إِلِكْتُرُونِيّ | using electricity and microchips | Turn off all electronic devices. | We sent an electronic copy of the contract.
+favor | noun | مَعْرُوف، خِدْمَة | something kind you do for someone | Can you do me a favor? | Thanks; I owe you a favor.
++ verb | فَضَّلَ؛ اِنْحَازَ إِلَى | to prefer or support someone or something | Most people favor the new plan. | The rules favor big companies.
+sugar | noun | سُكَّر | a sweet substance used in food | Do you take sugar in your tea? | Too much sugar is bad for your teeth.
+bind | verb | رَبَطَ؛ أَلْزَمَ | to tie together; to make someone keep a promise | Her hands were bound with rope. | The contract binds you to two years.
+solve | verb | حَلَّ | to find an answer to a problem | Can you solve this puzzle? | We need to solve the housing crisis.
+journey | noun | رِحْلَة | traveling from one place to another | The journey to the airport takes 40 minutes. | Learning a language is a long journey.
+divide | verb | قَسَّمَ؛ فَرَّقَ | to separate into parts; to cause disagreement | Divide the class into two groups. | The issue divided the country.
+inform | verb | أَبْلَغَ، أَعْلَمَ | to tell someone facts officially | Please inform us if you change your address. | We regret to inform you that your flight is canceled.
+illegal | adjective | غَيْر قَانُونِيّ | not allowed by law | It's illegal to drive without a license. | They were selling illegal drugs.
+expensive | adjective | غَالٍ، مُكْلِف | costing a lot of money | London is an expensive city. | That watch looks expensive.
+honestly | adverb | بِصَرَاحَة، بِصِدْق | used to show you're telling the truth or are annoyed | Honestly, I don't know. | Honestly! You never listen.
+snow | noun | ثَلْج | soft white frozen water that falls from the sky | We had a lot of snow last night. | The children played in the snow.
+speaker | noun | مُتَحَدِّث؛ سَمَّاعَة | a person who speaks; a device that sounds come out of | She's a native speaker of Arabic. | Connect your phone to the speaker.
+quiet | adjective | هَادِئ | making little noise; calm | Please be quiet; the baby is sleeping. | We live on a quiet street.
+spell | verb | تَهَجَّى | to say or write the letters of a word in order | How do you spell your surname? | I can never spell "necessary".
+reader | noun | قَارِئ | a person who reads | The newspaper has a million readers. | She's a fast reader.
+kitchen | noun | مَطْبَخ | the room where you cook | We eat breakfast in the kitchen. | The kitchen needs cleaning.
+repair | verb | أَصْلَحَ | to fix something that is broken | How much will it cost to repair the car? | They repaired the roof.
++ noun | إِصْلَاح | the work of fixing something | The road is closed for repairs. | The house needs a lot of repairs.
+scientific | adjective | عِلْمِيّ | relating to science | There's no scientific evidence for that. | She's doing scientific research.
+concert | noun | حَفْلَة مُوسِيقِيَّة | a performance of music | We went to a concert last night. | The concert was sold out.
+button | noun | زِرّ | a small round thing on clothes, or a part you press on a machine | Press the red button to stop. | A button came off my shirt.
+angry | adjective | غَاضِب | feeling strong displeasure | She was angry with me for being late. | Don't get angry!
+relative | noun | قَرِيب | a member of your family | We're visiting relatives in Misrata. | She's a distant relative.
++ adjective | نِسْبِيّ | compared with something else | They live in relative comfort. | Speed is relative.
+compete | verb | تَنَافَسَ | to try to win against others | Ten teams will compete for the cup. | Small shops can't compete with supermarkets.
+reward | noun | مُكَافَأَة | something given for good work or behavior | The police are offering a reward for information. | Good grades are the reward for hard work.
++ verb | كَافَأَ | to give someone something for good work | She was rewarded for her honesty. | Hard work is rewarded here.
+surgery | noun | جِرَاحَة | medical treatment by cutting into the body | He needs surgery on his knee. | The surgery took three hours.
+passenger | noun | رَاكِب | a person traveling in a vehicle who is not driving | All passengers must wear seat belts. | The plane had 180 passengers.
+friendly | adjective | وَدُود | kind and pleasant | The staff were very friendly. | She has a friendly smile.
+motor | noun | مُحَرِّك | a machine that makes something move | The washing machine needs a new motor. | It has an electric motor.
+emotional | adjective | عَاطِفِيّ | relating to feelings; showing strong feelings | It was an emotional goodbye. | She gets emotional when she talks about home.
+relatively | adverb | نِسْبِيًّا | quite, when compared with others | The exam was relatively easy. | Riga is relatively cheap.
+advertise | verb | أَعْلَنَ عَن | to tell the public about a product, job or event | They advertised the job online. | The company advertises on TV.
+experiment | noun | تَجْرِبَة | a scientific test | They did an experiment to test the drug. | Let's try a little experiment.
++ verb | جَرَّبَ | to try new ideas or methods | She likes to experiment with new recipes. | Scientists experimented on mice.
+trap | noun | فَخّ | a device to catch animals; a dangerous situation that is hard to escape | The mouse was caught in a trap. | Don't fall into the trap of comparing yourself to others.
++ verb | حَاصَرَ، عَلِقَ | to keep someone in a place they can't escape from | They were trapped in the burning building. | I feel trapped in this job.
+warning | noun | تَحْذِير | a statement that tells someone about danger | There's a warning on the packet. | The police gave him a warning.
+install | verb | ثَبَّتَ، رَكَّبَ | to put equipment or software in place so it can be used | I installed the app on my phone. | They installed solar panels.
+zero | number | صِفْر | the number 0 | The temperature fell below zero. | Our chances are close to zero.
+cloud | noun | سَحَابَة؛ السَّحَابَة الإِلِكْتُرُونِيَّة | a white or gray mass in the sky; storage on internet servers | There isn't a cloud in the sky. | All my photos are saved in the cloud.
+urban | adjective | حَضَرِيّ | relating to towns and cities | Most people now live in urban areas. | Urban traffic is a big problem.
+salt | noun | مِلْح | a white substance used to flavor food | Pass the salt, please. | Too much salt is bad for you.
+observe | verb | لَاحَظَ، رَاقَبَ؛ اِلْتَزَمَ بِـ | to watch carefully; to obey a rule or celebrate a custom | Scientists observed the birds for months. | Muslims observe Ramadan.
+wire | noun | سِلْك | a thin piece of metal used for electricity or to hold things | Don't touch that wire! | The crow bent the wire into a hook.
+delivery | noun | تَوْصِيل | bringing goods to a place | Free delivery on orders over $50. | The delivery is late.
+seal | verb | أَغْلَقَ بِإِحْكَام | to close something tightly | Seal the envelope. | The police sealed off the area.
++ noun | فُقْمَة؛ خَتْم | a sea animal; an official mark | Seals live in cold waters. | The letter had an official seal.
+empty | adjective | فَارِغ | containing nothing | The fridge is empty. | The streets were empty at night.
+pocket | noun | جَيْب | a small bag sewn into clothes | He put his hands in his pockets. | She took a pen out of her pocket.
+counter | noun | مِنْضَدَة، كَاوْنتَر | a long table in a shop or kitchen | Pay at the counter. | Leave the keys on the kitchen counter.
+tiny | adjective | صَغِير جِدًّا | very small | They live in a tiny apartment. | There's a tiny mistake in the title.
+complain | verb | اِشْتَكَى | to say that you're unhappy about something | He's always complaining about the weather. | Residents complained about the noise.
+dedicate | verb | كَرَّسَ؛ أَهْدَى | to give your time to something; to say something is in honor of someone | She dedicated her life to teaching. | He dedicated the book to his mother.
+basically | adverb | بِاخْتِصَار، أَسَاسًا | in the most important ways; simply | Basically, we need more money. | It's basically the same as the old one.
+besides | adverb | عِلَاوَةً عَلَى ذَلِك | also; in addition | I don't want to go. Besides, it's too late. | Who else came besides you?
+slowly | adverb | بِبُطْء | at a slow speed | Please speak more slowly. | Things are slowly getting better.
+whenever | conjunction | كُلَّمَا؛ مَتَى مَا | every time; at any time | Call me whenever you need help. | Whenever I see her, she's smiling.
+occasion | noun | مُنَاسَبَة | a special event; a particular time | We only use the good plates on special occasions. | I've met him on several occasions.
+manner | noun | طَرِيقَة؛ أَدَب (manners) | the way something is done; polite behavior | She spoke in a calm manner. | It's bad manners to talk with your mouth full.
+shower | noun | دُشّ؛ زَخَّة مَطَر | a way of washing under falling water; a short period of rain | I'm going to take a shower. | There will be showers this afternoon.
+loud | adjective | عَالٍ، صَاخِب | making a lot of noise | The music is too loud. | He has a loud voice.
+disappoint | verb | خَيَّبَ الأَمَل | to make someone sad because something isn't as good as they hoped | I'm sorry to disappoint you. | The film disappointed me.
+typically | adverb | عَادَةً، نَمُوذَجِيًّا | usually; in a typical way | The journey typically takes an hour. | It's a typically British habit.
+unfortunately | adverb | لِلْأَسَف | sadly | Unfortunately, the tickets are sold out. | Unfortunately, I can't come.
+voter | noun | نَاخِب | a person who votes in an election | Voters will choose a new president. | Young voters care about the climate.
+breakfast | noun | فُطُور | the first meal of the day | What did you have for breakfast? | Breakfast is served from 7 to 10.
+tall | adjective | طَوِيل | having a large height | He's very tall. | There are tall buildings downtown.
+roof | noun | سَقْف، سَطْح | the top cover of a building | The roof is leaking. | They keep bees on the roof.
+trail | noun | مَسَار، أَثَر | a path through countryside; marks left by something | We hiked a mountain trail. | The police followed the trail of blood.
+consequence | noun | عَاقِبَة، نَتِيجَة | a result, often a bad one | You must accept the consequences of your actions. | The decision had serious consequences.
+visitor | noun | زَائِر | a person who visits a place or person | The museum attracts a million visitors a year. | We have visitors this weekend.
+pleasure | noun | مُتْعَة؛ سُرُور | a feeling of happiness or enjoyment | Reading is my greatest pleasure. | "Thank you." "My pleasure."
+calm | adjective | هَادِئ | relaxed and not worried | Stay calm and listen. | The sea was calm.
++ verb | هَدَّأَ | to make someone feel less upset | Calm down; it's not a big deal. | Music calms me.
+breathe | verb | تَنَفَّسَ | to take air into your body and let it out | Breathe deeply and relax. | I couldn't breathe in the crowded room.
+familiar | adjective | مَأْلُوف؛ عَلَى دِرَايَة | well known to you; knowing something well | Her face looks familiar. | Are you familiar with this software?
+largely | adverb | إِلَى حَدٍّ كَبِير | mostly | The accident was largely his fault. | The audience was largely young.
+supporter | noun | مُؤَيِّد، مُشَجِّع | a person who supports a team, party or idea | He's a Barcelona supporter. | Supporters of the plan say it will create jobs.
+creative | adjective | مُبْدِع | good at making new things or ideas | She's very creative. | We need a creative solution.
+server | noun | خَادِم (حَاسُوب)؛ نَادِل | a computer that stores and provides data to others; a waiter | The website is down because of a server problem. | Ask the server for the menu.
+chip | noun | رَقَاقَة؛ رَقَائِق البَطَاطِس | a small piece of electronics; a thin fried slice of potato | The phone has a new chip. | He ate a bag of chips.
+appointment | noun | مَوْعِد | an arranged time to meet someone | I have a doctor's appointment at 3. | You need to make an appointment.
+climb | verb | تَسَلَّقَ؛ اِرْتَفَعَ | to go up something using your hands and feet; to increase | We climbed to the top of the hill. | Prices climbed by 10%.
+instrument | noun | آلَة (مُوسِيقِيَّة)؛ أَدَاة | a musical device; a tool for measuring or precise work | Do you play an instrument? | The surgeon's instruments were cleaned.
+cheese | noun | جُبْن | a food made from milk | I'd like a cheese sandwich. | This cheese is from France.
+examine | verb | فَحَصَ، دَرَسَ | to look at something carefully | The doctor examined my throat. | The report examines the causes of poverty.
+annoy | verb | أَزْعَجَ | to make someone a little angry | It annoys me when people are late. | Stop annoying your sister.
+careful | adjective | حَذِر، دَقِيق | giving attention to avoid mistakes or danger | Be careful; the floor is wet. | She's a very careful driver.
+reasonable | adjective | مَعْقُول | fair and sensible; not too expensive | That sounds like a reasonable idea. | The prices are reasonable.
+rural | adjective | رِيفِيّ | relating to the countryside | She grew up in a rural area. | Rural schools often lack teachers.
+emotion | noun | عَاطِفَة، شُعُور | a strong feeling such as love or fear | He tried to hide his emotions. | Music is closely linked to emotion.
+satisfy | verb | أَرْضَى؛ اِسْتَوْفَى | to make someone happy by giving what they want; to meet a need or rule | The answer didn't satisfy her. | You must satisfy the entry requirements.
+pretend | verb | تَظَاهَرَ | to act as if something is true when it is not | He pretended to be asleep. | Let's not pretend everything is fine.
+manufacturer | noun | شَرِكَة مُصَنِّعَة | a company that makes goods | Contact the manufacturer if it breaks. | She works for a car manufacturer.
+coat | noun | مِعْطَف | a warm piece of clothing worn over others | Put your coat on; it's cold. | She hung her coat by the door.
+sink | noun | حَوْض، مَغْسَلَة | a basin with a tap, used for washing | The pan is still in the sink. | Wash your hands in the sink.
++ verb | غَرِقَ | to go down below the surface of water | The ship sank in the storm. | My heart sank when I saw the results.
+hook | noun | خُطَّاف | a curved piece of metal for hanging things or catching fish | Hang your coat on the hook. | The crow used a hook to get the food.
+complaint | noun | شَكْوَى | a statement that something is wrong | We received many complaints about the noise. | She made a complaint to the manager.
+opposition | noun | مُعَارَضَة | strong disagreement; political parties not in government | There was strong opposition to the plan. | The opposition voted against the law.
+designer | noun | مُصَمِّم | a person who plans how things look or work | She's a fashion designer. | The designer changed the layout of the app.
+instruction | noun | تَعْلِيمَات | information about how to do something | Read the instructions carefully. | Follow the doctor's instructions.
+slide | verb | اِنْزَلَقَ | to move smoothly over a surface | The kids slid down the hill. | The door slides open.
++ noun | شَرِيحَة (عَرْض) | one page of a presentation | Let's look at the next slide. | The talk had 20 slides.
+gap | noun | فَجْوَة | a space between two things; a difference | There's a gap in the fence. | The gap between rich and poor is growing.
+twin | noun | تَوْأَم | one of two children born at the same time | She has a twin brother. | The twins look exactly alike.
+harm | noun | ضَرَر، أَذًى | damage or injury | Smoking does a lot of harm. | There's no harm in asking.
++ verb | أَضَرَّ بِـ | to hurt or damage | Too much sun can harm your skin. | The scandal harmed his career.
+frequently | adverb | كَثِيرًا، بِشَكْل مُتَكَرِّر | often | She frequently works late. | Frequently asked questions (FAQ)
+relief | noun | اِرْتِيَاح؛ إِغَاثَة | a feeling of happiness when worry ends; help for people in need | It was a relief to hear she was safe. | They sent relief to the flood victims.
+plastic | noun | بْلَاسْتِيك | a light, strong material made from chemicals | The bottle is made of plastic. | We should use less plastic.
+dozen | noun | دَزِّينَة (١٢) | twelve; (dozens) many | I bought a dozen eggs. | I've told you dozens of times!
+railway | noun | سِكَّة حَدِيد | a track for trains; a train system | A new railway line opened last year. | He works for the national railway.
+thin | adjective | نَحِيف؛ رَقِيق | not fat; not thick | He's tall and thin. | Cut the bread into thin slices.
+maintenance | noun | صِيَانَة | the work of keeping something in good condition | The car needs regular maintenance. | The building is closed for maintenance.
+nearby | adjective | قَرِيب، مُجَاوِر | not far away | We had lunch at a nearby café. | Is there a pharmacy nearby?
+surely | adverb | بِالتَّأْكِيد، لَا بُدَّ | used to show you think something is true | Surely you don't believe him? | This will surely help.
+extension | noun | تَمْدِيد؛ مُلْحَق؛ تَحْوِيلَة | extra time; an added part of a building; a phone line | I asked for an extension on my essay. | They built an extension to the house.
+conclusion | noun | خَاتِمَة؛ اِسْتِنْتَاج | the end of something; a decision reached after thinking | In conclusion, the plan was a success. | What conclusion did you reach?
+bush | noun | شُجَيْرَة | a small, thick plant | There's a bird in the bush. | He hid behind a bush.
+absolute | adjective | مُطْلَق، تَامّ | complete and total | I have absolute trust in her. | It was an absolute disaster.
+charity | noun | جَمْعِيَّة خَيْرِيَّة؛ صَدَقَة | an organization that helps people in need; giving to the poor | She works for a children's charity. | All the money goes to charity.
+plain | adjective | بَسِيط، عَادِيّ؛ وَاضِح | simple, without decoration; easy to understand | She wore a plain black dress. | Write in plain English.
+arrangement | noun | تَرْتِيب، اتِّفَاق | a plan or agreement | We made arrangements to meet at 6. | They have an arrangement to share the car.
+significantly | adverb | بِشَكْل كَبِير | in a large or important way | Prices have risen significantly. | It's significantly cheaper online.
+widely | adverb | عَلَى نِطَاق وَاسِع | by many people or in many places | English is widely spoken here. | It's widely believed that he will resign.
+employer | noun | صَاحِب العَمَل | a person or company that pays people to work | My employer pays for my training. | The hospital is the biggest employer in the town.
+suggestion | noun | اِقْتِرَاح | an idea or plan that someone suggests | Do you have any suggestions? | At her suggestion, we left early.
+nail | noun | مِسْمَار؛ ظُفْر | a thin metal pin; the hard part at the end of a finger | Hammer the nail into the wall. | She painted her nails red.

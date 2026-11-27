@@ -1,0 +1,70 @@
+academy | noun | أَكَادِيمِيَّة | a school or college for special training | She trained at a police academy. | He goes to a football academy.
+adjust | verb | عَدَّلَ؛ تَكَيَّفَ | to change something slightly; to get used to a new situation | You can adjust the height of the chair. | It took me months to adjust to life in Riga.
+alter | verb | غَيَّرَ، عَدَّلَ | to change something | We had to alter our travel plans. | The dress needs to be altered.
+amend | verb | عَدَّلَ (قَانُونًا أَو نَصًّا) | to make small changes to a law or document | The constitution was amended in 2020. | Please amend the date on the form.
+aware | adjective | مُدْرِك، عَلَى عِلْم | knowing that something exists or is happening | Are you aware of the risks? | I wasn't aware that you were ill.
+capacity | noun | سِعَة؛ قُدْرَة | the amount something can hold; the ability to do something | The stadium has a capacity of 50,000. | She has a great capacity for hard work.
+challenge | noun | تَحَدٍّ | something difficult that tests your ability | Learning Arabic grammar is a real challenge. | The team is ready for the challenge.
++ verb | تَحَدَّى؛ شَكَّكَ فِي | to question whether something is right; to invite someone to compete | Nobody dared to challenge the boss's decision. | He challenged me to a game of chess.
+clause | noun | بَنْد؛ جُمْلَة فَرْعِيَّة | a part of a legal document; a group of words with a verb | There's a clause in the contract about holidays. | "Because it rained" is a subordinate clause.
+compound | noun | مُرَكَّب؛ مُجَمَّع سَكَنِيّ | a substance made of two or more elements; an enclosed group of buildings | Water is a compound of hydrogen and oxygen. | They live in a walled compound.
++ verb | فَاقَمَ | to make a bad situation worse | The delay was compounded by bad weather. | His lies only compounded the problem.
+conflict | noun | صِرَاع، نِزَاع | a serious disagreement or a war | The conflict has lasted ten years. | There's a conflict between my work and family life.
+consult | verb | اِسْتَشَارَ | to ask someone for advice or information | You should consult a doctor. | Consult the dictionary if you're not sure.
+contact | noun | اِتِّصَال، تَوَاصُل | communication with someone; touching | We stayed in contact after university. | Avoid contact with the eyes.
++ verb | اِتَّصَلَ بِـ | to call, write to or email someone | Please contact us if you have any questions. | I'll contact you next week.
+decline | verb | اِنْخَفَضَ، تَرَاجَعَ | to become smaller or weaker | The number of birds has declined sharply. | His health declined quickly.
++ verb | رَفَضَ بِأَدَب | to politely refuse | She declined the invitation. | He declined to comment.
+discrete | adjective | مُنْفَصِل، مُسْتَقِلّ | clearly separate | The course is divided into discrete units. | These are two discrete problems.
+draft | noun | مُسَوَّدَة | an early version of a piece of writing | This is only the first draft of my essay. | Can you check my draft before I send it?
++ verb | صَاغَ، كَتَبَ مُسَوَّدَة | to write the first version of something | She drafted a letter to the manager. | The law was drafted in a hurry.
+enable | verb | مَكَّنَ مِن | to make it possible for someone to do something | The scholarship enabled her to study abroad. | Enable notifications in your settings.
+energy | noun | طَاقَة | the power to work or be active; power from electricity, gas, etc. | I don't have the energy to go out tonight. | We need to use less energy at home.
+enforce | verb | فَرَضَ، طَبَّقَ (القَانُون) | to make people obey a law or rule | The police enforce the speed limit strictly. | The rule is difficult to enforce.
+entity | noun | كِيَان | something that exists separately | The two companies are now a single entity. | Each department is a separate legal entity.
+equivalent | adjective | مُعَادِل، مُكَافِئ | equal in value, amount or meaning | $10 is roughly equivalent to €9. | Is there an equivalent word in Arabic?
++ noun | مُعَادِل | something that has the same value or purpose | A bachelor's degree or its equivalent is required. | The French equivalent of "hello" is "bonjour".
+evolve | verb | تَطَوَّرَ | to develop gradually | Languages evolve over time. | The company evolved from a small shop.
+expand | verb | تَوَسَّعَ، وَسَّعَ | to become or make larger | The business expanded into Asia. | Metal expands when it's heated.
+expose | verb | عَرَّضَ لِـ؛ كَشَفَ | to put someone in a situation where they could be harmed; to reveal a secret | Don't expose your skin to the sun for too long. | The journalist exposed the scandal.
+external | adjective | خَارِجِيّ | coming from outside | The decision was made under external pressure. | This cream is for external use only.
+facilitate | verb | سَهَّلَ، يَسَّرَ | to make something easier | The new software will facilitate communication. | Her job is to facilitate group discussions.
+fundamental | adjective | أَسَاسِيّ، جَوْهَرِيّ | basic and very important | There's a fundamental difference between the two plans. | Education is a fundamental right.
+generate | verb | وَلَّدَ، أَنْتَجَ | to produce or create something | The wind farm generates power for 10,000 homes. | The film generated a lot of interest.
+generation | noun | جِيل | all the people born at about the same time | My parents' generation didn't have smartphones. | The house has been in the family for three generations.
+image | noun | صُورَة | a picture; the opinion people have of someone | The image on the screen was blurry. | The company is trying to improve its image.
+liberal | adjective | لِيبْرَالِيّ؛ مُتَسَامِح | accepting different opinions and ways of living; generous | She has very liberal views. | He was liberal with his praise.
+license | noun | رُخْصَة | an official document that allows you to do something | Do you have a driver's license? | You need a license to sell alcohol.
+logic | noun | مَنْطِق | a way of thinking based on reason | I don't follow your logic. | There's no logic in spending money you don't have.
+margin | noun | هَامِش؛ فَارِق | the empty space at the side of a page; the difference between two amounts | Write your notes in the margin. | She won by a narrow margin.
+medical | adjective | طِبِّيّ | relating to medicine and treating illness | He needs urgent medical help. | She's in her third year of medical school.
+mental | adjective | عَقْلِيّ، نَفْسِيّ | relating to the mind | Exercise is good for your mental health. | Make a mental note of the address.
+modify | verb | عَدَّلَ | to change something slightly to improve it | We modified the design after the test. | The car has been modified for racing.
+monitor | verb | رَاقَبَ | to watch or check something over a period of time | Doctors are monitoring her condition closely. | The app monitors your sleep.
++ noun | شَاشَة | a computer screen | I work with two monitors. | The heart monitor started beeping.
+network | noun | شَبَكَة | a system of connected people, computers or roads | The city has an excellent bus network. | Build a professional network on LinkedIn.
+notion | noun | فِكْرَة، مَفْهُوم | an idea or belief | I have no notion of what he means. | The notion that money brings happiness is popular.
+objective | noun | هَدَف | something you plan to achieve | Our main objective is to increase sales. | What are the objectives of this course?
++ adjective | مَوْضُوعِيّ | based on facts, not feelings | Try to give an objective opinion. | Judges must be objective.
+orient | verb | وَجَّهَ؛ تَكَيَّفَ | to direct something toward a particular group or purpose; to find your position | The course is oriented toward beginners. | It took me a few days to orient myself in the new city.
+perspective | noun | مَنْظُور، وِجْهَة نَظَر | a way of thinking about something | Try to see it from my perspective. | Traveling gave me a new perspective on life.
+precise | adjective | دَقِيق | exact and accurate | Can you give me the precise time? | The instructions were clear and precise.
+prime | adjective | رَئِيسِيّ؛ مُمْتَاز | main or most important; of the best quality | Who is the prime suspect? | The hotel is in a prime location.
+psychology | noun | عِلْم النَّفْس | the study of the mind and behavior | She has a degree in psychology. | Understanding customer psychology is key to sales.
+pursue | verb | سَعَى إِلَى، تَابَعَ | to try to achieve something over time; to follow someone | She decided to pursue a career in law. | The police pursued the stolen car.
+ratio | noun | نِسْبَة | the relationship between two amounts | The ratio of students to teachers is 20 to 1. | Mix flour and water in a ratio of 2:1.
+reject | verb | رَفَضَ | to refuse to accept something | The proposal was rejected by the board. | She was rejected by three universities.
+revenue | noun | إِيرَادَات | money that a company or government receives | Tourism brings in a lot of revenue. | The company's revenue grew by 15%.
+stable | adjective | مُسْتَقِرّ، ثَابِت | not likely to change or move | The patient's condition is stable. | They want a stable relationship.
+style | noun | أُسْلُوب؛ أَنَاقَة | a way of doing something; an attractive way of dressing | I like her writing style. | He always dresses with style.
+substitute | noun | بَدِيل | a person or thing used instead of another | There's no substitute for hard work. | The coach brought on a substitute.
++ verb | اِسْتَبْدَلَ | to use one thing instead of another | You can substitute honey for sugar. | She substituted for the teacher who was ill.
+sustain | verb | حَافَظَ عَلَى، أَدَامَ؛ تَعَرَّضَ لِـ | to keep something going over time; to suffer an injury or damage | It's hard to sustain this level of effort. | He sustained serious injuries in the crash.
+symbol | noun | رَمْز | a sign or object that represents something | The dove is a symbol of peace. | What's the chemical symbol for gold?
+target | noun | هَدَف | a result you try to achieve; something you aim at | We met our sales target this month. | The museum was the target of the attack.
++ verb | اِسْتَهْدَفَ | to aim at a particular group or thing | The ads target teenagers. | The program targets families with low incomes.
+transit | noun | عُبُور، نَقْل | the movement of people or goods from one place to another | The package was damaged in transit. | The city needs better public transit.
+trend | noun | اِتِّجَاه، صَيْحَة | a general direction of change; a new fashion | There's a growing trend toward working from home. | She always follows the latest trends.
+version | noun | نُسْخَة، إِصْدَار | one form of something that is slightly different from others | Download the latest version of the app. | His version of the story was different from hers.
+welfare | noun | رَفَاه؛ إِعَانَات اجْتِمَاعِيَّة | health and happiness; money from the government for people in need | We care about the welfare of our staff. | Many families depend on welfare.
+whereas | conjunction | بَيْنَمَا، فِي حِين | used to compare two different facts | He likes coffee, whereas she prefers tea. | Some people learn quickly, whereas others need more time.

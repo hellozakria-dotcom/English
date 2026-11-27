@@ -1,0 +1,108 @@
+characteristic | noun | سِمَة، خَاصِّيَّة | a typical quality of someone or something | Patience is one of his best characteristics. | What are the main characteristics of a good teacher?
+trait | noun | سِمَة شَخْصِيَّة | a particular quality in someone's character | Honesty is a trait I admire. | Some traits run in families.
+quality | noun | جَوْدَة؛ صِفَة | how good something is; a feature of someone's character | The quality of the food was excellent. | Kindness is her best quality.
+tantrum | noun | نَوْبَة غَضَب (طِفْل) | a sudden, uncontrolled fit of anger, especially in a child | My son had a tantrum in the supermarket. | Stop throwing tantrums like a child.
+adolescence | noun | مُرَاهَقَة | the period of life between a child and an adult | Adolescence can be a difficult time. | He spent his adolescence in Canada.
+retirement | noun | تَقَاعُد | the time when you stop working, usually because of age | My father is enjoying his retirement. | She's saving for retirement.
+upbringing | noun | تَرْبِيَة، نَشْأَة | the way a child is cared for and taught | He had a strict religious upbringing. | Your upbringing affects your values.
+settle down | phrasal verb | اِسْتَقَرَّ | to start living a quiet life in one place, often after marrying | He wants to settle down and have kids. | After years of traveling, she settled down in Riga.
+put down | phrasal verb | أَهَانَ، اِسْتَخَفَّ بِـ؛ وَضَعَ | to criticize someone to make them feel stupid; to place something on a surface | Stop putting yourself down! | Put the box down here.
+go over | phrasal verb | رَاجَعَ | to check or study something carefully | Let's go over the plan one more time. | The teacher went over the homework.
+word for word | idiom | حَرْفِيًّا | in exactly the same words | She repeated the story word for word. | Don't translate word for word.
+hardly | adverb | بِالكَاد | almost not | I can hardly hear you. | We hardly ever go out these days.
+lately | adverb | مُؤَخَّرًا | recently | Have you seen Sara lately? | I've been very tired lately.
+highly | adverb | لِلغَايَة | very; very well | It's highly unlikely to rain. | She's a highly respected doctor.
+utterly | adverb | تَمَامًا، كُلِّيًّا | completely (often for negative things) | I was utterly exhausted. | That's utterly ridiculous.
+vivid | adjective | حَيّ، وَاضِح؛ زَاهٍ | very clear and detailed in your mind; very bright | I have vivid memories of my childhood. | She wore a vivid red dress.
+concise | adjective | مُوجَز | short and clear | Keep your answers concise. | The report is clear and concise.
+eloquent | adjective | فَصِيح، بَلِيغ | able to speak or write well and persuasively | She gave an eloquent speech. | He's an eloquent speaker.
+steady | adjective | ثَابِت، مُطَّرِد | developing at an even rate; firm and not shaking | There has been a steady increase in sales. | Hold the camera steady.
+slight | adjective | طَفِيف | small in amount | There's been a slight improvement. | I have a slight headache.
+decrease | verb | اِنْخَفَضَ، قَلَّ | to become less | The number of smokers has decreased. | Prices decreased by 5%.
+speed up | phrasal verb | أَسْرَعَ، سَرَّعَ | to go faster or make something faster | Can we speed up the process? | The car sped up as it left the city.
+run down | phrasal verb | أَضْعَفَ؛ اِنْتَقَدَ | to gradually reduce; to criticize unfairly | My phone battery is running down. | He's always running down his colleagues.
+cheer up | phrasal verb | اِبْتَهَجَ، أَبْهَجَ | to become or make someone happier | Cheer up! It's not the end of the world. | I bought her flowers to cheer her up.
+slow down | phrasal verb | أَبْطَأَ | to go slower or make something slower | Slow down, you're driving too fast. | The economy is slowing down.
+keep up | phrasal verb | وَاكَبَ؛ وَاصَلَ | to stay level with someone; to continue | I can't keep up with you; you walk too fast. | Keep up the good work!
+deceive | verb | خَدَعَ | to make someone believe something false | He deceived his family for years. | Don't be deceived by appearances.
+mislead | verb | ضَلَّلَ | to make someone believe something that isn't true | The advert misled customers. | I'm sorry if I misled you.
+fool | verb | خَدَعَ، اِسْتَغْفَلَ | to trick someone | You can't fool me! | Many people were fooled by the fake news.
+witness | noun | شَاهِد | a person who sees an event, especially a crime | Police are looking for witnesses to the accident. | She was the only witness.
++ verb | شَهِدَ | to see something happen | Did anyone witness the attack? | The 20th century witnessed huge changes.
+account | noun | رِوَايَة، وَصْف؛ حِسَاب | a description of an event; an arrangement with a bank or website | Her account of the accident was different from his. | I'd like to open a bank account.
+recall | verb | تَذَكَّرَ | to remember something | I can't recall his name. | Do you recall what she said?
+reliable | adjective | مَوْثُوق | able to be trusted | Is this information reliable? | My car is old but reliable.
+skeptical | adjective | مُتَشَكِّك | having doubts that something is true or useful | I'm skeptical about these diet products. | Many experts remain skeptical.
+genuine | adjective | حَقِيقِيّ، أَصِيل؛ صَادِق | real, not fake; sincere | Is this a genuine leather bag? | She showed genuine interest in my work.
+hoax | noun | خُدْعَة | a trick to make people believe something false | The bomb threat was a hoax. | The video turned out to be a hoax.
+stereotype | noun | صُورَة نَمَطِيَّة | a fixed and too simple idea about a type of person | It's a stereotype that all Americans are loud. | The film challenges gender stereotypes.
+custom | noun | عَادَة، تَقْلِيد | a traditional way of behaving in a society | It's the custom here to remove your shoes. | Learn about local customs before you travel.
+reserved | adjective | مُتَحَفِّظ؛ مَحْجُوز | not showing your feelings; kept for someone | He's quite reserved and shy. | These seats are reserved.
+outgoing | adjective | اِجْتِمَاعِيّ، مُنْفَتِح | friendly and enjoying meeting people | She's very outgoing and makes friends easily. | Outgoing people often enjoy sales jobs.
+etiquette | noun | آدَاب السُّلُوك، إِتِيكِيت | the rules of polite behavior | Business etiquette varies between countries. | Is it bad etiquette to text at dinner?
+get used to | phrasal verb | اِعْتَادَ عَلَى | to become familiar with something new | I'm getting used to the cold weather. | You'll get used to it.
+fit in | phrasal verb | اِنْدَمَجَ، تَأَقْلَمَ | to be accepted by a group | It's hard to fit in at a new school. | He never really fitted in.
+stand out | phrasal verb | بَرَزَ، تَمَيَّزَ | to be easy to see or better than others | Her red coat really stands out. | His essay stood out from the rest.
+privacy | noun | خُصُوصِيَّة | the state of being alone or keeping personal things secret | I need some privacy. | The app respects your privacy.
+hospitality | noun | كَرَم الضِّيَافَة؛ قِطَاع الضِّيَافَة | friendly welcome to guests; the hotel and restaurant business | Thank you for your hospitality. | She works in hospitality.
+outbreak | noun | اِنْدِلَاع؛ تَفَشٍّ | the sudden start of a war or disease | There's been an outbreak of flu at the school. | He was in London at the outbreak of the war.
+outlook | noun | نَظْرَة؛ تَوَقُّعَات | your attitude to life; what is expected to happen | She has a positive outlook. | The economic outlook is not good.
+downfall | noun | سُقُوط، اِنْهِيَار | the loss of power or success | Pride was his downfall. | The scandal led to the downfall of the government.
+setback | noun | اِنْتِكَاسَة، عَقَبَة | a problem that delays progress | The injury was a big setback for her. | Despite some setbacks, the project succeeded.
+breakthrough | noun | اِخْتِرَاق، إِنْجَاز كَبِير | an important discovery or development | Scientists have made a breakthrough in cancer research. | The talks reached a breakthrough.
+slip-up | noun | زَلَّة، خَطَأ بَسِيط | a small mistake | One slip-up cost us the match. | Sorry, that was a slip-up on my part.
+legacy | noun | إِرْث | something left by a person or event after they are gone | His legacy is a better school system. | The war left a legacy of hatred.
+aftermath | noun | عَوَاقِب، تَبِعَات | the period after a bad event | In the aftermath of the earthquake, many were homeless. | The aftermath of the war was terrible.
+truce | noun | هُدْنَة | an agreement to stop fighting for a time | The two sides agreed a truce. | The truce lasted only a week.
+casualty | noun | ضَحِيَّة، إِصَابَة | a person hurt or killed in an accident or war | There were no casualties in the fire. | The army suffered heavy casualties.
+survivor | noun | نَاجٍ | a person who continues to live after a dangerous event | She was the only survivor of the crash. | Survivors told their stories.
+commemorate | verb | أَحْيَا ذِكْرَى | to remember an important person or event with a ceremony | A statue commemorates the soldiers. | The holiday commemorates independence.
+wear off | phrasal verb | زَالَ أَثَرُه | to slowly disappear | The pain will wear off in an hour. | The excitement soon wore off.
+carry on | phrasal verb | اِسْتَمَرَّ، وَاصَلَ | to continue | Carry on with your work. | We carried on walking despite the rain.
+put off | phrasal verb | أَجَّلَ؛ نَفَّرَ | to delay; to make someone dislike something | Stop putting off your homework! | The smell put me off my food.
+grateful | adjective | مُمْتَنّ | feeling thankful | I'm grateful for your help. | We're grateful to all the volunteers.
+content | adjective | رَاضٍ، قَانِع | happy and satisfied | He's content with a simple life. | She seemed content to sit and read.
+cheerful | adjective | مَرِح، بَشُوش | happy and positive | She's always so cheerful in the morning. | The room is bright and cheerful.
+upbeat | adjective | مُتَفَائِل | positive and hopeful | The mood in the team is upbeat. | He gave an upbeat speech.
+breadwinner | noun | مُعِيل الأُسْرَة | the person who earns the money for a family | She's the main breadwinner in the family. | He became the breadwinner at 18.
+household | noun | الأُسْرَة، أَهْل البَيْت | all the people who live in one home | Most households have at least one car. | Household chores are shared.
+childcare | noun | رِعَايَة الأَطْفَال | care for children while parents work | Childcare is very expensive. | The company offers free childcare.
+equality | noun | مُسَاوَاة | the same rights and chances for everyone | They campaign for gender equality. | Equality before the law is essential.
+role model | noun | قُدْوَة | someone others admire and try to copy | Teachers can be powerful role models. | She's a role model for young women.
+paternity | noun | أُبُوَّة | being a father (paternity leave = time off work for new fathers) | He took two weeks of paternity leave. | The test proved paternity.
+chore | noun | عَمَل رُوتِينِيّ (مَنْزِلِيّ) | a boring job you have to do regularly | Washing up is my least favorite chore. | The children help with the household chores.
+outsider | noun | دَخِيل، غَرِيب | a person who doesn't belong to a group | I felt like an outsider at the party. | The winner was a complete outsider.
+lyrics | noun | كَلِمَات الأُغْنِيَة | the words of a song | I love the lyrics of this song. | She writes her own lyrics.
+tune | noun | لَحْن | a melody | I can't get that tune out of my head. | He whistled a happy tune.
+rhythm | noun | إِيقَاع | a regular repeated pattern of sounds or movements | The song has a great rhythm. | I like the rhythm of city life.
+soothing | adjective | مُهَدِّئ | making you feel calm | She has a soothing voice. | Listen to some soothing music before bed.
+nostalgic | adjective | حَنِين إِلَى المَاضِي | feeling happy and a little sad when remembering the past | Old photos make me nostalgic. | The song is very nostalgic.
+evoke | verb | اِسْتَحْضَرَ، أَثَارَ | to bring a memory or feeling into your mind | The smell evoked memories of my childhood. | The film evokes life in the 1960s.
+frankly | adverb | بِصَرَاحَة | honestly | Frankly, I don't care. | To put it frankly, the plan won't work.
+admittedly | adverb | بِاعْتِرَاف، صَحِيحٌ أَنّ | used to admit something is true | Admittedly, I didn't try very hard. | The hotel was expensive, admittedly, but it was worth it.
+placebo | noun | دَوَاء وَهْمِيّ | a pill with no medicine in it | Half the patients were given a placebo. | The placebo effect can be very strong.
+symptom | noun | عَرَض (مَرَضِيّ) | a sign of an illness | Fever is a common symptom of flu. | The symptoms usually last a week.
+remedy | noun | عِلَاج، عِلَاج طَبِيعِيّ | a cure for an illness or a solution to a problem | Honey is a traditional remedy for a sore throat. | There's no simple remedy for unemployment.
+swallow | verb | بَلَعَ | to make food or drink go down your throat | It hurts when I swallow. | Swallow the pill with water.
+squeeze | verb | عَصَرَ؛ ضَغَطَ | to press something firmly | Squeeze the lemon over the fish. | She squeezed my hand.
+palm | noun | رَاحَة اليَد؛ نَخْلَة | the inside surface of your hand; a type of tree | She read my palm. | Date palms grow in Libya.
+wrist | noun | رُسْغ، مِعْصَم | the joint between your hand and your arm | She broke her wrist playing volleyball. | He wears a watch on his left wrist.
+ankle | noun | كَاحِل | the joint between your foot and your leg | I twisted my ankle. | The water came up to my ankles.
+appliance | noun | جِهَاز (مَنْزِلِيّ) | a machine used in the home, like a fridge | Turn off all electrical appliances. | The kitchen has modern appliances.
+gadget | noun | أَدَاة، جِهَاز صَغِير | a small useful device | He loves buying new gadgets. | It's a clever kitchen gadget.
+obsolete | adjective | مُتَقَادِم، مَهْجُور | no longer used because something newer exists | Fax machines are almost obsolete. | The software is now obsolete.
+cutting-edge | adjective | مُتَطَوِّر جِدًّا | the newest and most advanced | The lab uses cutting-edge technology. | It's a cutting-edge design.
+up-to-date | adjective | حَدِيث، مُحَدَّث | modern; with the latest information | Keep your software up-to-date. | The map isn't up-to-date.
+user-friendly | adjective | سَهْل الاسْتِخْدَام | easy to use | The app is very user-friendly. | We need a more user-friendly website.
+upgrade | verb | رَقَّى، حَدَّثَ | to improve a machine or service to a newer version | I upgraded my phone last month. | We were upgraded to business class.
+malfunction | noun | عُطْل، خَلَل | a failure to work correctly | The crash was caused by an engine malfunction. | A computer malfunction delayed the flights.
+innovation | noun | اِبْتِكَار | a new idea, method or invention | The company is known for innovation. | Smartphones were a huge innovation.
+rely on | phrasal verb | اِعْتَمَدَ عَلَى | to depend on someone or something | You can rely on me. | Too many people rely on their phones for everything.
+turning point | noun | نُقْطَة تَحَوُّل | a time when an important change happens | Moving abroad was a turning point in my life. | The battle was a turning point in the war.
+milestone | noun | مَعْلَم، حَدَث بَارِز | a very important event in a process | Graduating was a major milestone. | The company reached a milestone of one million users.
+fuel | noun | وَقُود | a substance burned for energy | The car is running out of fuel. | Fuel prices have gone up.
++ verb | أَجَّجَ، غَذَّى | to make something increase or become stronger | His comments fueled the argument. | Low interest rates fueled the housing boom.
+spark | verb | أَشْعَلَ، أَثَارَ | to cause something to start | The decision sparked protests. | Her talk sparked my interest in physics.
+fade | verb | تَلَاشَى؛ بَهَتَ | to slowly disappear or lose color | The colors faded in the sun. | Her smile faded.
+thus | adverb | وَهَكَذَا، لِذَلِك | as a result (formal); in this way | He was late, and thus missed the bus. | Fold the paper thus.
+determined | adjective | مُصَمِّم، عَازِم | having made a firm decision; not giving up | She's determined to pass the exam. | He's a very determined young man.

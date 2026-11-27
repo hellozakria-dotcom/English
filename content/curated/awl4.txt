@@ -1,0 +1,73 @@
+access | noun | وُصُول، إِمْكَانِيَّة الدُّخُول | the right or way to enter, use or get something | Students have free access to the library. | Many villages still have no access to clean water.
++ verb | وَصَلَ إِلَى، دَخَلَ | to get into or use something, especially information | You can access your account online. | The building can only be accessed by car.
+adequate | adjective | كَافٍ، مُلَائِم | good enough or enough for a purpose | The hotel was adequate, but nothing special. | Many people don't get adequate sleep.
+annual | adjective | سَنَوِيّ | happening once a year | The company holds an annual meeting in May. | Her annual salary is $60,000.
+apparent | adjective | ظَاهِر، وَاضِح | easy to see or understand; seeming to be true | It soon became apparent that he was lying. | For no apparent reason, she started crying.
+approximate | adjective | تَقْرِيبِيّ | close to the exact number but not exact | The approximate cost is $200. | What's the approximate population of Riga?
+attitude | noun | مَوْقِف، نَظْرَة | the way you think and feel about something | She has a very positive attitude to life. | Attitudes toward working from home have changed.
+attribute | verb | نَسَبَ إِلَى، عَزَا | to say that something is caused by something | He attributes his success to hard work. | The quote is often attributed to Einstein.
++ noun | صِفَة، سِمَة | a quality or feature | Patience is an important attribute for a teacher. | What attributes make a good leader?
+civil | adjective | مَدَنِيّ؛ مُهَذَّب | relating to ordinary people, not the army or religion; polite | Civil war broke out in 2011. | Try to be civil, even if you disagree.
+code | noun | رَمْز؛ شِيفْرَة؛ قَوَاعِد | a set of numbers or letters; computer instructions; a set of rules | Enter the code sent to your phone. | The school has a strict dress code.
+commit | verb | اِرْتَكَبَ | to do something wrong or illegal | He was accused of committing a crime. | People who commit crimes should be punished.
++ verb | اِلْتَزَمَ | to promise to give your time or effort to something | The government is committed to reducing pollution. | Don't commit to anything until you've read the contract.
+communicate | verb | تَوَاصَلَ | to share information or feelings with someone | We communicate mostly by email. | Good managers communicate clearly.
+concentrate | verb | رَكَّزَ | to give all your attention to something | I can't concentrate with the TV on. | She's concentrating on her studies this year.
+confer | verb | تَشَاوَرَ؛ مَنَحَ | to discuss something with others; to give an honor or right | The judges conferred before giving their decision. | The university conferred an honorary degree on her.
+contrast | noun | تَبَايُن، تَضَادّ | a clear difference between two things | There's a sharp contrast between rich and poor areas. | In contrast to her sister, she's very shy.
++ verb | قَارَنَ بَيْنَ؛ تَبَايَنَ | to compare things to show the differences | Contrast the two poems in your essay. | His words contrast with his actions.
+cycle | noun | دَوْرَة | a series of events that happen again and again | Rain is part of the water cycle. | It's hard to break the cycle of poverty.
++ verb | رَكِبَ الدَّرَّاجَة | to ride a bicycle | I cycle to work every day. | We cycled along the coast.
+debate | noun | نِقَاش، مُنَاظَرَة | a discussion where people express different opinions | There's a lot of debate about the new law. | The TV debate between the candidates was tense.
++ verb | نَاقَشَ | to discuss a subject in detail | Parliament is debating the budget. | We debated whether to stay or leave.
+despite | preposition | رَغْمَ، عَلَى الرَّغْمِ مِن | without being stopped by something | Despite the rain, we went for a walk. | She got the job despite having no experience.
+dimension | noun | بُعْد | a measurement such as length or height; an aspect | What are the dimensions of the room? | Music adds a new dimension to the film.
+domestic | adjective | مَحَلِّيّ؛ مَنْزِلِيّ | inside one country; relating to the home | Domestic flights are cheaper than international ones. | She does most of the domestic work.
+emerge | verb | ظَهَرَ، بَرَزَ | to appear or become known | A man emerged from the shadows. | New details have emerged about the accident.
+error | noun | خَطَأ | a mistake | There are several errors in your essay. | The crash was caused by human error.
+ethnic | adjective | عِرْقِيّ | relating to a group of people with a shared culture or origin | The city has many ethnic restaurants. | The country has several ethnic minorities.
+goal | noun | هَدَف | something you want to achieve; a point in football | My goal is to reach C2 level. | He scored the winning goal.
+grant | noun | مِنْحَة | money given by a government or organization for a purpose | She received a grant to study abroad. | The project is funded by a research grant.
++ verb | مَنَحَ | to officially give or allow something | Her visa was granted last week. | He was granted permission to leave early.
+hence | adverb | لِذَلِكَ، وَمِن ثَمَّ | for this reason (formal) | The bus was late, hence the delay. | Prices have risen; hence the need for higher salaries.
+hypothesis | noun | فَرَضِيَّة | an idea that has not been proved yet | The results support our hypothesis. | Scientists tested the hypothesis in the lab.
+implement | verb | نَفَّذَ، طَبَّقَ | to put a plan or system into action | The new rules will be implemented next year. | It's easy to make plans but hard to implement them.
+implicate | verb | وَرَّطَ، أَشَارَ إِلَى تَوَرُّط | to show that someone is involved in something bad | The evidence implicates two police officers. | Several politicians were implicated in the scandal.
+impose | verb | فَرَضَ | to force a rule, tax or opinion on people | The government imposed a new tax on sugar. | Don't impose your views on others.
+integrate | verb | دَمَجَ، اِنْدَمَجَ | to combine things or people into a whole | It takes time to integrate into a new culture. | The app integrates with your calendar.
+internal | adjective | دَاخِلِيّ | inside something, a body or an organization | He suffered internal injuries. | The company is carrying out an internal investigation.
+investigate | verb | حَقَّقَ فِي | to try to find out the facts about something | Police are investigating the robbery. | Scientists are investigating the effects of the drug.
+job | noun | وَظِيفَة؛ مُهِمَّة | regular paid work; a piece of work | She got a job at a bank. | You did a great job!
+label | noun | مُلْصَق؛ تَصْنِيف | a piece of paper with information on a product; a name given to someone | Always read the label before taking medicine. | I don't like the label "difficult child".
++ verb | وَسَمَ، صَنَّفَ | to put a label on something, or describe someone with a word | All the boxes were clearly labeled. | He was labeled a troublemaker.
+mechanism | noun | آلِيَّة | a part of a machine, or a process or system | The lock mechanism is broken. | We need a mechanism for dealing with complaints.
+obvious | adjective | وَاضِح، بَدِيهِيّ | easy to see or understand | The answer seems obvious now. | It was obvious that she was upset.
+occupy | verb | شَغَلَ؛ اِحْتَلَّ | to fill a space or time; to take control of a place | Is this seat occupied? | The army occupied the city.
+option | noun | خِيَار | something you can choose | You have two options: stay or leave. | Paying in cash is no longer an option.
+output | noun | إِنْتَاج، مُخْرَجَات | the amount produced | The factory's output rose by 20%. | Writing every day increased my output.
+overall | adjective | إِجْمَالِيّ، عَامّ | including everything; in general | The overall cost was higher than expected. | Overall, I enjoyed the course.
+parallel | adjective | مُوَازٍ | side by side and the same distance apart; similar | Draw two parallel lines. | The two stories are parallel in many ways.
++ noun | تَشَابُه، نَظِير | a similarity between two things | There are clear parallels between the two crises. | There is no parallel for this in history.
+parameter | noun | مَعْيَار، حَدّ | a limit or rule that controls how something is done | We must work within the parameters of the budget. | Set the parameters before you start the test.
+phase | noun | مَرْحَلَة | a stage in a process | The project is in its final phase. | Teenagers often go through a difficult phase.
+predict | verb | تَوَقَّعَ، تَنَبَّأَ | to say what will happen in the future | Experts predict that prices will fall. | Nobody could have predicted the result.
+principal | adjective | رَئِيسِيّ | most important | Tourism is the principal source of income. | The principal reason is money.
++ noun | مُدِير المَدْرَسَة | the head of a school or college | The principal called my parents. | She was appointed principal last year.
+prior | adjective | سَابِق | happening or existing before something else | No prior knowledge is needed. | Please arrive 30 minutes prior to departure.
+professional | adjective | مِهْنِيّ، مُحْتَرِف | relating to a job that needs special training; done with skill | You should get professional advice. | She's a professional photographer.
+project | noun | مَشْرُوع | a planned piece of work | Our class is doing a project on water. | The project will take two years.
++ verb | تَوَقَّعَ؛ عَرَضَ (صُورَة) | to estimate a future number; to show an image on a screen | Sales are projected to rise by 5%. | The slides were projected onto the wall.
+promote | verb | رَوَّجَ لِـ؛ رَقَّى | to advertise or support something; to give someone a higher job | They're promoting their new album. | She was promoted to manager.
+regime | noun | نِظَام حُكْم؛ نِظَام | a government, especially one that is not democratic; a set of rules | The regime fell after weeks of protests. | He follows a strict exercise regime.
+resolve | verb | حَلَّ، سَوَّى | to find a solution to a problem | The dispute was resolved peacefully. | We need to resolve this issue quickly.
++ verb | عَزَمَ عَلَى | to make a firm decision | She resolved to study harder. | I resolved never to go back.
+retain | verb | اِحْتَفَظَ بِـ | to keep something | The town has retained its old charm. | It's hard to retain new vocabulary without review.
+series | noun | سِلْسِلَة؛ مُسَلْسَل | several things of the same kind in a row; a TV show with episodes | There has been a series of attacks. | Have you watched the new series on Netflix?
+statistic | noun | إِحْصَائِيَّة | a number that represents facts about something | Statistics show that crime has fallen. | One shocking statistic is that one in five children are poor.
+status | noun | مَكَانَة؛ وَضْع | social or professional position; the situation at a particular time | Doctors have high status in most societies. | What's the status of my order?
+stress | noun | تَوَتُّر، ضَغْط؛ نَبْرَة | worry caused by pressure; emphasis on a syllable | She's under a lot of stress at work. | The stress is on the second syllable.
++ verb | شَدَّدَ عَلَى | to emphasize something | The doctor stressed the importance of sleep. | I can't stress this enough.
+subsequent | adjective | لَاحِق | happening after something else | The film was a success, and subsequent films did even better. | The fire and the subsequent damage cost millions.
+sum | noun | مَبْلَغ؛ مَجْمُوع | an amount of money; the total of numbers added | He paid a large sum for the painting. | The sum of 5 and 3 is 8.
+summary | noun | مُلَخَّص | a short statement of the main points | Write a summary of the article. | In summary, the plan was a success.
+undertake | verb | تَوَلَّى، تَعَهَّدَ بِـ | to agree to do a job or task, especially a difficult one | The company undertook a major review. | He undertook to finish the work by Friday.

@@ -1,0 +1,66 @@
+adapt | verb | تَكَيَّفَ؛ عَدَّلَ | to change to suit a new situation; to change something for a new use | Children adapt quickly to new schools. | The novel was adapted for TV.
+adult | noun | بَالِغ، رَاشِد | a fully grown person | Tickets cost $10 for adults and $5 for children. | We should treat teenagers like adults.
+advocate | verb | دَعَا إِلَى، أَيَّدَ | to publicly support an idea or plan | She advocates free education for all. | Doctors advocate a diet low in sugar.
++ noun | مُدَافِع، مُنَاصِر | a person who publicly supports something | He's a strong advocate of renewable energy. | She works as a patient advocate.
+aid | noun | مُسَاعَدَة، مَعُونَة | help, especially money or food sent to a country in need | The UN sent food aid to the region. | He walks with the aid of a stick.
+channel | noun | قَنَاة | a TV station; a way of communicating | What's on the other channel? | Use the official channels to complain.
+chemical | noun | مَادَّة كِيمْيَائِيَّة | a substance made by chemistry | The factory releases dangerous chemicals into the river. | Wash fruit to remove chemicals.
+classic | adjective | كِلَاسِيكِيّ؛ نَمُوذَجِيّ | very good and popular for a long time; a typical example | It's a classic film from the 1950s. | That's a classic mistake.
+comprehensive | adjective | شَامِل | including everything or almost everything | The book gives a comprehensive guide to the city. | We need a comprehensive plan.
+comprise | verb | تَأَلَّفَ مِن، ضَمَّ | to consist of; to form | The team comprises five experts. | Women comprise 60% of the staff.
+confirm | verb | أَكَّدَ | to say or show that something is true or definite | Can you confirm your booking by email? | The tests confirmed that he had the flu.
+contrary | adjective | مُعَاكِس، مُنَاقِض | opposite | Contrary to popular belief, the desert can be cold. | On the contrary, I loved it.
+convert | verb | حَوَّلَ؛ اِعْتَنَقَ دِينًا | to change from one form or use to another; to change religion | They converted the garage into a bedroom. | He converted to Islam in 2015.
+couple | noun | زَوْجَان؛ عَدَد قَلِيل | two people in a relationship; two or a few | A young couple moved in next door. | I'll be back in a couple of minutes.
+decade | noun | عَقْد (عَشْر سَنَوَات) | a period of ten years | Prices have doubled in the last decade. | They've been friends for decades.
+definite | adjective | مُؤَكَّد، مُحَدَّد | certain or clear | We need a definite answer by Friday. | There's been a definite improvement.
+deny | verb | نَفَى؛ حَرَمَ | to say something isn't true; to refuse to allow something | He denied stealing the money. | They were denied entry to the country.
+differentiate | verb | مَيَّزَ، فَرَّقَ | to see or show the difference between things | Can you differentiate between the two sounds? | What differentiates your product from others?
+dispose | verb | تَخَلَّصَ مِن | to get rid of something (dispose of) | How do you dispose of old batteries? | The waste is disposed of safely.
+dynamic | adjective | دِينَامِيكِيّ، نَشِط | full of energy and new ideas; always changing | She's a dynamic young leader. | It's a dynamic market.
+eliminate | verb | أَزَالَ؛ أَقْصَى | to remove completely; to defeat in a competition | We want to eliminate poverty. | Our team was eliminated in the first round.
+empirical | adjective | تَجْرِيبِيّ | based on experiment or experience, not theory | There's no empirical evidence for his claim. | The study uses empirical data.
+equip | verb | جَهَّزَ | to provide the tools or skills needed | The lab is equipped with modern machines. | School should equip children for life.
+extract | verb | اِسْتَخْرَجَ | to remove or take out something | Oil is extracted from the sea bed. | The dentist extracted two teeth.
++ noun | مُقْتَطَف | a short part of a book, film, etc. | Read the extract and answer the questions. | Here's an extract from her speech.
+file | noun | مِلَفّ | a set of documents or a computer document | Save the file on your desktop. | The police have a file on him.
++ verb | قَدَّمَ (طَلَبًا رَسْمِيًّا)؛ حَفِظَ | to officially make a complaint or request; to store documents | She filed a complaint against the company. | File these papers under "invoices".
+finite | adjective | مَحْدُود | having a limit or end | The Earth's resources are finite. | We have a finite amount of time.
+foundation | noun | أَسَاس؛ مُؤَسَّسَة | the base of a building or idea; an organization that gives money | Trust is the foundation of a good marriage. | The foundation funds medical research.
+globe | noun | الكُرَة الأَرْضِيَّة | the world | She has traveled all over the globe. | Plastic is found in oceans around the globe.
+grade | noun | دَرَجَة، عَلَامَة؛ صَفّ | a mark for school work; a level of quality; a year at school | She got good grades in math. | My son is in fifth grade.
+guarantee | verb | ضَمِنَ | to promise that something will happen or is true | We guarantee delivery within 48 hours. | Money doesn't guarantee happiness.
++ noun | ضَمَان | a promise, often in writing, that something will be repaired if it breaks | The TV has a two-year guarantee. | There's no guarantee that it will work.
+hierarchy | noun | تَسَلْسُل هَرَمِيّ | a system where people or things are ranked by importance | He's at the top of the company hierarchy. | There's a strict hierarchy in the army.
+identical | adjective | مُتَطَابِق | exactly the same | The two bags are identical. | They're identical twins.
+ideology | noun | أَيْدِيُولُوجِيَّة | a set of political or social beliefs | The party's ideology has changed over time. | They share the same ideology.
+infer | verb | اِسْتَنْتَجَ | to form an opinion from the information you have | What can you infer from the text? | I inferred from his silence that he was angry.
+innovate | verb | اِبْتَكَرَ | to introduce new ideas or methods | Companies must innovate to survive. | The team keeps innovating.
+insert | verb | أَدْخَلَ | to put something into something else | Insert your card into the machine. | Insert a picture into the document.
+intervene | verb | تَدَخَّلَ | to get involved to change or stop something | The police had to intervene in the fight. | The government intervened to save the bank.
+isolate | verb | عَزَلَ | to separate someone or something from others | Patients with the virus were isolated. | The village was isolated by the snow.
+media | noun | وَسَائِل الإِعْلَام | TV, newspapers, radio and the internet | The media has a lot of power. | Her story spread quickly on social media.
+mode | noun | وَضْع؛ أُسْلُوب | a particular way or method; a setting on a device | Put your phone in silent mode. | The train is the cheapest mode of transport.
+paradigm | noun | نَمُوذَج، نَمَط فِكْرِيّ | a model or typical pattern of something | The discovery created a new paradigm in physics. | It's a paradigm shift in how we work.
+phenomenon | noun | ظَاهِرَة | something that happens or exists, especially something unusual | Climate change is a global phenomenon. | Social media addiction is a modern phenomenon.
+priority | noun | أَوْلَوِيَّة | something that is more important than other things | My family is my top priority. | Safety is our first priority.
+prohibit | verb | حَظَرَ، مَنَعَ | to officially forbid something | Smoking is prohibited inside the building. | The law prohibits the sale of guns.
+publication | noun | نَشْر؛ مَطْبُوعَة | the act of publishing; a book, magazine, etc. | The book is ready for publication. | She writes for several publications.
+quote | verb | اِقْتَبَسَ؛ قَدَّمَ سِعْرًا | to repeat someone's exact words; to give a price | He quoted a famous poem. | They quoted us $500 for the repair.
++ noun | اِقْتِبَاس؛ عَرْض سِعْر | someone's exact words; a price estimate | That's my favorite quote from the film. | Get a few quotes before you choose a builder.
+release | verb | أَطْلَقَ سَرَاحَ؛ أَصْدَرَ | to let someone go free; to make a film or product available | He was released from prison after five years. | The band released a new album.
++ noun | إِطْلَاق؛ إِصْدَار | the act of freeing; a new product or film | The film's release date is in June. | His release was a surprise.
+reverse | verb | عَكَسَ؛ رَجَعَ بِالسَّيَّارَة | to change something to the opposite; to drive backward | The court reversed the decision. | She reversed into the parking space.
+simulate | verb | حَاكَى | to create conditions that look real | The program simulates flying a plane. | They simulated an earthquake to test the building.
+sole | adjective | وَحِيد، فَرِيد | only; not shared | She was the sole survivor of the crash. | He has sole responsibility for the project.
+somewhat | adverb | إِلَى حَدٍّ مَا | slightly, to some degree | I was somewhat surprised by her answer. | Things have improved somewhat.
+submit | verb | قَدَّمَ، سَلَّمَ؛ خَضَعَ | to give a document for someone to consider; to accept someone's control | Submit your essay by Friday. | He refused to submit to their demands.
+successor | noun | خَلَف، خَلِيفَة | a person or thing that comes after another | Who will be the president's successor? | The new phone is a worthy successor to the old one.
+survive | verb | نَجَا، بَقِيَ عَلَى قَيْدِ الحَيَاة | to continue to live after a dangerous event | Only two people survived the crash. | Small shops struggle to survive.
+thesis | noun | أُطْرُوحَة؛ فَرْضِيَّة | a long piece of writing for a university degree; a main idea | She's writing her master's thesis. | The thesis of the book is simple.
+topic | noun | مَوْضُوع | a subject you talk or write about | Choose a topic for your presentation. | The weather is a safe topic of conversation.
+transmit | verb | نَقَلَ؛ بَثَّ | to pass something from one person or place to another; to broadcast | Mosquitoes transmit malaria. | The match was transmitted live.
+ultimate | adjective | نِهَائِيّ؛ أَقْصَى | final; the best or most extreme | Our ultimate goal is to win the league. | It's the ultimate guide to New York.
+unique | adjective | فَرِيد | being the only one of its kind; very special | Every fingerprint is unique. | The city has a unique atmosphere.
+visible | adjective | مَرْئِيّ، ظَاهِر | able to be seen | The mountain is visible from the city. | There's no visible damage.
+voluntary | adjective | طَوْعِيّ، تَطَوُّعِيّ | done by choice, without payment | She does voluntary work at a hospital. | Attendance is voluntary.

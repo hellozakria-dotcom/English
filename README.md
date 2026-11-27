@@ -36,10 +36,11 @@ dict/core.json        lemma list by frequency, word forms → lemma, phrases, AW
 dict/d_*.json         dictionary entries, one file per first letter (cached for offline use)
 dict/fakes.json       fake words for the placement test
 content/texts.md      graded texts ← edit these
+content/curated/*.txt hand-written dictionary entries (Arabic with harakat per meaning + 2 examples) ← edit these
 content/learn.py      spelling rules, confusing pairs, IELTS tasks, grammar, idioms ← edit these
 tools/build.py        texts.md → texts.json, learn.py → learn.json, generates sw.js
 tools/build_dict.py   rebuilds dict/ from the open sources (run tools/setup.sh first),
-                      then tools/postprocess.py, tools/rerank.py, tools/build_colloc.py
+                      then tools/postprocess.py, tools/rerank.py, tools/build_colloc.py, tools/curated.py
 ```
 
 ## Adding a text
